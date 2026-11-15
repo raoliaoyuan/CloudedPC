@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device" version="24.7.17">
+  <diagram id="06-gui-diagnosis" name="图 6  GUI 体验问题的定位逻辑">
+    <mxGraphModel dx="1400" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1180" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;div style=&quot;line-height:1.5&quot;&gt;图 6  GUI 体验问题的定位逻辑&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=34;fontColor=#16324F;fontStyle=1;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64" y="41" width="1300" height="45" />
+        </mxCell>
+        <mxCell id="subtitle" value="&lt;div style=&quot;line-height:1.5&quot;&gt;通用诊断框架〔建议〕｜所有候选原因待核验，不是 Dot 已测架构&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64" y="85" width="1300" height="30" />
+        </mxCell>
+        <mxCell id="accent" value="" style="rounded=1;fillColor=#137B77;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="42" width="7" height="38" />
+        </mxCell>
+        <mxCell id="chain" value="按键到可见结果的概念链〔通用技术分析〕" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F6F9FC;strokeColor=#A9BED0;strokeWidth=1.5;align=left;verticalAlign=top;spacingLeft=24;spacingTop=16;fontFamily=Noto Sans CJK SC;fontSize=26;fontStyle=1;fontColor=#16324F;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="70" y="690" width="1260" height="220" />
+        </mxCell>
+        <mxCell id="complaint" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;用户反馈〔观察〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:27px;line-height:1.45;color:#52647A&quot;&gt;界面简陋、总体使用体验差&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="360" y="180" width="680" height="110" />
+        </mxCell>
+        <mxCell id="layout" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;找不到或不理解操作&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;检查入口、状态反馈与步骤&lt;br&gt;记录任务用时、误操作和恢复路径&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF8E9;strokeColor=#A86C16;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;dashed=1;dashPattern=8 6;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="70" y="420" width="600" height="160" />
+        </mxCell>
+        <mxCell id="response" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;动作发出后等待或异常&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;先核对接管与输入焦点&lt;br&gt;再区分全界面问题和单应用问题&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF8E9;strokeColor=#A86C16;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;dashed=1;dashPattern=8 6;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="730" y="420" width="600" height="160" />
+        </mxCell>
+        <mxCell id="input" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;输入与控制权&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="chain">
+          <mxGeometry as="geometry" x="30" y="85" width="270" height="85" />
+        </mxCell>
+        <mxCell id="app" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;应用与资源&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="chain">
+          <mxGeometry as="geometry" x="340" y="85" width="270" height="85" />
+        </mxCell>
+        <mxCell id="frame" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;画面与传输&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="chain">
+          <mxGeometry as="geometry" x="650" y="85" width="270" height="85" />
+        </mxCell>
+        <mxCell id="client" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;客户端呈现&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="chain">
+          <mxGeometry as="geometry" x="960" y="85" width="270" height="85" />
+        </mxCell>
+        <mxCell id="branch1" style="edgeStyle=none;rounded=0;html=1;strokeColor=#A86C16;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.25;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;dashed=1;dashPattern=8 6;" edge="1" parent="1" source="complaint" target="layout">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="530" y="355" />
+              <mxPoint x="370" y="355" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="branch2" style="edgeStyle=none;rounded=0;html=1;strokeColor=#A86C16;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.75;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;dashed=1;dashPattern=8 6;" edge="1" parent="1" source="complaint" target="response">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="870" y="355" />
+              <mxPoint x="1030" y="355" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inputapp" style="edgeStyle=none;rounded=0;html=1;strokeColor=#64788C;strokeWidth=2.3;endArrow=block;endFill=1;exitX=1.0;exitY=0.49411764705882355;exitPerimeter=0;entryX=0.0;entryY=0.49411764705882355;entryPerimeter=0;" edge="1" parent="1" source="input" target="app">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="appframe" style="edgeStyle=none;rounded=0;html=1;strokeColor=#64788C;strokeWidth=2.3;endArrow=block;endFill=1;exitX=1.0;exitY=0.49411764705882355;exitPerimeter=0;entryX=0.0;entryY=0.49411764705882355;entryPerimeter=0;" edge="1" parent="1" source="app" target="frame">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="frameclient" style="edgeStyle=none;rounded=0;html=1;strokeColor=#64788C;strokeWidth=2.3;endArrow=block;endFill=1;exitX=1.0;exitY=0.49411764705882355;exitPerimeter=0;entryX=0.0;entryY=0.49411764705882355;entryPerimeter=0;" edge="1" parent="1" source="frame" target="client">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="notes" value="&lt;div style=&quot;line-height:1.5&quot;&gt;分别记录步骤、输入回显、应用耗时与画面表现；有条件时再采集资源及链路指标。&lt;br&gt;Dot 协议、编码与帧率仍未知；WorkBuddy 的尾网 RTT 不能填入这条 GUI 链。&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=25;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="75" y="965" width="1250" height="100" />
+        </mxCell>
+        <mxCell id="source" value="&lt;div style=&quot;line-height:1.5&quot;&gt;来源：[U1][T3][H1][W3]；借用诊断方法，不认定 Dot 使用 RDP 或 Azure Virtual Desktop。&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="1110" width="1280" height="45" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,66 @@
+LIVE_STATUS_ATTEMPT
+ 
+COLLECTOR_DESCRIPTION
+#!/usr/bin/env bash
+#
+# start-sandbox-log-collector: 沙箱内 sandbox-log-collector 守护进程启动脚本
+#
+# 职责：
+#   1. 决定是否启动：读 SANDBOX_LOG_FORWARD 节点级转发总开关
+#      → shell env 优先（envd 在创建进程时注入到子进程 environ）
+#      → shell env 为空时 fallback 走 envd HTTP 接口（http://localhost:49983/envs）
+#      → 都拿不到走默认关闭（无 sink 的复用镜像节点不空跑；与 log-forward-tee 默认一致）
+#   2. 二进制位置约定：${IDE_EDITOR_SERVER_DIR}/bin/sandbox-log-collector（镜像内置）
+#   3. 前台运行，由 supervisord 守护（autorestart=true）
+#
+# 为什么用 SANDBOX_LOG_FORWARD 而非独立开关：
+#   本采集器唯一目的就是把本地日志文件经 172.24.0.1:18100 sink 上报——与 log-forward-tee
+#   共用同一条链路、同一个转发前置条件。SANDBOX_LOG_FORWARD=1 表示"本节点有 spacelet sink、
+#   要启用沙箱日志上报"，采集器与 tee 同进同退，不引入第二个开关增加运维心智。
+#   （采集器二进制内部也会再读一次 SANDBOX_LOG_FORWARD 兜底，见 config/collector；这里的
+#    脚本判断只为在关闭时避免起进程空转。）
+#
+# 认领门闸：采集器进程启动后不会立即采集——它先轮询 envd /envs，等 X_IDE_SPACE_KEY 脱离
+#   warm- 前缀（即沙箱被真实用户认领）才开始 tail，预热期不采、不推进 offset。
+#
+# 为什么 envd fallback：与 start-sandbox-componentd / start-qqbot 完全相同的模式——supervisord
+#   早于 agent-init 启动的极端时序下 shell env 可能还没拿到注入值，envd HTTP 里可能已有。
+
+set -u
+
+ENVD_URL="${ENVD_URL:-http://localhost:49983/envs}"
+ENV_KEY="SANDBOX_LOG_FORWARD"
+
+log() {
+    # 日志走 stderr，保持 resolve_flag 的 stdout 干净（供命令替换）。
+SYNC_FILE_METADATA
+/usr/local/tna/sync_server ['bin', 'msgid', 'scripts', 'log', 'conf', 'README.md', '.version', '.package-version', 'sync_server.pid', 'logs', 'trpc.log']
+/root/proxy/box ['sandbox-proxy']
+SYNC_CONFIG_STRUCTURE
+server:
+  app: cloudMeldSystem
+  server: sync_server
+  service:
+      ip: 0.0.0.0
+      port: 18601
+      network: tcp
+      protocol: http
+  service:
+      network: tcp
+      protocol: http
+      network: tcp
+      protocol: trpc
+PM2_CHILD_PATH
+name=sandbox-proxy
+pm_exec_path=/tmp/sandbox-mock.js
+pm_cwd=/
+exec_interpreter=node
+PLUGIN_METADATA
+.codebuddy-plugin/plugin.json {'name': 'workbuddy-sheetagent', 'version': '${WORKBUDDY_BUILD_VERSION}', 'description': '由腾讯文档团队出品的电子表格智能助手，支持通过自然语言创建、查询与编辑 xlsx 表格'}
+mcp/package.json {'name': 'sheetagent-mcp', 'version': '0.1.0', 'description': None}
+LOG_SINK_CONNECTIONS
+ESTAB 0      0               172.24.0.11:35869          172.24.0.1:18100 users:(("nc",pid=51585,fd=3))           
+ESTAB 0      0               172.24.0.11:39169          172.24.0.1:18100 users:(("nc",pid=64107,fd=3))           
+ESTAB 0      0               172.24.0.11:55310          172.24.0.1:18100 users:(("sandbox-log-col",pid=130,fd=8))
+ESTAB 0      0               172.24.0.11:46305          172.24.0.1:18100 users:(("nc",pid=52466,fd=3))           
+ESTAB 0      0               172.24.0.11:36835          172.24.0.1:18100 users:(("nc",pid=52463,fd=3))           

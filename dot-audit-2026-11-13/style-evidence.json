@@ -1,0 +1,168 @@
+{
+  "input": "/home/gamer/Work/CloudPC/dot-audit-2026-11-13/Dot\u4e91\u7535\u8111\u8f6f\u786c\u4ef6\u914d\u7f6e\u4e0e\u8fd0\u884c\u68c0\u67e5\u62a5\u544a.docx",
+  "fonts_by_char_count": {},
+  "direct_run_formatting_runs": 204,
+  "direct_paragraph_formatting_paragraphs": 212,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 131,
+      "text": "\u9879\u76ee",
+      "style": "Normal"
+    },
+    {
+      "para_index": 132,
+      "text": "\u8bc1\u636e\u6240\u652f\u6301\u7684\u7ed3\u679c",
+      "style": "Normal"
+    },
+    {
+      "para_index": 133,
+      "text": "\u5224\u65ad\u4e0e\u9650\u5236",
+      "style": "Normal"
+    },
+    {
+      "para_index": 161,
+      "text": "\u6807\u8bb0",
+      "style": "Normal"
+    },
+    {
+      "para_index": 162,
+      "text": "\u6765\u6e90\u6027\u8d28",
+      "style": "Normal"
+    },
+    {
+      "para_index": 163,
+      "text": "\u672c\u62a5\u544a\u4f7f\u7528\u89c4\u5219",
+      "style": "Normal"
+    },
+    {
+      "para_index": 182,
+      "text": "\u8d44\u6e90",
+      "style": "Normal"
+    },
+    {
+      "para_index": 183,
+      "text": "\u8bb0\u5f55\u503c",
+      "style": "Normal"
+    },
+    {
+      "para_index": 184,
+      "text": "\u53ef\u652f\u6301\u7684\u89e3\u91ca",
+      "style": "Normal"
+    },
+    {
+      "para_index": 215,
+      "text": "\u6307\u6807",
+      "style": "Normal"
+    },
+    {
+      "para_index": 216,
+      "text": "\u9644\u4ef6 #024 \u7684\u8bb0\u5f55",
+      "style": "Normal"
+    },
+    {
+      "para_index": 217,
+      "text": "\u672c\u6b21\u590d\u6838",
+      "style": "Normal"
+    },
+    {
+      "para_index": 236,
+      "text": "\u4e0a\u4e0b\u6587",
+      "style": "Normal"
+    },
+    {
+      "para_index": 237,
+      "text": "\u8bb0\u5f55\u4e2d\u7684\u8def\u5f84\u6216\u73b0\u8c61",
+      "style": "Normal"
+    },
+    {
+      "para_index": 238,
+      "text": "\u5c1a\u672a\u786e\u5b9a",
+      "style": "Normal"
+    },
+    {
+      "para_index": 248,
+      "text": "\u7c7b\u522b",
+      "style": "Normal"
+    },
+    {
+      "para_index": 249,
+      "text": "\u8bb0\u5f55\u62a5\u544a\u7684\u5de5\u5177\u4e0e\u7248\u672c",
+      "style": "Normal"
+    },
+    {
+      "para_index": 268,
+      "text": "\u80fd\u529b",
+      "style": "Normal"
+    },
+    {
+      "para_index": 269,
+      "text": "\u8bb0\u5f55\u4e2d\u7684\u8bc1\u636e",
+      "style": "Normal"
+    },
+    {
+      "para_index": 270,
+      "text": "\u672c\u62a5\u544a\u5224\u5b9a",
+      "style": "Normal"
+    }
+  ],
+  "examples": {
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 6,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 13,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 21,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 29,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 38,
+        "text": "",
+        "style": "Normal"
+      }
+    ],
+    "direct_run_formatting": [
+      {
+        "para_index": 131,
+        "run_text": "\u9879\u76ee",
+        "style": "Normal"
+      },
+      {
+        "para_index": 132,
+        "run_text": "\u8bc1\u636e\u6240\u652f\u6301\u7684\u7ed3\u679c",
+        "style": "Normal"
+      },
+      {
+        "para_index": 133,
+        "run_text": "\u5224\u65ad\u4e0e\u9650\u5236",
+        "style": "Normal"
+      },
+      {
+        "para_index": 134,
+        "run_text": "\u7cfb\u7edf\u8eab\u4efd",
+        "style": "Normal"
+      },
+      {
+        "para_index": 135,
+        "run_text": "\u8bb0\u5f55\u62a5\u544a Debian 13.6\u3001Linux 6.18.57",
+        "style": "Normal"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

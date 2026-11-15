@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1040" viewBox="0 0 1400 1040">
+<title>图 1-1  产品能力与执行环境边界</title>
+<desc>产品逻辑关系，非物理部署拓扑｜青色：官方说明；橙色虚线：未确认</desc>
+<defs>
+<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#176B99"/></marker>
+<marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#137B77"/></marker>
+<marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#A86C16"/></marker>
+<marker id="arrow-slate" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#64788C"/></marker>
+</defs>
+<rect width="1400" height="1040" fill="white"/>
+<g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="40" y="42" width="7" height="38" rx="3" fill="#137B77"/>
+<text x="64" y="75.0" text-anchor="start" font-size="34" fill="#16324F" font-weight="700">图 1-1  产品能力与执行环境边界</text>
+<text x="64" y="112.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">产品逻辑关系，非物理部署拓扑｜青色：官方说明；橙色虚线：未确认</text>
+<polyline points="570,290 570,345 255,345 255,400" fill="none" stroke="#137B77" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-teal)"/>
+<polyline points="700,290 700,400" fill="none" stroke="#137B77" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-teal)"/>
+<polyline points="830,290 830,345 1145,345 1145,400" fill="none" stroke="#137B77" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-teal)"/>
+<rect x="440" y="175" width="520" height="115" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="700.0" y="219.51" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">Dot 代理〔官方〕</text>
+<text x="700.0" y="269.21" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">接收任务并协调执行环境</text>
+<rect x="55" y="400" width="400" height="180" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="255.0" y="461.06" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">自有云电脑〔官方〕</text>
+<text x="255.0" y="507.86" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">有自己的文件与浏览器会话</text>
+<text x="255.0" y="542.66" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">可供研究、文档与软件工作</text>
+<rect x="500" y="400" width="400" height="180" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="700.0" y="461.06" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">连接的用户电脑〔官方〕</text>
+<text x="700.0" y="507.86" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">需连接授权与设备在线</text>
+<text x="700.0" y="542.66" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">不是自有云电脑的同一工作区</text>
+<rect x="945" y="400" width="400" height="180" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="1145.0" y="461.06" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">Codex 云任务〔官方〕</text>
+<text x="1145.0" y="507.86" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">可使用准备好的仓库环境</text>
+<text x="1145.0" y="542.66" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">不能据此认定与桌面同镜像</text>
+<rect x="180" y="745" width="1040" height="150" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="700.0" y="789.61" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">本实例的具体部署尚未确认</text>
+<text x="700.0" y="837.86" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">供应商、区域、VM 数量、容器运行时、宿主与网络隔离层次</text>
+<text x="700.0" y="874.11" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">不能由 overlay、私有地址或 CPU 型号推定 Docker / Kubernetes</text>
+<text x="70" y="644.0" text-anchor="start" font-size="24" fill="#52647A" font-weight="400">箭头表示官方产品能力；不表示本账号已启用全部连接，亦不表示三个独立物理服务器。</text>
+<text x="60" y="972.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">来源：[O1][O4] 产品关系；[O2][O3] 共同基础设施说明；[A #021、#024、#027] 记录。</text>
+</g></svg>

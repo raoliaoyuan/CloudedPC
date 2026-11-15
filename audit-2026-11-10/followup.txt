@@ -1,0 +1,300 @@
+
+### CGROUP_DETAIL ###
+/sys/fs/cgroup/cpu.max
+400000 100000
+/sys/fs/cgroup/memory.max
+8589934592
+/sys/fs/cgroup/memory.current
+1592426496
+/sys/fs/cgroup/memory.peak
+1667457024
+/sys/fs/cgroup/memory.events
+low 0
+high 0
+max 0
+oom 0
+oom_kill 0
+oom_group_kill 0
+pagecache_max 0
+pagecache_oom 0
+/sys/fs/cgroup/cpu.stat
+usage_usec 268410898
+user_usec 113078453
+system_usec 155332444
+core_sched.force_idle_usec 0
+nr_periods 42349
+nr_throttled 5
+throttled_usec 1062352
+nr_burst 0
+burst_usec 0
+nr_throttled_bt 0
+throttled_usec_bt 0
+/sys/fs/cgroup/cpu.pressure
+some avg10=0.00 avg60=0.00 avg300=0.00 total=0
+full avg10=0.00 avg60=0.00 avg300=0.00 total=0
+/sys/fs/cgroup/memory.pressure
+some avg10=0.00 avg60=0.00 avg300=0.00 total=0
+full avg10=0.00 avg60=0.00 avg300=0.00 total=0
+/sys/fs/cgroup/io.pressure
+some avg10=0.00 avg60=0.00 avg300=0.00 total=0
+full avg10=0.00 avg60=0.00 avg300=0.00 total=0
+/sys/fs/cgroup/memory.swap.max
+8589934592
+/sys/fs/cgroup/init.scope/cpu.max
+max 100000
+/sys/fs/cgroup/init.scope/memory.max
+max
+/sys/fs/cgroup/init.scope/memory.current
+1592303616
+/sys/fs/cgroup/init.scope/memory.peak
+1667084288
+/sys/fs/cgroup/init.scope/memory.events
+low 0
+high 0
+max 0
+oom 0
+oom_kill 0
+oom_group_kill 0
+pagecache_max 0
+pagecache_oom 0
+/sys/fs/cgroup/init.scope/cpu.stat
+usage_usec 268405222
+user_usec 113073901
+system_usec 155331321
+core_sched.force_idle_usec 0
+nr_periods 0
+nr_throttled 0
+throttled_usec 0
+nr_burst 0
+burst_usec 0
+nr_throttled_bt 0
+throttled_usec_bt 0
+/sys/fs/cgroup/init.scope/cpu.pressure
+some avg10=0.00 avg60=0.00 avg300=0.00 total=0
+full avg10=0.00 avg60=0.00 avg300=0.00 total=0
+/sys/fs/cgroup/init.scope/memory.pressure
+some avg10=0.00 avg60=0.00 avg300=0.00 total=0
+full avg10=0.00 avg60=0.00 avg300=0.00 total=0
+/sys/fs/cgroup/init.scope/io.pressure
+some avg10=0.00 avg60=0.00 avg300=0.00 total=0
+full avg10=0.00 avg60=0.00 avg300=0.00 total=0
+/sys/fs/cgroup/init.scope/memory.swap.max
+max
+cpu_sample {"seconds": 5.000289859017357, "cores_used": 0.03184875367031142, "throttled_periods_delta": 0, "throttled_usec_delta": 0}
+
+### STORAGE_DETAIL ###
+TARGET SOURCE  FSTYPE  OPTIONS
+/      overlay overlay rw,relatime,lowerdir=/var/run/cloudstudio/warm-6092b80c-9f1f-4559-a6f2-e40f6b2a9596_6092b80c-9f1f-4559-a6f2-e40f6b2a9596/uupper/diff:/tmp/ovl2-idmap-1139011-0:/tmp/ovl2-idmap-1139011-1,upperdir=/mnt/user-data/6a6c9216e8f648099f7a8db6835e86b2/diff,workdir=/mnt/user-data/6a6c9216e8f648099f7a8db6835e86b2/.overlay2-work,index=off,uuid=null,metacopy=off
+TARGET SOURCE  FSTYPE
+/      overlay overlay
+TARGET SOURCE  FSTYPE
+/      overlay overlay
+Filesystem        1B-blocks      Used    Available Use% Mounted on
+overlay        274877906944 244940800 272497704960   1% /
+overlay        274877906944 244940800 272497704960   1% /
+overlay        274877906944 244940800 272497704960   1% /
+ls: cannot access '/data': No such file or directory
+ls: cannot access '/dev/dri': No such file or directory
+ls: cannot access '/dev/nvidia*': No such file or directory
+ls: cannot access '/dev/kvm': No such file or directory
+ls: cannot access '/dev/net/tun': No such file or directory
+drwxr-xr-x 1 root root  20 Sep 30 22:15 /home
+drwx------ 1 root root 246 Nov 10 15:53 /root
+drwxr-xr-x 1 root root  32 Nov 10 15:50 /workspace
+
+### TAILSCALE ###
+{
+  "Version": "1.104.5-t788384763-gd9218e278",
+  "TUN": false,
+  "BackendState": "Running",
+  "TailscaleIPs": [
+    "100.120.78.38",
+    "fd7a:115c:a1e0::6f3b:4e27"
+  ],
+  "Health": []
+}
+{
+  "HostName": "workbuddy-sandbox",
+  "DNSName": "workbuddy-sandbox.tail912f9d.ts.net.",
+  "Relay": "sin",
+  "Online": true,
+  "KeyExpiry": "2027-05-09T07:42:07Z"
+}
+[
+  {
+    "HostName": "steam-os",
+    "TailscaleIPs": [
+      "100.82.31.127",
+      "fd7a:115c:a1e0::d63b:1f80"
+    ],
+    "CurAddr": "",
+    "Relay": "sin",
+    "Online": true,
+    "Active": true,
+    "RxBytes": 163152,
+    "TxBytes": 259088
+  }
+]
+{
+  "WantRunning": true,
+  "RunSSH": true,
+  "ShieldsUp": false,
+  "CorpDNS": true,
+  "RouteAll": true,
+  "AdvertiseRoutes": null,
+  "ExitNodeID": "",
+  "NetfilterMode": 2
+}
+2026/11/10 15:58:21 portmap: monitor: gateway and self IP changed: gw=172.24.0.1 self=172.24.0.11
+
+Report:
+	* Time: 2026-11-10 15:58:21.86534025+08:00
+	* UDP: true
+	* IPv4: yes, 43.134.172.85:13871
+	* IPv6: no, but OS has support
+	* MappingVariesByDestIP: true
+	* PortMapping: 
+	* Nearest DERP: Singapore
+	* DERP latency:
+		- sin: 1.8ms   (Singapore)
+		- hkg: 35.5ms  (Hong Kong)
+		- bom: 56.5ms  (Mumbai)
+		- tok: 67.3ms  (Tokyo)
+		- syd: 98.5ms  (Sydney)
+		- par: 157.5ms (Paris)
+		- dbi: 158.9ms (Dubai)
+		- mad: 161.2ms (Madrid)
+		- lhr: 162.1ms (London)
+		- fra: 163.2ms (Frankfurt)
+		- sfo: 168.8ms (San Francisco)
+		- lax: 171.6ms (Los Angeles)
+		- ams: 173.1ms (Amsterdam)
+		- waw: 175ms   (Warsaw)
+		- hel: 182.6ms (Helsinki)
+		- sea: 183.9ms (Seattle)
+		- nue: 190ms   (Nuremberg)
+		- ord: 200.8ms (Chicago)
+		- nai: 215.8ms (Nairobi)
+		- den: 225.6ms (Denver)
+		- tor: 228.5ms (Toronto)
+		- nyc: 231.9ms (New York City)
+		- iad: 236.3ms (Ashburn)
+		- dfw: 245.9ms (Dallas)
+		- mia: 246.9ms (Miami)
+		- sao:         (São Paulo)
+		- jnb:         (Johannesburg)
+		- hnl:         (Honolulu)
+No serve config
+No serve config
+
+### SSH_EFFECTIVE ###
+usepam yes
+permitrootlogin yes
+pubkeyauthentication yes
+passwordauthentication yes
+forcecommand none
+authorizedkeysfile .ssh/authorized_keys .ssh/authorized_keys2
+authenticationmethods any
+700 root /root/.ssh
+
+### FIREWALL ###
+-P INPUT ACCEPT
+-P FORWARD ACCEPT
+-P OUTPUT ACCEPT
+-N DOCKER
+-N DOCKER-ISOLATION-STAGE-1
+-N DOCKER-ISOLATION-STAGE-2
+-N DOCKER-USER
+-A FORWARD -j DOCKER-USER
+-A FORWARD -j DOCKER-ISOLATION-STAGE-1
+-A FORWARD -o docker0 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+-A FORWARD -o docker0 -j DOCKER
+-A FORWARD -i docker0 ! -o docker0 -j ACCEPT
+-A FORWARD -i docker0 -o docker0 -j ACCEPT
+-A DOCKER-ISOLATION-STAGE-1 -i docker0 ! -o docker0 -j DOCKER-ISOLATION-STAGE-2
+-A DOCKER-ISOLATION-STAGE-1 -j RETURN
+-A DOCKER-ISOLATION-STAGE-2 -o docker0 -j DROP
+-A DOCKER-ISOLATION-STAGE-2 -j RETURN
+-A DOCKER-USER -j RETURN
+{
+  "ServerVersion": "27.5.1",
+  "Containers": 0,
+  "ContainersRunning": 0,
+  "Images": 0,
+  "Driver": "overlay2",
+  "CgroupDriver": "cgroupfs",
+  "CgroupVersion": "2",
+  "NCPU": 32,
+  "MemTotal": 132411875328,
+  "DockerRootDir": "/var/lib/docker",
+  "SecurityOptions": [
+    "name=seccomp,profile=builtin",
+    "name=cgroupns"
+  ],
+  "Warnings": null
+}
+
+### INIT_REFERENCES ###
+/root/.bashrc:24: [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+/root/.bashrc:70:     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+/root/.bashrc:91:     . ~/.bash_aliases
+/root/.bashrc:102:     . /etc/bash_completion
+/root/.bashrc:107: for i in $(ls -A $HOME/.bashrc.d/); do source $HOME/.bashrc.d/$i; done
+/root/.profile:5:     . ~/.bashrc
+/etc/profile:9:       . /etc/bash.bashrc
+/etc/profile:23:       . $i
+/etc/profile.d/01-locale-fix.sh:2: eval $(/usr/bin/locale-check C.UTF-8)
+/etc/profile.d/bash_completion.sh:9:             . "${XDG_CONFIG_HOME:-$HOME/.config}/bash_completion"
+/etc/profile.d/bash_completion.sh:12:             . /usr/share/bash-completion/bash_completion
+NVM installed ['v22.13.1']
+pyenv executable True
+GLOBAL_NPM npm 11.9.0 {'node': '^20.17.0 || >=22.9.0'}
+GLOBAL_NPM pm2 6.0.14 {'node': '>=16.0.0'}
+GLOBAL_NPM yarn 1.22.22 {'node': '>=4.0.0'}
+GLOBAL_NPM typescript 5.9.3 {'node': '>=14.17'}
+GLOBAL_NPM corepack 0.30.0 {'node': '^18.17.1 || >=20.10.0'}
+GLOBAL_NPM node-gyp 12.2.0 {'node': '^20.17.0 || >=22.9.0'}
+GLOBAL_NPM pnpm 10.28.2 {'node': '>=18.12'}
+GLOBAL_NPM pptxgenjs 4.0.1 None
+GLOBAL_NPM playwright 1.58.1 {'node': '>=18'}
+GLOBAL_NPM http-server 14.1.1 {'node': '>=12'}
+GLOBAL_NPM react-scripts 5.0.1 {'node': '>=14.0.0'}
+GLOBAL_NPM create-react-app 5.1.0 {'node': '>=14'}
+GLOBAL_NPM vue 3.2.37 None
+GLOBAL_NPM juice 11.1.1 {'node': '>=18.17'}
+GLOBAL_NPM react 18.2.0 {'node': '>=0.10.0'}
+GLOBAL_NPM mcporter 0.9.0 {'node': '>=20.11.0'}
+GLOBAL_NPM agent-browser 0.27.0 None
+GLOBAL_NPM @tencent-ai/codebuddy-code 2.159.0-dev.4c1b684.202609291705 None
+GLOBAL_NPM @angular/cli 21.1.3 {'node': '^20.19.0 || ^22.12.0 || >=24.0.0', 'npm': '^6.11.0 || ^7.5.6 || >=8.0.0', 'yarn': '>= 1.13.0'}
+GLOBAL_NPM @vue/cli 5.0.9 {'node': '^12.0.0 || >= 14.0.0'}
+GLOBAL_NPM @tencent/slidekit 3.0.0 None
+GLOBAL_NPM @tencent/wecom-cli-linux-x64 1.3.4-workbuddy.279 {'node': '>=18'}
+GLOBAL_NPM @tencent/wecom-cli 1.3.4-workbuddy.279 {'node': '>=18'}
+
+### PYTHON_PACKAGES ###
+[{"name": "Babel", "version": "2.10.3"}, {"name": "blinker", "version": "1.7.0"}, {"name": "certifi", "version": "2023.11.17"}, {"name": "chardet", "version": "5.2.0"}, {"name": "cryptography", "version": "41.0.7"}, {"name": "dbus-python", "version": "1.3.2"}, {"name": "debtcollector", "version": "2.5.0"}, {"name": "Deprecated", "version": "1.2.14"}, {"name": "distro", "version": "1.9.0"}, {"name": "dnspython", "version": "2.6.1"}, {"name": "docutils", "version": "0.20.1"}, {"name": "eventlet", "version": "0.35.2"}, {"name": "greenlet", "version": "3.0.3"}, {"name": "httplib2", "version": "0.20.4"}, {"name": "idna", "version": "3.6"}, {"name": "importlib-metadata", "version": "4.12.0"}, {"name": "iso8601", "version": "1.0.2"}, {"name": "jwcrypto", "version": "1.5.4"}, {"name": "launchpadlib", "version": "1.11.0"}, {"name": "lazr.restfulclient", "version": "0.14.6"}, {"name": "lazr.uri", "version": "1.0.6"}, {"name": "Mako", "version": "1.3.2.dev0"}, {"name": "Markdown", "version": "3.5.2"}, {"name": "MarkupSafe", "version": "2.1.5"}, {"name": "mercurial", "version": "6.7.2"}, {"name": "monotonic", "version": "1.6"}, {"name": "more-itertools", "version": "10.2.0"}, {"name": "msgpack", "version": "1.0.3"}, {"name": "netaddr", "version": "0.8.0"}, {"name": "netifaces", "version": "0.11.0"}, {"name": "numpy", "version": "1.26.4"}, {"name": "oauthlib", "version": "3.2.2"}, {"name": "oslo.config", "version": "9.4.0"}, {"name": "oslo.context", "version": "5.5.0"}, {"name": "oslo.i18n", "version": "6.3.0"}, {"name": "oslo.log", "version": "5.5.1"}, {"name": "oslo.serialization", "version": "5.4.0"}, {"name": "oslo.utils", "version": "7.1.0"}, {"name": "packaging", "version": "24.0"}, {"name": "pbr", "version": "5.11.1"}, {"name": "pillow", "version": "10.2.0"}, {"name": "pip", "version": "24.0"}, {"name": "pyasyncore", "version": "1.0.2"}, {"name": "PyGObject", "version": "3.48.2"}, {"name": "pyinotify", "version": "0.9.6"}, {"name": "PyJWT", "version": "2.7.0"}, {"name": "pyparsing", "version": "3.1.1"}, {"name": "python-apt", "version": "2.7.7+ubuntu5.1"}, {"name": "python-dateutil", "version": "2.8.2"}, {"name": "python-novnc", "version": "1.0.0"}, {"name": "pytz", "version": "2024.1"}, {"name": "PyYAML", "version": "6.0.1"}, {"name": "requests", "version": "2.31.0"}, {"name": "rfc3986", "version": "2.0.0"}, {"name": "roman", "version": "3.3"}, {"name": "setuptools", "version": "68.1.2"}, {"name": "six", "version": "1.16.0"}, {"name": "ssh-import-id", "version": "5.11"}, {"name": "stevedore", "version": "5.1.0"}, {"name": "typing_extensions", "version": "4.10.0"}, {"name": "urllib3", "version": "2.0.7"}, {"name": "wadllib", "version": "1.3.6"}, {"name": "websockify", "version": "0.10.0"}, {"name": "wheel", "version": "0.42.0"}, {"name": "wrapt", "version": "1.15.0"}, {"name": "zipp", "version": "1.0.0"}]
+
+### DESKTOP ###
+sshd
+supervisord
+
+### APT_SUMMARY ###
+{
+  "installed": 871,
+  "upgradable": 281,
+  "candidates_in_security": 221,
+  "held": []
+}
+
+### BACKUP_INDICATORS ###
+zfsutils-linux
+e2scrub_all
+dpkg
+apt-compat
+man-db
+
+### CLOCK ###
+2026-11-10T15:58:24+08:00
+/usr/share/zoneinfo/Asia/Singapore
+4854.67 4854.67

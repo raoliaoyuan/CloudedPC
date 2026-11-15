@@ -1,0 +1,216 @@
+    PID    PPID                  STARTED COMMAND
+      1       0 Tue Nov 10 14:37:28 2026 docker-init
+     61       1 Tue Nov 10 14:37:28 2026 supervisord
+     90      61 Tue Nov 10 14:37:29 2026 ash
+     92      90 Tue Nov 10 14:37:29 2026 ash
+     93      90 Tue Nov 10 14:37:29 2026 log-forward-tee
+     95      92 Tue Nov 10 14:37:29 2026 node
+     97      61 Tue Nov 10 14:37:29 2026 ash
+    100      61 Tue Nov 10 14:37:29 2026 ash
+    105      61 Tue Nov 10 14:37:29 2026 node
+    106      97 Tue Nov 10 14:37:29 2026 ash
+    107      97 Tue Nov 10 14:37:29 2026 log-forward-tee
+    110      61 Tue Nov 10 14:37:29 2026 node
+    111     100 Tue Nov 10 14:37:29 2026 ash
+    112     106 Tue Nov 10 14:37:29 2026 bash
+    113     100 Tue Nov 10 14:37:29 2026 log-forward-tee
+    116     111 Tue Nov 10 14:37:29 2026 sandbox-proxy
+    118      61 Tue Nov 10 14:37:29 2026 docker-init
+    130      61 Tue Nov 10 14:37:29 2026 sandbox-log-col
+    174      93 Tue Nov 10 14:37:29 2026 log-forward-tee
+    177     107 Tue Nov 10 14:37:29 2026 log-forward-tee
+    181     113 Tue Nov 10 14:37:29 2026 log-forward-tee
+   1265     112 Tue Nov 10 14:37:29 2026 envd
+   1301       1 Tue Nov 10 14:37:29 2026 PM2 v6.0.14: Go
+   1313    1301 Tue Nov 10 14:37:29 2026 sandbox-proxy-m
+   1347     116 Tue Nov 10 14:37:31 2026 node
+   1348     116 Tue Nov 10 14:37:31 2026 node
+  51585       1 Tue Nov 10 15:22:33 2026 nc
+  51868     118 Tue Nov 10 15:22:33 2026 dockerd
+  52016   51868 Tue Nov 10 15:22:33 2026 containerd
+  52463     177 Tue Nov 10 15:22:34 2026 nc
+  52466     174 Tue Nov 10 15:22:34 2026 nc
+  64062     116 Tue Nov 10 15:36:20 2026 node
+  64088    1347 Tue Nov 10 15:36:20 2026 sandbox-proxy
+  64107     181 Tue Nov 10 15:36:21 2026 nc
+  64108      61 Tue Nov 10 15:36:21 2026 bash
+  64125       1 Tue Nov 10 15:36:21 2026 sync_server
+  64144      61 Tue Nov 10 15:36:21 2026 editor_sdk
+  64167    1347 Tue Nov 10 15:36:22 2026 node
+  64553   64108 Tue Nov 10 15:36:25 2026 tail
+  65518       1 Tue Nov 10 15:40:51 2026 tailscaled
+  67281       1 Tue Nov 10 15:45:19 2026 sshd
+  68343   65518 Tue Nov 10 15:53:42 2026 tailscaled
+  68352   68343 Tue Nov 10 15:53:42 2026 login
+  68366   68352 Tue Nov 10 15:53:42 2026 bash
+  68845   65518 Tue Nov 10 15:59:07 2026 tailscaled
+  68852   68845 Tue Nov 10 15:59:07 2026 tailscaled
+  68859   68852 Tue Nov 10 15:59:07 2026 python3
+  68877   68859 Tue Nov 10 15:59:07 2026 ps
+STARTUP FRAGMENTS
+
+FILE /root/.bashrc.d/50-node
+1: . ~/.nvm/nvm-lazy.sh
+2: source <(ng completion script)
+
+FILE /root/.bashrc.d/60-python
+1: #!/usr/bin/env bash
+2: 
+3: # shellcheck disable=SC2120
+4: 
+5: function pyenv_cloud-studio_init() {
+6: 	if test -e "$CLOUDSTUDIO_REPO_ROOT"; then {
+7: 		export PYENV_HOOK_PATH="/root/.gp_pyenv.d"
+8: 		export GP_PYENV_MIRROR="/workspace/.pyenv_mirror"
+9: 		export GP_PYENV_FAKEROOT="$GP_PYENV_MIRROR/fakeroot"
+10: 		export PYTHONUSERBASE="$GP_PYENV_MIRROR/user/current"
+11: 		export PYTHONUSERBASE_VERSION_FILE="${PYTHONUSERBASE%/*}/.mounted_version"
+12: 		export PIP_CACHE_DIR="$GP_PYENV_MIRROR/pip_cache"
+13: 
+14: 		if test ! -v GP_PYENV_INIT; then {
+15: 
+16: 			function vscode::add_settings() (
+17: 				# From https://github.com/axonasif/dotfiles/blob/main/src/utils/common.sh
+18: 				exec >>"/tmp/.${FUNCNAME[0]}.log" && exec 2>&1
+19: 				set -eu
+20: 				local lockfile="/tmp/.vscs_add.lock"
+21: 				trap 'rm -f $lockfile $tmp_file || :;:' ERR SIGINT RETURN EXIT
+22: 				while test -e "$lockfile" && sleep 0.2; do {
+23: 					continue
+24: 				}; done
+25: 				touch "$lockfile"
+26: 
+27: 				# Read from standard input
+28: 				read -t0.5 -u0 -r -d '' input || :
+29: 				if test -z "${input:-}"; then {
+30: 					return 1
+31: 				}; fi
+32: 
+33: 				for vscode_machine_settings_file in "$@"; do {
+34: 					local tmp_file="${vscode_machine_settings_file%/*}/.tmp"
+35: 
+36: 					# Create the vscode machine settings file if it doesnt exist
+37: 					if test ! -e "$vscode_machine_settings_file"; then {
+38: 						mkdir -p "${vscode_machine_settings_file%/*}"
+39: 						touch "$vscode_machine_settings_file"
+40: 					}; fi
+41: 
+42: 					# Check json syntax
+43: 					if test ! -s "$vscode_machine_settings_file" || ! jq -reM '""' "$vscode_machine_settings_file" 1>/dev/null; then {
+44: 						printf '%s\n' "$input" >"$vscode_machine_settings_file"
+45: 					}; else {
+46: 						# Remove any trailing commas
+47: 						sed -i -e 's|,}|\n}|g' -e 's|, }|\n}|g' -e ':begin;$!N;s/,\n}/\n}/g;tbegin;P;D' "$vscode_machine_settings_file"
+48: 
+49: 						# Merge the input settings with machine settings.json
+50: 						cp -a "$vscode_machine_settings_file" "$tmp_file"
+51: 						jq -s '.[0] * .[1]' - "$tmp_file" <<<"$input" >"$vscode_machine_settings_file"
+52: 						rm -f "$tmp_file"
+53: 					}; fi
+54: 
+55: 				}; done
+56: 			)
+57: 
+58: 			# Restore installed python versions
+59: 			local target version_dir
+60: 			(
+61: 				shopt -s nullglob
+62: 				for version_dir in "$GP_PYENV_FAKEROOT/versions/"*; do {
+63: 					target="$PYENV_ROOT/versions/${version_dir##*/}"
+64: 					mkdir -p "$target" 2>/dev/null
+65: 					if ! mountpoint -q "$target" && ! sudo mount --bind "$version_dir" "$target" 2>/dev/null; then {
+66: 						rm -rf "$target"
+67: 						ln -s "$version_dir" "$target"
+68: 					}; fi
+69: 				}; done
+70: 			)
+71: 
+72: 			# Persistent `pyenv global` version
+73: 			local p_version_file="$GP_PYENV_FAKEROOT/version"
+74: 			local o_version_file="$PYENV_ROOT/version"
+75: 			if test ! -e "$p_version_file"; then {
+76: 				mkdir -p "${p_version_file%/*}"
+77: 				if test -e "$o_version_file"; then {
+78: 					printf '%s\n' "$(<"$o_version_file")" >"$p_version_file" || :
+79: 				}; fi
+80: 			}; fi
+81: 			touch "$p_version_file"
+82: 			rm -f "$o_version_file"
+83: 			ln -sf "$p_version_file" "$o_version_file"
+84: 
+85: 			# Init userbase hook
+86: 			pyenv global 1>/dev/null
+87: 
+88: 			# Set /home/cloud-studio/.pyenv/shims/python as the default Interpreter for ms-python.python VSCode extension
+89: 			vscode::add_settings "/workspace/.vscode-remote/data/Machine/settings.json" "/root/.vscode-server/data/Machine/settings.json" <<-JSON
+90: 				{
+91: 					"python.defaultInterpreterPath": "/root/.pyenv/shims/python",
+92: 					"python.terminal.activateEnvironment": false
+93: 				}
+94: 			JSON
+95: 
+96: 		}; fi && export GP_PYENV_INIT=true
+97: 
+98: 		# Poetry customizations
+99: 		export POETRY_CACHE_DIR="$GP_PYENV_MIRROR/poetry"
+100: 	}; fi
+101: }
+102: 
+103: pyenv_cloud-studio_init
+104: unset -f pyenv_cloud-studio_init vscode::add_settings
+105: 
+106: # Do not init when sourced internally from `pyenv`
+107: if test ! -v PYENV_DIR; then {
+108: 	eval "$(pyenv init -)"
+109: }; fi
+
+FILE /root/.bashrc.d/80-rust
+1: export CARGO_HOME=/workspace/.cargo
+2: mkdir -m 0755 -p "$CARGO_HOME/bin" 2>/dev/null
+3: export PATH=$CARGO_HOME/bin:$PATH
+4: test ! -e "$CARGO_HOME/bin/rustup" && mv "$(command -v rustup)" "$CARGO_HOME/bin"
+
+FILE /root/.bashrc.d/99-java
+1: export SDKMAN_DIR="/root/.sdkman"
+2: [[ -s "/root/.sdkman/bin/sdkman-init.sh" ]] && source "/root/.sdkman/bin/sdkman-init.sh"
+
+NVM DEFAULT
+v22.13.1
+
+
+RUNTIME BINARIES
+/usr/bin/node v18.19.1
+/root/.nvm/versions/node/v22.13.1/bin/node v22.13.1
+/root/.pyenv/bin/pyenv pyenv 2.3.9-1-gff93c58b
+
+YARGS DEPENDENCIES
+/root/.nvm/versions/node/v22.13.1/lib/node_modules/react-scripts/node_modules/yargs/package.json 16.2.0 module {'node': '>=10'}
+/root/.nvm/versions/node/v22.13.1/lib/node_modules/@angular/cli/node_modules/yargs/package.json 18.0.0 module {'node': '^20.19.0 || ^22.12.0 || >=23'}
+/root/.nvm/versions/node/v22.13.1/lib/node_modules/@vue/cli/node_modules/yargs/package.json 16.2.0 module {'node': '>=10'}
+
+PYENV VERSIONS
+['3.11.1']
+3.11.1
+
+
+PROCESS START TIMES
+
+SUPERVISOR CONFIG SECTIONS
+
+LOG FILE NAMES AND SIZES
+/var/log/faillog 0
+/var/log/cuda-installer.log 3065
+/var/log/bootstrap.log 61229
+/var/log/wtmp 0
+/var/log/fontconfig.log 4071
+/var/log/dpkg.log 823285
+/var/log/btmp 768
+/var/log/README 1041
+/var/log/lastlog 0
+/var/log/alternatives.log 42073
+/root/.pm2/logs/sandbox-proxy-out.log 0
+/root/.pm2/logs/sandbox-proxy-error.log 0
+
+KEY STATE PERMISSIONS
+/var/lib/tailscale 0o700 0
+/var/lib/tailscale/tailscaled.state 0o600 0

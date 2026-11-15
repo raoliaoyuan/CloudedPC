@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1110" viewBox="0 0 1400 1110">
+<title>图 4  数据保留与恢复的比较</title>
+<desc>蓝色：历史存储或服务证据；青色：官方能力；橙色：待验证对象</desc>
+<defs>
+<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#176B99"/></marker>
+<marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#137B77"/></marker>
+<marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#A86C16"/></marker>
+<marker id="arrow-slate" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#64788C"/></marker>
+</defs>
+<rect width="1400" height="1110" fill="white"/>
+<g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="40" y="42" width="7" height="38" rx="3" fill="#137B77"/>
+<text x="64" y="75.0" text-anchor="start" font-size="34" fill="#16324F" font-weight="700">图 4  数据保留与恢复的比较</text>
+<text x="64" y="112.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">蓝色：历史存储或服务证据；青色：官方能力；橙色：待验证对象</text>
+<rect x="70" y="450" width="1260" height="320" rx="18" fill="#F6F9FC" stroke="#A9BED0" stroke-width="1.5"/>
+<text x="94" y="490.0" text-anchor="start" font-size="26" fill="#16324F" font-weight="700">两边都需要按对象与生命周期事件核验</text>
+<polyline points="370,340 370,450" fill="none" stroke="#A86C16" stroke-width="2.3" stroke-linejoin="round" stroke-dasharray="8 6" marker-end="url(#arrow-amber)"/>
+<polyline points="1030,340 1030,450" fill="none" stroke="#A86C16" stroke-width="2.3" stroke-linejoin="round" stroke-dasharray="8 6" marker-end="url(#arrow-amber)"/>
+<rect x="70" y="190" width="600" height="150" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="370.0" y="231.70999999999998" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">Dot 状态延续〔官方〕</text>
+<text x="370.0" y="282.85999999999996" text-anchor="middle" font-size="27" fill="#52647A" font-weight="400">可跨使用时段保留状态</text>
+<text x="370.0" y="322.01" text-anchor="middle" font-size="27" fill="#52647A" font-weight="400">本账号的具体策略尚未核实</text>
+<rect x="730" y="190" width="600" height="150" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="1030.0" y="231.70999999999998" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">WorkBuddy 存储与同步〔实测〕</text>
+<text x="1030.0" y="282.85999999999996" text-anchor="middle" font-size="27" fill="#52647A" font-weight="400">user-data 与后端挂载线索</text>
+<text x="1030.0" y="322.01" text-anchor="middle" font-size="27" fill="#52647A" font-weight="400">同步组件运行，完整性尚未验收</text>
+<rect x="100" y="545" width="350" height="175" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="275.0" y="603.5600000000001" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">文件与目录</text>
+<text x="275.0" y="650.36" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">路径和哈希</text>
+<text x="275.0" y="685.1600000000001" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">暂停或重建后是否恢复</text>
+<rect x="525" y="545" width="350" height="175" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="700.0" y="603.5600000000001" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">浏览器会话</text>
+<text x="700.0" y="650.36" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">是否已登录</text>
+<text x="700.0" y="685.1600000000001" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">网站过期与快照分别看</text>
+<rect x="950" y="545" width="350" height="175" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="1125.0" y="603.5600000000001" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">进程与连接</text>
+<text x="1125.0" y="650.36" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">进程、端口与 TCP</text>
+<text x="1125.0" y="685.1600000000001" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">是否继续或需要重建</text>
+<rect x="160" y="870" width="1080" height="135" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="700.0" y="905.66" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">独立副本与恢复演练〔建议〕</text>
+<text x="700.0" y="955.36" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">状态保留不等于进程持续运行；文件同步不等于可恢复备份</text>
+<text x="700.0" y="993.06" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">当前没有一方完成本项目所需的完整恢复验收</text>
+<text x="60" y="1067.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">来源：[W1 第 3、5、11 章][A #039、#042][O1][O2]；虚线不表示已建立备份。</text>
+</g></svg>

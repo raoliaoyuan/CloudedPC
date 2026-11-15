@@ -1,0 +1,39 @@
+
+Report:
+	* Time: 2026-11-10 16:00:55.442776372+08:00
+	* UDP: false
+	* IPv4: (no addr found)
+	* IPv6: no, but OS has support
+	* MappingVariesByDestIP: 
+	* PortMapping: 
+	* CaptivePortal: false
+	* Nearest DERP: Singapore
+	* DERP latency:
+		- sin: 101.5ms (Singapore)
+		- hkg: 131.9ms (Hong Kong)
+		- bom: 155.8ms (Mumbai)
+		- tok: 168.3ms (Tokyo)
+		- syd: 239.2ms (Sydney)
+		- fra: 259.4ms (Frankfurt)
+		- dbi: 260.9ms (Dubai)
+		- nue: 261.5ms (Nuremberg)
+		- lhr: 264.5ms (London)
+		- ams: 266.1ms (Amsterdam)
+		- lax: 275.7ms (Los Angeles)
+		- waw: 278.7ms (Warsaw)
+		- sea: 282.3ms (Seattle)
+		- sfo: 285.6ms (San Francisco)
+		- hel: 291.3ms (Helsinki)
+		- den: 297.4ms (Denver)
+		- dfw: 310.8ms (Dallas)
+		- ord: 318.7ms (Chicago)
+		- tor: 324.6ms (Toronto)
+		- nyc: 326.1ms (New York City)
+		- iad: 329.1ms (Ashburn)
+		- nai: 331ms   (Nairobi)
+		- par: 343.3ms (Paris)
+		- mia: 347.9ms (Miami)
+		- mad: 354.3ms (Madrid)
+		- sao: 420.7ms (São Paulo)
+		- jnb: 468.8ms (Johannesburg)
+		- hnl:         (Honolulu)

@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "word_pages": 20,
+  "figures": 8,
+  "original_body_elements_preserved": 140,
+  "original_tables_preserved": 9,
+  "source_references_preserved": 21,
+  "docx_parts_unchanged": 14,
+  "native_drawio_pages": [
+    {
+      "key": "01-environment-boundaries",
+      "native_cells": 15
+    },
+    {
+      "key": "02-resource-limits",
+      "native_cells": 16
+    },
+    {
+      "key": "03-storage-evidence",
+      "native_cells": 15
+    },
+    {
+      "key": "04-network-contexts",
+      "native_cells": 26
+    },
+    {
+      "key": "05-preview-and-access",
+      "native_cells": 17
+    },
+    {
+      "key": "06-permission-controls",
+      "native_cells": 16
+    },
+    {
+      "key": "07-persistence-lifecycle",
+      "native_cells": 15
+    },
+    {
+      "key": "08-human-takeover",
+      "native_cells": 18
+    }
+  ],
+  "relative_links_resolve": 58,
+  "render_pixel_equivalence": true,
+  "package_entries": 28,
+  "package_bytes": 6477945,
+  "sha256_docx": "29a321420ec60fbbe92f056c7cafc95abb9fc2f169638d6ea156d58b5f3c433d",
+  "sha256_zip": "c14600054abe8f8bbcd9c28c894174a08244ec220be2d8e7086a29ae1eac3057"
+}

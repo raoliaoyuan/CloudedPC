@@ -1,0 +1,8 @@
+Source: captured diagnostic tool output, 2026-11-10 approximately 15:58 Asia/Singapore
+Command: tailscale ping --c 5 --until-direct=false --timeout=5s 100.120.78.38
+From: steam-os 100.82.31.127
+Target: workbuddy-sandbox 100.120.78.38
+Route: DERP(sin) for all five probes
+RTT_ms: 106, 105, 103, 104, 105
+Mean_ms: 104.6
+All 5 probes returned. Not a bandwidth or long-term loss test.

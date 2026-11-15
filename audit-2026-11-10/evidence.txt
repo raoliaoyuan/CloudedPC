@@ -1,0 +1,1554 @@
+
+### IDENTITY ###
+2026-11-10T15:57:04+08:00
+064f56bb22e3
+uid=0(root) gid=0(root) groups=0(root),100(users)
+Linux 064f56bb22e3 6.6.117-45.14.1.tl4.x86_64 #1 SMP Tue Sep 15 20:26:43 CST 2026 x86_64 x86_64 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 24.04.3 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.3 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+ 15:57:04 up  1:19,  0 user,  load average: 3.95, 4.10, 3.75
+docker
+    PID COMMAND
+      1 docker-init
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+
+### CPU ###
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           52 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  32
+On-line CPU(s) list:                     0-31
+Vendor ID:                               AuthenticAMD
+Model name:                              AMD EPYC 9754 128-Core Processor
+CPU family:                              25
+Model:                                   160
+Thread(s) per core:                      2
+Core(s) per socket:                      16
+Socket(s):                               1
+Stepping:                                2
+BogoMIPS:                                4500.06
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid amd_dcm tsc_known_freq pni pclmulqdq monitor ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ibpb vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 avx512_bf16 clzero xsaveerptr wbnoinvd arat avx512vbmi umip avx512_vbmi2 vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm
+Hypervisor vendor:                       KVM
+Virtualization type:                     full
+L1d cache:                               512 KiB (16 instances)
+L1i cache:                               512 KiB (16 instances)
+L2 cache:                                16 MiB (16 instances)
+L3 cache:                                32 MiB (2 instances)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0-31
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Indirect target selection: Not affected
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Not affected
+Vulnerability Spec rstack overflow:      Vulnerable: No microcode
+Vulnerability Spec store bypass:         Vulnerable
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Retpolines; IBPB conditional; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Vulnerable: Clear CPU buffers attempted, no microcode
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Not affected
+32
+32
+pid 68500's current affinity list: 0-31
+400000 100000
+usage_usec 264341606
+user_usec 110798420
+system_usec 153543186
+core_sched.force_idle_usec 0
+nr_periods 41716
+nr_throttled 5
+throttled_usec 1062352
+nr_burst 0
+burst_usec 0
+nr_throttled_bt 0
+throttled_usec_bt 0
+0-31
+
+### MEMORY ###
+               total        used        free      shared  buff/cache   available
+Mem:     132411875328 21967462400 20247056384    39571456 91461910528 110444412928
+Swap:              0           0           0
+8589934592
+1588199424
+1643151360
+low 0
+high 0
+max 0
+oom 0
+oom_kill 0
+oom_group_kill 0
+pagecache_max 0
+pagecache_oom 0
+8589934592
+0
+some avg10=0.00 avg60=0.00 avg300=0.00 total=0
+full avg10=0.00 avg60=0.00 avg300=0.00 total=0
+some avg10=0.00 avg60=0.00 avg300=0.00 total=0
+full avg10=0.00 avg60=0.00 avg300=0.00 total=0
+some avg10=0.00 avg60=0.00 avg300=0.00 total=0
+full avg10=0.00 avg60=0.00 avg300=0.00 total=0
+
+### STORAGE ###
+NAME   TYPE  SIZE FSTYPE ROTA MODEL MOUNTPOINTS
+vda    disk 1000G           1       
+`-vda1 part 1000G           1       /usr/sbin/docker-init
+                                    /usr/lib/modules/6.6.117-45.14.1.tl4.x86_64
+                                    /.oldroot/usr/lib/modules/6.6.117-45.14.1.tl4.x86_64
+                                    /.oldroot/usr/sbin/docker-init
+vdb    disk    2T           1       /var/lib/rancher/rke2
+                                    /var/lib/rancher/k3s
+                                    /var/lib/kubelet
+                                    /var/lib/k0s
+                                    /var/lib/docker
+                                    /var/lib/containerd/io.containerd.snapshotter.v1.overlayfs
+                                    /var/lib/buildkit
+                                    /etc/resolv.conf
+                                    /etc/hosts
+                                    /etc/hostname
+                                    /.PlnPyKFp4CRfFtgC1
+                                    /.oldroot/var/lib/kubelet
+                                    /.oldroot/var/lib/rancher/rke2
+                                    /.oldroot/var/lib/rancher/k3s
+                                    /.oldroot/var/lib/docker
+                                    /.oldroot/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs
+                                    /.oldroot/var/lib/buildkit
+                                    /.oldroot/var/lib/k0s
+                                    /.oldroot/etc/hosts
+                                    /.oldroot/etc/hostname
+                                    /.oldroot/etc/resolv.conf
+                                    /.oldroot/.PlnPyKFp4CRfFtgC1
+vdc    disk  100G           1       
+lsblk: /proc/swaps: parse error at line 1 -- ignored
+Filesystem     Type     Size  Used Avail Use% Mounted on
+overlay        overlay  100G  5.2G   94G   6% /.oldroot
+tmpfs          tmpfs     64M     0   64M   0% /dev
+shm            tmpfs    8.0G     0  8.0G   0% /dev/shm
+tmpfs          tmpfs     10M  4.0K   10M   1% /.PlnPyKFp4CRfFtgC1_run
+/dev/vda1      xfs     1000G   38G  963G   4% /usr/sbin/docker-init
+/dev/vdb       ext4     2.0T   47G  1.8T   3% /etc/hosts
+tmpfs          tmpfs     25G   22M   25G   1% /etc/docker/daemon.json
+tmpfs          tmpfs     62G     0   62G   0% /proc/acpi
+tmpfs          tmpfs     62G     0   62G   0% /proc/scsi
+tmpfs          tmpfs     62G     0   62G   0% /sys/firmware
+overlay        overlay  256G  234M  254G   1% /
+/dev/nbd962    btrfs    256G  234M  254G   1% /var/lib/k0s
+overlay        overlay  256G  234M  254G   1% /run/cloudstudio/prewarm-info.json
+Filesystem        Inodes  IUsed     IFree IUse% Mounted on
+overlay                0      0         0     - /.oldroot
+tmpfs           16163559     17  16163542    1% /dev
+shm             16163559      3  16163556    1% /dev/shm
+tmpfs           16163559      4  16163555    1% /.PlnPyKFp4CRfFtgC1_run
+/dev/vda1      524287472 220785 524066687    1% /usr/sbin/docker-init
+/dev/vdb       131072000 586271 130485729    1% /etc/hosts
+tmpfs             819200   8324    810876    2% /etc/docker/daemon.json
+tmpfs           16163559      1  16163558    1% /proc/acpi
+tmpfs           16163559      1  16163558    1% /proc/scsi
+tmpfs           16163559      1  16163558    1% /sys/firmware
+overlay                0      0         0     - /
+/dev/nbd962            0      0         0     - /var/lib/k0s
+overlay                0      0         0     - /run/cloudstudio/prewarm-info.json
+
+### DEVICES ###
+srw-rw---- 1 root docker 0 Nov 10 15:22 /var/run/docker.sock
+/sys/class/dmi/id/sys_vendor: Tencent Cloud
+/sys/class/dmi/id/product_name: CVM
+
+### PERFORMANCE ###
+procs -----------memory---------- ---swap-- -----io---- -system-- -------cpu-------
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st gu
+ 4  0      0 19772192 1608612 87710536    0    0 465904 496595 16740209   25  7  5 87  0  0  0
+ 8  0      0 19734828 1608612 87711708    0    0     0  1108 59546 110070  9  8 83  0  0  0
+ 6  0      0 19771368 1608612 87711904    0    0     0   408 48920 79642  6  6 87  0  0  0
+ 4  0      0 19785388 1608612 87712104    0    0     0   276 57758 90162  8  8 84  0  0  0
+ 6  0      0 19786564 1608612 87712440    0    0     0   835 53019 83013  7  7 86  0  0  0
+ 6  0      0 19635340 1608612 87722564    0    0  9832   412 59287 114850 14  9 77  0  0  0
+    PID    PPID USER     COMMAND         %CPU %MEM   RSS
+   1347     116 root     node             0.0  0.3 392828
+  64062     116 root     node             0.0  0.1 162536
+   1348     116 root     node             0.0  0.1 162432
+     95      92 root     node             0.0  0.0 91300
+  64167    1347 root     node             0.0  0.0 84492
+   1301       1 root     PM2 v6.0.14: Go  0.0  0.0 69932
+   1313    1301 root     sandbox-proxy-m  0.0  0.0 64872
+    105      61 root     node             0.0  0.0 62680
+  51868     118 root     dockerd          0.0  0.0 62624
+    110      61 root     node             0.0  0.0 58432
+  64144      61 root     editor_sdk       0.0  0.0 57764
+    116     111 root     sandbox-proxy    0.0  0.0 47284
+  65518       1 root     tailscaled       0.0  0.0 45384
+  52016   51868 root     containerd       0.0  0.0 36528
+  64088    1347 root     sandbox-proxy    0.0  0.0 29796
+  64125       1 root     sync_server      0.0  0.0 27544
+  68343   65518 root     tailscaled       0.0  0.0 27116
+  68484   65518 root     tailscaled       0.0  0.0 27084
+  68493   68484 root     tailscaled       0.0  0.0 26300
+   1265     112 root     envd             0.0  0.0 19128
+     61       1 root     supervisord      0.0  0.0 16984
+
+### NETWORK ###
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+eth0@if12758     UP             172.24.0.11/24 
+docker0          DOWN           172.17.0.1/16 
+default via 172.24.0.1 dev eth0 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown 
+172.24.0.0/24 dev eth0 proto kernel scope link src 172.24.0.11 
+# https://cloud.tencent.com/document/product/213/5225
+nameserver 183.60.83.19
+nameserver 183.60.82.98
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                                 
+udp   UNCONN 0      0         127.0.0.11:48989      0.0.0.0:*                                           
+udp   UNCONN 0      0            0.0.0.0:57384      0.0.0.0:*    users:(("tailscaled",pid=65518,fd=13)) 
+udp   UNCONN 0      0               [::]:58020         [::]:*    users:(("tailscaled",pid=65518,fd=10)) 
+tcp   LISTEN 0      128        127.0.0.1:39099      0.0.0.0:*    users:(("editor_sdk",pid=64144,fd=7))  
+tcp   LISTEN 0      4096      0.0.0.0%lo:34700      0.0.0.0:*    users:(("tailscaled",pid=65518,fd=15)) 
+tcp   LISTEN 0      511        127.0.0.1:62667      0.0.0.0:*    users:(("node",pid=1347,fd=18))        
+tcp   LISTEN 0      511          0.0.0.0:65310      0.0.0.0:*    users:(("node",pid=105,fd=18))         
+tcp   LISTEN 0      4096       127.0.0.1:8089       0.0.0.0:*    users:(("sync_server",pid=64125,fd=12))
+tcp   LISTEN 0      4096       127.0.0.1:1055       0.0.0.0:*    users:(("tailscaled",pid=65518,fd=12)) 
+tcp   LISTEN 0      128          0.0.0.0:22         0.0.0.0:*    users:(("sshd",pid=67281,fd=3))        
+tcp   LISTEN 0      4096      127.0.0.11:42913      0.0.0.0:*                                           
+tcp   LISTEN 0      511                *:65213            *:*    users:(("node",pid=95,fd=17))          
+tcp   LISTEN 0      511                *:65216            *:*    users:(("node",pid=110,fd=18))         
+tcp   LISTEN 0      4096               *:65225            *:*    users:(("sandbox-proxy",pid=116,fd=16))
+tcp   LISTEN 0      4096               *:49983            *:*    users:(("envd",pid=1265,fd=6))         
+tcp   LISTEN 0      4096               *:9090             *:*    users:(("sandbox-proxy",pid=116,fd=10))
+tcp   LISTEN 0      128             [::]:22            [::]:*    users:(("sshd",pid=67281,fd=4))        
+tcp   LISTEN 0      4096               *:18601            *:*    users:(("sync_server",pid=64125,fd=14))
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    RX:  bytes packets errors dropped  missed   mcast           
+      27083927   52628      0       0       0       0 
+    TX:  bytes packets errors dropped carrier collsns           
+      27083927   52628      0       0       0       0 
+2: eth0@if12758: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default 
+    link/ether c6:83:df:cc:af:a3 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    RX:  bytes packets errors dropped  missed   mcast           
+     102487583   36178      0       0       0       0 
+    TX:  bytes packets errors dropped carrier collsns           
+      11037806   33211      0       0       0       0 
+3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default 
+    link/ether 02:42:30:32:34:8f brd ff:ff:ff:ff:ff:ff
+    RX:  bytes packets errors dropped  missed   mcast           
+             0       0      0       0       0       0 
+    TX:  bytes packets errors dropped carrier collsns           
+             0       0      0       0       0       0 
+
+### SERVICES ###
+offline
+
+### SECURITY ###
+listenaddress [::]:22
+listenaddress 0.0.0.0:22
+usepam yes
+maxauthtries 6
+permitrootlogin yes
+pubkeyauthentication yes
+passwordauthentication yes
+kbdinteractiveauthentication no
+x11forwarding yes
+permitemptypasswords no
+gatewayports no
+allowtcpforwarding yes
+root P 2026-11-10 0 99999 7 -1
+root uid=0 shell=/bin/bash
+ubuntu uid=1000 shell=/bin/bash
+user uid=1001 shell=/bin/sh
+# Warning: iptables-legacy tables present, use iptables-legacy to see them
+-P INPUT ACCEPT
+-P FORWARD ACCEPT
+-P OUTPUT ACCEPT
+CapInh:	000001ffffffffff
+CapPrm:	000001ffffffffff
+CapEff:	000001ffffffffff
+CapBnd:	000001ffffffffff
+CapAmb:	000001ffffffffff
+NoNewPrivs:	0
+Seccomp:	2
+Seccomp_filters:	2
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+2
+1
+0
+
+### SOFTWARE ###
+/usr/bin/python3
+/usr/bin/pip
+/usr/bin/pip3
+/usr/bin/node
+/usr/bin/git
+/usr/local/bin/docker
+/usr/bin/gcc
+/usr/bin/g++
+/usr/bin/cmake
+/usr/bin/make
+/usr/bin/tailscale
+/usr/bin/ssh
+Python 3.12.3
+v18.19.1
+git version 2.43.0
+1.104.5
+  tailscale commit: 78838476328d1a97dc05400ad23086a9dbe616da
+  long version: 1.104.5-t788384763-gd9218e278
+  other commit: d9218e278237adcb8bfc039e82a4ad1912554b4f
+  go version: go1.27.3 (tailscale/go 7ef7b40364)
+bash: line 33: npm: command not found
+OpenSSH_9.6p1 Ubuntu-3ubuntu13.20, OpenSSL 3.0.13 30 Jan 2024
+Client:
+ Version:           27.5.1
+ API version:       1.47
+ Go version:        go1.22.11
+ Git commit:        9f9e405
+ Built:             Wed Jan 22 13:40:02 2025
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          27.5.1
+  API version:      1.47 (minimum version 1.24)
+  Go version:       go1.22.11
+  Git commit:       4c9b3b0
+  Built:            Wed Jan 22 13:41:24 2025
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          v1.7.25
+  GitCommit:        bcc810d6b9066471b0b6fa75f557a15a1cbf31bb
+ runc:
+  Version:          1.2.4
+  GitCommit:        v1.2.4-0-g6c52b3f
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+
+### PACKAGES ###
+adduser	3.137ubuntu1
+adwaita-icon-theme	46.0-1
+apt	2.8.3
+at-spi2-common	2.52.0-1build1
+at-spi2-core	2.52.0-1build1
+autoconf	2.71-3
+autocutsel	0.10.1-1build2
+automake	1:1.16.5-1.3ubuntu1
+autotools-dev	20220109.1
+base-files	13ubuntu10.3
+base-passwd	3.6.3build1
+bash	5.2.21-2ubuntu4
+bash-completion	1:2.11-8
+bc	1.07.1-3ubuntu4
+binutils	2.42-4ubuntu2.8
+binutils-common:amd64	2.42-4ubuntu2.8
+binutils-x86-64-linux-gnu	2.42-4ubuntu2.8
+bsdextrautils	2.39.3-9ubuntu6.4
+bsdutils	1:2.39.3-9ubuntu6.4
+btrfs-progs	6.6.3-1.1build2
+bubblewrap	0.9.0-1ubuntu0.3
+build-essential	12.10ubuntu1
+bzip2	1.0.8-5.1build0.1
+ca-certificates	20240203
+cmake	3.28.3-1build7
+cmake-data	3.28.3-1build7
+comerr-dev:amd64	2.1-1.47.0-2.4~exp1ubuntu4.1
+coreutils	9.4-3ubuntu6.1
+cpp	4:13.2.0-7ubuntu1
+cpp-13	13.3.0-6ubuntu2~24.04
+cpp-13-x86-64-linux-gnu	13.3.0-6ubuntu2~24.04
+cpp-x86-64-linux-gnu	4:13.2.0-7ubuntu1
+curl	8.5.0-2ubuntu10.6
+dash	0.5.12-6ubuntu5
+dbus	1.14.10-4ubuntu4.1
+dbus-bin	1.14.10-4ubuntu4.1
+dbus-daemon	1.14.10-4ubuntu4.1
+dbus-session-bus-common	1.14.10-4ubuntu4.1
+dbus-system-bus-common	1.14.10-4ubuntu4.1
+dbus-user-session	1.14.10-4ubuntu4.1
+dbus-x11	1.14.10-4ubuntu4.1
+dconf-gsettings-backend:amd64	0.40.0-4ubuntu0.1
+dconf-service	0.40.0-4ubuntu0.1
+debconf	1.5.86ubuntu1
+debianutils	5.17build1
+default-libmysqlclient-dev:amd64	1.1.0build1
+diffutils	1:3.10-1build1
+dirmngr	2.4.4-2ubuntu17.4
+distro-info-data	0.60ubuntu0.5
+docutils-common	0.20.1+dfsg-3
+dpkg	1.22.6ubuntu6.5
+dpkg-dev	1.22.6ubuntu6.5
+e2fsprogs	1.47.0-2.4~exp1ubuntu4.1
+emacs-bin-common	1:29.3+1-1ubuntu2
+emacs-common	1:29.3+1-1ubuntu2
+emacs-el	1:29.3+1-1ubuntu2
+emacs-nox	1:29.3+1-1ubuntu2
+emacsen-common	3.0.5
+file	1:5.45-3build1
+findutils	4.9.0-5build1
+fish	3.7.0-1
+fish-common	3.7.0-1
+fontconfig	2.15.0-1.1ubuntu2
+fontconfig-config	2.15.0-1.1ubuntu2
+fonts-dejavu-core	2.37-8
+fonts-dejavu-mono	2.37-8
+fonts-urw-base35	20200910-8
+fuse-overlayfs	1.13-1
+fuse3	3.14.0-5build1
+g++	4:13.2.0-7ubuntu1
+g++-13	13.3.0-6ubuntu2~24.04
+g++-13-x86-64-linux-gnu	13.3.0-6ubuntu2~24.04
+g++-x86-64-linux-gnu	4:13.2.0-7ubuntu1
+gcc	4:13.2.0-7ubuntu1
+gcc-13	13.3.0-6ubuntu2~24.04
+gcc-13-base:amd64	13.3.0-6ubuntu2~24.04
+gcc-13-x86-64-linux-gnu	13.3.0-6ubuntu2~24.04
+gcc-14-base:amd64	14.2.0-4ubuntu2~24.04
+gcc-x86-64-linux-gnu	4:13.2.0-7ubuntu1
+gh	2.86.0
+gir1.2-atspi-2.0:amd64	2.52.0-1build1
+gir1.2-freedesktop-dev:amd64	1.80.1-1
+gir1.2-freedesktop:amd64	1.80.1-1
+gir1.2-gdkpixbuf-2.0:amd64	2.42.10+dfsg-3ubuntu3.2
+gir1.2-girepository-2.0-dev:amd64	1.80.1-1
+gir1.2-girepository-2.0:amd64	1.80.1-1
+gir1.2-glib-2.0-dev:amd64	2.80.0-6ubuntu3.7
+gir1.2-glib-2.0:amd64	2.80.0-6ubuntu3.7
+gir1.2-packagekitglib-1.0	1.2.8-2ubuntu1.4
+gir1.2-rsvg-2.0:amd64	2.58.0+dfsg-1build1
+git	1:2.43.0-1ubuntu7.3
+git-lfs	3.4.1-1ubuntu0.3
+git-man	1:2.43.0-1ubuntu7.3
+glib-networking-common	2.80.0-1build1
+glib-networking-services	2.80.0-1build1
+glib-networking:amd64	2.80.0-1build1
+gnome-desktop3-data	44.0-5build2
+gnome-settings-daemon-common	46.0-1ubuntu1.24.04.1
+gnupg	2.4.4-2ubuntu17.4
+gnupg-utils	2.4.4-2ubuntu17.4
+gobject-introspection-bin	1.80.1-1
+gobject-introspection:amd64	1.80.1-1
+gpg	2.4.4-2ubuntu17.4
+gpg-agent	2.4.4-2ubuntu17.4
+gpgconf	2.4.4-2ubuntu17.4
+gpgsm	2.4.4-2ubuntu17.4
+gpgv	2.4.4-2ubuntu17.4
+grep	3.11-4build1
+groff-base	1.23.0-3build2
+gsettings-desktop-schemas	46.1-0ubuntu1
+gtk-update-icon-cache	3.24.41-4ubuntu1.3
+gzip	1.12-1ubuntu3.1
+hicolor-icon-theme	0.17-2
+hostname	3.23+nmu2ubuntu2
+htop	3.3.0-4build1
+humanity-icon-theme	0.6.16
+icu-devtools	74.2-1ubuntu3.1
+ieee-data	20220827.1
+imagemagick	8:6.9.12.98+dfsg1-5.2build2
+imagemagick-6-common	8:6.9.12.98+dfsg1-5.2build2
+imagemagick-6.q16	8:6.9.12.98+dfsg1-5.2build2
+init-system-helpers	1.66ubuntu1
+install-info	7.1-3build2
+iproute2	6.1.0-1ubuntu6.2
+iptables	1.8.10-3ubuntu2
+iputils-ping	3:20240117-1ubuntu0.1
+iso-codes	4.16.0-1
+jq	1.7.1-3ubuntu0.24.04.1
+keyboxd	2.4.4-2ubuntu17.4
+krb5-multidev:amd64	1.20.1-6ubuntu2.6
+less	590-2ubuntu2.1
+libacl1:amd64	2.3.2-1build1.1
+libadwaita-1-0:amd64	1.5.0-1ubuntu2
+libaom3:amd64	3.8.2-2ubuntu0.1
+libapparmor1:amd64	4.0.1really4.0.1-0ubuntu0.24.04.5
+libappstream5:amd64	1.0.2-1build6
+libapr1t64:amd64	1.7.2-3.1ubuntu0.1
+libaprutil1t64:amd64	1.6.3-1.1ubuntu7
+libapt-pkg6.0t64:amd64	2.8.3
+libarchive13t64:amd64	3.7.2-2ubuntu0.5
+libargon2-1:amd64	0~20190702+dfsg-4build1
+libasan8:amd64	14.2.0-4ubuntu2~24.04
+libasound2-data	1.2.11-1ubuntu0.1
+libasound2-plugins:amd64	1.2.7.1-1ubuntu5
+libasound2t64:amd64	1.2.11-1ubuntu0.1
+libassuan0:amd64	2.5.6-1build1
+libasyncns0:amd64	0.8-6build4
+libatk-adaptor:amd64	2.52.0-1build1
+libatk-bridge2.0-0t64:amd64	2.52.0-1build1
+libatk1.0-0t64:amd64	2.52.0-1build1
+libatomic1:amd64	14.2.0-4ubuntu2~24.04
+libatspi2.0-0t64:amd64	2.52.0-1build1
+libattr1:amd64	1:2.5.2-1build1.1
+libaudit-common	1:3.1.2-2.1build1.1
+libaudit1:amd64	1:3.1.2-2.1build1.1
+libavahi-client3:amd64	0.8-13ubuntu6.1
+libavahi-common-data:amd64	0.8-13ubuntu6.1
+libavahi-common3:amd64	0.8-13ubuntu6.1
+libavcodec60:amd64	7:6.1.1-3ubuntu5
+libavutil58:amd64	7:6.1.1-3ubuntu5
+libbinutils:amd64	2.42-4ubuntu2.8
+libblas3:amd64	3.12.0-3build1.1
+libblkid-dev:amd64	2.39.3-9ubuntu6.4
+libblkid1:amd64	2.39.3-9ubuntu6.4
+libbpf1:amd64	1:1.3.0-2build2
+libbrotli-dev:amd64	1.1.0-2build2
+libbrotli1:amd64	1.1.0-2build2
+libbsd0:amd64	0.12.1-1build1.1
+libbz2-1.0:amd64	1.0.8-5.1build0.1
+libbz2-dev:amd64	1.0.8-5.1build0.1
+libc-bin	2.39-0ubuntu8.6
+libc-dev-bin	2.39-0ubuntu8.6
+libc6-dev:amd64	2.39-0ubuntu8.6
+libc6:amd64	2.39-0ubuntu8.6
+libcairo-gobject2:amd64	1.18.0-3build1
+libcairo-script-interpreter2:amd64	1.18.0-3build1
+libcairo2-dev:amd64	1.18.0-3build1
+libcairo2:amd64	1.18.0-3build1
+libcanberra0t64:amd64	0.30-10ubuntu10
+libcap-ng0:amd64	0.8.4-2build2
+libcap2-bin	1:2.66-5ubuntu2.2
+libcap2:amd64	1:2.66-5ubuntu2.2
+libcares2:amd64	1.27.0-1.0ubuntu1
+libcbor0.10:amd64	0.10.2-1.2ubuntu2
+libcc1-0:amd64	14.2.0-4ubuntu2~24.04
+libcodec2-1.2:amd64	1.2.0-2build1
+libcolord2:amd64	1.4.7-1build2
+libcom-err2:amd64	1.47.0-2.4~exp1ubuntu4.1
+libcrypt-dev:amd64	1:4.4.36-4build1
+libcrypt1:amd64	1:4.4.36-4build1
+libcryptsetup12:amd64	2:2.7.0-1ubuntu4.2
+libctf-nobfd0:amd64	2.42-4ubuntu2.8
+libctf0:amd64	2.42-4ubuntu2.8
+libcups2t64:amd64	2.4.7-1.2ubuntu7.14
+libcurl3t64-gnutls:amd64	8.5.0-2ubuntu10.6
+libcurl4-openssl-dev:amd64	8.5.0-2ubuntu10.6
+libcurl4t64:amd64	8.5.0-2ubuntu10.6
+libdatrie1:amd64	0.2.13-3build1
+libdav1d7:amd64	1.4.1-1build1
+libdb-dev:amd64	1:5.3.21ubuntu2
+libdb5.3-dev	5.3.28+dfsg2-7
+libdb5.3t64:amd64	5.3.28+dfsg2-7
+libdbus-1-3:amd64	1.14.10-4ubuntu4.1
+libdconf1:amd64	0.40.0-4ubuntu0.1
+libde265-0:amd64	1.0.15-1build3
+libdebconfclient0:amd64	0.271ubuntu3
+libdeflate-dev:amd64	1.19-1build1.1
+libdeflate0:amd64	1.19-1build1.1
+libdevmapper1.02.1:amd64	2:1.02.185-3ubuntu3.2
+libdjvulibre-dev:amd64	3.5.28-2ubuntu0.24.04.1
+libdjvulibre-text	3.5.28-2ubuntu0.24.04.1
+libdjvulibre21:amd64	3.5.28-2ubuntu0.24.04.1
+libdpkg-perl	1.22.6ubuntu6.5
+libdrm-amdgpu1:amd64	2.4.125-1ubuntu0.1~24.04.1
+libdrm-common	2.4.125-1ubuntu0.1~24.04.1
+libdrm-intel1:amd64	2.4.125-1ubuntu0.1~24.04.1
+libdrm2:amd64	2.4.125-1ubuntu0.1~24.04.1
+libduktape207:amd64	2.7.0+tests-0ubuntu3
+libdw1t64:amd64	0.190-1.1ubuntu0.1
+libedit2:amd64	3.1-20230828-1build1
+libegl-mesa0:amd64	25.2.8-0ubuntu0.24.04.3
+libegl1:amd64	1.7.0-1build1
+libeis1:amd64	1.2.1-1
+libelf1t64:amd64	0.190-1.1ubuntu0.1
+libepoxy0:amd64	1.5.10-1build1
+liberror-perl	0.17029-2
+libevdev2:amd64	1.13.1+dfsg-1build1
+libevent-2.1-7t64:amd64	2.1.12-stable-9ubuntu2
+libevent-core-2.1-7t64:amd64	2.1.12-stable-9ubuntu2
+libevent-dev	2.1.12-stable-9ubuntu2
+libevent-extra-2.1-7t64:amd64	2.1.12-stable-9ubuntu2
+libevent-openssl-2.1-7t64:amd64	2.1.12-stable-9ubuntu2
+libevent-pthreads-2.1-7t64:amd64	2.1.12-stable-9ubuntu2
+libexif-dev:amd64	0.6.24-1build2
+libexif12:amd64	0.6.24-1build2
+libexpat1-dev:amd64	2.6.1-2ubuntu0.3
+libexpat1:amd64	2.6.1-2ubuntu0.3
+libext2fs2t64:amd64	1.47.0-2.4~exp1ubuntu4.1
+libfdisk1:amd64	2.39.3-9ubuntu6.4
+libffi-dev:amd64	3.4.6-1build1
+libffi8:amd64	3.4.6-1build1
+libfftw3-double3:amd64	3.3.10-1ubuntu3
+libfftw3-single3:amd64	3.3.10-1ubuntu3
+libfido2-1:amd64	1.14.0-1build3
+libflac12t64:amd64	1.4.3+ds-2.1ubuntu2
+libfontconfig-dev:amd64	2.15.0-1.1ubuntu2
+libfontconfig1:amd64	2.15.0-1.1ubuntu2
+libfontenc1:amd64	1:1.1.8-1build1
+libfreetype-dev:amd64	2.13.2+dfsg-1build3
+libfreetype6:amd64	2.13.2+dfsg-1build3
+libfribidi0:amd64	1.0.13-3build1
+libfuse3-3:amd64	3.14.0-5build1
+libgbm1:amd64	25.2.8-0ubuntu0.24.04.3
+libgcc-13-dev:amd64	13.3.0-6ubuntu2~24.04
+libgcc-14-dev:amd64	14.2.0-4ubuntu2~24.04
+libgcc-s1:amd64	14.2.0-4ubuntu2~24.04
+libgccjit0:amd64	14.2.0-4ubuntu2~24.04
+libgcrypt20:amd64	1.10.3-2build1
+libgdbm-compat4t64:amd64	1.23-5.1build1
+libgdbm-dev:amd64	1.23-5.1build1
+libgdbm6t64:amd64	1.23-5.1build1
+libgdk-pixbuf-2.0-0:amd64	2.42.10+dfsg-3ubuntu3.2
+libgdk-pixbuf-2.0-dev:amd64	2.42.10+dfsg-3ubuntu3.2
+libgdk-pixbuf2.0-bin	2.42.10+dfsg-3ubuntu3.2
+libgdk-pixbuf2.0-common	2.42.10+dfsg-3ubuntu3.2
+libgfortran5:amd64	14.2.0-4ubuntu2~24.04
+libgif7:amd64	5.2.2-1ubuntu1.2
+libgirepository-1.0-1:amd64	1.80.1-1
+libgirepository-1.0-dev:amd64	1.80.1-1
+libgirepository-2.0-0:amd64	2.80.0-6ubuntu3.7
+libgirepository1.0-dev	1.80.1-1
+libgl1-mesa-dri:amd64	25.2.8-0ubuntu0.24.04.3
+libgl1:amd64	1.7.0-1build1
+libgles2:amd64	1.7.0-1build1
+libglib2.0-0t64:amd64	2.80.0-6ubuntu3.7
+libglib2.0-bin	2.80.0-6ubuntu3.7
+libglib2.0-data	2.80.0-6ubuntu3.7
+libglib2.0-dev-bin	2.80.0-6ubuntu3.7
+libglib2.0-dev:amd64	2.80.0-6ubuntu3.7
+libglvnd0:amd64	1.7.0-1build1
+libglx-mesa0:amd64	25.2.8-0ubuntu0.24.04.3
+libglx0:amd64	1.7.0-1build1
+libgmp-dev:amd64	2:6.3.0+dfsg-2ubuntu6.1
+libgmp10:amd64	2:6.3.0+dfsg-2ubuntu6.1
+libgmpxx4ldbl:amd64	2:6.3.0+dfsg-2ubuntu6.1
+libgnome-desktop-4-2t64:amd64	44.0-5build2
+libgnutls30t64:amd64	3.8.3-1.1ubuntu3.4
+libgomp1:amd64	14.2.0-4ubuntu2~24.04
+libgpg-error0:amd64	1.47-3build2.1
+libgpm2:amd64	1.20.7-11
+libgprofng0:amd64	2.42-4ubuntu2.8
+libgraphene-1.0-0:amd64	1.10.8-3build2
+libgraphite2-3:amd64	1.3.14-2build1
+libgs-common	10.02.1~dfsg1-0ubuntu7.9
+libgs10-common	10.02.1~dfsg1-0ubuntu7.9
+libgs10:amd64	10.02.1~dfsg1-0ubuntu7.9
+libgsm1:amd64	1.0.22-1build1
+libgssapi-krb5-2:amd64	1.20.1-6ubuntu2.6
+libgssrpc4t64:amd64	1.20.1-6ubuntu2.6
+libgstreamer-plugins-base1.0-0:amd64	1.24.2-1ubuntu0.5
+libgstreamer1.0-0:amd64	1.24.2-1ubuntu0.1
+libgtk-3-0t64:amd64	3.24.41-4ubuntu1.3
+libgtk-3-common	3.24.41-4ubuntu1.3
+libgtk-4-1:amd64	4.14.5+ds-0ubuntu0.10
+libgtk-4-common	4.14.5+ds-0ubuntu0.10
+libgudev-1.0-0:amd64	1:238-5ubuntu1
+libharfbuzz0b:amd64	8.3.0-2build2
+libheif-plugin-aomdec:amd64	1.17.6-1ubuntu4.2
+libheif-plugin-libde265:amd64	1.17.6-1ubuntu4.2
+libheif1:amd64	1.17.6-1ubuntu4.2
+libhogweed6t64:amd64	3.9.1-2.2build1.1
+libhwasan0:amd64	14.2.0-4ubuntu2~24.04
+libhwy1t64:amd64	1.0.7-8.1build1
+libice-dev:amd64	2:1.0.10-1build3
+libice6:amd64	2:1.0.10-1build3
+libicu-dev:amd64	74.2-1ubuntu3.1
+libicu74:amd64	74.2-1ubuntu3.1
+libid3tag0:amd64	0.15.1b-14build1
+libidn12:amd64	1.42-1ubuntu0.1
+libidn2-0:amd64	2.3.7-2build1.1
+libijs-0.35:amd64	0.35-15.1build1
+libimagequant0:amd64	2.18.0-1build1
+libimath-3-1-29t64:amd64	3.1.9-3.1ubuntu2
+libimath-dev:amd64	3.1.9-3.1ubuntu2
+libimlib2t64:amd64	1.12.1-1.1build2
+libinih1:amd64	55-1ubuntu2
+libinput-bin	1.25.0-1ubuntu3.7
+libinput10:amd64	1.25.0-1ubuntu3.7
+libip4tc2:amd64	1.8.10-3ubuntu2
+libip6tc2:amd64	1.8.10-3ubuntu2
+libisl23:amd64	0.26-3build1.1
+libitm1:amd64	14.2.0-4ubuntu2~24.04
+libjack-jackd2-0:amd64	1.9.21~dfsg-3ubuntu3
+libjansson4:amd64	2.14-2build2
+libjbig-dev:amd64	2.1-6.1ubuntu2
+libjbig0:amd64	2.1-6.1ubuntu2
+libjbig2dec0:amd64	0.20-1ubuntu0.24.04.1
+libjpeg-dev:amd64	8c-2ubuntu11
+libjpeg-turbo8-dev:amd64	2.1.5-2ubuntu2
+libjpeg-turbo8:amd64	2.1.5-2ubuntu2
+libjpeg8-dev:amd64	8c-2ubuntu11
+libjpeg8:amd64	8c-2ubuntu11
+libjq1:amd64	1.7.1-3ubuntu0.24.04.1
+libjson-c5:amd64	0.17-1build1
+libjson-glib-1.0-0:amd64	1.8.0-2build2
+libjson-glib-1.0-common	1.8.0-2build2
+libjsoncpp25:amd64	1.9.5-6build1
+libjxl0.7:amd64	0.7.0-10.2ubuntu6.1
+libk5crypto3:amd64	1.20.1-6ubuntu2.6
+libkadm5clnt-mit12:amd64	1.20.1-6ubuntu2.6
+libkadm5srv-mit12:amd64	1.20.1-6ubuntu2.6
+libkdb5-10t64:amd64	1.20.1-6ubuntu2.6
+libkeyutils1:amd64	1.6.3-3build1
+libkmod2:amd64	31+20240202-2ubuntu7.1
+libkrb5-3:amd64	1.20.1-6ubuntu2.6
+libkrb5-dev:amd64	1.20.1-6ubuntu2.6
+libkrb5support0:amd64	1.20.1-6ubuntu2.6
+libksba8:amd64	1.6.6-1build1
+liblapack3:amd64	3.12.0-3build1.1
+liblcms2-2:amd64	2.14-2build1
+liblcms2-dev:amd64	2.14-2build1
+libldap2:amd64	2.6.7+dfsg-1~exp1ubuntu8.2
+liblept5:amd64	1.82.0-3build4
+liblerc-dev:amd64	4.0.0+ds-4ubuntu2
+liblerc4:amd64	4.0.0+ds-4ubuntu2
+libllvm20:amd64	1:20.1.2-0ubuntu1~24.04.2
+liblqr-1-0-dev:amd64	0.4.2-2.1build2
+liblqr-1-0:amd64	0.4.2-2.1build2
+liblsan0:amd64	14.2.0-4ubuntu2~24.04
+libltdl-dev:amd64	2.4.7-7build1
+libltdl7:amd64	2.4.7-7build1
+liblz4-1:amd64	1.9.4-1build1.1
+liblzma-dev:amd64	5.6.1+really5.4.5-1ubuntu0.2
+liblzma5:amd64	5.6.1+really5.4.5-1ubuntu0.2
+liblzo2-2:amd64	2.10-2build4
+libmagic-mgc	1:5.45-3build1
+libmagic1t64:amd64	1:5.45-3build1
+libmagickcore-6-arch-config:amd64	8:6.9.12.98+dfsg1-5.2build2
+libmagickcore-6-headers	8:6.9.12.98+dfsg1-5.2build2
+libmagickcore-6.q16-7-extra:amd64	8:6.9.12.98+dfsg1-5.2build2
+libmagickcore-6.q16-7t64:amd64	8:6.9.12.98+dfsg1-5.2build2
+libmagickcore-6.q16-dev:amd64	8:6.9.12.98+dfsg1-5.2build2
+libmagickcore-dev	8:6.9.12.98+dfsg1-5.2build2
+libmagickwand-6-headers	8:6.9.12.98+dfsg1-5.2build2
+libmagickwand-6.q16-7t64:amd64	8:6.9.12.98+dfsg1-5.2build2
+libmagickwand-6.q16-dev:amd64	8:6.9.12.98+dfsg1-5.2build2
+libmagickwand-dev	8:6.9.12.98+dfsg1-5.2build2
+libmaxminddb-dev:amd64	1.9.1-1build1
+libmaxminddb0:amd64	1.9.1-1build1
+libmd0:amd64	1.1.0-2build1.1
+libmnl0:amd64	1.0.5-2build1
+libmount-dev:amd64	2.39.3-9ubuntu6.4
+libmount1:amd64	2.39.3-9ubuntu6.4
+libmp3lame0:amd64	3.100-6build1
+libmpc3:amd64	1.3.1-1build1.1
+libmpfr6:amd64	4.2.1-1build1.1
+libmpg123-0t64:amd64	1.32.5-1ubuntu1.1
+libmtdev1t64:amd64	1.1.6-1.1build1
+libmutter-14-0:amd64	46.2-1ubuntu0.24.04.16
+libmysqlclient-dev	8.0.44-0ubuntu0.24.04.2
+libmysqlclient21:amd64	8.0.44-0ubuntu0.24.04.2
+libncurses-dev:amd64	6.4+20240113-1ubuntu2.2
+libncurses6:amd64	6.4+20240113-1ubuntu2.2
+libncursesw6:amd64	6.4+20240113-1ubuntu2.2
+libnetfilter-conntrack3:amd64	1.0.9-6build1
+libnettle8t64:amd64	3.9.1-2.2build1.1
+libnfnetlink0:amd64	1.0.2-2build1
+libnftnl11:amd64	1.2.6-2build1
+libnghttp2-14:amd64	1.59.0-1ubuntu0.2
+libnl-3-200:amd64	3.7.0-0.3build1.1
+libnl-genl-3-200:amd64	3.7.0-0.3build1.1
+libnode109:amd64	18.19.1+dfsg-6ubuntu5
+libnpth0t64:amd64	1.6-3.1build1
+libnspr4:amd64	2:4.35-1.1build1
+libnss3:amd64	2:3.98-1build1
+libnuma1:amd64	2.0.18-1ubuntu0.24.04.1
+libnvidia-container-tools	1.19.0~rc.2-1
+libnvidia-container1:amd64	1.19.0~rc.2-1
+libnvpair3linux	2.2.2-0ubuntu9.4
+libobrender32v5	3.6.1-12build5
+libobt2v5:amd64	3.6.1-12build5
+libogg0:amd64	1.3.5-3build1
+libonig5:amd64	6.9.9-1build1
+libopenexr-3-1-30:amd64	3.1.5-5.1build3
+libopenexr-dev	3.1.5-5.1build3
+libopenjp2-7-dev:amd64	2.5.0-2ubuntu0.4
+libopenjp2-7:amd64	2.5.0-2ubuntu0.4
+libopus0:amd64	1.4-1build1
+liborc-0.4-0t64:amd64	1:0.4.38-1ubuntu0.1
+libp11-kit0:amd64	0.25.3-4ubuntu2.1
+libpackagekit-glib2-18:amd64	1.2.8-2ubuntu1.4
+libpam-modules-bin	1.5.3-5ubuntu5.5
+libpam-modules:amd64	1.5.3-5ubuntu5.5
+libpam-runtime	1.5.3-5ubuntu5.5
+libpam-systemd:amd64	255.4-1ubuntu8.12
+libpam0g:amd64	1.5.3-5ubuntu5.5
+libpango-1.0-0:amd64	1.52.1+ds-1build1
+libpangocairo-1.0-0:amd64	1.52.1+ds-1build1
+libpangoft2-1.0-0:amd64	1.52.1+ds-1build1
+libpangoxft-1.0-0:amd64	1.52.1+ds-1build1
+libpaper1:amd64	1.1.29build1
+libpciaccess0:amd64	0.17-3ubuntu0.24.04.2
+libpcre2-16-0:amd64	10.42-4ubuntu2.1
+libpcre2-32-0:amd64	10.42-4ubuntu2.1
+libpcre2-8-0:amd64	10.42-4ubuntu2.1
+libpcre2-dev:amd64	10.42-4ubuntu2.1
+libpcre2-posix3:amd64	10.42-4ubuntu2.1
+libperl5.38t64:amd64	5.38.2-3.2ubuntu0.2
+libpipeline1:amd64	1.5.7-2
+libpipewire-0.3-0t64:amd64	1.0.5-1ubuntu3.3
+libpixman-1-0:amd64	0.42.2-1build1
+libpixman-1-dev:amd64	0.42.2-1build1
+libpkgconf3:amd64	1.8.1-2build1
+libpng-dev:amd64	1.6.43-5ubuntu0.3
+libpng16-16t64:amd64	1.6.43-5ubuntu0.3
+libpolkit-agent-1-0:amd64	124-2ubuntu1.24.04.2
+libpolkit-gobject-1-0:amd64	124-2ubuntu1.24.04.2
+libpoppler134:amd64	24.02.0-1ubuntu9.8
+libpq-dev	16.11-0ubuntu0.24.04.1
+libpq5:amd64	16.11-0ubuntu0.24.04.1
+libproc2-0:amd64	2:4.0.4-4ubuntu3.2
+libproxy1v5:amd64	0.5.4-4build1
+libpsl5t64:amd64	0.21.2-1.1build1
+libpthread-stubs0-dev:amd64	0.4-1build3
+libpulse0:amd64	1:16.1+dfsg1-2ubuntu10.1
+libpython3-stdlib:amd64	3.12.3-0ubuntu2.1
+libpython3.12-minimal:amd64	3.12.3-1ubuntu0.10
+libpython3.12-stdlib:amd64	3.12.3-1ubuntu0.10
+libpython3.12t64:amd64	3.12.3-1ubuntu0.10
+libquadmath0:amd64	14.2.0-4ubuntu2~24.04
+libraqm0:amd64	0.10.1-1build1
+librav1e0:amd64	0.7.1-2
+libraw23t64:amd64	0.21.2-2.1ubuntu0.24.04.1
+libreadline-dev:amd64	8.2-4build1
+libreadline8t64:amd64	8.2-4build1
+libreiserfscore0t64	1:3.6.27-7.1build1
+librhash0:amd64	1.4.3-3build1
+librsvg2-2:amd64	2.58.0+dfsg-1build1
+librsvg2-common:amd64	2.58.0+dfsg-1build1
+librsvg2-dev:amd64	2.58.0+dfsg-1build1
+librtmp1:amd64	2.4+20151223.gitfa8646d.1-2build7
+libsamplerate0:amd64	0.2.2-4build1
+libsasl2-2:amd64	2.1.28+dfsg1-5ubuntu3.1
+libsasl2-modules-db:amd64	2.1.28+dfsg1-5ubuntu3.1
+libseccomp2:amd64	2.5.5-1ubuntu3.1
+libselinux1-dev:amd64	3.5-2ubuntu2.1
+libselinux1:amd64	3.5-2ubuntu2.1
+libsemanage-common	3.5-1build5
+libsemanage2:amd64	3.5-1build5
+libsensors-config	1:3.6.0-9build1
+libsensors5:amd64	1:3.6.0-9build1
+libsepol-dev:amd64	3.5-2build1
+libsepol2:amd64	3.5-2build1
+libserf-1-1:amd64	1.3.10-1ubuntu0.24.04.1
+libsframe1:amd64	2.42-4ubuntu2.8
+libsharpyuv-dev:amd64	1.3.2-0.4build3
+libsharpyuv0:amd64	1.3.2-0.4build3
+libshine3:amd64	3.1.1-2build1
+libsm-dev:amd64	2:1.2.3-1build3
+libsm6:amd64	2:1.2.3-1build3
+libsmartcols1:amd64	2.39.3-9ubuntu6.4
+libsnapd-glib-2-1:amd64	1.64-0ubuntu5
+libsnappy1v5:amd64	1.1.10-1build1
+libsndfile1:amd64	1.2.2-1ubuntu5.24.04.1
+libsodium23:amd64	1.0.18-1ubuntu0.24.04.1
+libsoup-3.0-0:amd64	3.4.4-5ubuntu0.8
+libsoup-3.0-common	3.4.4-5ubuntu0.8
+libsoxr0:amd64	0.1.3-4build3
+libspa-0.2-modules:amd64	1.0.5-1ubuntu3.3
+libspectre1:amd64	0.2.12-1build2
+libspeex1:amd64	1.2.1-2ubuntu2.24.04.1
+libspeexdsp1:amd64	1.2.1-1ubuntu3
+libsqlite3-0:amd64	3.45.1-1ubuntu2.5
+libsqlite3-dev:amd64	3.45.1-1ubuntu2.5
+libss2:amd64	1.47.0-2.4~exp1ubuntu4.1
+libssh-4:amd64	0.10.6-2ubuntu0.2
+libssl-dev:amd64	3.0.13-0ubuntu3.7
+libssl3t64:amd64	3.0.13-0ubuntu3.7
+libstartup-notification0:amd64	0.12-6build3
+libstdc++-13-dev:amd64	13.3.0-6ubuntu2~24.04
+libstdc++6:amd64	14.2.0-4ubuntu2~24.04
+libstemmer0d:amd64	2.2.0-4build1
+libsubid4:amd64	1:4.13+dfsg1-4ubuntu3.2
+libsvn1:amd64	1.14.3-1build4
+libsvtav1enc1d1:amd64	1.7.0+dfsg-2build1
+libswresample4:amd64	7:6.1.1-3ubuntu5
+libsystemd-shared:amd64	255.4-1ubuntu8.12
+libsystemd0:amd64	255.4-1ubuntu8.12
+libtasn1-6:amd64	4.19.0-3ubuntu0.24.04.2
+libtcl8.6:amd64	8.6.14+dfsg-1build1
+libtdb1:amd64	1.4.10-1build1
+libtesseract5:amd64	5.3.4-1build5
+libthai-data	0.1.29-2build1
+libthai0:amd64	0.1.29-2build1
+libtheora0:amd64	1.1.1+dfsg.1-16.1build3
+libtiff-dev:amd64	4.5.1+git230720-4ubuntu2.4
+libtiff6:amd64	4.5.1+git230720-4ubuntu2.4
+libtiffxx6:amd64	4.5.1+git230720-4ubuntu2.4
+libtinfo6:amd64	6.4+20240113-1ubuntu2.2
+libtirpc-common	1.3.4+ds-1.1build1
+libtirpc3t64:amd64	1.3.4+ds-1.1build1
+libtk8.6:amd64	8.6.14-1build1
+libtool	2.4.7-7build1
+libtree-sitter0:amd64	0.20.8-2
+libtsan2:amd64	14.2.0-4ubuntu2~24.04
+libtwolame0:amd64	0.4.0-2build3
+libubsan1:amd64	14.2.0-4ubuntu2~24.04
+libuchardet0:amd64	0.0.8-1build1
+libudev1:amd64	255.4-1ubuntu8.12
+libunistring5:amd64	1.1-2build1.1
+libunwind8:amd64	1.6.2-3build1.1
+liburcu8t64:amd64	0.14.0-3.1build1
+libutempter0:amd64	1.2.1-3build1
+libutf8proc3:amd64	2.9.0-1build1
+libuuid1:amd64	2.39.3-9ubuntu6.4
+libuutil3linux	2.2.2-0ubuntu9.4
+libuv1t64:amd64	1.48.0-1.1build1
+libva-drm2:amd64	2.20.0-2ubuntu0.2
+libva-x11-2:amd64	2.20.0-2ubuntu0.2
+libva2:amd64	2.20.0-2ubuntu0.2
+libvdpau1:amd64	1.5-2build1
+libvncclient1:amd64	0.9.14+dfsg-1build2
+libvncserver1:amd64	0.9.14+dfsg-1build2
+libvorbis0a:amd64	1.3.7-1build3
+libvorbisenc2:amd64	1.3.7-1build3
+libvorbisfile3:amd64	1.3.7-1build3
+libvpl2	2023.3.0-1build1
+libvpx9:amd64	1.14.0-1ubuntu2.3
+libvulkan1:amd64	1.3.275.0-1build1
+libwacom-common	2.10.0-2
+libwacom9:amd64	2.10.0-2
+libwayland-client0:amd64	1.22.0-2.1build1
+libwayland-cursor0:amd64	1.22.0-2.1build1
+libwayland-egl1:amd64	1.22.0-2.1build1
+libwayland-server0:amd64	1.22.0-2.1build1
+libwebp-dev:amd64	1.3.2-0.4build3
+libwebp7:amd64	1.3.2-0.4build3
+libwebpdecoder3:amd64	1.3.2-0.4build3
+libwebpdemux2:amd64	1.3.2-0.4build3
+libwebpmux3:amd64	1.3.2-0.4build3
+libwebrtc-audio-processing1:amd64	0.3.1-0ubuntu6
+libwmf-0.2-7:amd64	0.2.13-1.1build3
+libwmf-dev	0.2.13-1.1build3
+libwmflite-0.2-7:amd64	0.2.13-1.1build3
+libwrap0:amd64	7.6.q-33
+libx11-6:amd64	2:1.8.7-1build1
+libx11-data	2:1.8.7-1build1
+libx11-dev:amd64	2:1.8.7-1build1
+libx11-xcb1:amd64	2:1.8.7-1build1
+libx264-164:amd64	2:0.164.3108+git31e19f9-1
+libx265-199:amd64	3.5-2build1
+libxau-dev:amd64	1:1.0.9-1build6
+libxau6:amd64	1:1.0.9-1build6
+libxaw7:amd64	2:1.0.14-1build2
+libxcb-damage0:amd64	1.15-1ubuntu2
+libxcb-dri3-0:amd64	1.15-1ubuntu2
+libxcb-glx0:amd64	1.15-1ubuntu2
+libxcb-present0:amd64	1.15-1ubuntu2
+libxcb-randr0:amd64	1.15-1ubuntu2
+libxcb-render0-dev:amd64	1.15-1ubuntu2
+libxcb-render0:amd64	1.15-1ubuntu2
+libxcb-res0:amd64	1.15-1ubuntu2
+libxcb-shape0:amd64	1.15-1ubuntu2
+libxcb-shm0-dev:amd64	1.15-1ubuntu2
+libxcb-shm0:amd64	1.15-1ubuntu2
+libxcb-sync1:amd64	1.15-1ubuntu2
+libxcb-util1:amd64	0.4.0-1build3
+libxcb-xfixes0:amd64	1.15-1ubuntu2
+libxcb-xkb1:amd64	1.15-1ubuntu2
+libxcb1-dev:amd64	1.15-1ubuntu2
+libxcb1:amd64	1.15-1ubuntu2
+libxcomposite1:amd64	1:0.4.5-1build3
+libxcursor1:amd64	1:1.2.1-1build1
+libxdamage1:amd64	1:1.1.6-1build1
+libxdmcp-dev:amd64	1:1.1.3-0ubuntu6
+libxdmcp6:amd64	1:1.1.3-0ubuntu6
+libxdo3:amd64	1:3.20160805.1-5build1
+libxext-dev:amd64	2:1.3.4-1build2
+libxext6:amd64	2:1.3.4-1build2
+libxfixes3:amd64	1:6.0.0-2build1
+libxfont2:amd64	1:2.0.6-1build1
+libxft2:amd64	2.3.6-1build1
+libxi6:amd64	2:1.8.1-1build1
+libxinerama1:amd64	2:1.1.4-3build1
+libxkbcommon-x11-0:amd64	1.6.0-1build1
+libxkbcommon0:amd64	1.6.0-1build1
+libxkbfile1:amd64	1:1.1.0-1build4
+libxkbregistry0:amd64	1.6.0-1build1
+libxml2-dev:amd64	2.9.14+dfsg-1.3ubuntu3.7
+libxml2:amd64	2.9.14+dfsg-1.3ubuntu3.7
+libxmlb2:amd64	0.3.18-1
+libxmu6:amd64	2:1.1.3-3build2
+libxmuu1:amd64	2:1.1.3-3build2
+libxpm4:amd64	1:3.5.17-1build2
+libxrandr2:amd64	2:1.5.2-2build1
+libxrender-dev:amd64	1:0.9.10-1.1build1
+libxrender1:amd64	1:0.9.10-1.1build1
+libxshmfence1:amd64	1.3-1build5
+libxslt1-dev:amd64	1.1.39-0exp1ubuntu0.24.04.3
+libxslt1.1:amd64	1.1.39-0exp1ubuntu0.24.04.3
+libxss1:amd64	1:1.2.3-1build3
+libxt-dev:amd64	1:1.2.1-1.2build1
+libxt6t64:amd64	1:1.2.1-1.2build1
+libxtables12:amd64	1.8.10-3ubuntu2
+libxtst6:amd64	2:1.2.3-1.1build1
+libxv1:amd64	2:1.0.11-1.1build1
+libxvidcore4:amd64	2:1.3.7-1build1
+libxxf86dga1:amd64	2:1.1.5-1build1
+libxxf86vm1:amd64	1:1.1.4-1build4
+libxxhash0:amd64	0.8.2-2build1
+libyaml-0-2:amd64	0.2.5-1build1
+libyaml-dev:amd64	0.2.5-1build1
+libzfs4linux	2.2.2-0ubuntu9.4
+libzpool5linux	2.2.2-0ubuntu9.4
+libzstd-dev:amd64	1.5.5+dfsg2-2build1.1
+libzstd1:amd64	1.5.5+dfsg2-2build1.1
+libzvbi-common	0.2.42-2
+libzvbi0t64:amd64	0.2.42-2
+linux-libc-dev:amd64	6.8.0-94.96
+locales	2.39-0ubuntu8.6
+login	1:4.13+dfsg1-4ubuntu3.2
+logsave	1.47.0-2.4~exp1ubuntu4.1
+lsb-release	12.0-2
+lsof	4.95.0-1build3
+lto-disabled-list	47
+m4	1.4.19-4build1
+make	4.3-4.1build2
+man-db	2.12.0-4build2
+mawk	1.3.4.20240123-1build1
+media-types	10.1.0
+mercurial	6.7.2-1ubuntu2.2
+mercurial-common	6.7.2-1ubuntu2.2
+mesa-libgallium:amd64	25.2.8-0ubuntu0.24.04.3
+mount	2.39.3-9ubuntu6.4
+multitail	6.5.0-6
+mutter	46.2-1ubuntu0.24.04.16
+mutter-common	46.2-1ubuntu0.24.04.16
+mutter-common-bin	46.2-1ubuntu0.24.04.16
+mysql-common	5.8+1.1.0build1
+nano	7.2-2ubuntu0.1
+ncurses-base	6.4+20240113-1ubuntu2.2
+ncurses-bin	6.4+20240113-1ubuntu2.2
+ncurses-term	6.4+20240113-1ubuntu2.2
+net-tools	2.10-0.1ubuntu4.4
+netbase	6.4
+netcat-openbsd	1.226-1ubuntu2
+ninja-build	1.11.1-2
+node-acorn	8.8.1+ds+~cs25.17.7-2
+node-busboy	1.6.0+~cs2.6.0-2
+node-cjs-module-lexer	1.2.3+dfsg-1
+node-undici	5.26.3+dfsg1+~cs23.10.12-2
+node-xtend	4.0.2-3
+nodejs	18.19.1+dfsg-6ubuntu5
+novnc	1:1.3.0-2
+nvidia-container-toolkit	1.19.0~rc.2-1
+nvidia-container-toolkit-base	1.19.0~rc.2-1
+ocl-icd-libopencl1:amd64	2.3.2-1build1
+openbox	3.6.1-12build5
+openssh-client	1:9.6p1-3ubuntu13.20
+openssh-server	1:9.6p1-3ubuntu13.20
+openssh-sftp-server	1:9.6p1-3ubuntu13.20
+openssl	3.0.13-0ubuntu3.7
+packagekit	1.2.8-2ubuntu1.4
+passwd	1:4.13+dfsg1-4ubuntu3.2
+patch	2.7.6-7build3
+perl	5.38.2-3.2ubuntu0.2
+perl-base	5.38.2-3.2ubuntu0.2
+perl-modules-5.38	5.38.2-3.2ubuntu0.2
+pigz	2.8-1
+pinentry-curses	1.2.1-3ubuntu5
+pkgconf-bin	1.8.1-2build1
+pkgconf:amd64	1.8.1-2build1
+polkitd	124-2ubuntu1.24.04.2
+poppler-data	0.4.12-1
+poppler-utils	24.02.0-1ubuntu9.8
+procps	2:4.0.4-4ubuntu3.2
+psmisc	23.7-1build1
+pulseaudio	1:16.1+dfsg1-2ubuntu10.1
+pulseaudio-utils	1:16.1+dfsg1-2ubuntu10.1
+python-apt-common	2.7.7ubuntu5.1
+python-babel-localedata	2.10.3-3build1
+python3	3.12.3-0ubuntu2.1
+python3-apt	2.7.7ubuntu5.1
+python3-babel	2.10.3-3build1
+python3-blinker	1.7.0-1
+python3-certifi	2023.11.17-1
+python3-cffi-backend:amd64	1.16.0-2build1
+python3-chardet	5.2.0+dfsg-1
+python3-cryptography	41.0.7-4ubuntu0.1
+python3-dateutil	2.8.2-3ubuntu1
+python3-dbus	1.3.2-5build3
+python3-debtcollector	2.5.0-3
+python3-deprecated	1.2.14-1
+python3-distro	1.9.0-1
+python3-dnspython	2.6.1-1ubuntu1
+python3-docutils	0.20.1+dfsg-3
+python3-eventlet	0.35.2-0ubuntu1.1
+python3-gi	3.48.2-1
+python3-greenlet	3.0.3-0ubuntu5.1
+python3-httplib2	0.20.4-3
+python3-idna	3.6-2ubuntu0.1
+python3-importlib-metadata	4.12.0-1
+python3-iso8601	1.0.2-1
+python3-jwcrypto	1.5.4-1
+python3-jwt	2.7.0-1
+python3-launchpadlib	1.11.0-6
+python3-lazr.restfulclient	0.14.6-1
+python3-lazr.uri	1.0.6-3
+python3-mako	1.3.2-1
+python3-markdown	3.5.2-1
+python3-markupsafe	2.1.5-1build2
+python3-minimal	3.12.3-0ubuntu2.1
+python3-monotonic	1.6-2
+python3-more-itertools	10.2.0-1
+python3-msgpack	1.0.3-3build2
+python3-netaddr	0.8.0-2ubuntu1
+python3-netifaces:amd64	0.11.0-2build3
+python3-novnc	1:1.3.0-2
+python3-numpy	1:1.26.4+ds-6ubuntu1
+python3-oauthlib	3.2.2-1
+python3-oslo.config	1:9.4.0-0ubuntu1
+python3-oslo.context	1:5.5.0-0ubuntu1
+python3-oslo.i18n	6.3.0-0ubuntu1
+python3-oslo.log	5.5.1-0ubuntu1
+python3-oslo.serialization	5.4.0-0ubuntu1
+python3-oslo.utils	7.1.0-0ubuntu1
+python3-packaging	24.0-1
+python3-pbr	5.11.1-0ubuntu1
+python3-pil:amd64	10.2.0-1ubuntu1
+python3-pkg-resources	68.1.2-2ubuntu1.2
+python3-pyasyncore	1.0.2-2
+python3-pyinotify	0.9.6-2ubuntu1
+python3-pyparsing	3.1.1-1
+python3-requests	2.31.0+dfsg-1ubuntu1.1
+python3-rfc3986	2.0.0-2
+python3-roman	3.3-3
+python3-setuptools	68.1.2-2ubuntu1.2
+python3-six	1.16.0-4
+python3-software-properties	0.99.49.3
+python3-stevedore	1:5.1.0-0ubuntu1
+python3-typing-extensions	4.10.0-1
+python3-tz	2024.1-2
+python3-urllib3	2.0.7-1ubuntu0.6
+python3-wadllib	1.3.6-5
+python3-websockify	0.10.0+dfsg1-5build2
+python3-wrapt	1.15.0-2build3
+python3-yaml	6.0.1-2build2
+python3-zipp	1.0.0-6ubuntu0.1
+python3.12	3.12.3-1ubuntu0.10
+python3.12-minimal	3.12.3-1ubuntu0.10
+readline-common	8.2-4build1
+ripgrep	14.1.0-1
+rpcsvc-proto	1.4.2-0ubuntu7
+scrot	1.10-1build2
+sed	4.9-2build1
+sensible-utils	0.0.22
+session-migration	0.3.9build1
+sgml-base	1.31
+shared-mime-info	2.4-4
+socat	1.8.0.0-4build3
+software-properties-common	0.99.49.3
+sound-theme-freedesktop	0.8-2ubuntu1
+sq	0.33.0-3
+ssh-import-id	5.11-0ubuntu2.24.04.1
+sshpass	1.09-1
+ssl-cert	1.1.2ubuntu1
+stow	2.3.1-1
+subversion	1.14.3-1build4
+sudo	1.9.15p5-3ubuntu5.24.04.1
+systemd	255.4-1ubuntu8.12
+systemd-dev	255.4-1ubuntu8.12
+systemd-sysv	255.4-1ubuntu8.12
+sysvinit-utils	3.08-6ubuntu3
+tailscale	1.104.5
+tailscale-archive-keyring	1.35.181
+tar	1.35+dfsg-3build1
+tcl	8.6.14build1
+tcl8.6	8.6.14+dfsg-1build1
+tesseract-ocr	5.3.4-1build5
+tesseract-ocr-eng	1:4.1.0-2
+tesseract-ocr-osd	1:4.1.0-2
+time	1.9-0.2build1
+tint2	17.0.1-1.1build2
+tk	8.6.14build1
+tk8.6	8.6.14-1build1
+tzdata	2025b-0ubuntu0.24.04.1
+ubuntu-keyring	2023.11.28.1
+ubuntu-mono	24.04-0ubuntu1
+ucf	3.0043+nmu1
+uidmap	1:4.13+dfsg1-4ubuntu3.2
+unminimize	0.2.1
+unzip	6.0-28ubuntu4.1
+util-linux	2.39.3-9ubuntu6.4
+uuid-dev:amd64	2.39.3-9ubuntu6.4
+vim	2:9.1.0016-1ubuntu7.9
+vim-common	2:9.1.0016-1ubuntu7.9
+vim-runtime	2:9.1.0016-1ubuntu7.9
+websockify	0.10.0+dfsg1-5build2
+wget	1.21.4-1ubuntu4.1
+x11-apps	7.7+11build3
+x11-common	1:7.7+23ubuntu3
+x11-utils	7.7+6build2
+x11-xkb-utils	7.7+8build2
+x11-xserver-utils	7.7+10build2
+x11proto-core-dev	2023.2-1
+x11proto-dev	2023.2-1
+x11vnc	0.9.16-10
+xauth	1:1.1.2-1build1
+xbitmaps	1.1.1-2.2
+xclip	0.13-3
+xdotool	1:3.20160805.1-5build1
+xfonts-encodings	1:1.0.5-0ubuntu2
+xfonts-utils	1:7.7+6build3
+xfsprogs	6.6.0-1ubuntu2.1
+xkb-data	2.41-2ubuntu1.1
+xml-core	0.19
+xorg-sgml-doctools	1:1.11-1.1
+xsel	1.2.1-1
+xserver-common	2:21.1.12-1ubuntu1.8
+xterm	390-1ubuntu3
+xtrans-dev	1.4.0-1
+xvfb	2:21.1.12-1ubuntu1.8
+xz-utils	5.6.1+really5.4.5-1ubuntu0.2
+zenity	4.0.1-1build3
+zenity-common	4.0.1-1build3
+zfsutils-linux	2.2.2-0ubuntu9.4
+zip	3.0-13ubuntu0.2
+zlib1g-dev:amd64	1:1.3.dfsg-3.1ubuntu2.1
+zlib1g:amd64	1:1.3.dfsg-3.1ubuntu2.1
+zsh	5.9-6ubuntu2
+zsh-common	5.9-6ubuntu2
+
+### UPDATES ###
+Listing...
+apt/noble-updates,noble-security 2.8.4ubuntu0.1 amd64 [upgradable from: 2.8.3]
+base-files/noble-updates 13ubuntu10.5 amd64 [upgradable from: 13ubuntu10.3]
+binutils-common/noble-updates 2.42-4ubuntu2.10 amd64 [upgradable from: 2.42-4ubuntu2.8]
+binutils-x86-64-linux-gnu/noble-updates 2.42-4ubuntu2.10 amd64 [upgradable from: 2.42-4ubuntu2.8]
+binutils/noble-updates 2.42-4ubuntu2.10 amd64 [upgradable from: 2.42-4ubuntu2.8]
+bsdextrautils/noble-updates,noble-security 2.39.3-9ubuntu6.6 amd64 [upgradable from: 2.39.3-9ubuntu6.4]
+bsdutils/noble-updates,noble-security 1:2.39.3-9ubuntu6.6 amd64 [upgradable from: 1:2.39.3-9ubuntu6.4]
+bzip2/noble-updates,noble-security 1.0.8-5.1ubuntu0.1 amd64 [upgradable from: 1.0.8-5.1build0.1]
+ca-certificates/noble-updates,noble-security 20260816ubuntu0.24.04.2 all [upgradable from: 20240203]
+coreutils/noble-updates,noble-security 9.4-3ubuntu6.3 amd64 [upgradable from: 9.4-3ubuntu6.1]
+cpp-13-x86-64-linux-gnu/noble-updates,noble-security 13.3.0-6ubuntu2~24.04.1 amd64 [upgradable from: 13.3.0-6ubuntu2~24.04]
+cpp-13/noble-updates,noble-security 13.3.0-6ubuntu2~24.04.1 amd64 [upgradable from: 13.3.0-6ubuntu2~24.04]
+curl/noble-updates,noble-security 8.5.0-2ubuntu10.16 amd64 [upgradable from: 8.5.0-2ubuntu10.6]
+diffutils/noble-updates,noble-security 1:3.10-1ubuntu0.1 amd64 [upgradable from: 1:3.10-1build1]
+dirmngr/noble-updates,noble-security 2.4.4-2ubuntu17.6 amd64 [upgradable from: 2.4.4-2ubuntu17.4]
+distro-info-data/noble-updates,noble-security 2026.10.12-0ubuntu0.24.04.1 all [upgradable from: 0.60ubuntu0.5]
+dpkg-dev/noble-updates,noble-security 1.22.6ubuntu6.6 all [upgradable from: 1.22.6ubuntu6.5]
+dpkg/noble-updates,noble-security 1.22.6ubuntu6.6 amd64 [upgradable from: 1.22.6ubuntu6.5]
+g++-13-x86-64-linux-gnu/noble-updates,noble-security 13.3.0-6ubuntu2~24.04.1 amd64 [upgradable from: 13.3.0-6ubuntu2~24.04]
+g++-13/noble-updates,noble-security 13.3.0-6ubuntu2~24.04.1 amd64 [upgradable from: 13.3.0-6ubuntu2~24.04]
+gcc-13-base/noble-updates,noble-security 13.3.0-6ubuntu2~24.04.1 amd64 [upgradable from: 13.3.0-6ubuntu2~24.04]
+gcc-13-x86-64-linux-gnu/noble-updates,noble-security 13.3.0-6ubuntu2~24.04.1 amd64 [upgradable from: 13.3.0-6ubuntu2~24.04]
+gcc-13/noble-updates,noble-security 13.3.0-6ubuntu2~24.04.1 amd64 [upgradable from: 13.3.0-6ubuntu2~24.04]
+gcc-14-base/noble-updates,noble-security 14.2.0-4ubuntu2~24.04.1 amd64 [upgradable from: 14.2.0-4ubuntu2~24.04]
+gh/unknown 2.103.3 amd64 [upgradable from: 2.86.0]
+gir1.2-gdkpixbuf-2.0/noble-updates,noble-security 2.42.10+dfsg-3ubuntu3.3 amd64 [upgradable from: 2.42.10+dfsg-3ubuntu3.2]
+gir1.2-glib-2.0-dev/noble-updates 2.80.0-6ubuntu3.10 amd64 [upgradable from: 2.80.0-6ubuntu3.7]
+gir1.2-glib-2.0/noble-updates 2.80.0-6ubuntu3.10 amd64 [upgradable from: 2.80.0-6ubuntu3.7]
+gir1.2-packagekitglib-1.0/noble-updates,noble-security 1.2.8-2ubuntu1.5 amd64 [upgradable from: 1.2.8-2ubuntu1.4]
+gir1.2-rsvg-2.0/noble-updates,noble-security 2.58.0+dfsg-1ubuntu0.1 amd64 [upgradable from: 2.58.0+dfsg-1build1]
+git-lfs/noble-updates 3.4.1-1ubuntu0.4 amd64 [upgradable from: 3.4.1-1ubuntu0.3]
+git-man/noble-updates,noble-security 1:2.43.0-1ubuntu7.4 all [upgradable from: 1:2.43.0-1ubuntu7.3]
+git/noble-updates,noble-security 1:2.43.0-1ubuntu7.4 amd64 [upgradable from: 1:2.43.0-1ubuntu7.3]
+gnupg-utils/noble-updates,noble-security 2.4.4-2ubuntu17.6 amd64 [upgradable from: 2.4.4-2ubuntu17.4]
+gnupg/noble-updates,noble-security 2.4.4-2ubuntu17.6 all [upgradable from: 2.4.4-2ubuntu17.4]
+gpg-agent/noble-updates,noble-security 2.4.4-2ubuntu17.6 amd64 [upgradable from: 2.4.4-2ubuntu17.4]
+gpg/noble-updates,noble-security 2.4.4-2ubuntu17.6 amd64 [upgradable from: 2.4.4-2ubuntu17.4]
+gpgconf/noble-updates,noble-security 2.4.4-2ubuntu17.6 amd64 [upgradable from: 2.4.4-2ubuntu17.4]
+gpgsm/noble-updates,noble-security 2.4.4-2ubuntu17.6 amd64 [upgradable from: 2.4.4-2ubuntu17.4]
+gpgv/noble-updates,noble-security 2.4.4-2ubuntu17.6 amd64 [upgradable from: 2.4.4-2ubuntu17.4]
+gzip/noble-updates,noble-security 1.12-1ubuntu3.2 amd64 [upgradable from: 1.12-1ubuntu3.1]
+iproute2/noble-updates 6.1.0-1ubuntu6.4 amd64 [upgradable from: 6.1.0-1ubuntu6.2]
+jq/noble-updates,noble-security 1.7.1-3ubuntu0.24.04.2 amd64 [upgradable from: 1.7.1-3ubuntu0.24.04.1]
+keyboxd/noble-updates,noble-security 2.4.4-2ubuntu17.6 amd64 [upgradable from: 2.4.4-2ubuntu17.4]
+krb5-multidev/noble-updates 1.20.1-6ubuntu2.10 amd64 [upgradable from: 1.20.1-6ubuntu2.6]
+libaom3/noble-updates,noble-security 3.8.2-2ubuntu0.2 amd64 [upgradable from: 3.8.2-2ubuntu0.1]
+libapparmor1/noble-updates 4.0.1really4.0.1-0ubuntu0.24.04.9 amd64 [upgradable from: 4.0.1really4.0.1-0ubuntu0.24.04.5]
+libaprutil1t64/noble-updates,noble-security 1.6.3-1.1ubuntu7.1 amd64 [upgradable from: 1.6.3-1.1ubuntu7]
+libapt-pkg6.0t64/noble-updates,noble-security 2.8.4ubuntu0.1 amd64 [upgradable from: 2.8.3]
+libarchive13t64/noble-updates,noble-security 3.7.2-2ubuntu0.9 amd64 [upgradable from: 3.7.2-2ubuntu0.5]
+libasan8/noble-updates,noble-security 14.2.0-4ubuntu2~24.04.1 amd64 [upgradable from: 14.2.0-4ubuntu2~24.04]
+libasound2-data/noble-updates,noble-security 1.2.11-1ubuntu0.3 all [upgradable from: 1.2.11-1ubuntu0.1]
+libasound2t64/noble-updates,noble-security 1.2.11-1ubuntu0.3 amd64 [upgradable from: 1.2.11-1ubuntu0.1]
+libatomic1/noble-updates,noble-security 14.2.0-4ubuntu2~24.04.1 amd64 [upgradable from: 14.2.0-4ubuntu2~24.04]
+libattr1/noble-updates,noble-security 1:2.5.2-1ubuntu0.1 amd64 [upgradable from: 1:2.5.2-1build1.1]
+libaudit-common/noble-updates 1:3.1.2-2.1ubuntu0.1 all [upgradable from: 1:3.1.2-2.1build1.1]
+libaudit1/noble-updates 1:3.1.2-2.1ubuntu0.1 amd64 [upgradable from: 1:3.1.2-2.1build1.1]
+libavahi-client3/noble-updates,noble-security 0.8-13ubuntu6.2 amd64 [upgradable from: 0.8-13ubuntu6.1]
+libavahi-common-data/noble-updates,noble-security 0.8-13ubuntu6.2 amd64 [upgradable from: 0.8-13ubuntu6.1]
+libavahi-common3/noble-updates,noble-security 0.8-13ubuntu6.2 amd64 [upgradable from: 0.8-13ubuntu6.1]
+libbinutils/noble-updates 2.42-4ubuntu2.10 amd64 [upgradable from: 2.42-4ubuntu2.8]
+libblkid-dev/noble-updates,noble-security 2.39.3-9ubuntu6.6 amd64 [upgradable from: 2.39.3-9ubuntu6.4]
+libblkid1/noble-updates,noble-security 2.39.3-9ubuntu6.6 amd64 [upgradable from: 2.39.3-9ubuntu6.4]
+libbrotli-dev/noble-updates,noble-security 1.1.0-2ubuntu0.1 amd64 [upgradable from: 1.1.0-2build2]
+libbrotli1/noble-updates,noble-security 1.1.0-2ubuntu0.1 amd64 [upgradable from: 1.1.0-2build2]
+libbz2-1.0/noble-updates,noble-security 1.0.8-5.1ubuntu0.1 amd64 [upgradable from: 1.0.8-5.1build0.1]
+libbz2-dev/noble-updates,noble-security 1.0.8-5.1ubuntu0.1 amd64 [upgradable from: 1.0.8-5.1build0.1]
+libc-bin/noble-updates,noble-security 2.39-0ubuntu8.9 amd64 [upgradable from: 2.39-0ubuntu8.6]
+libc-dev-bin/noble-updates,noble-security 2.39-0ubuntu8.9 amd64 [upgradable from: 2.39-0ubuntu8.6]
+libc6-dev/noble-updates,noble-security 2.39-0ubuntu8.9 amd64 [upgradable from: 2.39-0ubuntu8.6]
+libc6/noble-updates,noble-security 2.39-0ubuntu8.9 amd64 [upgradable from: 2.39-0ubuntu8.6]
+libcap2-bin/noble-updates,noble-security 1:2.66-5ubuntu2.4 amd64 [upgradable from: 1:2.66-5ubuntu2.2]
+libcap2/noble-updates,noble-security 1:2.66-5ubuntu2.4 amd64 [upgradable from: 1:2.66-5ubuntu2.2]
+libcares2/noble-updates,noble-security 1.27.0-1.0ubuntu1.1 amd64 [upgradable from: 1.27.0-1.0ubuntu1]
+libcc1-0/noble-updates,noble-security 14.2.0-4ubuntu2~24.04.1 amd64 [upgradable from: 14.2.0-4ubuntu2~24.04]
+libctf-nobfd0/noble-updates 2.42-4ubuntu2.10 amd64 [upgradable from: 2.42-4ubuntu2.8]
+libctf0/noble-updates 2.42-4ubuntu2.10 amd64 [upgradable from: 2.42-4ubuntu2.8]
+libcurl3t64-gnutls/noble-updates,noble-security 8.5.0-2ubuntu10.16 amd64 [upgradable from: 8.5.0-2ubuntu10.6]
+libcurl4-openssl-dev/noble-updates,noble-security 8.5.0-2ubuntu10.16 amd64 [upgradable from: 8.5.0-2ubuntu10.6]
+libcurl4t64/noble-updates,noble-security 8.5.0-2ubuntu10.16 amd64 [upgradable from: 8.5.0-2ubuntu10.6]
+libde265-0/noble-updates,noble-security 1.0.15-1ubuntu0.2 amd64 [upgradable from: 1.0.15-1build3]
+libdjvulibre-dev/noble-updates,noble-security 3.5.28-2ubuntu0.24.04.2 amd64 [upgradable from: 3.5.28-2ubuntu0.24.04.1]
+libdjvulibre-text/noble-updates,noble-security 3.5.28-2ubuntu0.24.04.2 all [upgradable from: 3.5.28-2ubuntu0.24.04.1]
+libdjvulibre21/noble-updates,noble-security 3.5.28-2ubuntu0.24.04.2 amd64 [upgradable from: 3.5.28-2ubuntu0.24.04.1]
+libdpkg-perl/noble-updates,noble-security 1.22.6ubuntu6.6 all [upgradable from: 1.22.6ubuntu6.5]
+libdrm-amdgpu1/noble-updates,noble-security 2.4.125-1ubuntu0.1~24.04.2 amd64 [upgradable from: 2.4.125-1ubuntu0.1~24.04.1]
+libdrm-common/noble-updates,noble-security 2.4.125-1ubuntu0.1~24.04.2 all [upgradable from: 2.4.125-1ubuntu0.1~24.04.1]
+libdrm-intel1/noble-updates,noble-security 2.4.125-1ubuntu0.1~24.04.2 amd64 [upgradable from: 2.4.125-1ubuntu0.1~24.04.1]
+libdrm2/noble-updates,noble-security 2.4.125-1ubuntu0.1~24.04.2 amd64 [upgradable from: 2.4.125-1ubuntu0.1~24.04.1]
+libegl-mesa0/noble-updates 25.2.8-0ubuntu0.24.04.4 amd64 [upgradable from: 25.2.8-0ubuntu0.24.04.3]
+libevent-2.1-7t64/noble-updates,noble-security 2.1.12-stable-9ubuntu2.2 amd64 [upgradable from: 2.1.12-stable-9ubuntu2]
+libevent-core-2.1-7t64/noble-updates,noble-security 2.1.12-stable-9ubuntu2.2 amd64 [upgradable from: 2.1.12-stable-9ubuntu2]
+libevent-dev/noble-updates,noble-security 2.1.12-stable-9ubuntu2.2 amd64 [upgradable from: 2.1.12-stable-9ubuntu2]
+libevent-extra-2.1-7t64/noble-updates,noble-security 2.1.12-stable-9ubuntu2.2 amd64 [upgradable from: 2.1.12-stable-9ubuntu2]
+libevent-openssl-2.1-7t64/noble-updates,noble-security 2.1.12-stable-9ubuntu2.2 amd64 [upgradable from: 2.1.12-stable-9ubuntu2]
+libevent-pthreads-2.1-7t64/noble-updates,noble-security 2.1.12-stable-9ubuntu2.2 amd64 [upgradable from: 2.1.12-stable-9ubuntu2]
+libexif-dev/noble-updates,noble-security 0.6.24-1ubuntu0.24.04.1 amd64 [upgradable from: 0.6.24-1build2]
+libexif12/noble-updates,noble-security 0.6.24-1ubuntu0.24.04.1 amd64 [upgradable from: 0.6.24-1build2]
+libexpat1-dev/noble-updates,noble-security 2.6.1-2ubuntu0.6 amd64 [upgradable from: 2.6.1-2ubuntu0.3]
+libexpat1/noble-updates,noble-security 2.6.1-2ubuntu0.6 amd64 [upgradable from: 2.6.1-2ubuntu0.3]
+libfdisk1/noble-updates,noble-security 2.39.3-9ubuntu6.6 amd64 [upgradable from: 2.39.3-9ubuntu6.4]
+libfreetype-dev/noble-updates,noble-security 2.13.2+dfsg-1ubuntu0.2 amd64 [upgradable from: 2.13.2+dfsg-1build3]
+libfreetype6/noble-updates,noble-security 2.13.2+dfsg-1ubuntu0.2 amd64 [upgradable from: 2.13.2+dfsg-1build3]
+libgbm1/noble-updates 25.2.8-0ubuntu0.24.04.4 amd64 [upgradable from: 25.2.8-0ubuntu0.24.04.3]
+libgcc-13-dev/noble-updates,noble-security 13.3.0-6ubuntu2~24.04.1 amd64 [upgradable from: 13.3.0-6ubuntu2~24.04]
+libgcc-14-dev/noble-updates,noble-security 14.2.0-4ubuntu2~24.04.1 amd64 [upgradable from: 14.2.0-4ubuntu2~24.04]
+libgcc-s1/noble-updates,noble-security 14.2.0-4ubuntu2~24.04.1 amd64 [upgradable from: 14.2.0-4ubuntu2~24.04]
+libgccjit0/noble-updates,noble-security 14.2.0-4ubuntu2~24.04.1 amd64 [upgradable from: 14.2.0-4ubuntu2~24.04]
+libgcrypt20/noble-updates,noble-security 1.10.3-2ubuntu0.2 amd64 [upgradable from: 1.10.3-2build1]
+libgdk-pixbuf-2.0-0/noble-updates,noble-security 2.42.10+dfsg-3ubuntu3.3 amd64 [upgradable from: 2.42.10+dfsg-3ubuntu3.2]
+libgdk-pixbuf-2.0-dev/noble-updates,noble-security 2.42.10+dfsg-3ubuntu3.3 amd64 [upgradable from: 2.42.10+dfsg-3ubuntu3.2]
+libgdk-pixbuf2.0-bin/noble-updates,noble-security 2.42.10+dfsg-3ubuntu3.3 amd64 [upgradable from: 2.42.10+dfsg-3ubuntu3.2]
+libgdk-pixbuf2.0-common/noble-updates,noble-security 2.42.10+dfsg-3ubuntu3.3 all [upgradable from: 2.42.10+dfsg-3ubuntu3.2]
+libgfortran5/noble-updates,noble-security 14.2.0-4ubuntu2~24.04.1 amd64 [upgradable from: 14.2.0-4ubuntu2~24.04]
+libgirepository-2.0-0/noble-updates 2.80.0-6ubuntu3.10 amd64 [upgradable from: 2.80.0-6ubuntu3.7]
+libgl1-mesa-dri/noble-updates 25.2.8-0ubuntu0.24.04.4 amd64 [upgradable from: 25.2.8-0ubuntu0.24.04.3]
+libglib2.0-0t64/noble-updates 2.80.0-6ubuntu3.10 amd64 [upgradable from: 2.80.0-6ubuntu3.7]
+libglib2.0-bin/noble-updates 2.80.0-6ubuntu3.10 amd64 [upgradable from: 2.80.0-6ubuntu3.7]
+libglib2.0-data/noble-updates 2.80.0-6ubuntu3.10 all [upgradable from: 2.80.0-6ubuntu3.7]
+libglib2.0-dev-bin/noble-updates 2.80.0-6ubuntu3.10 amd64 [upgradable from: 2.80.0-6ubuntu3.7]
+libglib2.0-dev/noble-updates 2.80.0-6ubuntu3.10 amd64 [upgradable from: 2.80.0-6ubuntu3.7]
+libglx-mesa0/noble-updates 25.2.8-0ubuntu0.24.04.4 amd64 [upgradable from: 25.2.8-0ubuntu0.24.04.3]
+libgnutls30t64/noble-updates,noble-security 3.8.3-1.1ubuntu3.6 amd64 [upgradable from: 3.8.3-1.1ubuntu3.4]
+libgomp1/noble-updates,noble-security 14.2.0-4ubuntu2~24.04.1 amd64 [upgradable from: 14.2.0-4ubuntu2~24.04]
+libgprofng0/noble-updates 2.42-4ubuntu2.10 amd64 [upgradable from: 2.42-4ubuntu2.8]
+libgraphite2-3/noble-updates,noble-security 1.3.14-2ubuntu0.24.04.1 amd64 [upgradable from: 1.3.14-2build1]
+libgs-common/noble-updates,noble-security 10.02.1~dfsg1-0ubuntu7.10 all [upgradable from: 10.02.1~dfsg1-0ubuntu7.9]
+libgs10-common/noble-updates,noble-security 10.02.1~dfsg1-0ubuntu7.10 all [upgradable from: 10.02.1~dfsg1-0ubuntu7.9]
+libgs10/noble-updates,noble-security 10.02.1~dfsg1-0ubuntu7.10 amd64 [upgradable from: 10.02.1~dfsg1-0ubuntu7.9]
+libgssapi-krb5-2/noble-updates 1.20.1-6ubuntu2.10 amd64 [upgradable from: 1.20.1-6ubuntu2.6]
+libgssrpc4t64/noble-updates 1.20.1-6ubuntu2.10 amd64 [upgradable from: 1.20.1-6ubuntu2.6]
+libheif-plugin-aomdec/noble-updates,noble-security 1.17.6-1ubuntu4.9 amd64 [upgradable from: 1.17.6-1ubuntu4.2]
+libheif-plugin-libde265/noble-updates,noble-security 1.17.6-1ubuntu4.9 amd64 [upgradable from: 1.17.6-1ubuntu4.2]
+libheif1/noble-updates,noble-security 1.17.6-1ubuntu4.9 amd64 [upgradable from: 1.17.6-1ubuntu4.2]
+libhwasan0/noble-updates,noble-security 14.2.0-4ubuntu2~24.04.1 amd64 [upgradable from: 14.2.0-4ubuntu2~24.04]
+libitm1/noble-updates,noble-security 14.2.0-4ubuntu2~24.04.1 amd64 [upgradable from: 14.2.0-4ubuntu2~24.04]
+libjq1/noble-updates,noble-security 1.7.1-3ubuntu0.24.04.2 amd64 [upgradable from: 1.7.1-3ubuntu0.24.04.1]
+libk5crypto3/noble-updates 1.20.1-6ubuntu2.10 amd64 [upgradable from: 1.20.1-6ubuntu2.6]
+libkadm5clnt-mit12/noble-updates 1.20.1-6ubuntu2.10 amd64 [upgradable from: 1.20.1-6ubuntu2.6]
+libkadm5srv-mit12/noble-updates 1.20.1-6ubuntu2.10 amd64 [upgradable from: 1.20.1-6ubuntu2.6]
+libkdb5-10t64/noble-updates 1.20.1-6ubuntu2.10 amd64 [upgradable from: 1.20.1-6ubuntu2.6]
+libkmod2/noble-updates,noble-security 31+20240202-2ubuntu7.2 amd64 [upgradable from: 31+20240202-2ubuntu7.1]
+libkrb5-3/noble-updates 1.20.1-6ubuntu2.10 amd64 [upgradable from: 1.20.1-6ubuntu2.6]
+libkrb5-dev/noble-updates 1.20.1-6ubuntu2.10 amd64 [upgradable from: 1.20.1-6ubuntu2.6]
+libkrb5support0/noble-updates 1.20.1-6ubuntu2.10 amd64 [upgradable from: 1.20.1-6ubuntu2.6]
+liblcms2-2/noble-updates,noble-security 2.14-2ubuntu0.1 amd64 [upgradable from: 2.14-2build1]
+liblcms2-dev/noble-updates,noble-security 2.14-2ubuntu0.1 amd64 [upgradable from: 2.14-2build1]
+libldap2/noble-updates 2.6.10+dfsg-0ubuntu0.24.04.1 amd64 [upgradable from: 2.6.7+dfsg-1~exp1ubuntu8.2]
+libllvm20/noble-updates,noble-security 1:20.1.2-0ubuntu1~24.04.3 amd64 [upgradable from: 1:20.1.2-0ubuntu1~24.04.2]
+liblsan0/noble-updates,noble-security 14.2.0-4ubuntu2~24.04.1 amd64 [upgradable from: 14.2.0-4ubuntu2~24.04]
+liblzma-dev/noble-updates,noble-security 5.6.1+really5.4.5-1ubuntu0.4 amd64 [upgradable from: 5.6.1+really5.4.5-1ubuntu0.2]
+liblzma5/noble-updates,noble-security 5.6.1+really5.4.5-1ubuntu0.4 amd64 [upgradable from: 5.6.1+really5.4.5-1ubuntu0.2]
+libmount-dev/noble-updates,noble-security 2.39.3-9ubuntu6.6 amd64 [upgradable from: 2.39.3-9ubuntu6.4]
+libmount1/noble-updates,noble-security 2.39.3-9ubuntu6.6 amd64 [upgradable from: 2.39.3-9ubuntu6.4]
+libmutter-14-0/noble-updates 46.2-1ubuntu0.24.04.18 amd64 [upgradable from: 46.2-1ubuntu0.24.04.16]
+libmysqlclient-dev/noble-updates,noble-security 8.0.46-0ubuntu0.24.04.4 amd64 [upgradable from: 8.0.44-0ubuntu0.24.04.2]
+libmysqlclient21/noble-updates,noble-security 8.0.46-0ubuntu0.24.04.4 amd64 [upgradable from: 8.0.44-0ubuntu0.24.04.2]
+libnghttp2-14/noble-updates,noble-security 1.59.0-1ubuntu0.4 amd64 [upgradable from: 1.59.0-1ubuntu0.2]
+libnss3/noble-updates,noble-security 2:3.98-1ubuntu0.3 amd64 [upgradable from: 2:3.98-1build1]
+libnvidia-container-tools/unknown 1.20.2-1 amd64 [upgradable from: 1.19.0~rc.2-1]
+libnvidia-container1/unknown 1.20.2-1 amd64 [upgradable from: 1.19.0~rc.2-1]
+libnvpair3linux/noble-updates,noble-security 2.2.2-0ubuntu9.5 amd64 [upgradable from: 2.2.2-0ubuntu9.4]
+libopenjp2-7-dev/noble-updates,noble-security 2.5.0-2ubuntu0.5 amd64 [upgradable from: 2.5.0-2ubuntu0.4]
+libopenjp2-7/noble-updates,noble-security 2.5.0-2ubuntu0.5 amd64 [upgradable from: 2.5.0-2ubuntu0.4]
+libp11-kit0/noble-updates,noble-security 0.25.3-4ubuntu2.2 amd64 [upgradable from: 0.25.3-4ubuntu2.1]
+libpackagekit-glib2-18/noble-updates,noble-security 1.2.8-2ubuntu1.5 amd64 [upgradable from: 1.2.8-2ubuntu1.4]
+libpam-modules-bin/noble-updates,noble-security 1.5.3-5ubuntu5.7 amd64 [upgradable from: 1.5.3-5ubuntu5.5]
+libpam-modules/noble-updates,noble-security 1.5.3-5ubuntu5.7 amd64 [upgradable from: 1.5.3-5ubuntu5.5]
+libpam-runtime/noble-updates,noble-security 1.5.3-5ubuntu5.7 all [upgradable from: 1.5.3-5ubuntu5.5]
+libpam-systemd/noble-updates,noble-security 255.4-1ubuntu8.18 amd64 [upgradable from: 255.4-1ubuntu8.12]
+libpam0g/noble-updates,noble-security 1.5.3-5ubuntu5.7 amd64 [upgradable from: 1.5.3-5ubuntu5.5]
+libpciaccess0/noble-updates 0.17-3ubuntu0.24.04.3 amd64 [upgradable from: 0.17-3ubuntu0.24.04.2]
+libpcre2-16-0/noble-updates,noble-security 10.42-4ubuntu2.2 amd64 [upgradable from: 10.42-4ubuntu2.1]
+libpcre2-32-0/noble-updates,noble-security 10.42-4ubuntu2.2 amd64 [upgradable from: 10.42-4ubuntu2.1]
+libpcre2-8-0/noble-updates,noble-security 10.42-4ubuntu2.2 amd64 [upgradable from: 10.42-4ubuntu2.1]
+libpcre2-dev/noble-updates,noble-security 10.42-4ubuntu2.2 amd64 [upgradable from: 10.42-4ubuntu2.1]
+libpcre2-posix3/noble-updates,noble-security 10.42-4ubuntu2.2 amd64 [upgradable from: 10.42-4ubuntu2.1]
+libperl5.38t64/noble-updates,noble-security 5.38.2-3.2ubuntu0.6 amd64 [upgradable from: 5.38.2-3.2ubuntu0.2]
+libpng-dev/noble-updates,noble-security 1.6.43-5ubuntu0.7 amd64 [upgradable from: 1.6.43-5ubuntu0.3]
+libpng16-16t64/noble-updates,noble-security 1.6.43-5ubuntu0.7 amd64 [upgradable from: 1.6.43-5ubuntu0.3]
+libpolkit-agent-1-0/noble-updates,noble-security 124-2ubuntu1.24.04.4 amd64 [upgradable from: 124-2ubuntu1.24.04.2]
+libpolkit-gobject-1-0/noble-updates,noble-security 124-2ubuntu1.24.04.4 amd64 [upgradable from: 124-2ubuntu1.24.04.2]
+libpoppler134/noble-updates,noble-security 24.02.0-1ubuntu9.11 amd64 [upgradable from: 24.02.0-1ubuntu9.8]
+libpq-dev/noble-updates,noble-security 16.15-0ubuntu0.24.04.1 amd64 [upgradable from: 16.11-0ubuntu0.24.04.1]
+libpq5/noble-updates,noble-security 16.15-0ubuntu0.24.04.1 amd64 [upgradable from: 16.11-0ubuntu0.24.04.1]
+libproc2-0/noble-updates 2:4.0.4-4ubuntu3.3 amd64 [upgradable from: 2:4.0.4-4ubuntu3.2]
+libpython3.12-minimal/noble-updates,noble-security 3.12.3-1ubuntu0.17 amd64 [upgradable from: 3.12.3-1ubuntu0.10]
+libpython3.12-stdlib/noble-updates,noble-security 3.12.3-1ubuntu0.17 amd64 [upgradable from: 3.12.3-1ubuntu0.10]
+libpython3.12t64/noble-updates,noble-security 3.12.3-1ubuntu0.17 amd64 [upgradable from: 3.12.3-1ubuntu0.10]
+libquadmath0/noble-updates,noble-security 14.2.0-4ubuntu2~24.04.1 amd64 [upgradable from: 14.2.0-4ubuntu2~24.04]
+libraw23t64/noble-updates,noble-security 0.21.2-2.1ubuntu0.24.04.2 amd64 [upgradable from: 0.21.2-2.1ubuntu0.24.04.1]
+librsvg2-2/noble-updates,noble-security 2.58.0+dfsg-1ubuntu0.1 amd64 [upgradable from: 2.58.0+dfsg-1build1]
+librsvg2-common/noble-updates,noble-security 2.58.0+dfsg-1ubuntu0.1 amd64 [upgradable from: 2.58.0+dfsg-1build1]
+librsvg2-dev/noble-updates,noble-security 2.58.0+dfsg-1ubuntu0.1 amd64 [upgradable from: 2.58.0+dfsg-1build1]
+libsframe1/noble-updates 2.42-4ubuntu2.10 amd64 [upgradable from: 2.42-4ubuntu2.8]
+libsmartcols1/noble-updates,noble-security 2.39.3-9ubuntu6.6 amd64 [upgradable from: 2.39.3-9ubuntu6.4]
+libsoup-3.0-0/noble-updates,noble-security 3.4.4-5ubuntu0.10 amd64 [upgradable from: 3.4.4-5ubuntu0.8]
+libsoup-3.0-common/noble-updates,noble-security 3.4.4-5ubuntu0.10 all [upgradable from: 3.4.4-5ubuntu0.8]
+libsqlite3-0/noble-updates 3.45.1-1ubuntu2.9 amd64 [upgradable from: 3.45.1-1ubuntu2.5]
+libsqlite3-dev/noble-updates 3.45.1-1ubuntu2.9 amd64 [upgradable from: 3.45.1-1ubuntu2.5]
+libssh-4/noble-updates,noble-security 0.10.6-2ubuntu0.5 amd64 [upgradable from: 0.10.6-2ubuntu0.2]
+libssl-dev/noble-updates,noble-security 3.0.13-0ubuntu3.16 amd64 [upgradable from: 3.0.13-0ubuntu3.7]
+libssl3t64/noble-updates,noble-security 3.0.13-0ubuntu3.16 amd64 [upgradable from: 3.0.13-0ubuntu3.7]
+libstdc++-13-dev/noble-updates,noble-security 13.3.0-6ubuntu2~24.04.1 amd64 [upgradable from: 13.3.0-6ubuntu2~24.04]
+libstdc++6/noble-updates,noble-security 14.2.0-4ubuntu2~24.04.1 amd64 [upgradable from: 14.2.0-4ubuntu2~24.04]
+libsystemd-shared/noble-updates,noble-security 255.4-1ubuntu8.18 amd64 [upgradable from: 255.4-1ubuntu8.12]
+libsystemd0/noble-updates,noble-security 255.4-1ubuntu8.18 amd64 [upgradable from: 255.4-1ubuntu8.12]
+libtiff-dev/noble-updates,noble-security 4.5.1+git230720-4ubuntu2.5 amd64 [upgradable from: 4.5.1+git230720-4ubuntu2.4]
+libtiff6/noble-updates,noble-security 4.5.1+git230720-4ubuntu2.5 amd64 [upgradable from: 4.5.1+git230720-4ubuntu2.4]
+libtiffxx6/noble-updates,noble-security 4.5.1+git230720-4ubuntu2.5 amd64 [upgradable from: 4.5.1+git230720-4ubuntu2.4]
+libtsan2/noble-updates,noble-security 14.2.0-4ubuntu2~24.04.1 amd64 [upgradable from: 14.2.0-4ubuntu2~24.04]
+libubsan1/noble-updates,noble-security 14.2.0-4ubuntu2~24.04.1 amd64 [upgradable from: 14.2.0-4ubuntu2~24.04]
+libudev1/noble-updates,noble-security 255.4-1ubuntu8.18 amd64 [upgradable from: 255.4-1ubuntu8.12]
+libuuid1/noble-updates,noble-security 2.39.3-9ubuntu6.6 amd64 [upgradable from: 2.39.3-9ubuntu6.4]
+libuutil3linux/noble-updates,noble-security 2.2.2-0ubuntu9.5 amd64 [upgradable from: 2.2.2-0ubuntu9.4]
+libvncclient1/noble-updates,noble-security 0.9.14+dfsg-1ubuntu0.2 amd64 [upgradable from: 0.9.14+dfsg-1build2]
+libvncserver1/noble-updates,noble-security 0.9.14+dfsg-1ubuntu0.2 amd64 [upgradable from: 0.9.14+dfsg-1build2]
+libx11-6/noble-updates,noble-security 2:1.8.7-1ubuntu0.1 amd64 [upgradable from: 2:1.8.7-1build1]
+libx11-data/noble-updates,noble-security 2:1.8.7-1ubuntu0.1 all [upgradable from: 2:1.8.7-1build1]
+libx11-dev/noble-updates,noble-security 2:1.8.7-1ubuntu0.1 amd64 [upgradable from: 2:1.8.7-1build1]
+libx11-xcb1/noble-updates,noble-security 2:1.8.7-1ubuntu0.1 amd64 [upgradable from: 2:1.8.7-1build1]
+libxfont2/noble-updates,noble-security 1:2.0.6-1+deb13u1build0.24.04.2 amd64 [upgradable from: 1:2.0.6-1build1]
+libxml2-dev/noble-updates,noble-security 2.9.14+dfsg-1.3ubuntu3.10 amd64 [upgradable from: 2.9.14+dfsg-1.3ubuntu3.7]
+libxml2/noble-updates,noble-security 2.9.14+dfsg-1.3ubuntu3.10 amd64 [upgradable from: 2.9.14+dfsg-1.3ubuntu3.7]
+libxmlb2/noble-updates 0.3.24-1~ubuntu0.24.04.1 amd64 [upgradable from: 0.3.18-1]
+libxpm4/noble-updates,noble-security 1:3.5.17-1ubuntu0.24.04.2 amd64 [upgradable from: 1:3.5.17-1build2]
+libxtst6/noble-updates,noble-security 2:1.2.3-1.1ubuntu0.1 amd64 [upgradable from: 2:1.2.3-1.1build1]
+libzfs4linux/noble-updates,noble-security 2.2.2-0ubuntu9.5 amd64 [upgradable from: 2.2.2-0ubuntu9.4]
+libzpool5linux/noble-updates,noble-security 2.2.2-0ubuntu9.5 amd64 [upgradable from: 2.2.2-0ubuntu9.4]
+linux-libc-dev/noble-updates 6.8.0-149.149 amd64 [upgradable from: 6.8.0-94.96]
+locales/noble-updates,noble-security 2.39-0ubuntu8.9 all [upgradable from: 2.39-0ubuntu8.6]
+mesa-libgallium/noble-updates 25.2.8-0ubuntu0.24.04.4 amd64 [upgradable from: 25.2.8-0ubuntu0.24.04.3]
+mount/noble-updates,noble-security 2.39.3-9ubuntu6.6 amd64 [upgradable from: 2.39.3-9ubuntu6.4]
+mutter-common-bin/noble-updates 46.2-1ubuntu0.24.04.18 amd64 [upgradable from: 46.2-1ubuntu0.24.04.16]
+mutter-common/noble-updates 46.2-1ubuntu0.24.04.18 all [upgradable from: 46.2-1ubuntu0.24.04.16]
+mutter/noble-updates 46.2-1ubuntu0.24.04.18 amd64 [upgradable from: 46.2-1ubuntu0.24.04.16]
+nano/noble-updates,noble-security 7.2-2ubuntu0.2 amd64 [upgradable from: 7.2-2ubuntu0.1]
+nvidia-container-toolkit-base/unknown 1.20.2-1 amd64 [upgradable from: 1.19.0~rc.2-1]
+nvidia-container-toolkit/unknown 1.20.2-1 amd64 [upgradable from: 1.19.0~rc.2-1]
+openssl/noble-updates,noble-security 3.0.13-0ubuntu3.16 amd64 [upgradable from: 3.0.13-0ubuntu3.7]
+packagekit/noble-updates,noble-security 1.2.8-2ubuntu1.5 amd64 [upgradable from: 1.2.8-2ubuntu1.4]
+perl-base/noble-updates,noble-security 5.38.2-3.2ubuntu0.6 amd64 [upgradable from: 5.38.2-3.2ubuntu0.2]
+perl-modules-5.38/noble-updates,noble-security 5.38.2-3.2ubuntu0.6 all [upgradable from: 5.38.2-3.2ubuntu0.2]
+perl/noble-updates,noble-security 5.38.2-3.2ubuntu0.6 amd64 [upgradable from: 5.38.2-3.2ubuntu0.2]
+polkitd/noble-updates,noble-security 124-2ubuntu1.24.04.4 amd64 [upgradable from: 124-2ubuntu1.24.04.2]
+poppler-utils/noble-updates,noble-security 24.02.0-1ubuntu9.11 amd64 [upgradable from: 24.02.0-1ubuntu9.8]
+procps/noble-updates 2:4.0.4-4ubuntu3.3 amd64 [upgradable from: 2:4.0.4-4ubuntu3.2]
+python-apt-common/noble-updates 2.7.7ubuntu5.3 all [upgradable from: 2.7.7ubuntu5.1]
+python3-apt/noble-updates 2.7.7ubuntu5.3 amd64 [upgradable from: 2.7.7ubuntu5.1]
+python3-cryptography/noble-updates,noble-security 41.0.7-4ubuntu0.4 amd64 [upgradable from: 41.0.7-4ubuntu0.1]
+python3-httplib2/noble-updates,noble-security 0.20.4-3ubuntu0.1 all [upgradable from: 0.20.4-3]
+python3-idna/noble-updates,noble-security 3.6-2ubuntu0.2 all [upgradable from: 3.6-2ubuntu0.1]
+python3-jwt/noble-updates,noble-security 2.7.0-1ubuntu0.4 all [upgradable from: 2.7.0-1]
+python3-mako/noble-updates,noble-security 1.3.2-1ubuntu0.1 all [upgradable from: 1.3.2-1]
+python3-pil/noble-updates,noble-security 10.2.0-1ubuntu1.4 amd64 [upgradable from: 10.2.0-1ubuntu1]
+python3-requests/noble-updates,noble-security 2.31.0+dfsg-1ubuntu1.2 all [upgradable from: 2.31.0+dfsg-1ubuntu1.1]
+python3-software-properties/noble-updates 0.99.49.4 all [upgradable from: 0.99.49.3]
+python3-urllib3/noble-updates,noble-security 2.0.7-1ubuntu0.8 all [upgradable from: 2.0.7-1ubuntu0.6]
+python3.12-minimal/noble-updates,noble-security 3.12.3-1ubuntu0.17 amd64 [upgradable from: 3.12.3-1ubuntu0.10]
+python3.12/noble-updates,noble-security 3.12.3-1ubuntu0.17 amd64 [upgradable from: 3.12.3-1ubuntu0.10]
+sed/noble-updates,noble-security 4.9-2ubuntu0.24.04.1 amd64 [upgradable from: 4.9-2build1]
+socat/noble-updates,noble-security 1.8.0.0-4ubuntu0.1 amd64 [upgradable from: 1.8.0.0-4build3]
+software-properties-common/noble-updates 0.99.49.4 all [upgradable from: 0.99.49.3]
+sudo/noble-updates,noble-security 1.9.15p5-3ubuntu5.24.04.4 amd64 [upgradable from: 1.9.15p5-3ubuntu5.24.04.1]
+systemd-dev/noble-updates,noble-security 255.4-1ubuntu8.18 all [upgradable from: 255.4-1ubuntu8.12]
+systemd-sysv/noble-updates,noble-security 255.4-1ubuntu8.18 amd64 [upgradable from: 255.4-1ubuntu8.12]
+systemd/noble-updates,noble-security 255.4-1ubuntu8.18 amd64 [upgradable from: 255.4-1ubuntu8.12]
+tar/noble-updates,noble-security 1.35+dfsg-3ubuntu0.4 amd64 [upgradable from: 1.35+dfsg-3build1]
+tzdata/noble-updates,noble-security 2026e-0ubuntu0.24.04.1 all [upgradable from: 2025b-0ubuntu0.24.04.1]
+util-linux/noble-updates,noble-security 2.39.3-9ubuntu6.6 amd64 [upgradable from: 2.39.3-9ubuntu6.4]
+uuid-dev/noble-updates,noble-security 2.39.3-9ubuntu6.6 amd64 [upgradable from: 2.39.3-9ubuntu6.4]
+vim-common/noble-updates,noble-security 2:9.1.0016-1ubuntu7.20 all [upgradable from: 2:9.1.0016-1ubuntu7.9]
+vim-runtime/noble-updates,noble-security 2:9.1.0016-1ubuntu7.20 all [upgradable from: 2:9.1.0016-1ubuntu7.9]
+vim/noble-updates,noble-security 2:9.1.0016-1ubuntu7.20 amd64 [upgradable from: 2:9.1.0016-1ubuntu7.9]
+wget/noble-updates,noble-security 1.21.4-1ubuntu4.5 amd64 [upgradable from: 1.21.4-1ubuntu4.1]
+xserver-common/noble-updates 2:21.1.12-1ubuntu1.9 all [upgradable from: 2:21.1.12-1ubuntu1.8]
+xvfb/noble-updates 2:21.1.12-1ubuntu1.9 amd64 [upgradable from: 2:21.1.12-1ubuntu1.8]
+xz-utils/noble-updates,noble-security 5.6.1+really5.4.5-1ubuntu0.4 amd64 [upgradable from: 5.6.1+really5.4.5-1ubuntu0.2]
+zfsutils-linux/noble-updates,noble-security 2.2.2-0ubuntu9.5 amd64 [upgradable from: 2.2.2-0ubuntu9.4]
+zlib1g-dev/noble-updates,noble-security 1:1.3.dfsg-3.1ubuntu2.3 amd64 [upgradable from: 1:1.3.dfsg-3.1ubuntu2.1]
+zlib1g/noble-updates,noble-security 1:1.3.dfsg-3.1ubuntu2.3 amd64 [upgradable from: 1:1.3.dfsg-3.1ubuntu2.1]
+2026-11-10 04:40 cli.github.com_packages_dists_stable_InRelease
+2026-11-10 05:35 dl.google.com_linux_chrome_deb_dists_stable_InRelease
+2026-02-20 06:36 apt.llvm.org_focal_dists_llvm-toolchain-focal-15_InRelease
+2026-11-10 06:54 nvidia.github.io_libnvidia-container_stable_deb_amd64_InRelease
+2026-11-10 06:54 nvidia.github.io_libnvidia-container_experimental_deb_amd64_InRelease
+2026-11-10 15:40 pkgs.tailscale.com_stable_ubuntu_dists_noble_InRelease
+2024-04-25 23:11 mirrors.cloud.tencent.com_ubuntu_dists_noble_InRelease
+2026-11-09 13:12 mirrors.cloud.tencent.com_ubuntu_dists_noble-updates_InRelease
+2026-11-09 11:09 mirrors.cloud.tencent.com_ubuntu_dists_noble-security_InRelease
+
+### LOG_COUNTS ###
+No journal files were found.
+Archived and active journals take up 0B in the file system.
+Counter()
+
+### CGROUP_MOUNTS ###
+TARGET                  SOURCE FSTYPE  OPTIONS
+/sys/fs/cgroup          cgroup cgroup2 rw,nosuid,nodev,noexec,relatime
+/.oldroot/sys/fs/cgroup cgroup cgroup2 rw,nosuid,nodev,noexec,relatime
+0::/init.scope
+151533
+353
+43:13760 rbytes=16384 wbytes=442368 rios=1 wios=32 dbytes=0 dios=0
+43:19296 rbytes=0 wbytes=368640 rios=0 wios=30 dbytes=0 dios=0
+43:8960 rbytes=0 wbytes=1581056 rios=0 wios=104 dbytes=0 dios=0
+43:23072 rbytes=0 wbytes=3399680 rios=0 wios=220 dbytes=0 dios=0
+43:6304 rbytes=0 wbytes=1187840 rios=0 wios=85 dbytes=0 dios=0
+43:4928 rbytes=0 wbytes=3301376 rios=0 wios=214 dbytes=0 dios=0
+43:27552 rbytes=0 wbytes=770048 rios=0 wios=52 dbytes=0 dios=0
+43:736 rbytes=0 wbytes=802816 rios=0 wios=54 dbytes=0 dios=0
+43:27200 rbytes=0 wbytes=2072576 rios=0 wios=139 dbytes=0 dios=0
+43:26848 rbytes=0 wbytes=3661824 rios=0 wios=236 dbytes=0 dios=0
+43:5920 rbytes=0 wbytes=2940928 rios=0 wios=192 dbytes=0 dios=0
+43:25856 rbytes=0 wbytes=3907584 rios=0 wios=251 dbytes=0 dios=0
+43:24960 rbytes=0 wbytes=1646592 rios=0 wios=113 dbytes=0 dios=0
+43:14912 rbytes=0 wbytes=1531904 rios=0 wios=106 dbytes=0 dios=0
+43:4736 rbytes=0 wbytes=1679360 rios=0 wios=115 dbytes=0 dios=0
+253:0 rbytes=0 wbytes=137728 rios=0 wios=5 dbytes=0 dios=0
+43:30784 rbytes=77824 wbytes=423399424 rios=11 wios=14928 dbytes=0 dios=0
+253:16 rbytes=6754304 wbytes=0 rios=152 wios=0 dbytes=0 dios=0
+253:32 rbytes=333021184 wbytes=888832 rios=1306 wios=130 dbytes=0 dios=0
+
+### BOOT_FILES ###
+/root/.bashrc
+644 root 3456 2026-02-03 03:02:42.000000000 +0800
+/root/.profile
+644 root 161 2024-04-22 21:04:27.000000000 +0800
+/etc/profile
+644 root 582 2024-04-22 21:04:27.000000000 +0800
+/etc/bash.bashrc
+644 root 2319 2024-03-31 16:41:03.000000000 +0800

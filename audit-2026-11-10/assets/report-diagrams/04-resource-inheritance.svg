@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1100" viewBox="0 0 1400 1100">
+<title>图 2-1  资源视图与配额继承</title>
+<desc>规划任务应以可见父级 cgroup 限制为依据｜基于 2026-11-10 检查</desc>
+<defs>
+<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#176B99"/></marker>
+<marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#A86C16"/></marker>
+<marker id="arrow-slate" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#64788C"/></marker>
+</defs>
+<rect width="1400" height="1100" fill="white"/>
+<g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="40" y="42" width="7" height="38" rx="3" fill="#137B77"/>
+<text x="64" y="75.0" text-anchor="start" font-size="34" fill="#16324F" font-weight="700">图 2-1  资源视图与配额继承</text>
+<text x="64" y="109.0" text-anchor="start" font-size="18" fill="#52647A" font-weight="400">规划任务应以可见父级 cgroup 限制为依据｜基于 2026-11-10 检查</text>
+<rect x="60" y="350" width="1280" height="570" rx="18" fill="#F6F9FC" stroke="#A9BED0" stroke-width="1.5"/>
+<text x="84" y="387.0" text-anchor="start" font-size="22" fill="#16324F" font-weight="700">本工作区的资源边界 · 子级无法突破父级限制</text>
+<polyline points="700,290 700,425" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="700,545 700,625" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="700,735 700,780 270,780 270,825" fill="none" stroke="#A86C16" stroke-width="2.3" stroke-linejoin="round" stroke-dasharray="8 6" marker-end="url(#arrow-amber)"/>
+<polyline points="700,735 700,780 700,780 700,825" fill="none" stroke="#A86C16" stroke-width="2.3" stroke-linejoin="round" stroke-dasharray="8 6" marker-end="url(#arrow-amber)"/>
+<polyline points="700,735 700,780 1130,780 1130,825" fill="none" stroke="#A86C16" stroke-width="2.3" stroke-linejoin="round" stroke-dasharray="8 6" marker-end="url(#arrow-amber)"/>
+<rect x="340" y="180" width="720" height="110" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="700.0" y="210.72" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">系统工具显示的上层资源</text>
+<text x="700.0" y="250.27" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">32 个逻辑 CPU / 约 123.32 GiB 内存</text>
+<text x="700.0" y="277.82" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">可见范围不代表容器独占资源</text>
+<rect x="340" y="425" width="720" height="120" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="700.0" y="460.71999999999997" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">可见父级 cgroup</text>
+<text x="700.0" y="500.27" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">CPU：400000 / 100000 ≈ 4 核算力配额</text>
+<text x="700.0" y="527.8199999999999" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">内存：8 GiB；进程 / 线程数：151533</text>
+<rect x="340" y="625" width="720" height="110" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="700.0" y="655.72" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">检查进程所在 init.scope</text>
+<text x="700.0" y="695.27" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">CPU、内存、进程数限制显示 max</text>
+<text x="700.0" y="722.82" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">仍然继承父级上限</text>
+<rect x="110" y="825" width="320" height="65" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="270.0" y="865.27" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">平台服务（示意）</text>
+<rect x="540" y="825" width="320" height="65" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="700.0" y="865.27" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">项目任务（示意）</text>
+<rect x="970" y="825" width="320" height="65" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="1130.0" y="865.27" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">内部 Docker 任务（示意）</text>
+<rect x="605.0" y="308" width="190.0" height="28" rx="5" fill="white"/>
+<text x="700" y="328.0" text-anchor="middle" font-size="17" fill="#176B99" font-weight="400">实际预算以限制值为准</text>
+<rect x="613.5" y="570" width="173.0" height="28" rx="5" fill="white"/>
+<text x="700" y="590.0" text-anchor="middle" font-size="17" fill="#176B99" font-weight="400">限制沿层级向下生效</text>
+<text x="70" y="969.0" text-anchor="start" font-size="19" fill="#52647A" font-weight="400">平台服务、项目进程和内部 Docker 任务共同消耗外层配额；max 不表示无限资源。</text>
+<text x="70" y="997.5" text-anchor="start" font-size="19" fill="#52647A" font-weight="400">任务分组为示意，未逐一核对所有进程及未来子容器的 cgroup 路径。</text>
+<text x="70" y="1026.0" text-anchor="start" font-size="19" fill="#52647A" font-weight="400">/dev/shm 的 8 GiB 容量不是额外内存；短时采样也不构成长期性能保证。</text>
+</g></svg>

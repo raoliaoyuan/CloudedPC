@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1160" viewBox="0 0 1400 1160">
+<title>图 7-1  权限控制与实例证据边界</title>
+<desc>青色：官方控制项；蓝色：历史助手陈述；橙色虚线：缺少本实例证据</desc>
+<defs>
+<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#176B99"/></marker>
+<marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#137B77"/></marker>
+<marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#A86C16"/></marker>
+<marker id="arrow-slate" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#64788C"/></marker>
+</defs>
+<rect width="1400" height="1160" fill="white"/>
+<g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="40" y="42" width="7" height="38" rx="3" fill="#137B77"/>
+<text x="64" y="75.0" text-anchor="start" font-size="34" fill="#16324F" font-weight="700">图 7-1  权限控制与实例证据边界</text>
+<text x="64" y="112.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">青色：官方控制项；蓝色：历史助手陈述；橙色虚线：缺少本实例证据</text>
+<polyline points="700,290 700,350 255,350 255,410" fill="none" stroke="#137B77" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-teal)"/>
+<polyline points="700,290 700,350 700,350 700,410" fill="none" stroke="#137B77" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-teal)"/>
+<polyline points="700,290 700,350 1145,350 1145,410" fill="none" stroke="#137B77" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-teal)"/>
+<rect x="350" y="175" width="700" height="115" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="700.0" y="219.51" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">拥有者授权与适用工作区规则〔官方〕</text>
+<text x="700.0" y="269.21" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">连接的账号权限与动作限制共同约束任务</text>
+<rect x="55" y="410" width="400" height="140" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="255.0" y="468.46000000000004" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">浏览器访问〔官方〕</text>
+<text x="255.0" y="515.26" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">网站访问与已登录账号范围</text>
+<rect x="500" y="410" width="400" height="140" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="700.0" y="468.46000000000004" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">代码与 Shell 联网〔官方〕</text>
+<text x="700.0" y="515.26" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">代码发起的网络访问</text>
+<rect x="945" y="410" width="400" height="140" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="1145.0" y="468.46000000000004" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">桌面交互〔官方〕</text>
+<text x="1145.0" y="515.26" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">查看与交互能力</text>
+<rect x="180" y="655" width="1040" height="120" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="700.0" y="702.735" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">需要审查的动作适用 Auto-review〔官方〕</text>
+<text x="700.0" y="750.985" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">此框表示动作审查机制，不是网络代理或某个已确认的本地进程</text>
+<rect x="70" y="875" width="580" height="150" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="360.0" y="918.16" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">助手报告的限制〔记录〕</text>
+<text x="360.0" y="967.86" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">称没有管理员权限和 TUN</text>
+<text x="360.0" y="1005.56" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">不足以证明所有进程均非 root</text>
+<rect x="750" y="875" width="580" height="150" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="1040.0" y="918.16" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">本实例仍缺少〔未确认〕</text>
+<text x="1040.0" y="967.86" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">id、capabilities、seccomp</text>
+<text x="1040.0" y="1005.56" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">SSH、防火墙与完整策略证据</text>
+<text x="60" y="1102.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">来源：[O2]；[A #012、#021、#024]。控制项彼此独立，不能由一个入口推定其他入口。</text>
+</g></svg>

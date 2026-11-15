@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850">
+<title>图 5-1  服务管理结构</title>
+<desc>Supervisor 配置与运行进程对应关系｜检查日期：2026-11-10</desc>
+<defs>
+<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#176B99"/></marker>
+<marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#A86C16"/></marker>
+<marker id="arrow-slate" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#64788C"/></marker>
+</defs>
+<rect width="1400" height="850" fill="white"/>
+<g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="40" y="42" width="7" height="38" rx="3" fill="#137B77"/>
+<text x="64" y="75.0" text-anchor="start" font-size="34" fill="#16324F" font-weight="700">图 5-1  服务管理结构</text>
+<text x="64" y="109.0" text-anchor="start" font-size="18" fill="#52647A" font-weight="400">Supervisor 配置与运行进程对应关系｜检查日期：2026-11-10</text>
+<rect x="40" y="160" width="1320" height="600" rx="18" fill="#F6F9FC" stroke="#A9BED0" stroke-width="1.5"/>
+<text x="64" y="197.0" text-anchor="start" font-size="22" fill="#16324F" font-weight="700">WorkBuddy 执行容器 · 064f56bb22e3</text>
+<polyline points="700,313 700,365" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="700,457 700,505 150,505 150,555" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="700,457 700,505 370,505 370,555" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="700,457 700,505 590,505 590,555" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="700,457 700,505 810,505 810,555" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="700,457 700,505 1030,505 1030,555" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="700,457 700,505 1250,505 1250,555" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<rect x="500" y="225" width="400" height="88" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="700.0" y="258.495" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">docker-init</text>
+<text x="700.0" y="298.045" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">容器 PID 1</text>
+<rect x="500" y="365" width="400" height="92" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="700.0" y="400.495" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">supervisord</text>
+<text x="700.0" y="440.045" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">平台主要服务管理器</text>
+<rect x="50" y="555" width="200" height="145" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="150.0" y="606.8299999999999" text-anchor="middle" font-size="19" fill="#16324F" font-weight="700">平台终端与 API</text>
+<text x="150.0" y="642.03" text-anchor="middle" font-size="16" fill="#52647A" font-weight="400">terminal / api / proxy</text>
+<text x="150.0" y="665.2299999999999" text-anchor="middle" font-size="16" fill="#52647A" font-weight="400">65310 / 65213 / 65216</text>
+<rect x="270" y="555" width="200" height="145" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="370.0" y="606.8299999999999" text-anchor="middle" font-size="19" fill="#16324F" font-weight="700">执行环境管理</text>
+<text x="370.0" y="642.03" text-anchor="middle" font-size="16" fill="#52647A" font-weight="400">e2b-envd</text>
+<text x="370.0" y="665.2299999999999" text-anchor="middle" font-size="16" fill="#52647A" font-weight="400">进程、文件及环境配置</text>
+<rect x="490" y="555" width="200" height="145" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="590.0" y="606.8299999999999" text-anchor="middle" font-size="19" fill="#16324F" font-weight="700">内部 Docker</text>
+<text x="590.0" y="642.03" text-anchor="middle" font-size="16" fill="#52647A" font-weight="400">dockerd / containerd</text>
+<text x="590.0" y="665.2299999999999" text-anchor="middle" font-size="16" fill="#52647A" font-weight="400">容器内开发运行时</text>
+<rect x="710" y="555" width="200" height="145" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="810.0" y="606.8299999999999" text-anchor="middle" font-size="19" fill="#16324F" font-weight="700">CodeBuddy 组件</text>
+<text x="810.0" y="642.03" text-anchor="middle" font-size="16" fill="#52647A" font-weight="400">sandbox-proxy</text>
+<text x="810.0" y="665.2299999999999" text-anchor="middle" font-size="16" fill="#52647A" font-weight="400">CodeBuddy / MCP</text>
+<rect x="930" y="555" width="200" height="145" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="1030.0" y="606.8299999999999" text-anchor="middle" font-size="19" fill="#16324F" font-weight="700">同步与文档</text>
+<text x="1030.0" y="642.03" text-anchor="middle" font-size="16" fill="#52647A" font-weight="400">sync-server</text>
+<text x="1030.0" y="665.2299999999999" text-anchor="middle" font-size="16" fill="#52647A" font-weight="400">editor-sdk</text>
+<rect x="1150" y="555" width="200" height="145" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="1250.0" y="606.8299999999999" text-anchor="middle" font-size="19" fill="#16324F" font-weight="700">日志采集转发</text>
+<text x="1250.0" y="642.03" text-anchor="middle" font-size="16" fill="#52647A" font-weight="400">log-forward-tee</text>
+<text x="1250.0" y="665.2299999999999" text-anchor="middle" font-size="16" fill="#52647A" font-weight="400">sandbox-log-collector</text>
+<text x="50" y="803.0" text-anchor="start" font-size="18" fill="#52647A" font-weight="400">注：部分服务受平台开关控制；一次性初始化任务、按需服务和 OpenSSH 启动保障见正文。</text>
+</g></svg>

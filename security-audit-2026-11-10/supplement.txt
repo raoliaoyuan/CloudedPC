@@ -1,0 +1,74 @@
+SUDO EFFECTIVE
+ubuntu Matching Defaults entries for ubuntu on 064f56bb22e3:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin, use_pty
+
+User ubuntu may run the following commands on 064f56bb22e3:
+    (root) NOPASSWD: ALL
+ 
+user Matching Defaults entries for user on 064f56bb22e3:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin, use_pty
+
+User user may run the following commands on 064f56bb22e3:
+    (root) NOPASSWD: ALL
+ 
+IPV6_LEGACY
+-P INPUT ACCEPT
+-P FORWARD DROP
+-P OUTPUT ACCEPT
+-N DOCKER
+-N DOCKER-ISOLATION-STAGE-1
+-N DOCKER-ISOLATION-STAGE-2
+-N DOCKER-USER
+-A FORWARD -j DOCKER-USER
+-A DOCKER-ISOLATION-STAGE-1 -i docker0 ! -o docker0 -j DOCKER-ISOLATION-STAGE-2
+-A DOCKER-ISOLATION-STAGE-1 -j RETURN
+-A DOCKER-ISOLATION-STAGE-2 -o docker0 -j DROP
+-A DOCKER-ISOLATION-STAGE-2 -j RETURN
+-A DOCKER-USER -j RETURN
+ 
+LOG DESTINATIONS AND PROCESS SECURITY
+61 supervisord ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+93 log-forward-tee ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+95 node ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+105 node ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+107 log-forward-tee ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+110 node ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+113 log-forward-tee ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+130 sandbox-log-col ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+log_fds {'1': 'pipe:[572442031]', '2': 'pipe:[572442031]'}
+174 log-forward-tee ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+177 log-forward-tee ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+181 log-forward-tee ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+1347 node ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+1348 node ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+51868 dockerd ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+64062 node ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+64167 node ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+65518 tailscaled ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+log_fds {'1': '/tmp/tailscaled.log', '2': '/tmp/tailscaled.log'}
+67281 sshd ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+log_fds {'1': '/dev/null', '2': '/dev/null'}
+68343 tailscaled ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+log_fds {'1': '/dev/null', '2': '/dev/null'}
+69228 tailscaled ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+log_fds {'1': '/dev/null', '2': '/dev/null'}
+69236 tailscaled ['Uid:\t0\t0\t0\t0', 'NoNewPrivs:\t0', 'Seccomp:\t2']
+log_fds {'1': 'pipe:[645681170]', '2': 'pipe:[645681171]'}
+SYSLOG SOCKETS
+/dev/log False False
+/run/systemd/journal/dev-log False False
+/run/systemd/journal/socket False False
+JOURNAL STATUS
+Archived and active journals take up 0B in the file system.
+ No journal files were found.
+
+TAILSCALE OPERATOR
+{'OperatorUser': None}
+CERT PACKAGE
+ca-certificates 20240203
+
+CERT REFERENCE FILE NAMES
+emSign_Root_CA_-_G1.crt
+emSign_Root_CA_-_C1.crt
+emSign_ECC_Root_CA_-_G3.crt
+emSign_ECC_Root_CA_-_C3.crt

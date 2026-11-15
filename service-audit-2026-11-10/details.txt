@@ -1,0 +1,854 @@
+EFFECTIVE_CONFIG_FILES ['/.PlnPyKFp4CRfFtgC1/supervisord-conf/supervisord.conf', '/.PlnPyKFp4CRfFtgC1_run/supervisord-conf/vs-code.conf']
+EFFECTIVE_PROGRAMS
+program:init-workspace {'autostart': 'true (Supervisor default)', 'autorestart': 'false', 'startsecs': '1 (Supervisor default)', 'priority': '1'}
+program:terminal {'autostart': 'true', 'autorestart': 'true', 'startsecs': '1 (Supervisor default)', 'priority': '999 (Supervisor default)'}
+program:api {'autostart': 'true', 'autorestart': 'true', 'startsecs': '1 (Supervisor default)', 'priority': '110'}
+program:proxy {'autostart': 'true', 'autorestart': 'true', 'startsecs': '1 (Supervisor default)', 'priority': '999 (Supervisor default)'}
+program:docker {'autostart': 'true', 'autorestart': 'true', 'startsecs': '1 (Supervisor default)', 'priority': '999 (Supervisor default)'}
+program:e2b-envd {'autostart': 'true', 'autorestart': 'true', 'startsecs': '5', 'priority': '90'}
+program:cbc-d {'autostart': 'true', 'autorestart': 'true', 'startsecs': '1 (Supervisor default)', 'priority': '110'}
+program:git-credential-helper {'autostart': 'true', 'autorestart': 'false', 'startsecs': '1 (Supervisor default)', 'priority': '120'}
+program:agent-init {'autostart': 'true', 'autorestart': 'false', 'startsecs': '1 (Supervisor default)', 'priority': '120'}
+program:codebuddy-touch-sessions {'autostart': 'true', 'autorestart': 'false', 'startsecs': '0', 'priority': '1'}
+program:sync-server {'autostart': 'true', 'autorestart': 'true', 'startsecs': '1 (Supervisor default)', 'priority': '130'}
+program:editor-sdk {'autostart': 'true', 'autorestart': 'true', 'startsecs': '5', 'priority': '140'}
+program:sandbox-log-collector {'autostart': 'true', 'autorestart': 'true', 'startsecs': '5', 'priority': '210'}
+program:vs-code {'autostart': 'false', 'autorestart': 'true', 'startsecs': '1 (Supervisor default)', 'priority': '999 (Supervisor default)'}
+SUPERVISOR_SERVER_TYPE unix
+STARTUP_SCRIPT_CONTENTS_REDACTED
+
+FILE start-terminal
+1: #!/usr/bin/env bash
+2: IDE_WORK_DIR=$(eval "echo $IDE_WORK_DIR")
+3: if [ -z "$IDE_EDITOR_SERVER_BIND_ADDRESS" ]; then
+4:   IDE_EDITOR_SERVER_BIND_ADDRESS=0.0.0.0
+5: fi
+6: 
+7: if [ -z "$IDE_EDITOR_SERVER_CMD" ]; then
+8:   exec $IDE_EDITOR_SERVER_DIR/lib/node $IDE_EDITOR_SERVER_DIR/terminal/app
+9: else
+10:   exec $(eval "echo $IDE_EDITOR_SERVER_CMD")
+11: fi
+
+FILE start-api
+1: #!/usr/bin/env bash
+2: #source ~/.sdkman/bin/sdkman-init.sh
+3: #source /root/.zshrc.d/60-python
+4: 
+5: # 注入环境变量 codebuddy插件历史对话目录
+6: export CODEBUDDY_PLUGIN_HISTORY_DIR=${HOME}/.local/share/CodeBuddyExtension/Data/${ACC_USER_ID}/web-VSCode/${ACC_USER_ID}/history
+7: 
+8: exec $IDE_EDITOR_SERVER_DIR/lib/node $IDE_EDITOR_SERVER_DIR/api
+
+FILE start-proxy
+1: #!/usr/bin/env bash
+2: IDE_WORK_DIR=$(eval "echo $IDE_WORK_DIR")
+3: if [ -z "$IDE_EDITOR_SERVER_BIND_ADDRESS" ]; then
+4:   IDE_EDITOR_SERVER_BIND_ADDRESS=0.0.0.0
+5: fi
+6: 
+7: if [ -z "$IDE_EDITOR_SERVER_CMD" ]; then
+8:   exec $IDE_EDITOR_SERVER_DIR/lib/node $IDE_EDITOR_SERVER_DIR/local-proxy
+9: else
+10:   exec $(eval "echo $IDE_EDITOR_SERVER_CMD")
+11: fi
+
+FILE start-e2b-envd
+1: #!/usr/bin/env bash
+2: 
+3: # 加载环境变量配置
+4: source ~/.sdkman/bin/sdkman-init.sh
+5: source /root/.zshrc.d/60-python
+6: 
+7: if ! id user &>/dev/null; then
+8:     usermod -aG users root
+9:     useradd -m -d /home/user -G sudo,users user
+10: fi
+11: 
+12: ENVD_BIN="$IDE_EDITOR_SERVER_DIR/bin/envd"
+13: ENVD_SYMLINK="/usr/bin/envd"
+14: 
+15: # 创建软链接
+16: ln -sf "$ENVD_BIN" "$ENVD_SYMLINK"
+17: 
+18: # 启动 envd 进程（后台运行）
+19: # 使用 setsid 完全脱离控制终端，避免 envd 因 tty 问题被挂起
+20: setsid $ENVD_BIN -isnotfc </dev/null &
+21: ENVD_PID=$!
+22: 
+23: # 收集环境变量并生成包含 E2B_SANDBOX_ID 的 JSON
+24: ENVVARS_JSON=$(
+25:   env | grep -vE '^(SHELL|PWD|SHLVL|PATH|LS_COLORS)=' | jq -R '
+26:     split("=") as $parts |
+27:     {($parts[0]): ($parts[1:] | join("="))}
+28:   ' | jq -s --arg sandbox_id "$X_IDE_SPACE_KEY" '
+29:     add | {
+30:       envVars: .,
+31:       defaultWorkdir: "/workspace",
+32:       E2B_SANDBOX_ID: $sandbox_id
+33:     }
+34:   '
+35: )
+36: 
+37: # curl 循环重试10次，重试间隔200ms（0.2秒），直到返回2xx状态码
+38: MAX_RETRIES=10
+39: RETRY_DELAY=0.2  # 重试间隔改为200毫秒
+40: SUCCESS=0
+41: 
+42: for ((i=1; i<=MAX_RETRIES; i++)); do
+43:   # 发送POST请求，捕获HTTP状态码
+44:   HTTP_CODE=$(
+45:     curl -s -o /dev/null -w "%{http_code}" \
+46:       -X POST \
+47:       -H "Content-Type: application/json" \
+48:       -d "$ENVVARS_JSON" \
+49:       http://127.0.0.1:49983/init
+50:   )
+51: 
+52:   # 检查状态码是否为2xx（200-299）
+53:   if [[ $HTTP_CODE -ge 200 && $HTTP_CODE -lt 300 ]]; then
+54:     echo "POST request succeeded (HTTP $HTTP_CODE) on attempt $i"
+55:     SUCCESS=1
+56:     break
+57:   else
+58:     echo "Attempt $i failed (HTTP $HTTP_CODE), retrying in $RETRY_DELAY second(s)..."
+59:     sleep $RETRY_DELAY  # 等待200毫秒后重试
+60:   fi
+61: done
+62: 
+63: # 所有重试失败的处理
+64: if [[ $SUCCESS -eq 0 ]]; then
+65:   echo "Error: All $MAX_RETRIES attempts to send POST request failed"
+66: fi
+67: 
+68: # 等待 envd 进程结束
+69: wait $ENVD_PID
+
+FILE start-cbc.d
+1: #!/usr/bin/env bash
+2: 
+3: # 从 envd 获取 ENABLE_CBC_D（agents 沙箱环境变量的权威来源）
+4: # envd 拉取失败时兜底 shell env，避免开发/本地环境无 envd 时脚本无法工作
+5: ENVD_URL="http://localhost:49983/envs"
+6: ENVD_RESPONSE=$(curl -s "${ENVD_URL}")
+7: 
+8: if [ $? -ne 0 ]; then
+9:     echo "Failed to get environment variables from envd, falling back to shell env"
+10:     ENABLE_CBC_D_VALUE="$ENABLE_CBC_D"
+11: else
+12:     ENABLE_CBC_D_VALUE=$(echo "$ENVD_RESPONSE" | grep -o '"ENABLE_CBC_D":"[^"]*"' | cut -d'"' -f4)
+13: fi
+14: 
+15: # 检查cbc.d功能是否开启
+16: if [ "$ENABLE_CBC_D_VALUE" != "true" ]; then
+17:     echo "cbc.d is disabled, skipping..."
+18:     exit 0
+19: fi
+20: 
+21: echo "Starting cbc.d service..."
+22: 
+23: # 定义下载地址和目标目录
+24: # 从环境变量获取下载地址，如果未设置则使用默认值
+25: # 注意：是 node 版还是 go 版由 tar 包内容自动识别，不依赖环境变量；
+26: #       运维侧切换 node↔go 仅需把 CBC_D_DOWNLOAD_URL 指向对应 tar 包即可。
+27: DEFAULT_DOWNLOAD_URL="https://cs-res-1324618448.cos.ap-shanghai.myqcloud.com/sandbox/tools/box.tar.gz"
+28: DOWNLOAD_URL="${CBC_D_DOWNLOAD_URL:-$DEFAULT_DOWNLOAD_URL}"
+29: TARGET_DIR="/root/proxy"
+30: TMP_FILE="/tmp/box.tar.gz"
+31: 
+32: # 创建目标目录
+33: mkdir -p "$TARGET_DIR"
+34: 
+35: # === sandbox-componentd 接管路径优先 ===
+36: # sandbox-componentd 升级 box 时会写入：
+37: #   /root/proxy/box-versions/<version>/   ← 实际版本目录
+38: #   /root/proxy/box-current               ← symlink 指向当前激活版本
+39: # 如果 symlink 存在且有效，跳过 box.tar.gz 下载流程，直接使用 box-current。
+40: SANDBOX_COMPONENTD_LINK="$TARGET_DIR/box-current"
+41: if [ -L "$SANDBOX_COMPONENTD_LINK" ] && [ -d "$SANDBOX_COMPONENTD_LINK" ]; then
+42:     echo "sandbox-componentd manifest active, using $SANDBOX_COMPONENTD_LINK -> $(readlink -f "$SANDBOX_COMPONENTD_LINK")"
+43:     BOX_DIR="$SANDBOX_COMPONENTD_LINK"
+44: else
+45:     # 检查目标目录是否已存在
+46:     if [ -d "$TARGET_DIR/box" ]; then
+47:         echo "cbc.d already exists at $TARGET_DIR/box, skipping download"
+48:     else
+49:         # 下载文件
+50:         echo "Downloading from $DOWNLOAD_URL..."
+51:         if ! curl -fsSL -o "$TMP_FILE" "$DOWNLOAD_URL"; then
+52:             echo "Failed to download file from $DOWNLOAD_URL"
+53:             exit 1
+54:         fi
+55: 
+56:         # 解压文件到目标目录
+57:         echo "Extracting to $TARGET_DIR..."
+58:         if ! tar -xzf "$TMP_FILE" -C "$TARGET_DIR"; then
+59:             echo "Failed to extract file"
+60:             rm -f "$TMP_FILE"
+61:             exit 1
+62:         fi
+63: 
+64:         # 清理临时文件
+65:         rm -f "$TMP_FILE"
+66:         echo "Downloaded and extracted box to $TARGET_DIR"
+67:     fi
+68:     BOX_DIR="$TARGET_DIR/box"
+69: fi
+70: 
+71: # === 自动识别产物形态：Go 二进制优先 ===
+72: # Go 版 tar 包结构：<box_dir>/sandbox-proxy （单二进制）
+73: # Node 版 tar 包结构：<box_dir>/ecosystem.config.js + <box_dir>/index.js 等
+74: GO_BIN="$BOX_DIR/sandbox-proxy"
+75: NODE_ECO="$BOX_DIR/ecosystem.config.js"
+76: 
+77: if [ -f "$GO_BIN" ]; then
+78:     echo "Detected Go flavor sandbox-proxy at $GO_BIN"
+79:     chmod +x "$GO_BIN"
+80: 
+81:     echo "cbc.d service setup completed successfully (go flavor)"
+82:     # 前台运行，由 supervisord 守护（autorestart=true）
+83:     exec "$GO_BIN"
+84: elif [ -f "$NODE_ECO" ]; then
+85:     echo "Detected Node flavor sandbox-proxy at $NODE_ECO"
+86: 
+87:     # 确保服务正在运行
+88:     pm2 delete job-proxy 2>/dev/null || true
+89:     pm2 delete sandbox-proxy 2>/dev/null || true
+90:     # 启动服务
+91:     pm2 start "$NODE_ECO"
+92: 
+93:     echo "cbc.d service setup completed successfully (node flavor)"
+94: 
+95:     # 保持进程前台运行，让 supervisord 能够正确管理
+96:     exec pm2 logs --raw sandbox-proxy
+97: else
+98:     echo "ERROR: Neither $GO_BIN nor $NODE_ECO found in $BOX_DIR"
+99:     ls -la "$BOX_DIR" 2>/dev/null || true
+100:     exit 1
+101: fi
+
+FILE init-git-credential-helper
+1: #!/usr/bin/env bash
+2: 
+3: # 从envd获取环境变量
+4: ENVD_URL="http://localhost:49983/envs"
+5: ENVD_RESPONSE=$(curl -s "${ENVD_URL}")
+6: 
+7: # 检查curl是否成功
+8: if [ $? -ne 0 ]; then
+9:     echo "Failed to get environment variables from envd, falling back to shell env"
+10: [credential-related line omitted]
+11: else
+12: [credential-related line omitted]
+13: [credential-related line omitted]
+14: fi
+15: 
+16: [credential-related line omitted]
+17: [credential-related line omitted]
+18: [credential-related line omitted]
+19:     exit 0
+20: fi
+21: 
+22: [credential-related line omitted]
+23: 
+24: # 定义下载地址和目标路径
+25: # 从环境变量获取下载地址，如果未设置则使用默认值
+26: [credential-related line omitted]
+27: [credential-related line omitted]
+28: [credential-related line omitted]
+29: 
+30: # 检查文件是否已存在，存在则跳过
+31: if [ -f "$TARGET_PATH" ]; then
+32: [credential-related line omitted]
+33: else
+34: [credential-related line omitted]
+35: 
+36:     # 下载文件
+37:     if ! curl -fsSL -o "$TARGET_PATH" "$DOWNLOAD_URL"; then
+38: [credential-related line omitted]
+39:         exit 1
+40:     fi
+41: 
+42:     # 添加执行权限
+43:     chmod +x "$TARGET_PATH"
+44: [credential-related line omitted]
+45: fi
+46: 
+47: # 检查 git config 中是否已配置（只需配置一次，因为文件路径不变）
+48: [credential-related line omitted]
+49: [credential-related line omitted]
+50: else
+51: [credential-related line omitted]
+52: [credential-related line omitted]
+53: [credential-related line omitted]
+54: fi
+55: 
+56: [credential-related line omitted]
+57: 
+58: # 脚本执行完成后退出，因为这是一次性初始化任务
+59: exit 0
+
+FILE agent-init
+1: #!/usr/bin/env bash
+2: 
+3: # 从envd获取环境变量
+4: ENVD_URL="http://localhost:49983/envs"
+5: ENVD_RESPONSE=$(curl -s "${ENVD_URL}")
+6: 
+7: # 检查curl是否成功
+8: if [ $? -ne 0 ]; then
+9:     echo "Failed to get environment variables from envd, falling back to shell env"
+10:     ENABLE_AGENT_INIT_VALUE="$ENABLE_AGENT_INIT"
+11: else
+12:     # 从envd响应中提取ENABLE_AGENT_INIT的值
+13:     ENABLE_AGENT_INIT_VALUE=$(echo "$ENVD_RESPONSE" | grep -o '"ENABLE_AGENT_INIT":"[^"]*"' | cut -d'"' -f4)
+14: fi
+15: 
+16: # 检查agent功能是否开启
+17: if [ "$ENABLE_AGENT_INIT_VALUE" != "true" ]; then
+18:     echo "agent is disabled, skipping..."
+19:     exit 0
+20: fi
+21: 
+22: echo "Initializing agent..."
+23: 
+24: # agent-init 二进制由 base 系统盘 rootfs 直接交付（随系统盘版本更新），此处不再从
+25: # COS 兜底下载。历史上这里有一段 download-if-absent 兜底：文件不存在时从固定 COS
+26: # URL（cs-res-.../sandbox/tools/agent-init）拉取。该兜底有两个问题，已移除：
+27: #   1. COS 那份长期未更新（停在 2026-02 的旧版），一旦触发下载就把系统盘自带的新版
+28: #      覆盖成旧版（生产实测 sh3：base 盘 1.0.22 被覆盖成 1.0.10）。
+29: #   2. 触发条件是竞态——warm 空壳的系统盘是 base 盘的 COW fork（远程 CloneDisk + NBD
+30: #      挂载），而本脚本在 warm 预热阶段就被 supervisord 拉起（ENABLE_AGENT_INIT 已注入）。
+31: #      在「NBD 系统盘就绪、/usr/local/system/bin/agent-init 可 stat 到」之前的时间窗内，
+32: #      [ -f ] 判为不存在 → 误触下载。用"文件缺失=需下载"兜底本身就是错误判据。
+33: TARGET_PATH="/usr/local/system/bin/agent-init"
+34: 
+35: if [ ! -f "$TARGET_PATH" ]; then
+36:     # 不再下载兜底：文件缺失只可能是系统盘异常/init 时序问题，报错让上层可见，
+37:     # 绝不用陈旧 COS 源覆盖。退出码非 0 便于排查（supervisord startretries=0 不会重启刷屏）。
+38:     echo "Error: agent-init not found at $TARGET_PATH (should be provided by base system disk)"
+39:     exit 1
+40: fi
+41: 
+42: # 验证agent是否可以正常执行
+43: if [ -f "$TARGET_PATH" ]; then
+44:     echo "Verifying agent-init installation..."
+45:     if "$TARGET_PATH" --version 2>/dev/null || "$TARGET_PATH" -h 2>/dev/null; then
+46:         echo "agent-init is working correctly"
+47:     else
+48:         echo "Warning: agent-init may not be working correctly, but continuing..."
+49:     fi
+50: fi
+51: 
+52: echo "agent-init initialization completed successfully"
+53: 
+54: # 脚本执行完成后退出，因为这是一次性初始化任务
+55: exit 0
+
+FILE start-sync-server
+1: #!/usr/bin/env bash
+2: 
+3: # 优先使用 shell env 中的 ENABLE_SYNC_SERVER；
+4: # 若 env 中未设置（为空），再尝试从 envd 获取一次作为兜底。
+5: ENABLE_SYNC_SERVER_VALUE="$ENABLE_SYNC_SERVER"
+6: if [ -z "$ENABLE_SYNC_SERVER_VALUE" ]; then
+7:     ENVD_URL="http://localhost:49983/envs"
+8:     ENVD_RESPONSE=$(curl -s "${ENVD_URL}")
+9:     if [ $? -eq 0 ] && [ -n "$ENVD_RESPONSE" ]; then
+10:         ENABLE_SYNC_SERVER_VALUE=$(echo "$ENVD_RESPONSE" | grep -o '"ENABLE_SYNC_SERVER":"[^"]*"' | cut -d'"' -f4)
+11:     else
+12:         echo "[sync-server] failed to get environment variables from envd, falling back to shell env"
+13:     fi
+14: fi
+15: 
+16: # 检查 sync-server 功能是否开启
+17: if [ "$ENABLE_SYNC_SERVER_VALUE" != "true" ]; then
+18:     echo "sync-server is disabled, skipping..."
+19:     exit 0
+20: fi
+21: 
+22: SYNC_DIR="/usr/local/tna/sync_server"
+23: 
+24: # 检查 sync-server 是否已安装
+25: if [ ! -x "$SYNC_DIR/scripts/start.sh" ]; then
+26:     echo "[sync-server] $SYNC_DIR not installed, skipping..."
+27:     exit 0
+28: fi
+29: 
+30: echo "Starting sync-server service..."
+31: 
+32: # 进入工作目录
+33: cd "$SYNC_DIR" || {
+34:     echo "[sync-server] failed to cd into $SYNC_DIR"
+35:     exit 1
+36: }
+37: 
+38: # tail 进程 PID（在 trap 中使用）
+39: TAIL_PID=""
+40: 
+41: # 收到 supervisor 的 SIGTERM 时优雅停止：
+42: # 1. 调用 stop.sh 关闭 sync_server 4 个业务进程
+43: # 2. 杀掉后台 tail
+44: # 3. 退出，让 supervisord 认为本次停机干净完成
+45: graceful_stop() {
+46:     echo "[sync-server] received stop signal, calling stop.sh..."
+47:     bash "$SYNC_DIR/scripts/stop.sh" || echo "[sync-server] stop.sh returned non-zero"
+48:     [ -n "$TAIL_PID" ] && kill "$TAIL_PID" 2>/dev/null
+49:     exit 0
+50: }
+51: trap graceful_stop TERM
+52: 
+53: # 启动并自检
+54: if ! bash "$SYNC_DIR/scripts/start.sh"; then
+55:     echo "[sync-server] start.sh failed"
+56:     exit 1
+57: fi
+58: sleep 3
+59: if ! bash "$SYNC_DIR/scripts/check.sh"; then
+60:     echo "[sync-server] check.sh failed"
+61:     exit 1
+62: fi
+63: 
+64: echo "sync-server service setup completed successfully"
+65: 
+66: # tail 日志放后台，让 ash 主进程留在前台接收 supervisord 信号
+67: # 这样 trap 才能在 SIGTERM 到达时触发 graceful_stop（exec 会替换进程导致 trap 失效）
+68: tail -F "$SYNC_DIR/log/sync_watchdog.log" "$SYNC_DIR/log/sync_mcd0.log" &
+69: TAIL_PID=$!
+70: wait "$TAIL_PID"
+
+FILE start-editor-sdk
+1: #!/usr/bin/env bash
+2: 
+3: # editor_sdk（腾讯文档本地引擎）启动脚本。
+4: #
+5: # 开关来源：与 start-sync-server 开头一致——优先 shell env，缺失再从 envd 兜底读取。
+6: # 注意：agentos 经 BuildSandboxEnvs 注入的 ENABLE_EDITOR_SDK 落在 envd（/envs），
+7: #       supervisor 拉起的进程 env 里不一定有该变量，因此必须走 envd 兜底。
+8: ENABLE_EDITOR_SDK_VALUE="$ENABLE_EDITOR_SDK"
+9: if [ -z "$ENABLE_EDITOR_SDK_VALUE" ]; then
+10:     ENVD_URL="http://localhost:49983/envs"
+11:     ENVD_RESPONSE=$(curl -s "${ENVD_URL}")
+12:     if [ $? -eq 0 ] && [ -n "$ENVD_RESPONSE" ]; then
+13:         ENABLE_EDITOR_SDK_VALUE=$(echo "$ENVD_RESPONSE" | grep -o '"ENABLE_EDITOR_SDK":"[^"]*"' | cut -d'"' -f4)
+14:     else
+15:         echo "[editor-sdk] failed to get environment variables from envd, falling back to shell env"
+16:     fi
+17: fi
+18: 
+19: # 开关未开启则直接退出（exit 0，避免 supervisor 误判异常而反复重启）
+20: if [ "$ENABLE_EDITOR_SDK_VALUE" != "true" ]; then
+21:     echo "[editor-sdk] ENABLE_EDITOR_SDK='${ENABLE_EDITOR_SDK_VALUE}' (not 'true'), editor_sdk disabled, skipping..."
+22:     exit 0
+23: fi
+24: 
+25: EDITOR_SDK_BIN="/usr/local/system/bin/editor_sdk"
+26: 
+27: # 二进制不存在/不可执行则跳过：兼容「supervisor 配置已上线、但模版尚未烤进二进制」的过渡期，
+28: # 优雅退出而非反复重启刷错误日志。
+29: if [ ! -x "$EDITOR_SDK_BIN" ]; then
+30:     echo "[editor-sdk] $EDITOR_SDK_BIN not found or not executable, skipping..."
+31:     exit 0
+32: fi
+33: 
+34: # 监听端口：默认 39099（与桌面端 TencentDocsService 首选端口一致），允许 EDITOR_SDK_PORT env 覆盖。
+35: EDITOR_SDK_PORT="${EDITOR_SDK_PORT:-39099}"
+36: 
+37: # 启动参数：--port / --log_dir / --cors_origin / --resource_url_base。
+38: # 日志默认落到 /tmp/editor-sdk-logs/（E2B 沙箱 stdout 不易直接观察，落盘方便排查）。
+39: # 允许 EDITOR_SDK_LOG_DIR 覆盖。
+40: # --cors_origin='*'：允许任意来源跨域访问本地文档预览/编辑接口。
+41: # --resource_url_base=null：不指定资源基地址（沙箱内无法预知浏览器侧对外域名，置空由上层处理）。
+42: EDITOR_SDK_LOG_DIR="${EDITOR_SDK_LOG_DIR:-/tmp/editor-sdk-logs}"
+43: mkdir -p "$EDITOR_SDK_LOG_DIR"
+44: EDITOR_SDK_ARGS="--port=${EDITOR_SDK_PORT} --log_dir=${EDITOR_SDK_LOG_DIR} --cors_origin=* --resource_url_base=null"
+45: 
+46: echo "[editor-sdk] starting: $EDITOR_SDK_BIN $EDITOR_SDK_ARGS"
+47: 
+48: # exec 让 editor_sdk 成为前台进程，直接接收 supervisor 的 SIGTERM/SIGKILL。
+49: exec "$EDITOR_SDK_BIN" $EDITOR_SDK_ARGS
+
+FILE start-sandbox-log-collector
+1: #!/usr/bin/env bash
+2: #
+3: # start-sandbox-log-collector: 沙箱内 sandbox-log-collector 守护进程启动脚本
+4: #
+5: # 职责：
+6: #   1. 决定是否启动：读 SANDBOX_LOG_FORWARD 节点级转发总开关
+7: #      → shell env 优先（envd 在创建进程时注入到子进程 environ）
+8: #      → shell env 为空时 fallback 走 envd HTTP 接口（http://localhost:49983/envs）
+9: #      → 都拿不到走默认关闭（无 sink 的复用镜像节点不空跑；与 log-forward-tee 默认一致）
+10: #   2. 二进制位置约定：${IDE_EDITOR_SERVER_DIR}/bin/sandbox-log-collector（镜像内置）
+11: #   3. 前台运行，由 supervisord 守护（autorestart=true）
+12: #
+13: # 为什么用 SANDBOX_LOG_FORWARD 而非独立开关：
+14: #   本采集器唯一目的就是把本地日志文件经 172.24.0.1:18100 sink 上报——与 log-forward-tee
+15: #   共用同一条链路、同一个转发前置条件。SANDBOX_LOG_FORWARD=1 表示"本节点有 spacelet sink、
+16: #   要启用沙箱日志上报"，采集器与 tee 同进同退，不引入第二个开关增加运维心智。
+17: #   （采集器二进制内部也会再读一次 SANDBOX_LOG_FORWARD 兜底，见 config/collector；这里的
+18: #    脚本判断只为在关闭时避免起进程空转。）
+19: #
+20: # 认领门闸：采集器进程启动后不会立即采集——它先轮询 envd /envs，等 X_IDE_SPACE_KEY 脱离
+21: #   warm- 前缀（即沙箱被真实用户认领）才开始 tail，预热期不采、不推进 offset。
+22: #
+23: # 为什么 envd fallback：与 start-sandbox-componentd / start-qqbot 完全相同的模式——supervisord
+24: #   早于 agent-init 启动的极端时序下 shell env 可能还没拿到注入值，envd HTTP 里可能已有。
+25: 
+26: set -u
+27: 
+28: ENVD_URL="${ENVD_URL:-http://localhost:49983/envs}"
+29: ENV_KEY="SANDBOX_LOG_FORWARD"
+30: 
+31: log() {
+32:     # 日志走 stderr，保持 resolve_flag 的 stdout 干净（供命令替换）。
+33:     echo "[start-sandbox-log-collector][$(date '+%Y-%m-%d %H:%M:%S')] $*" >&2
+34: }
+35: 
+36: # 从 envd JSON 响应中提取指定 key 的值；JSON 形如 {"KEY":"VAL",...}。不依赖 jq。
+37: extract_envd_value() {
+38:     local key="$1"
+39:     local resp="$2"
+40:     echo "$resp" | grep -o "\"${key}\":\"[^\"]*\"" | cut -d'"' -f4
+41: }
+42: 
+43: # 解析最终 SANDBOX_LOG_FORWARD 值：
+44: #   1) shell env 非空 → 用 shell env
+45: #   2) shell env 空 → 调 envd /envs 拿
+46: #   3) envd 也拿不到 → 默认 "0"（关闭；无 sink 的复用镜像节点不空跑）
+47: resolve_flag() {
+48:     local val="${!ENV_KEY:-}"
+49:     if [ -n "$val" ]; then
+50:         log "$ENV_KEY=$val (from shell env)"
+51:         echo "$val"
+52:         return
+53:     fi
+54: 
+55:     log "$ENV_KEY empty in shell env, falling back to envd: $ENVD_URL"
+56:     local resp http_code body curl_rc
+57:     resp=$(curl -s -m 5 -w "\n__HTTP_CODE__:%{http_code}" "$ENVD_URL" 2>/dev/null) || true
+58:     curl_rc=$?
+59:     http_code=$(echo "$resp" | grep -o '__HTTP_CODE__:[0-9]*' | cut -d: -f2)
+60:     body=$(echo "$resp" | sed 's/__HTTP_CODE__:[0-9]*//')
+61: 
+62:     if [ "$curl_rc" -eq 0 ] && [ "$http_code" = "200" ] && [ -n "$body" ]; then
+63:         val=$(extract_envd_value "$ENV_KEY" "$body")
+64:         if [ -n "$val" ]; then
+65:             log "$ENV_KEY=$val (from envd)"
+66:             echo "$val"
+67:             return
+68:         fi
+69:         log "$ENV_KEY not present in envd response"
+70:     else
+71:         log "WARN: envd fetch failed (curl_rc=$curl_rc, http=$http_code)"
+72:     fi
+73: 
+74:     log "$ENV_KEY using default '0' (no value from shell/envd)"
+75:     echo "0"
+76: }
+77: 
+78: flag=$(resolve_flag)
+79: 
+80: # 仅 "1" 启动；其他值（含默认 "0"）一律不采集，sleep 保持 RUNNING 不触发重启风暴。
+81: if [ "$flag" != "1" ]; then
+82:     log "disabled by $ENV_KEY=$flag, skipping..."
+83:     exec sleep infinity
+84: fi
+85: 
+86: BIN="${IDE_EDITOR_SERVER_DIR:-/.PlnPyKFp4CRfFtgC1}/bin/sandbox-log-collector"
+87: 
+88: if [ ! -x "$BIN" ]; then
+89:     log "binary not found or not executable: $BIN"
+90:     log "image may be out of date; sleeping to avoid supervisord restart storm"
+91:     exec sleep infinity
+92: fi
+93: 
+94: log "starting from $BIN"
+95: log "collector env: LOGCOL_ROOT_DIR=${LOGCOL_ROOT_DIR:-default} SANDBOX_LOG_SINK_ADDR=${SANDBOX_LOG_SINK_ADDR:-default}"
+96: 
+97: # 前台运行，由 supervisord 接管 PID/重启。
+98: exec "$BIN"
+
+FILE start-vscode
+1: #!/usr/bin/env bash
+2: IDE_WORK_DIR=$(eval "echo $IDE_WORK_DIR")
+3: if [ -z "$IDE_EDITOR_SERVER_BIND_ADDRESS" ]; then
+4:   IDE_EDITOR_SERVER_BIND_ADDRESS=0.0.0.0
+5: fi
+6: 
+7: # ===================== 第一步：先创建所有需要的目录（Machine），必做 =====================
+8: mkdir -p "$HOME/.local/share/code-server/Machine"
+9: 
+10: # ===================== 第二步：先写入配置文件，必做 =====================
+11: # 写入Machine目录的settings.json
+12: echo '{"task.allowAutomaticTasks": "off"}' > "$HOME/.local/share/code-server/Machine/settings.json"
+13: 
+14: 
+15: if [ -z "$IDE_EDITOR_SERVER_CMD" ]; then
+16: [credential-related line omitted]
+17: else
+18:   exec $(eval "echo $IDE_EDITOR_SERVER_CMD")
+19: fi
+
+FILE log-forward-tee
+1: #!/bin/sh
+2: # log-forward-tee —— 沙箱日志转发 helper（B1）。
+3: #
+4: # 用途：作为管道下游读取某个 supervisord program 的 stdout+stderr，逐行做两件事：
+5: #   1) 原样打回本进程 stdout（即 supervisord 的 /dev/stdout）—— 维持现有容器日志采集不变；
+6: #   2) 另发一份到 spacelet 的 sandbox 日志 sink —— 由 spacelet 反查 sandboxId 注入后写自己
+7: #      stdout，最终随 spacelet 容器标准输出被采集到 CLS。
+8: #
+9: # 用法（在 supervisord command 里用管道接到业务命令后面）：
+10: #   <业务命令> 2>&1 | log-forward-tee <service>
+11: # <service> 为服务名（如 api / box / cbc.d / e2b-envd / agent-init），会随每行转发给 sink，
+12: # sink 注入成 "service" 字段，便于在 CLS 区分同一沙箱内不同服务的日志（sink 只能按源 IP 反查
+13: # sandboxId、区分不了同沙箱多服务，故服务名必须由本 tee 侧携带）。
+14: #
+15: # 设计要点：
+16: #   - 纯 POSIX sh，不用 bash 进程替换/数组，busybox ash 与 bash 均可运行（沙箱镜像 shell 混用）。
+17: #   - 绝不阻塞/回压业务：第 2 路失败/未就绪时整体降级为“只本地采集不上报”，第 1 路照常打回 stdout。
+18: #
+19: #   - nc 用绝对路径解析，不依赖 PATH：
+20: #     supervisord 直管的 program 继承 supervisord 自身 PATH（不含 $IDE_EDITOR_SERVER_DIR/bin），
+21: #     init 脚本里的 `export PATH` 只影响 init 自身进程、不传播给兄弟 program。故 `command -v nc` 常为空、
+22: #     裸 `nc` 报 not found（B1）。busybox 的 nc applet 实际在 $IDE_EDITOR_SERVER_DIR/bin/nc，
+23: #     这里显式按该路径 + 常见系统路径探测。
+24: #
+25: #   - 转发用“一条长连接 + 后台重连循环”，而非“每行一个 nc 短连接”，也不是“单次 nc 不重连”：
+26: #     · 每行 fork 一个 nc（旧实现）：日志量大时打爆进程/连接，且与 sink“一条连接反查一次源 IP、
+27: #       逐行 scan”的模型不匹配。
+28: #     · 单次 nc 不重连：warm 池预热的容器在预热期就起了本 tee，nc 也在预热期 fork。用户认领时容器
+29: #       经 pivot_root 切根，切根期 nc 被杀 / 连接断，之后再没 nc —— 业务日志永久不转发（实测线上现象：
+30: #       tee 主进程活着但无 nc 子进程）。
+31: #     故这里：后台起一个 while 重连循环常驻持有 FIFO 读端，nc 每次从 FIFO 读、转发到 sink 的一条 TCP
+32: #     长连接；nc 因切根 / 网络抖动 / sink 重启退出后，循环 sleep 1 自动重连，转发自愈恢复。主进程只持
+33: #     FIFO 写端，逐行 append。整个 program 生命周期复用长连接、不 fork 海量 nc，又能扛过 pivot_root。
+34: #
+35: #   - 【关键：退避期必须持续排空 FIFO，绝不裸 sleep】—— 否则回压卡死业务进程（实测 P0 回归）。
+36: #     FIFO 读端 fd4 由本进程树长期持有、永不关闭，故主进程写 fd3 永远不会收到 EPIPE，只会“成功”或
+37: #     在 64KB 管道缓冲写满时【阻塞】。旧实现里 nc 掉线后裸 `sleep $backoff`（最长 30s），sleep 期间
+38: #     没有任何人读 fd4 → FIFO 很快写满 → 主循环写 fd3 阻塞 → 停止 read → 上游业务进程（如 envd）写
+39: #     stdout 也跟着阻塞 → 业务卡死、请求全超时。warm 认领 pivot_root 必杀 nc、必进退避窗口，日志量稍大
+40: #     即命中，普遍卡死所有认领沙箱。
+41: #     解法：退避不再裸 sleep，而是在退避时长内用 `timeout <backoff> cat <&4 >/dev/null` 持续把 fd4
+42: #     排空丢弃。这样【任一时刻 fd4 恰有一个读者】——连通时是 nc、退避时是这个限时 cat——fd3 永不写满
+43: #     阻塞，主循环永不停，业务零回压。退避期转发数据被丢弃（可接受，第 1 路 stdout 采集始终不受影响）。
+44: #
+45: #   - trap '' PIPE：保留。nc 与退避 cat 交接的极短瞬间理论上仍可能有 SIGPIPE，忽略之更稳妥。
+46: 
+47: # 转发目标：默认直接用 bridge 网关 172.24.0.1:18100（spacelet sink 的固定监听地址），不依赖注入 env。
+48: # 为何不依赖 SANDBOX_LOG_SINK_ADDR env：sink 地址是基础设施常量（cloudstudio 网络网关固定
+49: # 172.24.0.1、端口固定 18100），非每沙箱变化的动态值。而 warm 池预热的容器 supervisord 在预热时
+50: # 就已启动，认领时注入的动态 env 走 envd 回调、进不到已在跑的 supervisord 子进程（本 tee 就是其一）。
+51: # 若依赖 env，一旦注入时序变化就静默降级、日志悄悄丢。故默认硬编码网关地址，env 仅作运维可选覆盖。
+52: SINK_ADDR="${SANDBOX_LOG_SINK_ADDR:-172.24.0.1:18100}"
+53: SINK_HOST="${SINK_ADDR%:*}"
+54: SINK_PORT="${SINK_ADDR##*:}"
+55: 
+56: # 服务名（第 1 个参数）。转发时给每行加前缀 \x01<service>\x01，sink 剥离前缀后注入成 service 字段。
+57: # \x01(SOH) 是控制符，不会出现在正常日志文本 / JSON 里，作前缀分隔符冲突概率极低。
+58: # 未传服务名时前缀为空标记（\x01\x01），sink 视 service 为空、不影响 sandboxId/msg。
+59: SERVICE="$1"
+60: SOH="$(printf '\001')"
+61: SVC_PREFIX="${SOH}${SERVICE}${SOH}"
+62: 
+63: # 解析可用的可执行绝对路径（不依赖 PATH）。按优先级探测：镜像内 busybox bin → 常见系统路径 → PATH 兜底。
+64: # supervisord 直管的 program 继承 supervisord 自身 PATH（不含 $IDE_EDITOR_SERVER_DIR/bin），故裸命令
+65: # 常报 not found；这里显式按镜像内 busybox bin + 常见系统路径探测。
+66: find_bin() {
+67:   name="$1"
+68:   for c in \
+69:     "${IDE_EDITOR_SERVER_DIR:-/.PlnPyKFp4CRfFtgC1}/bin/$name" \
+70:     "/usr/bin/$name" "/bin/$name" "/usr/local/bin/$name"; do
+71:     [ -x "$c" ] && { printf '%s' "$c"; return 0; }
+72:   done
+73:   # 最后再试 PATH（多数场景为空，作兜底）。
+74:   command -v "$name" 2>/dev/null && return 0
+75:   return 1
+76: }
+77: 
+78: NC_BIN="$(find_bin nc)"
+79: # timeout/cat 用于“退避期持续排空 fd4”，避免裸 sleep 导致 FIFO 写满回压业务（见顶部说明）。
+80: # 二者均为最终镜像内 busybox 1.34 applet（$IDE_EDITOR_SERVER_DIR/bin 下），正常一定解析得到。
+81: TIMEOUT_BIN="$(find_bin timeout)"
+82: CAT_BIN="$(find_bin cat)"
+83: 
+84: # nc 空窗期写 FIFO 会收到 SIGPIPE，忽略之，避免 tee 被信号杀死（见顶部说明）。
+85: trap '' PIPE
+86: 
+87: # 第 2 路的常驻转发通道：FIFO + 后台 nc 退避重连循环。建不出 nc / FIFO 时 FWD 置空 → 只走第 1 路。
+88: #
+89: # 【关键 1：FIFO 必须用 O_RDWR(`<>`) 单次打开，绝不能先 `3>fifo` 再 `4<fifo`】
+90: # FIFO 的 open 语义：只写打开(`3>fifo`)会【阻塞】直到有人打开读端；只读打开(`4<fifo`)会阻塞直到有人
+91: # 打开写端。若在同一进程里顺序写成 `exec 3>fifo && exec 4<fifo`，第一句只写打开就永久阻塞（读端 open
+92: # 在下一句、永远到不了）——整个 tee 进程卡在启动、主 `while read` 根本没开始，上游业务(如 envd)第一次
+93: # 写 stdout 即被回压卡死。实测 busybox 1.34 ash 必现。
+94: # 解法：`exec 3<>"$FIFO"` 以 O_RDWR 打开——FIFO 同时有了读端和写端(自己)，open【不阻塞】。主进程用
+95: # `>&3` 写；后台循环的读端由 `4<&3` dup 得到。
+96: #
+97: # 【关键 2：抗 pivot_root】读写都用“已打开的 fd”，绝不按路径重开。
+98: # warm 认领时容器做 pivot_root 换 mount namespace：预热期在 /tmp 建的 FIFO，pivot 后新根 /tmp 是另一个
+99: # 文件系统、同名路径解析到【不同 inode】。若后台循环 nc 按 `<"$FIFO"` 路径重开读端，pivot 后会打开新根
+100: # 那个空 FIFO、两端错位、转发永久断裂。故这里开完 fd 即 `rm` 路径，后续只用继承 fd(`>&3` / `<&4`)，
+101: # 已打开的 fd 绑定 inode、不受 pivot 换路径影响。
+102: #
+103: # 【关键 3：O_RDWR 写端常在 → nc 读永不因业务 EOF 退出】
+104: # 因 fd3 是 O_RDWR，FIFO 始终有一个写者(本进程)，后台 nc/cat 读 fd4 不会因“业务侧 stdin 关闭”而收到
+105: # EOF——这正是长连接转发想要的(整个 program 生命周期复用)。收尾时显式关 fd3 并 kill 后台循环即可。
+106: FWD=""
+107: FIFO=""
+108: # 节点级转发开关：仅当 SANDBOX_LOG_FORWARD=1 时才起 nc/FIFO 转发；默认（env 未设/非 "1"）只走第 1 路
+109: # 本地采集，完全不起 nc。因沙箱镜像被多方复用——外部业务方用我们的镜像、其节点没有 spacelet 日志
+110: # sink，nc 会永久连不上、周期性空转 fork（虽有下方软门闸退避、不回压业务，仍有累积开销），故默认不转发。
+111: # 只有确有 sink 的节点由 spacelet-v2 --enable-sandbox-log-forward 经容器初始 env 塞 SANDBOX_LOG_FORWARD=1
+112: # 显式开启。
+113: if [ "${SANDBOX_LOG_FORWARD:-0}" = "1" ] && [ -n "$NC_BIN" ]; then
+114:   FIFO="$(mktemp -u 2>/dev/null || printf '/tmp/log-fwd.%s' "$$")"
+115:   if mkfifo "$FIFO" 2>/dev/null &&
+116:      exec 3<>"$FIFO" 2>/dev/null &&  # fd3=读写端(O_RDWR，open 不阻塞)，主进程用 >&3 写
+117:      exec 4<&3 2>/dev/null; then     # fd4=从 fd3 dup 的读端，供后台循环 nc/cat 用 <&4 读
+118:     # 开完 fd 即删路径：后续 nc/cat 用 <&4、主进程用 >&3，均不再按路径访问，天然抗 pivot。
+119:     rm -f "$FIFO" 2>/dev/null
+120:     # 后台退避重连循环：nc 从继承的 fd4 读、转发到 sink；nc 退出即重连（sink 未就绪/网络抖动/pivot 杀 nc）。
+121:     # 退避：nc 存活 < 2s（秒退，如连不上）时退避时长翻倍；≥ 2s（正常传输）则重置为 1s，保证 sink 就绪后
+122:     # 快速连上。子 shell 继承 fd4，循环内不关它（关了读端会破坏配对）。
+123:     #
+124:     # 【关键：退避期用 timeout+cat 持续排空 fd4，绝不裸 sleep】nc 掉线到重连之间若无人读 fd4，FIFO 会
+125:     # 写满导致主进程写 fd3 阻塞、进而卡死上游业务进程（见顶部说明）。故退避时长内改用
+126:     # `timeout <backoff> cat <&4 >/dev/null` 持续读丢 fd4，让 fd4 全程有读者、fd3 永不写满阻塞。
+127:     # 退避 = timeout 时长：既是"多久后重试 nc"，也是"这段时间持续排空 fd4"，二者天然合一。
+128:     # 兜底：极端下 timeout/cat 解析不到时，退避回退为 1s 短 sleep（把最坏阻塞窗口从上限压到 1s）。
+129:     #
+130:     # 【长期失败软门闸】正常退避上限 30s（sink 短暂重启/抖动能 ~30s 内自愈）。但在"根本没有 sink"的
+131:     # 旧 spacelet 节点上，nc 会永久连不上——若一直 30s 一轮 nc，几十壳×多 tee 累积仍有 fork 开销。故连续
+132:     # 失败超过 fail_gate 次后，退避上限抬到 idle_max(300s)：仍持续排空 fd4、仍周期重试（不永久放弃，避免
+133:     # 退回"转发断裂"），只是把重试从 30s 拉到 5min，几乎消除长期空转开销。nc 一旦连上(存活≥2s)立即复位。
+134:     (
+135:       backoff=1; min=1; max=30; idle_max=300; fail_gate=10; fails=0
+136:       while :; do
+137:         t0=$(date +%s 2>/dev/null || echo 0)
+138:         "$NC_BIN" "$SINK_HOST" "$SINK_PORT" <&4 >/dev/null 2>&1
+139:         t1=$(date +%s 2>/dev/null || echo 0)
+140:         if [ "$((t1 - t0))" -ge 2 ]; then
+141:           # nc 正常存活过（连上并传输）：复位退避与失败计数。
+142:           backoff=$min; fails=0
+143:         else
+144:           # nc 秒退（多为连不上）：累计失败，退避翻倍。达门闸后把上限从 max 抬到 idle_max。
+145:           fails=$((fails + 1))
+146:           backoff=$((backoff * 2))
+147:           cap=$max
+148:           [ "$fails" -ge "$fail_gate" ] && cap=$idle_max
+149:           [ "$backoff" -gt "$cap" ] && backoff=$cap
+150:         fi
+151:         # 退避期持续排空 fd4，绝不让 FIFO 写满回压业务。
+152:         if [ -n "$TIMEOUT_BIN" ] && [ -n "$CAT_BIN" ]; then
+153:           "$TIMEOUT_BIN" "$backoff" "$CAT_BIN" <&4 >/dev/null 2>&1 || true
+154:         else
+155:           # 兜底：无 timeout/cat 时只 sleep 1s（不用 $backoff），把最坏阻塞窗口压到 1s。
+156:           sleep 1
+157:         fi
+158:       done
+159:     ) &
+160:     LOOP_PID=$!
+161:     # 主进程不需要 fd4（读端由后台循环持有），关掉主进程侧的 fd4 副本，避免主进程意外持读端影响 EOF 语义。
+162:     exec 4<&- 2>/dev/null
+163:     FWD=1
+164:   fi
+165: fi
+166: 
+167: # 主循环：逐行读入。第 1 路必做；第 2 路仅在 FWD 就绪时尝试，写失败（nc 重连空窗期）静默丢该行、
+168: # 不关闭第 2 路（下一行 nc 若已重连即恢复）。
+169: while IFS= read -r line; do
+170:   # 第 1 路：原样回 stdout，维持现有采集（任何情况下都执行）。
+171:   printf '%s\n' "$line"
+172:   # 第 2 路：写入 FIFO 写端（fd 3），前置 \x01<service>\x01 前缀供 sink 识别注入 service 字段。
+173:   # 写失败仅丢该行（|| true），不影响第 1 路、不停第 2 路。
+174:   if [ -n "$FWD" ]; then
+175:     printf '%s%s\n' "$SVC_PREFIX" "$line" >&3 2>/dev/null || true
+176:   fi
+177: done
+178: 
+179: # 收尾：关闭写端、停后台循环、删 FIFO。
+180: if [ -n "$FWD" ]; then
+[remaining lines omitted] 184
+
+FILE init
+1: #!/usr/bin/env bash
+2: export PATH=$IDE_EDITOR_SERVER_DIR/bin:$PATH
+3: 
+4: echo '0. dynamic workdir'
+5: IDE_WORK_DIR=$(eval "echo $IDE_WORK_DIR")
+6: 
+7: mkdir -p "$IDE_WORK_DIR"
+8: mkdir -p "$IDE_EDITOR_SERVER_DIR"_run/supervisord-conf
+9: 
+10: cp -f "$IDE_EDITOR_SERVER_DIR"/supervisord-conf/vs-code.conf "$IDE_EDITOR_SERVER_DIR"_run/supervisord-conf/vs-code.conf
+11: 
+12: "$IDE_EDITOR_SERVER_DIR"/bin/supervisord -c "$IDE_EDITOR_SERVER_DIR"/supervisord-conf/supervisord.conf ctl reload
+13: 
+14: echo "[resolv-debug] /etc/resolv.conf before reset:"
+15: [ -e /etc/resolv.conf ] && cat /etc/resolv.conf || echo "[resolv-debug] not exists"
+16: 
+17: if [ ! "$IDE_WORKSPACE_RESET_RESOLVCONF" = "disabled" ]; then
+18:     echo '1. start reset /etc/resolv.conf'
+19:     if [ "$X_IDE_SPACE_REGION" = "tc-nanjing" ]; then
+20:         cat "$IDE_EDITOR_SERVER_DIR"/workspace-init/resolv.tc-nanjing.conf.init > /etc/resolv.conf
+21:     else 
+22:         cat "$IDE_EDITOR_SERVER_DIR"/workspace-init/resolv.conf.init > /etc/resolv.conf
+23:     fi
+24:     sed -i "s/http:\/\/mirrors.tencent.com/http:\/\/mirrors.tencentyun.com/g" /etc/apt/sources.list
+25: else
+26:     echo '1. [PASS] start reset /etc/resolv.conf'
+27: fi
+28: 
+29: echo '1.5. install auth-proxy local CA into system trust store'
+30: # 把 editor-server 只读镜像里携带的 auth-proxy 内部伪域名根 CA 公钥安装进沙箱系统信任库，
+31: # 使沙箱内 git/curl/各语言运行时信任 https://*.auth-proxy.local 等。CA 仅用于内部伪域名。
+32: AUTH_PROXY_CA_SRC="$IDE_EDITOR_SERVER_DIR/workspace-init/auth-proxy-ca.crt"
+33: if [ -f "$AUTH_PROXY_CA_SRC" ] && command -v update-ca-certificates >/dev/null 2>&1; then
+34:     if cp -f "$AUTH_PROXY_CA_SRC" /usr/local/share/ca-certificates/auth-proxy-local.crt 2>/dev/null; then
+35:         update-ca-certificates >/dev/null 2>&1 || true
+36:     else
+37:         echo '1.5. [SKIP] cannot write auth-proxy CA to trust store'
+38:     fi
+39: else
+40:     echo '1.5. [SKIP] auth-proxy CA file or update-ca-certificates not found'
+41: fi
+42: 
+43: echo '2. init user settings.'
+44: mkdir -p ~/.local/share/code-server/data/User
+45: rm -rf ~/.local/share/code-server/data/clp
+46: rm -rf ~/.local/share/code-server/data/languagepacks.json
+47: mkdir -p /var/run/cloudstudio
+48: cat > /var/run/cloudstudio/space.yaml << EOF
+49: spacekey: $X_IDE_SPACE_KEY
+50: region: $X_IDE_SPACE_REGION
+51: host: $X_IDE_SPACE_HOST
+52: cpu: $X_IDE_CPU_LIMIT
+53: mem: $X_IDE_MEMORY_LIMIT
+54: gpu: $X_IDE_GPU_LIMIT
+55: gpuType: $X_IDE_GPU_TYPE
+56: totalDisk: $X_IDE_DISK_QUOTA
+57: EOF
+58: 
+59: echo '3. cloud studio ready (vs-code 按需启动，由 api 探测 65210 时拉起)'
+60: 
+61: if [ "$IDE_WORKSPACE_CUSTOM_HOSTS" = "enabled" ]; then
+62:     echo "# Please note that the modification of this file will be automatically restored after the workspace restart" >> /etc/hosts
+63:     echo "# If you need to keep it, please modify ~/.user_hosts at the same time" >> /etc/hosts
+64:     if [ -f ~/.user_hosts ] && [ $(wc -l ~/.user_hosts|awk '{print $1}') -lt 50 ] && [ $(du -k ~/.user_hosts|awk '{print $1}') -lt 10 ] ; then
+65:         ipRegex='(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])'
+66:         domainRegex='(([a-zA-Z]|[a-zA-Z][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z]|[A-Za-z][A-Za-z0-9\-]*[A-Za-z0-9])'
+67:         # shellcheck disable=SC2016
+68:         notExist='!system("grep -q [[:space:]]"$i"[[:space:]] /etc/hosts||grep -q [[:space:]]"$i"$ /etc/hosts")'
+69:         awk '/^'"$ipRegex"'/{{flag="true";for(i=2;i<=NF;i++){if('"$notExist"'||$i!~/^'"$domainRegex"'$/){flag="false";continue;}}if(flag=="true"&&$NF>1){system("echo "$0" >> /etc/hosts")}}}' ~/.user_hosts
+70:     elif [ ! -f ~/.user_hosts ]; then
+71:        echo "" > ~/.user_hosts
+72:     fi
+73: fi
+74: 
+75: #云主机模式会检测echo输出"workspace init end", 以确认init完成
+76: echo '5. workspace init end'
+PM2_SCRIPT_HINTS
+/root/proxy ['box', '.box-version', 'data']
+/root/.pm2 ['logs', 'pids', 'module_conf.json', 'modules', 'touch', 'pm2.log', 'pm2.pid', 'pub.sock', 'rpc.sock']

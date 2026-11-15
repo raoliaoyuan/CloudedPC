@@ -1,0 +1,53 @@
+
+### PATH_AND_LAZY_NVM ###
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+-rwxr-xr-x 1 root root 20889000 Feb  6  2026 /root/.cargo/bin/rustup
+#!/bin/bash
+
+export NVM_DIR="/root/.nvm"
+
+node_versions=("$NVM_DIR"/versions/node/*)
+
+if ((${#node_versions[@]} > 0)); then
+	PATH="$PATH:${node_versions[$((${#node_versions[@]} - 1))]}/bin"
+fi
+
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+	# load the real nvm on first use
+	nvm() {
+		# shellcheck disable=SC1090,SC1091
+		source "$NVM_DIR"/nvm.sh
+		nvm "$@"
+	}
+fi
+
+if [ -s "$NVM_DIR/bash_completion" ]; then
+	# shellcheck disable=SC1090,SC1091
+	source "$NVM_DIR"/bash_completion
+fi
+
+### ESM_INTEROP_ISOLATED ###
+v18.19.1 ERR_REQUIRE_ESM require() of ES Module /root/.nvm/versions/node/v22.13.1/lib/node_modules/@angular/cli/node_modules/yargs/helpers/helpers.mjs not supported.
+v22.13.1 yargs ESM require OK
+
+### PYENV_PYTHON ###
+Python 3.11.1
+
+### SERVICE_CONFIG_PATHS ###
+61 supervisord ['/.PlnPyKFp4CRfFtgC1/bin/supervisord', '-c', '/.PlnPyKFp4CRfFtgC1/supervisord-conf/supervisord.conf', '']
+65518 tailscaled ['tailscaled', '--tun=userspace-networking', '--socks5-server=localhost:1055', '']
+68343 tailscaled ['/usr/sbin/tailscaled', 'be-child', 'ssh-monitor', '--uid=0', '--gid=0', '--groups=0,100', '--local-user=root', '--rpc-fd=3', '']
+68901 tailscaled ['/usr/sbin/tailscaled', 'be-child', 'ssh-monitor', '--uid=0', '--gid=0', '--groups=0,100', '--local-user=root', '--rpc-fd=3', '']
+68909 tailscaled ['/usr/sbin/tailscaled', 'be-child', 'ssh', '--login-shell=/bin/bash', '--uid=0', '--gid=0', '--groups=0,100', '--local-user=root', '--home-dir=/root', '--remote-user=[redacted]', '--remote-ip=100.82.31.127', '--has-tty=false', '--tty-name=', '--force-v1-behavior', '--cmd=bash --noprofile --norc -s', '--env-fd=3', '']
+67281 sshd ['sshd: /usr/sbin/sshd [listener] 0 of 10-100 startups', '']
+
+### FAILED_LOGIN_RECORDS ###
+root     ssh:notty    127.0.0.1        Tue Nov 10 15:46 - 15:46  (00:00)
+root     ssh:notty    127.0.0.1        Tue Nov 10 15:46 - 15:46  (00:00)
+
+btmp begins Tue Nov 10 15:46:14 2026
+
+### PACKAGE_INTEGRITY ###
+
+### REBOOT_FLAG ###
+not present

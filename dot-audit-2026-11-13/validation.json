@@ -1,0 +1,13 @@
+{
+  "source_sha256": "fc206e63af54b37f193e7a92d31869354598059053167358798009ea561e1428",
+  "preserved_parts": 13,
+  "sources": 21,
+  "tables": 9,
+  "chapters": 11,
+  "report_sha256": "600b6123097271bb9599c04d7369fb2da58ceb0c53575a7b1aff17e58b3639dd",
+  "pages": 12,
+  "visual_review": "All 12 pages inspected; final render pixel-identical to inspected images",
+  "hyperlinks": 92,
+  "reference_unchanged": true,
+  "field_refresh": "updateFields=true; PAGE rendered correctly"
+}

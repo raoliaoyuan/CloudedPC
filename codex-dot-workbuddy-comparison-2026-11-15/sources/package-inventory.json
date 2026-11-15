@@ -1,0 +1,122 @@
+{
+  "[Content_Types].xml": {
+    "sha256": "41a66d1038dce748cc4e368b9446df3e779dbe21cbbe4c23e959ecf360f6d5c8",
+    "bytes": 1916,
+    "role": "editable"
+  },
+  "_rels/.rels": {
+    "sha256": "a9ae57efe9186f07d48303bcac5d54c7e359bf3f503939c03ad2954e5c59a5c4",
+    "bytes": 734,
+    "role": "preserve"
+  },
+  "docProps/core.xml": {
+    "sha256": "ae6212a9110a7b2c8e7bf709ae22b350d5ad4dcd99ebfea1664c1cd097576040",
+    "bytes": 865,
+    "role": "editable"
+  },
+  "docProps/app.xml": {
+    "sha256": "be664981c3141cddfc59362beb287ebf20d0773660e2dd6faac5968a5930a081",
+    "bytes": 1132,
+    "role": "preserve"
+  },
+  "word/document.xml": {
+    "sha256": "ce9add73479b7d42ae08986070f40869b83a93e1883c1a983a20a9a4949c67eb",
+    "bytes": 225542,
+    "role": "editable"
+  },
+  "word/_rels/document.xml.rels": {
+    "sha256": "ce010bcf1c930eb212df58309664037445c5660424ecc65e61d21472d207f6d8",
+    "bytes": 10976,
+    "role": "editable"
+  },
+  "word/styles.xml": {
+    "sha256": "9a26ef985cdcc97e4f43235f8290143173cb83dda0865faada55f1fcd3cc589d",
+    "bytes": 350161,
+    "role": "preserve"
+  },
+  "word/stylesWithEffects.xml": {
+    "sha256": "463ae0928cf0d84775dbf8cf18d6c3029f6707c81bf590f6d6dd8757a5e93f15",
+    "bytes": 438131,
+    "role": "preserve"
+  },
+  "word/settings.xml": {
+    "sha256": "86c73de844b13fc27c417004b8fc5a7fdf76224ea4f5bdd0fb3996abedf5c6bb",
+    "bytes": 2565,
+    "role": "editable"
+  },
+  "word/webSettings.xml": {
+    "sha256": "349d36de7434d09f86987ff671d8814964a0588c1e630c06e562cda7e75e9f95",
+    "bytes": 438,
+    "role": "preserve"
+  },
+  "word/fontTable.xml": {
+    "sha256": "79385fb7f60247507ecaffc292e9ebd52ea0657b8634f629ba6fccc54011d6bb",
+    "bytes": 2811,
+    "role": "preserve"
+  },
+  "word/theme/theme1.xml": {
+    "sha256": "e3a8ab7db9ca7afca56f5f2820a56e8b660016c647773555b060b0a02ac76941",
+    "bytes": 10939,
+    "role": "preserve"
+  },
+  "customXml/item1.xml": {
+    "sha256": "a86086ffc5d8e83ebd6c71a55d1d2efaa31b137977f5f3a752366e1023612144",
+    "bytes": 262,
+    "role": "preserve"
+  },
+  "customXml/_rels/item1.xml.rels": {
+    "sha256": "1ca6c9a64edcebe24ee703a54403611b322d96da33371779e742d2d3f7ed7a6c",
+    "bytes": 295,
+    "role": "preserve"
+  },
+  "customXml/itemProps1.xml": {
+    "sha256": "c542307b13ec29a8b546217bb37936ab4822e044b265d2952985ec3d6afed24e",
+    "bytes": 354,
+    "role": "preserve"
+  },
+  "word/numbering.xml": {
+    "sha256": "70976f19cbcd896e51890859fe6ecb3467a5a7ad0c040160fedc5a1993cb09ce",
+    "bytes": 5513,
+    "role": "preserve"
+  },
+  "word/footer1.xml": {
+    "sha256": "3881aa42535fc3dfad7c61dc049088cf6a50a8442596b47da3a20c6c4d60d016",
+    "bytes": 1447,
+    "role": "editable"
+  },
+  "docProps/thumbnail.jpeg": {
+    "sha256": "96367138dc44ce09bf2c8f0f8e49348a1478d2c5c0af69bbc2bbc38b63cdcead",
+    "bytes": 8324,
+    "role": "preserve"
+  },
+  "word/media/01-comparison-scope.png": {
+    "sha256": "f97a8de534681049327b68897468ce4ff390caa18f33b57817b5a24ac6dde886",
+    "bytes": 445895,
+    "role": "preserve"
+  },
+  "word/media/02-resource-comparison.png": {
+    "sha256": "7237065fe3668e2246cf0576791b92b8b4095453e6bffc8816a0550214a8ee59",
+    "bytes": 383574,
+    "role": "preserve"
+  },
+  "word/media/03-network-comparison.png": {
+    "sha256": "00b584e86188ea45d42cdb4ad49008f846ca7b383431648a2561bbbfc548b132",
+    "bytes": 444471,
+    "role": "preserve"
+  },
+  "word/media/04-persistence-comparison.png": {
+    "sha256": "163975405ec7a0f2351fb5a91910993962fe1892b6b7fbc9adc165168634171e",
+    "bytes": 408709,
+    "role": "preserve"
+  },
+  "word/media/05-gui-workflow.png": {
+    "sha256": "fe24b2e60986fc774adafe569e63de2852ed4225ea34362f4a7c10c299f8dcba",
+    "bytes": 419692,
+    "role": "preserve"
+  },
+  "word/media/06-gui-diagnosis.png": {
+    "sha256": "3a83dde6e54d890954d472be09b88799ce134c4ba63162415c7916ce514619dd",
+    "bytes": 387615,
+    "role": "preserve"
+  }
+}

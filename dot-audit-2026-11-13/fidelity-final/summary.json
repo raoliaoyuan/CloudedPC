@@ -1,0 +1,21 @@
+{
+  "a_docx": "/home/gamer/Work/CloudPC/\u4e91PC\u8f6f\u786c\u4ef6\u68c0\u67e5\u62a5\u544a.docx",
+  "b_docx": "/home/gamer/Work/CloudPC/dot-audit-2026-11-13/Dot\u4e91\u7535\u8111\u8f6f\u786c\u4ef6\u914d\u7f6e\u4e0e\u8fd0\u884c\u68c0\u67e5\u62a5\u544a.docx",
+  "pages_a": 10,
+  "pages_b": 12,
+  "changed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "num_changed_pages": 12
+}

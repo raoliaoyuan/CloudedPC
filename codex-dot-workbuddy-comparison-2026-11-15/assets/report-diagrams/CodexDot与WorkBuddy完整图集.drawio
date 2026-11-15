@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device" version="24.7.17">
+  <diagram id="01-comparison-scope" name="图 1  比较对象与证据边界">
+    <mxGraphModel dx="1400" dy="1050" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1050" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;div style=&quot;line-height:1.5&quot;&gt;图 1  比较对象与证据边界&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=34;fontColor=#16324F;fontStyle=1;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64" y="41" width="1300" height="45" />
+        </mxCell>
+        <mxCell id="subtitle" value="&lt;div style=&quot;line-height:1.5&quot;&gt;逻辑范围图｜蓝色：历史资料，等级见框内；青色：官方；橙色虚线：未确认&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64" y="85" width="1300" height="30" />
+        </mxCell>
+        <mxCell id="accent" value="" style="rounded=1;fillColor=#137B77;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="42" width="7" height="38" />
+        </mxCell>
+        <mxCell id="dot" value="Codex Dot 云电脑" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F6F9FC;strokeColor=#A9BED0;strokeWidth=1.5;align=left;verticalAlign=top;spacingLeft=24;spacingTop=16;fontFamily=Noto Sans CJK SC;fontSize=26;fontStyle=1;fontColor=#16324F;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="175" width="620" height="660" />
+        </mxCell>
+        <mxCell id="wb" value="WorkBuddy 云 PC 本实例" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F6F9FC;strokeColor=#A9BED0;strokeWidth=1.5;align=left;verticalAlign=top;spacingLeft=24;spacingTop=16;fontFamily=Noto Sans CJK SC;fontSize=26;fontStyle=1;fontColor=#16324F;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="730" y="175" width="620" height="660" />
+        </mxCell>
+        <mxCell id="dot-official" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;任务与云电脑〔官方〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;Dot 有自有云电脑与浏览器&lt;br&gt;可委派任务并由用户必要时接管&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EDF8F5;strokeColor=#137B77;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="dot">
+          <mxGeometry as="geometry" x="35" y="90" width="550" height="150" />
+        </mxCell>
+        <mxCell id="dot-evidence" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;实例证据〔记录与观察〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;配置多为历史助手陈述&lt;br&gt;数独可玩与 GUI 操作有用户确认&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="dot">
+          <mxGeometry as="geometry" x="35" y="290" width="550" height="145" />
+        </mxCell>
+        <mxCell id="dot-unknown" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;部署细节〔未确认〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;运行时、配额、底层拓扑&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF8E9;strokeColor=#A86C16;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;dashed=1;dashPattern=8 6;" vertex="1" parent="dot">
+          <mxGeometry as="geometry" x="35" y="485" width="550" height="125" />
+        </mxCell>
+        <mxCell id="wb-evidence" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;Tencent Cloud CVM〔实测线索〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;DMI 厂商与产品标识&lt;br&gt;当前工作区是 Linux 容器&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="wb">
+          <mxGeometry as="geometry" x="35" y="90" width="550" height="150" />
+        </mxCell>
+        <mxCell id="wb-service" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;容器内管理〔历史实测〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;终端、CodeBuddy 与 Docker 组件&lt;br&gt;有配置、进程和访问证据&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="wb">
+          <mxGeometry as="geometry" x="35" y="290" width="550" height="145" />
+        </mxCell>
+        <mxCell id="wb-boundary" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;宿主能力〔未确认〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:24px;line-height:1.45;color:#52647A&quot;&gt;Sysbox 特征是推断；无宿主管理权&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF8E9;strokeColor=#A86C16;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;dashed=1;dashPattern=8 6;" vertex="1" parent="wb">
+          <mxGeometry as="geometry" x="35" y="485" width="550" height="125" />
+        </mxCell>
+        <mxCell id="rules" value="&lt;div style=&quot;line-height:1.5&quot;&gt;Dot 自有云电脑、委派的 Codex Cloud 与连接的个人电脑不能混为同一环境。&lt;br&gt;两边都涉及代理工具；本图不比较代理模型质量，也不把单个实例泛化为产品规格。&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=25;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="70" y="880" width="1260" height="95" />
+        </mxCell>
+        <mxCell id="source" value="&lt;div style=&quot;line-height:1.5&quot;&gt;来源：[W1 第 2、5、8 章][A #024、#060][U1][O1][O3]。&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="990" width="1280" height="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="02-resource-comparison" name="图 2  可见资源与实际限制">
+    <mxGraphModel dx="1400" dy="1080" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1080" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;div style=&quot;line-height:1.5&quot;&gt;图 2  可见资源与实际限制&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=34;fontColor=#16324F;fontStyle=1;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64" y="41" width="1300" height="45" />
+        </mxCell>
+        <mxCell id="subtitle" value="&lt;div style=&quot;line-height:1.5&quot;&gt;蓝色：历史实测或记录；橙色虚线：需补证据；同口径后才能比较&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64" y="85" width="1300" height="30" />
+        </mxCell>
+        <mxCell id="accent" value="" style="rounded=1;fillColor=#137B77;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="42" width="7" height="38" />
+        </mxCell>
+        <mxCell id="dot-view" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;Dot 可见视图〔记录〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:28px;line-height:1.45;color:#52647A&quot;&gt;9 个逻辑 CPU&lt;br&gt;内存总量约 9.73 GiB&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="70" y="190" width="600" height="160" />
+        </mxCell>
+        <mxCell id="wb-view" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;WorkBuddy 可见视图〔实测〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:28px;line-height:1.45;color:#52647A&quot;&gt;32 个逻辑 CPU&lt;br&gt;内存总量约 123.32 GiB&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="730" y="190" width="600" height="160" />
+        </mxCell>
+        <mxCell id="dot-limit" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;实际限制〔未确认〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;缺少 cpu.max、memory.max&lt;br&gt;或其他资源控制机制的原始证据&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF8E9;strokeColor=#A86C16;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;dashed=1;dashPattern=8 6;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="70" y="500" width="600" height="165" />
+        </mxCell>
+        <mxCell id="wb-limit" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;父级限制〔历史实测〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;400000 / 100000 → 4 核时间上限&lt;br&gt;memory.max → 8 GiB 硬限制&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="730" y="500" width="600" height="165" />
+        </mxCell>
+        <mxCell id="conclusion" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;比较结论〔技术分析〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:27px;line-height:1.45;color:#52647A&quot;&gt;9 个可见 CPU 与 4 核时间上限不是同一种指标&lt;br&gt;没有同负载基准，不能据此排名性能、独占性或响应速度&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="140" y="800" width="1120" height="145" />
+        </mxCell>
+        <mxCell id="dot-check" style="edgeStyle=none;rounded=0;html=1;strokeColor=#A86C16;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;dashed=1;dashPattern=8 6;" edge="1" parent="1" source="dot-view" target="dot-limit">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="dot-check-label" value="不能直接当成配额" style="text;html=1;fillColor=#FFFFFF;strokeColor=none;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#176B99;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="272.0" y="410" width="196.0" height="28" />
+        </mxCell>
+        <mxCell id="wb-check" style="edgeStyle=none;rounded=0;html=1;strokeColor=#176B99;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="wb-view" target="wb-limit">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="wb-check-label" value="实际核对父级约束" style="text;html=1;fillColor=#FFFFFF;strokeColor=none;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#176B99;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="932.0" y="410" width="196.0" height="28" />
+        </mxCell>
+        <mxCell id="source" value="&lt;div style=&quot;line-height:1.5&quot;&gt;来源：[A #024][W1 第 2 章][T1]。4 核上限不是 4 个独占物理核，也不是保底性能。&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="1000" width="1280" height="50" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="03-network-comparison" name="图 3  远程入口与网络证据">
+    <mxGraphModel dx="1400" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1180" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;div style=&quot;line-height:1.5&quot;&gt;图 3  远程入口与网络证据&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=34;fontColor=#16324F;fontStyle=1;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64" y="41" width="1300" height="45" />
+        </mxCell>
+        <mxCell id="subtitle" value="&lt;div style=&quot;line-height:1.5&quot;&gt;箭头表示已支持的逻辑访问关系，不是完整抓包拓扑&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64" y="85" width="1300" height="30" />
+        </mxCell>
+        <mxCell id="accent" value="" style="rounded=1;fillColor=#137B77;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="42" width="7" height="38" />
+        </mxCell>
+        <mxCell id="wb" value="WorkBuddy 本实例" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F6F9FC;strokeColor=#A9BED0;strokeWidth=1.5;align=left;verticalAlign=top;spacingLeft=24;spacingTop=16;fontFamily=Noto Sans CJK SC;fontSize=26;fontStyle=1;fontColor=#16324F;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="170" width="620" height="740" />
+        </mxCell>
+        <mxCell id="dot" value="Codex Dot 云电脑" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F6F9FC;strokeColor=#A9BED0;strokeWidth=1.5;align=left;verticalAlign=top;spacingLeft=24;spacingTop=16;fontFamily=Noto Sans CJK SC;fontSize=26;fontStyle=1;fontColor=#16324F;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="730" y="170" width="620" height="740" />
+        </mxCell>
+        <mxCell id="wb-user" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;用户端发起远程访问&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;历史 SSH 登录成功&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="wb">
+          <mxGeometry as="geometry" x="40" y="90" width="540" height="110" />
+        </mxCell>
+        <mxCell id="wb-entry" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;Tailscale 入口〔历史实测〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:25px;line-height:1.45;color:#52647A&quot;&gt;用户态模式在线&lt;br&gt;此处不等同于容器 OpenSSH&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="wb">
+          <mxGeometry as="geometry" x="40" y="280" width="540" height="145" />
+        </mxCell>
+        <mxCell id="wb-target" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;WorkBuddy 执行环境&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;可开展已授权的终端管理&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="wb">
+          <mxGeometry as="geometry" x="40" y="490" width="540" height="115" />
+        </mxCell>
+        <mxCell id="dot-user" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;用户操作 GUI〔用户观察〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;可操作，但反馈体验差&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="dot">
+          <mxGeometry as="geometry" x="40" y="90" width="540" height="110" />
+        </mxCell>
+        <mxCell id="dot-entry" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;人工接管〔官方〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:25px;line-height:1.45;color:#52647A&quot;&gt;查看后选择 Take over&lt;br&gt;GUI 协议与传输路径未确认&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EDF8F5;strokeColor=#137B77;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="dot">
+          <mxGeometry as="geometry" x="40" y="280" width="540" height="145" />
+        </mxCell>
+        <mxCell id="dot-target" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;Dot 云电脑&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;用户确认数独本地预览可玩&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="dot">
+          <mxGeometry as="geometry" x="40" y="490" width="540" height="115" />
+        </mxCell>
+        <mxCell id="unknown" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;两边仍须分别验收&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:25px;line-height:1.45;color:#52647A&quot;&gt;公网入站、长期服务与恢复；Dot 另缺独立 SSH 及尾网连接证据&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF8E9;strokeColor=#A86C16;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;dashed=1;dashPattern=8 6;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="100" y="960" width="1200" height="120" />
+        </mxCell>
+        <mxCell id="wb1" style="edgeStyle=none;rounded=0;html=1;strokeColor=#176B99;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="wb-user" target="wb-entry">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="wb2" style="edgeStyle=none;rounded=0;html=1;strokeColor=#176B99;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="wb-entry" target="wb-target">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="dot1" style="edgeStyle=none;rounded=0;html=1;strokeColor=#137B77;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="dot-user" target="dot-entry">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="dot2" style="edgeStyle=none;rounded=0;html=1;strokeColor=#137B77;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="dot-entry" target="dot-target">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="wb-note" value="&lt;div style=&quot;line-height:1.5&quot;&gt;独立探测经 DERP(sin)，均值 104.6 ms&lt;br&gt;不是该次 SSH 的完整抓包或 GUI 测量&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="95" y="810" width="530" height="70" />
+        </mxCell>
+        <mxCell id="dot-note" value="&lt;div style=&quot;line-height:1.5&quot;&gt;浏览器出站代理另有配置记录&lt;br&gt;不能把它画成已确认的 GUI 传输链&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="775" y="810" width="530" height="70" />
+        </mxCell>
+        <mxCell id="source" value="&lt;div style=&quot;line-height:1.5&quot;&gt;来源：[W1 第 7 章][W2 第 6 节][W3][A #027、#036、#060][U1][O1]。&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="1120" width="1280" height="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="04-persistence-comparison" name="图 4  数据保留与恢复的比较">
+    <mxGraphModel dx="1400" dy="1110" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1110" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;div style=&quot;line-height:1.5&quot;&gt;图 4  数据保留与恢复的比较&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=34;fontColor=#16324F;fontStyle=1;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64" y="41" width="1300" height="45" />
+        </mxCell>
+        <mxCell id="subtitle" value="&lt;div style=&quot;line-height:1.5&quot;&gt;蓝色：历史存储或服务证据；青色：官方能力；橙色：待验证对象&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64" y="85" width="1300" height="30" />
+        </mxCell>
+        <mxCell id="accent" value="" style="rounded=1;fillColor=#137B77;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="42" width="7" height="38" />
+        </mxCell>
+        <mxCell id="objects" value="两边都需要按对象与生命周期事件核验" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F6F9FC;strokeColor=#A9BED0;strokeWidth=1.5;align=left;verticalAlign=top;spacingLeft=24;spacingTop=16;fontFamily=Noto Sans CJK SC;fontSize=26;fontStyle=1;fontColor=#16324F;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="70" y="450" width="1260" height="320" />
+        </mxCell>
+        <mxCell id="dot" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;Dot 状态延续〔官方〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:27px;line-height:1.45;color:#52647A&quot;&gt;可跨使用时段保留状态&lt;br&gt;本账号的具体策略尚未核实&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EDF8F5;strokeColor=#137B77;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="70" y="190" width="600" height="150" />
+        </mxCell>
+        <mxCell id="wb" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;WorkBuddy 存储与同步〔实测〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:27px;line-height:1.45;color:#52647A&quot;&gt;user-data 与后端挂载线索&lt;br&gt;同步组件运行，完整性尚未验收&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="730" y="190" width="600" height="150" />
+        </mxCell>
+        <mxCell id="files" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;文件与目录&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:24px;line-height:1.45;color:#52647A&quot;&gt;路径和哈希&lt;br&gt;暂停或重建后是否恢复&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF8E9;strokeColor=#A86C16;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;dashed=1;dashPattern=8 6;" vertex="1" parent="objects">
+          <mxGeometry as="geometry" x="30" y="95" width="350" height="175" />
+        </mxCell>
+        <mxCell id="browser" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;浏览器会话&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:24px;line-height:1.45;color:#52647A&quot;&gt;是否已登录&lt;br&gt;网站过期与快照分别看&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF8E9;strokeColor=#A86C16;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;dashed=1;dashPattern=8 6;" vertex="1" parent="objects">
+          <mxGeometry as="geometry" x="455" y="95" width="350" height="175" />
+        </mxCell>
+        <mxCell id="process" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;进程与连接&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:24px;line-height:1.45;color:#52647A&quot;&gt;进程、端口与 TCP&lt;br&gt;是否继续或需要重建&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF8E9;strokeColor=#A86C16;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;dashed=1;dashPattern=8 6;" vertex="1" parent="objects">
+          <mxGeometry as="geometry" x="880" y="95" width="350" height="175" />
+        </mxCell>
+        <mxCell id="backup" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;独立副本与恢复演练〔建议〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;状态保留不等于进程持续运行；文件同步不等于可恢复备份&lt;br&gt;当前没有一方完成本项目所需的完整恢复验收&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF8E9;strokeColor=#A86C16;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;dashed=1;dashPattern=8 6;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="160" y="870" width="1080" height="135" />
+        </mxCell>
+        <mxCell id="dot-test" style="edgeStyle=none;rounded=0;html=1;strokeColor=#A86C16;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.23809523809523808;entryY=0.0;entryPerimeter=0;dashed=1;dashPattern=8 6;" edge="1" parent="1" source="dot" target="objects">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="wb-test" style="edgeStyle=none;rounded=0;html=1;strokeColor=#A86C16;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.7619047619047619;entryY=0.0;entryPerimeter=0;dashed=1;dashPattern=8 6;" edge="1" parent="1" source="wb" target="objects">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="source" value="&lt;div style=&quot;line-height:1.5&quot;&gt;来源：[W1 第 3、5、11 章][A #039、#042][O1][O2]；虚线不表示已建立备份。&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="1045" width="1280" height="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="05-gui-workflow" name="图 5  人工操作与控制权交接">
+    <mxGraphModel dx="1400" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1180" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;div style=&quot;line-height:1.5&quot;&gt;图 5  人工操作与控制权交接&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=34;fontColor=#16324F;fontStyle=1;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64" y="41" width="1300" height="45" />
+        </mxCell>
+        <mxCell id="subtitle" value="&lt;div style=&quot;line-height:1.5&quot;&gt;青色：Dot 官方流程；蓝色：WorkBuddy 历史实测；橙色：未确认&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64" y="85" width="1300" height="30" />
+        </mxCell>
+        <mxCell id="accent" value="" style="rounded=1;fillColor=#137B77;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="42" width="7" height="38" />
+        </mxCell>
+        <mxCell id="left" value="Dot 人工介入流程" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F6F9FC;strokeColor=#A9BED0;strokeWidth=1.5;align=left;verticalAlign=top;spacingLeft=24;spacingTop=16;fontFamily=Noto Sans CJK SC;fontSize=26;fontStyle=1;fontColor=#16324F;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="170" width="620" height="785" />
+        </mxCell>
+        <mxCell id="right" value="WorkBuddy 已验证界面范围" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F6F9FC;strokeColor=#A9BED0;strokeWidth=1.5;align=left;verticalAlign=top;spacingLeft=24;spacingTop=16;fontFamily=Noto Sans CJK SC;fontSize=26;fontStyle=1;fontColor=#16324F;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="730" y="170" width="620" height="785" />
+        </mxCell>
+        <mxCell id="open" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;打开云电脑&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;查看画面&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EDF8F5;strokeColor=#137B77;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="left">
+          <mxGeometry as="geometry" x="40" y="90" width="540" height="110" />
+        </mxCell>
+        <mxCell id="take" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;Take over&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;取得鼠标与键盘控制&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EDF8F5;strokeColor=#137B77;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="left">
+          <mxGeometry as="geometry" x="40" y="255" width="540" height="110" />
+        </mxCell>
+        <mxCell id="act" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;完成必要操作&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;例如登录或检查结果&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EDF8F5;strokeColor=#137B77;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="left">
+          <mxGeometry as="geometry" x="40" y="420" width="540" height="110" />
+        </mxCell>
+        <mxCell id="return" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;Return control&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;交还后由 Dot 继续任务&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EDF8F5;strokeColor=#137B77;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="left">
+          <mxGeometry as="geometry" x="40" y="585" width="540" height="110" />
+        </mxCell>
+        <mxCell id="terminal" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;终端与预览组件〔实测〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;平台终端、editor-sdk 运行&lt;br&gt;VS Code 配置按需启动&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="right">
+          <mxGeometry as="geometry" x="40" y="90" width="540" height="155" />
+        </mxCell>
+        <mxCell id="desktop" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;完整桌面〔未验收〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:25px;line-height:1.45;color:#52647A&quot;&gt;有相关软件包不等于运行会话&lt;br&gt;不能直接视为 Dot 的 GUI 替代品&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF8E9;strokeColor=#A86C16;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;dashed=1;dashPattern=8 6;" vertex="1" parent="right">
+          <mxGeometry as="geometry" x="40" y="330" width="540" height="170" />
+        </mxCell>
+        <mxCell id="same-test" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;同场景 GUI 对照〔缺失〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:24px;line-height:1.45;color:#52647A&quot;&gt;没有足够证据评定哪边更好用&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF8E9;strokeColor=#A86C16;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;dashed=1;dashPattern=8 6;" vertex="1" parent="right">
+          <mxGeometry as="geometry" x="40" y="585" width="540" height="110" />
+        </mxCell>
+        <mxCell id="opentake" style="edgeStyle=none;rounded=0;html=1;strokeColor=#137B77;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="open" target="take">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="takeact" style="edgeStyle=none;rounded=0;html=1;strokeColor=#137B77;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="take" target="act">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="actreturn" style="edgeStyle=none;rounded=0;html=1;strokeColor=#137B77;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="act" target="return">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="meaning" value="&lt;div style=&quot;line-height:1.5&quot;&gt;〔推断〕交接流程支持“围绕代理任务组织交互”的解释。&lt;br&gt;它不能证明界面简陋是刻意设计，或安全、成本与代理工作的必要代价。&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=25;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="75" y="995" width="1250" height="90" />
+        </mxCell>
+        <mxCell id="source" value="&lt;div style=&quot;line-height:1.5&quot;&gt;来源：[O1][O3][W1 第 4、5 章][U1]；不是 GUI 性能测试。&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="1120" width="1280" height="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="06-gui-diagnosis" name="图 6  GUI 体验问题的定位逻辑">
+    <mxGraphModel dx="1400" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1180" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;div style=&quot;line-height:1.5&quot;&gt;图 6  GUI 体验问题的定位逻辑&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=34;fontColor=#16324F;fontStyle=1;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64" y="41" width="1300" height="45" />
+        </mxCell>
+        <mxCell id="subtitle" value="&lt;div style=&quot;line-height:1.5&quot;&gt;通用诊断框架〔建议〕｜所有候选原因待核验，不是 Dot 已测架构&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64" y="85" width="1300" height="30" />
+        </mxCell>
+        <mxCell id="accent" value="" style="rounded=1;fillColor=#137B77;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="42" width="7" height="38" />
+        </mxCell>
+        <mxCell id="chain" value="按键到可见结果的概念链〔通用技术分析〕" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F6F9FC;strokeColor=#A9BED0;strokeWidth=1.5;align=left;verticalAlign=top;spacingLeft=24;spacingTop=16;fontFamily=Noto Sans CJK SC;fontSize=26;fontStyle=1;fontColor=#16324F;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="70" y="690" width="1260" height="220" />
+        </mxCell>
+        <mxCell id="complaint" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;用户反馈〔观察〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:27px;line-height:1.45;color:#52647A&quot;&gt;界面简陋、总体使用体验差&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="360" y="180" width="680" height="110" />
+        </mxCell>
+        <mxCell id="layout" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;找不到或不理解操作&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;检查入口、状态反馈与步骤&lt;br&gt;记录任务用时、误操作和恢复路径&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF8E9;strokeColor=#A86C16;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;dashed=1;dashPattern=8 6;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="70" y="420" width="600" height="160" />
+        </mxCell>
+        <mxCell id="response" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;动作发出后等待或异常&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:26px;line-height:1.45;color:#52647A&quot;&gt;先核对接管与输入焦点&lt;br&gt;再区分全界面问题和单应用问题&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF8E9;strokeColor=#A86C16;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;dashed=1;dashPattern=8 6;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="730" y="420" width="600" height="160" />
+        </mxCell>
+        <mxCell id="input" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;输入与控制权&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="chain">
+          <mxGeometry as="geometry" x="30" y="85" width="270" height="85" />
+        </mxCell>
+        <mxCell id="app" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;应用与资源&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="chain">
+          <mxGeometry as="geometry" x="340" y="85" width="270" height="85" />
+        </mxCell>
+        <mxCell id="frame" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;画面与传输&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="chain">
+          <mxGeometry as="geometry" x="650" y="85" width="270" height="85" />
+        </mxCell>
+        <mxCell id="client" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;客户端呈现&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="chain">
+          <mxGeometry as="geometry" x="960" y="85" width="270" height="85" />
+        </mxCell>
+        <mxCell id="branch1" style="edgeStyle=none;rounded=0;html=1;strokeColor=#A86C16;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.25;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;dashed=1;dashPattern=8 6;" edge="1" parent="1" source="complaint" target="layout">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="530" y="355" />
+              <mxPoint x="370" y="355" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="branch2" style="edgeStyle=none;rounded=0;html=1;strokeColor=#A86C16;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.75;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;dashed=1;dashPattern=8 6;" edge="1" parent="1" source="complaint" target="response">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="870" y="355" />
+              <mxPoint x="1030" y="355" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inputapp" style="edgeStyle=none;rounded=0;html=1;strokeColor=#64788C;strokeWidth=2.3;endArrow=block;endFill=1;exitX=1.0;exitY=0.49411764705882355;exitPerimeter=0;entryX=0.0;entryY=0.49411764705882355;entryPerimeter=0;" edge="1" parent="1" source="input" target="app">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="appframe" style="edgeStyle=none;rounded=0;html=1;strokeColor=#64788C;strokeWidth=2.3;endArrow=block;endFill=1;exitX=1.0;exitY=0.49411764705882355;exitPerimeter=0;entryX=0.0;entryY=0.49411764705882355;entryPerimeter=0;" edge="1" parent="1" source="app" target="frame">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="frameclient" style="edgeStyle=none;rounded=0;html=1;strokeColor=#64788C;strokeWidth=2.3;endArrow=block;endFill=1;exitX=1.0;exitY=0.49411764705882355;exitPerimeter=0;entryX=0.0;entryY=0.49411764705882355;entryPerimeter=0;" edge="1" parent="1" source="frame" target="client">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="notes" value="&lt;div style=&quot;line-height:1.5&quot;&gt;分别记录步骤、输入回显、应用耗时与画面表现；有条件时再采集资源及链路指标。&lt;br&gt;Dot 协议、编码与帧率仍未知；WorkBuddy 的尾网 RTT 不能填入这条 GUI 链。&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=25;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="75" y="965" width="1250" height="100" />
+        </mxCell>
+        <mxCell id="source" value="&lt;div style=&quot;line-height:1.5&quot;&gt;来源：[U1][T3][H1][W3]；借用诊断方法，不认定 Dot 使用 RDP 或 Azure Virtual Desktop。&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="1110" width="1280" height="45" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

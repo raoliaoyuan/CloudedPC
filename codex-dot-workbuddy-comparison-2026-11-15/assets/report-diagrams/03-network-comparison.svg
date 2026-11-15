@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1180" viewBox="0 0 1400 1180">
+<title>图 3  远程入口与网络证据</title>
+<desc>箭头表示已支持的逻辑访问关系，不是完整抓包拓扑</desc>
+<defs>
+<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#176B99"/></marker>
+<marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#137B77"/></marker>
+<marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#A86C16"/></marker>
+<marker id="arrow-slate" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#64788C"/></marker>
+</defs>
+<rect width="1400" height="1180" fill="white"/>
+<g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="40" y="42" width="7" height="38" rx="3" fill="#137B77"/>
+<text x="64" y="75.0" text-anchor="start" font-size="34" fill="#16324F" font-weight="700">图 3  远程入口与网络证据</text>
+<text x="64" y="112.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">箭头表示已支持的逻辑访问关系，不是完整抓包拓扑</text>
+<rect x="50" y="170" width="620" height="740" rx="18" fill="#F6F9FC" stroke="#A9BED0" stroke-width="1.5"/>
+<text x="74" y="210.0" text-anchor="start" font-size="26" fill="#16324F" font-weight="700">WorkBuddy 本实例</text>
+<rect x="730" y="170" width="620" height="740" rx="18" fill="#F6F9FC" stroke="#A9BED0" stroke-width="1.5"/>
+<text x="754" y="210.0" text-anchor="start" font-size="26" fill="#16324F" font-weight="700">Codex Dot 云电脑</text>
+<polyline points="360,370 360,450" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="360,595 360,660" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="1040,370 1040,450" fill="none" stroke="#137B77" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-teal)"/>
+<polyline points="1040,595 1040,660" fill="none" stroke="#137B77" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-teal)"/>
+<rect x="90" y="260" width="540" height="110" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="360.0" y="302.01" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">用户端发起远程访问</text>
+<text x="360.0" y="351.71" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">历史 SSH 登录成功</text>
+<rect x="90" y="450" width="540" height="145" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="360.0" y="492.11" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">Tailscale 入口〔历史实测〕</text>
+<text x="360.0" y="540.36" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">用户态模式在线</text>
+<text x="360.0" y="576.61" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">此处不等同于容器 OpenSSH</text>
+<rect x="90" y="660" width="540" height="115" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="360.0" y="704.51" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">WorkBuddy 执行环境</text>
+<text x="360.0" y="754.21" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">可开展已授权的终端管理</text>
+<rect x="770" y="260" width="540" height="110" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="1040.0" y="302.01" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">用户操作 GUI〔用户观察〕</text>
+<text x="1040.0" y="351.71" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">可操作，但反馈体验差</text>
+<rect x="770" y="450" width="540" height="145" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="1040.0" y="492.11" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">人工接管〔官方〕</text>
+<text x="1040.0" y="540.36" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">查看后选择 Take over</text>
+<text x="1040.0" y="576.61" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">GUI 协议与传输路径未确认</text>
+<rect x="770" y="660" width="540" height="115" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="1040.0" y="704.51" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">Dot 云电脑</text>
+<text x="1040.0" y="754.21" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">用户确认数独本地预览可玩</text>
+<rect x="100" y="960" width="1200" height="120" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="700.0" y="1007.735" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">两边仍须分别验收</text>
+<text x="700.0" y="1055.9850000000001" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">公网入站、长期服务与恢复；Dot 另缺独立 SSH 及尾网连接证据</text>
+<text x="95" y="832.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">独立探测经 DERP(sin)，均值 104.6 ms</text>
+<text x="95" y="865.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">不是该次 SSH 的完整抓包或 GUI 测量</text>
+<text x="775" y="832.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">浏览器出站代理另有配置记录</text>
+<text x="775" y="865.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">不能把它画成已确认的 GUI 传输链</text>
+<text x="60" y="1142.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">来源：[W1 第 7 章][W2 第 6 节][W3][A #027、#036、#060][U1][O1]。</text>
+</g></svg>

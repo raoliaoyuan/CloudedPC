@@ -1,0 +1,168 @@
+{
+  "input": "/home/gamer/Work/CloudPC/codex-dot-workbuddy-comparison-2026-11-15/Codex Dot\u5bf9\u6bd4 Workbuddy\u4e91PC\u5bf9\u6bd4\u5206\u6790\u62a5\u544a\u53caGUI\u4f53\u9a8c\u5206\u6790.docx",
+  "fonts_by_char_count": {},
+  "direct_run_formatting_runs": 237,
+  "direct_paragraph_formatting_paragraphs": 235,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 16,
+      "text": "\u56fe 1  \u6bd4\u8f83\u5bf9\u8c61\u4e0e\u8bc1\u636e\u8fb9\u754c",
+      "style": "Normal"
+    },
+    {
+      "para_index": 27,
+      "text": "\u56fe 2  \u53ef\u89c1\u8d44\u6e90\u4e0e\u5b9e\u9645\u9650\u5236",
+      "style": "Normal"
+    },
+    {
+      "para_index": 47,
+      "text": "\u56fe 3  \u8fdc\u7a0b\u5165\u53e3\u4e0e\u7f51\u7edc\u8bc1\u636e",
+      "style": "Normal"
+    },
+    {
+      "para_index": 58,
+      "text": "\u56fe 4  \u6570\u636e\u4fdd\u7559\u4e0e\u6062\u590d\u7684\u6bd4\u8f83",
+      "style": "Normal"
+    },
+    {
+      "para_index": 86,
+      "text": "\u56fe 5  \u4eba\u5de5\u64cd\u4f5c\u4e0e\u63a7\u5236\u6743\u4ea4\u63a5",
+      "style": "Normal"
+    },
+    {
+      "para_index": 99,
+      "text": "\u56fe 6  GUI \u4f53\u9a8c\u95ee\u9898\u7684\u5b9a\u4f4d\u903b\u8f91",
+      "style": "Normal"
+    },
+    {
+      "para_index": 136,
+      "text": "\u5173\u952e\u7ef4\u5ea6",
+      "style": "Normal"
+    },
+    {
+      "para_index": 137,
+      "text": "Codex Dot \u4e91\u7535\u8111",
+      "style": "Normal"
+    },
+    {
+      "para_index": 138,
+      "text": "WorkBuddy \u4e91 PC \u672c\u5b9e\u4f8b",
+      "style": "Normal"
+    },
+    {
+      "para_index": 151,
+      "text": "\u8bc1\u636e\u6807\u8bb0",
+      "style": "Normal"
+    },
+    {
+      "para_index": 152,
+      "text": "\u5b9a\u4e49\u4e0e\u4f7f\u7528\u8fb9\u754c",
+      "style": "Normal"
+    },
+    {
+      "para_index": 165,
+      "text": "\u9879\u76ee",
+      "style": "Normal"
+    },
+    {
+      "para_index": 166,
+      "text": "Codex Dot \u5386\u53f2\u8bb0\u5f55",
+      "style": "Normal"
+    },
+    {
+      "para_index": 167,
+      "text": "WorkBuddy \u5386\u53f2\u5b9e\u6d4b",
+      "style": "Normal"
+    },
+    {
+      "para_index": 192,
+      "text": "\u9879\u76ee",
+      "style": "Normal"
+    },
+    {
+      "para_index": 193,
+      "text": "Codex Dot",
+      "style": "Normal"
+    },
+    {
+      "para_index": 194,
+      "text": "WorkBuddy \u4e91 PC",
+      "style": "Normal"
+    },
+    {
+      "para_index": 216,
+      "text": "\u6bd4\u8f83\u9879",
+      "style": "Normal"
+    },
+    {
+      "para_index": 217,
+      "text": "Codex Dot",
+      "style": "Normal"
+    },
+    {
+      "para_index": 218,
+      "text": "WorkBuddy \u4e91 PC",
+      "style": "Normal"
+    }
+  ],
+  "examples": {
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 5,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 13,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 15,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 20,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 26,
+        "text": "",
+        "style": "Normal"
+      }
+    ],
+    "direct_run_formatting": [
+      {
+        "para_index": 16,
+        "run_text": "\u56fe 1  \u6bd4\u8f83\u5bf9\u8c61\u4e0e\u8bc1\u636e\u8fb9\u754c",
+        "style": "Normal"
+      },
+      {
+        "para_index": 18,
+        "run_text": "  \u00b7  ",
+        "style": "Normal"
+      },
+      {
+        "para_index": 18,
+        "run_text": "  \u00b7  ",
+        "style": "Normal"
+      },
+      {
+        "para_index": 27,
+        "run_text": "\u56fe 2  \u53ef\u89c1\u8d44\u6e90\u4e0e\u5b9e\u9645\u9650\u5236",
+        "style": "Normal"
+      },
+      {
+        "para_index": 29,
+        "run_text": "  \u00b7  ",
+        "style": "Normal"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

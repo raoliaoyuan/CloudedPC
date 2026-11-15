@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1180" viewBox="0 0 1400 1180">
+<title>图 6  GUI 体验问题的定位逻辑</title>
+<desc>通用诊断框架〔建议〕｜所有候选原因待核验，不是 Dot 已测架构</desc>
+<defs>
+<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#176B99"/></marker>
+<marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#137B77"/></marker>
+<marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#A86C16"/></marker>
+<marker id="arrow-slate" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#64788C"/></marker>
+</defs>
+<rect width="1400" height="1180" fill="white"/>
+<g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="40" y="42" width="7" height="38" rx="3" fill="#137B77"/>
+<text x="64" y="75.0" text-anchor="start" font-size="34" fill="#16324F" font-weight="700">图 6  GUI 体验问题的定位逻辑</text>
+<text x="64" y="112.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">通用诊断框架〔建议〕｜所有候选原因待核验，不是 Dot 已测架构</text>
+<rect x="70" y="690" width="1260" height="220" rx="18" fill="#F6F9FC" stroke="#A9BED0" stroke-width="1.5"/>
+<text x="94" y="730.0" text-anchor="start" font-size="26" fill="#16324F" font-weight="700">按键到可见结果的概念链〔通用技术分析〕</text>
+<polyline points="530,290 530,355 370,355 370,420" fill="none" stroke="#A86C16" stroke-width="2.3" stroke-linejoin="round" stroke-dasharray="8 6" marker-end="url(#arrow-amber)"/>
+<polyline points="870,290 870,355 1030,355 1030,420" fill="none" stroke="#A86C16" stroke-width="2.3" stroke-linejoin="round" stroke-dasharray="8 6" marker-end="url(#arrow-amber)"/>
+<polyline points="370,817 410,817" fill="none" stroke="#64788C" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-slate)"/>
+<polyline points="680,817 720,817" fill="none" stroke="#64788C" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-slate)"/>
+<polyline points="990,817 1030,817" fill="none" stroke="#64788C" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-slate)"/>
+<rect x="360" y="180" width="680" height="110" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="700.0" y="221.28500000000003" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">用户反馈〔观察〕</text>
+<text x="700.0" y="272.435" text-anchor="middle" font-size="27" fill="#52647A" font-weight="400">界面简陋、总体使用体验差</text>
+<rect x="70" y="420" width="600" height="160" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="370.0" y="468.16" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">找不到或不理解操作</text>
+<text x="370.0" y="517.86" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">检查入口、状态反馈与步骤</text>
+<text x="370.0" y="555.5600000000001" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">记录任务用时、误操作和恢复路径</text>
+<rect x="730" y="420" width="600" height="160" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="1030.0" y="468.16" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">动作发出后等待或异常</text>
+<text x="1030.0" y="517.86" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">先核对接管与输入焦点</text>
+<text x="1030.0" y="555.5600000000001" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">再区分全界面问题和单应用问题</text>
+<rect x="100" y="775" width="270" height="85" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="235.0" y="827.86" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">输入与控制权</text>
+<rect x="410" y="775" width="270" height="85" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="545.0" y="827.86" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">应用与资源</text>
+<rect x="720" y="775" width="270" height="85" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="855.0" y="827.86" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">画面与传输</text>
+<rect x="1030" y="775" width="270" height="85" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="1165.0" y="827.86" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">客户端呈现</text>
+<text x="75" y="990.0" text-anchor="start" font-size="25" fill="#52647A" font-weight="400">分别记录步骤、输入回显、应用耗时与画面表现；有条件时再采集资源及链路指标。</text>
+<text x="75" y="1027.5" text-anchor="start" font-size="25" fill="#52647A" font-weight="400">Dot 协议、编码与帧率仍未知；WorkBuddy 的尾网 RTT 不能填入这条 GUI 链。</text>
+<text x="60" y="1132.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">来源：[U1][T3][H1][W3]；借用诊断方法，不认定 Dot 使用 RDP 或 Azure Virtual Desktop。</text>
+</g></svg>

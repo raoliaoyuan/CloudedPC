@@ -1,0 +1,42 @@
+{
+  "final": "/home/gamer/Work/CloudPC/dot-comparison-2026-11-13/Dot与云PC对比及GUI设计分析报告.docx",
+  "pages": 10,
+  "sources": 13,
+  "web_sources": 9,
+  "linked_citations": 89,
+  "citations_by_source": {
+    "A": 17,
+    "B": 18,
+    "C": 3,
+    "U1": 14,
+    "O1": 9,
+    "O2": 7,
+    "O3": 7,
+    "T1": 2,
+    "T2": 2,
+    "T3": 3,
+    "C1": 2,
+    "C2": 2,
+    "C3": 3
+  },
+  "preserved_parts": 13,
+  "source_unchanged": true,
+  "page_images_visually_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "qa_render_pixel_identical": true,
+  "section_geometry_preserved": true,
+  "reference_relationships_preserved": true,
+  "fields": "PAGE preserved; updateFields true",
+  "style_audit": "Direct formatting is inherited source formatting plus citation color and table bold; heading-like flags are table headers.",
+  "sha256": "3d55a29f0f01931593ffbd4d7e2e42c750adc5b6f18df3ec5fdf91f23105c037"
+}

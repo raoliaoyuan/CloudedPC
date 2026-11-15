@@ -1,0 +1,168 @@
+{
+  "input": "/home/gamer/Work/CloudPC/dot-comparison-2026-11-13/Dot\u4e0e\u4e91PC\u5bf9\u6bd4\u53caGUI\u8bbe\u8ba1\u5206\u6790\u62a5\u544a.docx",
+  "fonts_by_char_count": {},
+  "direct_run_formatting_runs": 184,
+  "direct_paragraph_formatting_paragraphs": 191,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 104,
+      "text": "\u6bd4\u8f83\u91cd\u70b9",
+      "style": "Normal"
+    },
+    {
+      "para_index": 105,
+      "text": "\u539f\u4e91 PC",
+      "style": "Normal"
+    },
+    {
+      "para_index": 106,
+      "text": "Dot \u4e91\u7535\u8111",
+      "style": "Normal"
+    },
+    {
+      "para_index": 122,
+      "text": "\u9879\u76ee",
+      "style": "Normal"
+    },
+    {
+      "para_index": 123,
+      "text": "\u539f\u4e91 PC\u3000\u5386\u53f2\u5b9e\u6d4b",
+      "style": "Normal"
+    },
+    {
+      "para_index": 124,
+      "text": "Dot\u3000\u5386\u53f2\u8bb0\u5f55\u4e0e\u7f3a\u53e3",
+      "style": "Normal"
+    },
+    {
+      "para_index": 161,
+      "text": "\u8bbf\u95ee\u80fd\u529b",
+      "style": "Normal"
+    },
+    {
+      "para_index": 162,
+      "text": "\u539f\u4e91 PC",
+      "style": "Normal"
+    },
+    {
+      "para_index": 163,
+      "text": "Dot \u4e91\u7535\u8111",
+      "style": "Normal"
+    },
+    {
+      "para_index": 182,
+      "text": "\u6bd4\u8f83\u5bf9\u8c61",
+      "style": "Normal"
+    },
+    {
+      "para_index": 183,
+      "text": "\u539f\u4e91 PC",
+      "style": "Normal"
+    },
+    {
+      "para_index": 184,
+      "text": "Dot \u4e91\u7535\u8111",
+      "style": "Normal"
+    },
+    {
+      "para_index": 203,
+      "text": "\u4f7f\u7528\u573a\u666f",
+      "style": "Normal"
+    },
+    {
+      "para_index": 204,
+      "text": "\u539f\u4e91 PC \u7684\u9002\u914d\u60c5\u51b5",
+      "style": "Normal"
+    },
+    {
+      "para_index": 205,
+      "text": "Dot \u7684\u9002\u914d\u60c5\u51b5",
+      "style": "Normal"
+    },
+    {
+      "para_index": 227,
+      "text": "\u89e3\u91ca",
+      "style": "Normal"
+    },
+    {
+      "para_index": 228,
+      "text": "\u4f9d\u636e\u4e0e\u63a8\u65ad\u7406\u7531",
+      "style": "Normal"
+    },
+    {
+      "para_index": 229,
+      "text": "\u8bc1\u636e\u5f3a\u5ea6\u4e0e\u9650\u5236",
+      "style": "Normal"
+    },
+    {
+      "para_index": 242,
+      "text": "\u95ee\u9898\u7c7b\u522b",
+      "style": "Normal"
+    },
+    {
+      "para_index": 243,
+      "text": "\u5982\u679c\u51fa\u73b0\u8be5\u73b0\u8c61",
+      "style": "Normal"
+    }
+  ],
+  "examples": {
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 6,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 15,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 21,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 30,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 40,
+        "text": "",
+        "style": "Normal"
+      }
+    ],
+    "direct_run_formatting": [
+      {
+        "para_index": 104,
+        "run_text": "\u6bd4\u8f83\u91cd\u70b9",
+        "style": "Normal"
+      },
+      {
+        "para_index": 105,
+        "run_text": "\u539f\u4e91 PC",
+        "style": "Normal"
+      },
+      {
+        "para_index": 106,
+        "run_text": "Dot \u4e91\u7535\u8111",
+        "style": "Normal"
+      },
+      {
+        "para_index": 107,
+        "run_text": "\u8f6f\u786c\u4ef6\u8d44\u6e90",
+        "style": "Normal"
+      },
+      {
+        "para_index": 108,
+        "run_text": "\u5df2\u6d4b CPU \u65f6\u95f4\u4e0a\u9650 4 \u6838\u7b49\u6548\u3001\u5185\u5b58\u786c\u9650\u5236 8 GiB",
+        "style": "Normal"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

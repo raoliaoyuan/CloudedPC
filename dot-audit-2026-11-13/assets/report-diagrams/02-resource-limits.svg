@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1120" viewBox="0 0 1400 1120">
+<title>图 2-1  可见资源与实际配额核验</title>
+<desc>蓝色：历史助手记录；橙色虚线：缺失证据；灰色：通用技术解释</desc>
+<defs>
+<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#176B99"/></marker>
+<marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#137B77"/></marker>
+<marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#A86C16"/></marker>
+<marker id="arrow-slate" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#64788C"/></marker>
+</defs>
+<rect width="1400" height="1120" fill="white"/>
+<g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="40" y="42" width="7" height="38" rx="3" fill="#137B77"/>
+<text x="64" y="75.0" text-anchor="start" font-size="34" fill="#16324F" font-weight="700">图 2-1  可见资源与实际配额核验</text>
+<text x="64" y="112.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">蓝色：历史助手记录；橙色虚线：缺失证据；灰色：通用技术解释</text>
+<rect x="70" y="765" width="1260" height="215" rx="18" fill="#F6F9FC" stroke="#A9BED0" stroke-width="1.5"/>
+<text x="94" y="805.0" text-anchor="start" font-size="26" fill="#16324F" font-weight="700">通用 cgroup v2 机制〔技术说明，不是 Dot 已测配置〕</text>
+<polyline points="370,360 370,485" fill="none" stroke="#A86C16" stroke-width="2.3" stroke-linejoin="round" stroke-dasharray="8 6" marker-end="url(#arrow-amber)"/>
+<polyline points="1030,360 1030,485" fill="none" stroke="#A86C16" stroke-width="2.3" stroke-linejoin="round" stroke-dasharray="8 6" marker-end="url(#arrow-amber)"/>
+<rect x="70" y="190" width="600" height="170" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="370.0" y="241.70999999999998" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">CPU 可见值〔记录〕</text>
+<text x="370.0" y="292.85999999999996" text-anchor="middle" font-size="27" fill="#52647A" font-weight="400">AMD EPYC 9V74 型号字符串</text>
+<text x="370.0" y="332.01" text-anchor="middle" font-size="27" fill="#52647A" font-weight="400">9 个逻辑 CPU；允许 CPU 0–8</text>
+<rect x="730" y="190" width="600" height="170" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="1030.0" y="241.70999999999998" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">内存可见值〔记录〕</text>
+<text x="1030.0" y="292.85999999999996" text-anchor="middle" font-size="27" fill="#52647A" font-weight="400">总量约 9.73 GiB</text>
+<text x="1030.0" y="332.01" text-anchor="middle" font-size="27" fill="#52647A" font-weight="400">当时已用 1.64 GiB；可用 8.09 GiB</text>
+<rect x="70" y="485" width="600" height="170" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="370.0" y="538.16" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">CPU 实际限制〔未确认〕</text>
+<text x="370.0" y="587.86" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">缺少 cpu.max 与可读父层限制</text>
+<text x="370.0" y="625.56" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">也未完成独占性与持续性能验证</text>
+<rect x="730" y="485" width="600" height="170" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="1030.0" y="538.16" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">内存硬限制〔未确认〕</text>
+<text x="1030.0" y="587.86" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">缺少 memory.max 与可读父层限制</text>
+<text x="1030.0" y="625.56" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">可见总量不自动等于允许使用上限</text>
+<rect x="239.0" y="405" width="262.0" height="28" rx="5" fill="white"/>
+<text x="370" y="425.0" text-anchor="middle" font-size="22" fill="#176B99" font-weight="400">需补证据，不能直接换算</text>
+<rect x="899.0" y="405" width="262.0" height="28" rx="5" fill="white"/>
+<text x="1030" y="425.0" text-anchor="middle" font-size="22" fill="#176B99" font-weight="400">需补证据，不能直接等同</text>
+<text x="110" y="856.0" text-anchor="start" font-size="26" fill="#52647A" font-weight="400">CPU 时间上限 = quota / period；子级仍受父级限制。</text>
+<text x="110" y="895.0" text-anchor="start" font-size="26" fill="#52647A" font-weight="400">内存须核对硬限制；若采用其他资源控制机制，应按实际实现核验。</text>
+<text x="110" y="934.0" text-anchor="start" font-size="26" fill="#52647A" font-weight="400">没有原始限制与基准测试，不能认定“独占 9 核 / 10 GiB”。</text>
+<text x="60" y="1053.0" text-anchor="start" font-size="23" fill="#52647A" font-weight="400">来源：[A #024]；[T1] Linux cgroup v2。模型推理硬件也不能由此 CPU 视图反推。</text>
+</g></svg>

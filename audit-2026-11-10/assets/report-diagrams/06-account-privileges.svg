@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1100" viewBox="0 0 1400 1100">
+<title>图 6-1  账号与权限关系</title>
+<desc>区分密码认证状态、容器内管理权限和外层 UID 映射｜基于 2026-11-10 检查</desc>
+<defs>
+<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#176B99"/></marker>
+<marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#A86C16"/></marker>
+<marker id="arrow-slate" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#64788C"/></marker>
+</defs>
+<rect width="1400" height="1100" fill="white"/>
+<g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="40" y="42" width="7" height="38" rx="3" fill="#137B77"/>
+<text x="64" y="75.0" text-anchor="start" font-size="34" fill="#16324F" font-weight="700">图 6-1  账号与权限关系</text>
+<text x="64" y="109.0" text-anchor="start" font-size="18" fill="#52647A" font-weight="400">区分密码认证状态、容器内管理权限和外层 UID 映射｜基于 2026-11-10 检查</text>
+<rect x="50" y="170" width="1300" height="640" rx="18" fill="#F6F9FC" stroke="#A9BED0" stroke-width="1.5"/>
+<text x="74" y="207.0" text-anchor="start" font-size="22" fill="#16324F" font-weight="700">容器内部权限范围</text>
+<polyline points="430,320 600,320" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="430,532 500,532 500,390 600,390" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="1250,365 1320,365 1320,860 925,860 925,910" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<rect x="100" y="265" width="330" height="110" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="265.0" y="298.62" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">root · UID 0</text>
+<text x="265.0" y="335.27" text-anchor="middle" font-size="17" fill="#52647A" font-weight="400">已设置密码</text>
+<text x="265.0" y="359.92" text-anchor="middle" font-size="17" fill="#52647A" font-weight="400">OpenSSH 配置允许密码认证</text>
+<rect x="100" y="465" width="330" height="135" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="265.0" y="511.12" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">ubuntu / user</text>
+<text x="265.0" y="547.77" text-anchor="middle" font-size="17" fill="#52647A" font-weight="400">UID 1000 / 1001</text>
+<text x="265.0" y="572.42" text-anchor="middle" font-size="17" fill="#52647A" font-weight="400">密码锁定；未发现授权公钥</text>
+<rect x="600" y="300" width="650" height="130" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="925.0" y="340.71999999999997" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">容器内 root 管理权限</text>
+<text x="925.0" y="380.27" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">可管理容器文件、账号、软件及服务</text>
+<text x="925.0" y="407.82" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">权限仍受外层隔离约束</text>
+<rect x="600" y="615" width="650" height="125" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="925.0" y="653.22" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">其他系统账号</text>
+<text x="925.0" y="692.77" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">dockremap / nova / sync：未发现 sudo 权限</text>
+<text x="925.0" y="720.32" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">另有 21 个禁止登录或不可交互用途账号</text>
+<rect x="600" y="910" width="650" height="100" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="925.0" y="935.72" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">user namespace 映射</text>
+<text x="925.0" y="975.27" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">容器 UID 0 → 直接外层 UID 100000</text>
+<text x="925.0" y="1002.82" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">不能由此获得外层 UID 0 的权限</text>
+<rect x="434.75" y="425" width="130.5" height="28" rx="5" fill="white"/>
+<text x="500" y="445.0" text-anchor="middle" font-size="17" fill="#176B99" font-weight="400">NOPASSWD: ALL</text>
+<rect x="971.0" y="845" width="258.0" height="28" rx="5" fill="white"/>
+<text x="1100" y="865.0" text-anchor="middle" font-size="17" fill="#176B99" font-weight="400">映射关系，不是登录或提权路径</text>
+<text x="600" y="484.0" text-anchor="start" font-size="19" fill="#52647A" font-weight="400">ubuntu / user 不构成可靠的低权限执行边界。</text>
+<text x="100" y="668.0" text-anchor="start" font-size="18" fill="#52647A" font-weight="400">密码锁定限制密码认证，</text>
+<text x="100" y="695.0" text-anchor="start" font-size="18" fill="#52647A" font-weight="400">不等于账号不能被平台进程使用。</text>
+<text x="60" y="1058.0" text-anchor="start" font-size="18" fill="#52647A" font-weight="400">建议执行项目代码时使用无免密码 sudo、无不必要 capabilities 和管理 socket 权限的独立账号。</text>
+</g></svg>

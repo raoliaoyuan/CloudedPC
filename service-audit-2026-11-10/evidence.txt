@@ -1,0 +1,613 @@
+TIME 2026-11-10T16:35:44+08:00
+PROCESSES
+[
+  {
+    "pid": 1,
+    "ppid": 0,
+    "name": "docker-init",
+    "exe": "/.oldroot/usr/sbin/docker-init",
+    "args": [
+      "/sbin/docker-init",
+      "--",
+      "bash",
+      "-c",
+      "mkdir -p /workspace;[ -n \"$IDE_GIT_VERSION_CONTROL_URL\" ] && [ -z \"$(ls -A /workspace 2>/dev/null)\" ] && GIT_TERMINAL_PROMPT=0 git clone $IDE_GIT_VERSION_CONTROL_URL /workspace && sync;exec /.PlnPyKFp4CRfFtgC1/bin/supervisord -c /.PlnPyKFp4CRfFtgC1/supervisord-conf/supervisord.conf",
+      ""
+    ]
+  },
+  {
+    "pid": 61,
+    "ppid": 1,
+    "name": "supervisord",
+    "exe": "/.oldroot/.PlnPyKFp4CRfFtgC1/bin/supervisord",
+    "args": [
+      "/.PlnPyKFp4CRfFtgC1/bin/supervisord",
+      "-c",
+      "/.PlnPyKFp4CRfFtgC1/supervisord-conf/supervisord.conf",
+      ""
+    ]
+  },
+  {
+    "pid": 90,
+    "ppid": 61,
+    "name": "ash",
+    "exe": "/.oldroot/.PlnPyKFp4CRfFtgC1/bin/ash",
+    "args": [
+      "/.PlnPyKFp4CRfFtgC1/bin/ash",
+      "-c",
+      "{ echo start $X_IDE_SPACE_KEY api; /.PlnPyKFp4CRfFtgC1/workspace-init/start-api; } 2>&1 | /.PlnPyKFp4CRfFtgC1/workspace-init/log-forward-tee api",
+      ""
+    ]
+  },
+  {
+    "pid": 92,
+    "ppid": 90,
+    "name": "ash",
+    "exe": "/.oldroot/.PlnPyKFp4CRfFtgC1/bin/ash",
+    "args": [
+      "/.PlnPyKFp4CRfFtgC1/bin/ash",
+      "-c",
+      "{ echo start $X_IDE_SPACE_KEY api; /.PlnPyKFp4CRfFtgC1/workspace-init/start-api; } 2>&1 | /.PlnPyKFp4CRfFtgC1/workspace-init/log-forward-tee api",
+      ""
+    ]
+  },
+  {
+    "pid": 95,
+    "ppid": 92,
+    "name": "node",
+    "exe": "/.oldroot/.PlnPyKFp4CRfFtgC1/lib/node",
+    "args": [
+      "/.PlnPyKFp4CRfFtgC1/lib/node",
+      "/.PlnPyKFp4CRfFtgC1/api",
+      ""
+    ]
+  },
+  {
+    "pid": 97,
+    "ppid": 61,
+    "name": "ash",
+    "exe": "/.oldroot/.PlnPyKFp4CRfFtgC1/bin/ash",
+    "args": [
+      "/.PlnPyKFp4CRfFtgC1/bin/ash",
+      "-c",
+      "{ echo start $X_IDE_SPACE_KEY e2b-envd; /.PlnPyKFp4CRfFtgC1/workspace-init/start-e2b-envd; } 2>&1 | /.PlnPyKFp4CRfFtgC1/workspace-init/log-forward-tee e2b-envd",
+      ""
+    ]
+  },
+  {
+    "pid": 100,
+    "ppid": 61,
+    "name": "ash",
+    "exe": "/.oldroot/.PlnPyKFp4CRfFtgC1/bin/ash",
+    "args": [
+      "/.PlnPyKFp4CRfFtgC1/bin/ash",
+      "-c",
+      "{ echo start $X_IDE_SPACE_KEY cbc.d; /.PlnPyKFp4CRfFtgC1/workspace-init/start-cbc.d; } 2>&1 | /.PlnPyKFp4CRfFtgC1/workspace-init/log-forward-tee cbc.d",
+      ""
+    ]
+  },
+  {
+    "pid": 105,
+    "ppid": 61,
+    "name": "node",
+    "exe": "/.oldroot/.PlnPyKFp4CRfFtgC1/lib/node",
+    "args": [
+      "/.PlnPyKFp4CRfFtgC1/lib/node",
+      "/.PlnPyKFp4CRfFtgC1/terminal/app",
+      ""
+    ]
+  },
+  {
+    "pid": 106,
+    "ppid": 97,
+    "name": "ash",
+    "exe": "/.oldroot/.PlnPyKFp4CRfFtgC1/bin/ash",
+    "args": [
+      "/.PlnPyKFp4CRfFtgC1/bin/ash",
+      "-c",
+      "{ echo start $X_IDE_SPACE_KEY e2b-envd; /.PlnPyKFp4CRfFtgC1/workspace-init/start-e2b-envd; } 2>&1 | /.PlnPyKFp4CRfFtgC1/workspace-init/log-forward-tee e2b-envd",
+      ""
+    ]
+  },
+  {
+    "pid": 110,
+    "ppid": 61,
+    "name": "node",
+    "exe": "/.oldroot/.PlnPyKFp4CRfFtgC1/lib/node",
+    "args": [
+      "/.PlnPyKFp4CRfFtgC1/lib/node",
+      "/.PlnPyKFp4CRfFtgC1/local-proxy",
+      ""
+    ]
+  },
+  {
+    "pid": 111,
+    "ppid": 100,
+    "name": "ash",
+    "exe": "/.oldroot/.PlnPyKFp4CRfFtgC1/bin/ash",
+    "args": [
+      "/.PlnPyKFp4CRfFtgC1/bin/ash",
+      "-c",
+      "{ echo start $X_IDE_SPACE_KEY cbc.d; /.PlnPyKFp4CRfFtgC1/workspace-init/start-cbc.d; } 2>&1 | /.PlnPyKFp4CRfFtgC1/workspace-init/log-forward-tee cbc.d",
+      ""
+    ]
+  },
+  {
+    "pid": 116,
+    "ppid": 111,
+    "name": "sandbox-proxy",
+    "exe": "/.oldroot/root/proxy/box/sandbox-proxy",
+    "args": [
+      "/root/proxy/box/sandbox-proxy",
+      ""
+    ]
+  },
+  {
+    "pid": 118,
+    "ppid": 61,
+    "name": "docker-init",
+    "exe": "/usr/local/bin/docker-init",
+    "args": [
+      "docker-init",
+      "--",
+      "dockerd",
+      "--host=unix:///var/run/docker.sock",
+      "--tlsverify",
+      "--tlscacert",
+      "/certs/server/ca.pem",
+      "--tlscert",
+      "/certs/server/cert.pem",
+      "--tlskey",
+      "/certs/server/key.pem",
+      ""
+    ]
+  },
+  {
+    "pid": 130,
+    "ppid": 61,
+    "name": "sandbox-log-col",
+    "exe": "/.oldroot/.PlnPyKFp4CRfFtgC1/bin/sandbox-log-collector",
+    "args": [
+      "/.PlnPyKFp4CRfFtgC1/bin/sandbox-log-collector",
+      ""
+    ]
+  },
+  {
+    "pid": 1265,
+    "ppid": 112,
+    "name": "envd",
+    "exe": "/.oldroot/.PlnPyKFp4CRfFtgC1/bin/envd",
+    "args": [
+      "/.PlnPyKFp4CRfFtgC1/bin/envd",
+      "-isnotfc",
+      ""
+    ]
+  },
+  {
+    "pid": 1301,
+    "ppid": 1,
+    "name": "PM2 v6.0.14: Go",
+    "exe": "/.oldroot/root/.nvm/versions/node/v22.13.1/bin/node",
+    "args": [
+      "PM2 v6.0.14: God Daemon (/root/.pm2)",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "pid": 1313,
+    "ppid": 1301,
+    "name": "sandbox-proxy-m",
+    "exe": "/.oldroot/root/.nvm/versions/node/v22.13.1/bin/node",
+    "args": [
+      "sandbox-proxy-mock",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "pid": 1347,
+    "ppid": 116,
+    "name": "node",
+    "exe": "/.oldroot/root/.nvm/versions/node/v22.13.1/bin/node",
+    "args": [
+      "node",
+      "/root/.nvm/versions/node/v22.13.1/lib/node_modules/@tencent-ai/codebuddy-code/bin/codebuddy",
+      "--prewarm",
+      "--prewarm-id",
+      "sbx-116-1",
+      ""
+    ]
+  },
+  {
+    "pid": 1348,
+    "ppid": 116,
+    "name": "node",
+    "exe": "/.oldroot/root/.nvm/versions/node/v22.13.1/bin/node",
+    "args": [
+      "node",
+      "/root/.nvm/versions/node/v22.13.1/lib/node_modules/@tencent-ai/codebuddy-code/bin/codebuddy",
+      "--prewarm",
+      "--prewarm-id",
+      "sbx-116-2",
+      ""
+    ]
+  },
+  {
+    "pid": 51868,
+    "ppid": 118,
+    "name": "dockerd",
+    "exe": "/usr/local/bin/dockerd",
+    "args": [
+      "dockerd",
+      "--host=unix:///var/run/docker.sock",
+      "--tlsverify",
+      "--tlscacert",
+      "/certs/server/ca.pem",
+      "--tlscert",
+      "/certs/server/cert.pem",
+      "--tlskey",
+      "/certs/server/key.pem",
+      ""
+    ]
+  },
+  {
+    "pid": 52016,
+    "ppid": 51868,
+    "name": "containerd",
+    "exe": "/usr/local/bin/containerd",
+    "args": [
+      "containerd",
+      "--config",
+      "/var/run/docker/containerd/containerd.toml",
+      ""
+    ]
+  },
+  {
+    "pid": 64062,
+    "ppid": 116,
+    "name": "node",
+    "exe": "/root/.nvm/versions/node/v22.13.1/bin/node",
+    "args": [
+      "node",
+      "/root/.nvm/versions/node/v22.13.1/lib/node_modules/@tencent-ai/codebuddy-code/bin/codebuddy",
+      "--prewarm",
+      "--prewarm-id",
+      "sbx-116-3",
+      ""
+    ]
+  },
+  {
+    "pid": 64088,
+    "ppid": 1347,
+    "name": "sandbox-proxy",
+    "exe": "/root/proxy/box/sandbox-proxy",
+    "args": [
+      "/root/proxy/box/sandbox-proxy",
+      "mcp-stdio",
+      ""
+    ]
+  },
+  {
+    "pid": 64125,
+    "ppid": 1,
+    "name": "sync_server",
+    "exe": "/usr/local/tna/sync_server/bin/sync_server",
+    "args": [
+      "/usr/local/tna/sync_server/bin/sync_server",
+      "-conf",
+      "/usr/local/tna/sync_server/conf/trpc_go.yaml",
+      ""
+    ]
+  },
+  {
+    "pid": 64144,
+    "ppid": 61,
+    "name": "editor_sdk",
+    "exe": "/usr/local/system/bin/editor_sdk",
+    "args": [
+      "/usr/local/system/bin/editor_sdk",
+      "--port=39099",
+      "--log_dir=/tmp/editor-sdk-logs",
+      "--cors_origin=*",
+      "--resource_url_base=null",
+      ""
+    ]
+  },
+  {
+    "pid": 64167,
+    "ppid": 1347,
+    "name": "node",
+    "exe": "/root/.nvm/versions/node/v22.13.1/bin/node",
+    "args": [
+      "node",
+      "/root/.codebuddy/plugins/cache/workbuddy-sheetagent/workbuddy-sheetagent/--WORKBUDDY_BUILD_VERSION-/mcp/start.mjs",
+      ""
+    ]
+  },
+  {
+    "pid": 65518,
+    "ppid": 1,
+    "name": "tailscaled",
+    "exe": "/usr/sbin/tailscaled",
+    "args": [
+      "tailscaled",
+      "--tun=userspace-networking",
+      "--socks5-server=localhost:1055",
+      ""
+    ]
+  },
+  {
+    "pid": 67281,
+    "ppid": 1,
+    "name": "sshd",
+    "exe": "/usr/sbin/sshd",
+    "args": [
+      "sshd: /usr/sbin/sshd [listener] 0 of 10-100 startups",
+      ""
+    ]
+  },
+  {
+    "pid": 68343,
+    "ppid": 65518,
+    "name": "tailscaled",
+    "exe": "/usr/sbin/tailscaled",
+    "args": [
+      "[Tailscale SSH session child]"
+    ]
+  },
+  {
+    "pid": 69325,
+    "ppid": 65518,
+    "name": "tailscaled",
+    "exe": "/usr/sbin/tailscaled",
+    "args": [
+      "[Tailscale SSH session child]"
+    ]
+  },
+  {
+    "pid": 69333,
+    "ppid": 69325,
+    "name": "tailscaled",
+    "exe": "/usr/sbin/tailscaled",
+    "args": [
+      "[Tailscale SSH session child]"
+    ]
+  }
+]
+SUPERVISOR_MAIN /.PlnPyKFp4CRfFtgC1/supervisord-conf/supervisord.conf
+SUPERVISOR_CONFIG
+{"file": "/.PlnPyKFp4CRfFtgC1/supervisord-conf/supervisord.conf", "section": "include", "files": "%(ENV_IDE_EDITOR_SERVER_DIR)s_run/supervisord-conf/*.conf /usr/local/share/supervisor/*.conf"}
+{"file": "/.PlnPyKFp4CRfFtgC1/supervisord-conf/supervisord.conf", "section": "program:init-workspace", "command": "%(ENV_IDE_EDITOR_SERVER_DIR)s/bin/ash -c \"echo start $X_IDE_SPACE_KEY init-workspace; %(ENV_IDE_EDITOR_SERVER_DIR)s/workspace-init/init\"", "autorestart": "false", "startretries": "0", "priority": "1", "stdout_logfile": "/dev/stdout", "redirect_stderr": "true"}
+{"file": "/.PlnPyKFp4CRfFtgC1/supervisord-conf/supervisord.conf", "section": "program:terminal", "command": "%(ENV_IDE_EDITOR_SERVER_DIR)s/bin/ash -c \"echo start $X_IDE_SPACE_KEY terminal; %(ENV_IDE_EDITOR_SERVER_DIR)s/workspace-init/start-terminal\"", "autostart": "true", "autorestart": "true", "stdout_logfile": "/dev/stdout", "redirect_stderr": "true"}
+{"file": "/.PlnPyKFp4CRfFtgC1/supervisord-conf/supervisord.conf", "section": "program:api", "command": "%(ENV_IDE_EDITOR_SERVER_DIR)s/bin/ash -c \"{ echo start $X_IDE_SPACE_KEY api; %(ENV_IDE_EDITOR_SERVER_DIR)s/workspace-init/start-api; } 2>&1 | %(ENV_IDE_EDITOR_SERVER_DIR)s/workspace-init/log-forward-tee api\"", "autostart": "true", "autorestart": "true", "priority": "110", "stdout_logfile": "/dev/stdout", "redirect_stderr": "true"}
+{"file": "/.PlnPyKFp4CRfFtgC1/supervisord-conf/supervisord.conf", "section": "program:proxy", "command": "%(ENV_IDE_EDITOR_SERVER_DIR)s/bin/ash -c \"echo start $X_IDE_SPACE_KEY proxy; %(ENV_IDE_EDITOR_SERVER_DIR)s/workspace-init/start-proxy\"", "autostart": "true", "autorestart": "true", "stdout_logfile": "/dev/stdout", "redirect_stderr": "true"}
+{"file": "/.PlnPyKFp4CRfFtgC1/supervisord-conf/supervisord.conf", "section": "program:docker", "command": "/usr/local/bin/dockerd-entrypoint.sh", "autostart": "true", "autorestart": "true", "stdout_logfile": "/dev/stdout", "redirect_stderr": "true"}
+{"file": "/.PlnPyKFp4CRfFtgC1/supervisord-conf/supervisord.conf", "section": "program:e2b-envd", "command": "%(ENV_IDE_EDITOR_SERVER_DIR)s/bin/ash -c \"{ echo start $X_IDE_SPACE_KEY e2b-envd; %(ENV_IDE_EDITOR_SERVER_DIR)s/workspace-init/start-e2b-envd; } 2>&1 | %(ENV_IDE_EDITOR_SERVER_DIR)s/workspace-init/log-forward-tee e2b-envd\"", "autostart": "true", "autorestart": "true", "startsecs": "5", "startretries": "3", "priority": "90", "stdout_logfile": "/dev/stdout", "redirect_stderr": "true"}
+{"file": "/.PlnPyKFp4CRfFtgC1/supervisord-conf/supervisord.conf", "section": "program:cbc-d", "command": "%(ENV_IDE_EDITOR_SERVER_DIR)s/bin/ash -c \"{ echo start $X_IDE_SPACE_KEY cbc.d; %(ENV_IDE_EDITOR_SERVER_DIR)s/workspace-init/start-cbc.d; } 2>&1 | %(ENV_IDE_EDITOR_SERVER_DIR)s/workspace-init/log-forward-tee cbc.d\"", "autostart": "true", "autorestart": "true", "priority": "110", "stdout_logfile": "/dev/stdout", "redirect_stderr": "true"}
+{"file": "/.PlnPyKFp4CRfFtgC1/supervisord-conf/supervisord.conf", "section": "program:git-credential-helper", "command": "%(ENV_IDE_EDITOR_SERVER_DIR)s/bin/ash -c \"echo start $X_IDE_SPACE_KEY git-credential-helper; %(ENV_IDE_EDITOR_SERVER_DIR)s/workspace-init/init-git-credential-helper\"", "autostart": "true", "autorestart": "false", "startretries": "0", "priority": "120", "stdout_logfile": "/dev/stdout", "redirect_stderr": "true"}
+{"file": "/.PlnPyKFp4CRfFtgC1/supervisord-conf/supervisord.conf", "section": "program:agent-init", "command": "%(ENV_IDE_EDITOR_SERVER_DIR)s/bin/ash -c \"{ echo start $X_IDE_SPACE_KEY agent-init; %(ENV_IDE_EDITOR_SERVER_DIR)s/workspace-init/agent-init; } 2>&1 | %(ENV_IDE_EDITOR_SERVER_DIR)s/workspace-init/log-forward-tee agent-init\"", "autostart": "true", "autorestart": "false", "startretries": "0", "priority": "120", "stdout_logfile": "/dev/stdout", "redirect_stderr": "true"}
+{"file": "/.PlnPyKFp4CRfFtgC1/supervisord-conf/supervisord.conf", "section": "program:codebuddy-touch-sessions", "command": "/bin/sh -c \"echo start $X_IDE_SPACE_KEY codebuddy-touch-sessions; [ -d /root/.codebuddy/projects ] && find /root/.codebuddy/projects -mindepth 2 -maxdepth 2 -name '*.jsonl' -exec touch {} + || true\"", "autostart": "true", "autorestart": "false", "startsecs": "0", "startretries": "0", "priority": "1", "stdout_logfile": "/dev/stdout", "redirect_stderr": "true"}
+{"file": "/.PlnPyKFp4CRfFtgC1/supervisord-conf/supervisord.conf", "section": "program:sync-server", "command": "%(ENV_IDE_EDITOR_SERVER_DIR)s/bin/ash -c \"echo start $X_IDE_SPACE_KEY sync-server; %(ENV_IDE_EDITOR_SERVER_DIR)s/workspace-init/start-sync-server\"", "autostart": "true", "autorestart": "true", "startretries": "3", "priority": "130", "stdout_logfile": "/dev/stdout", "redirect_stderr": "true"}
+{"file": "/.PlnPyKFp4CRfFtgC1/supervisord-conf/supervisord.conf", "section": "program:editor-sdk", "command": "%(ENV_IDE_EDITOR_SERVER_DIR)s/bin/ash -c \"echo start $X_IDE_SPACE_KEY editor-sdk; %(ENV_IDE_EDITOR_SERVER_DIR)s/workspace-init/start-editor-sdk\"", "autostart": "true", "autorestart": "true", "startsecs": "5", "startretries": "3", "priority": "140", "stdout_logfile": "/dev/stdout", "redirect_stderr": "true"}
+{"file": "/.PlnPyKFp4CRfFtgC1/supervisord-conf/supervisord.conf", "section": "program:sandbox-log-collector", "command": "%(ENV_IDE_EDITOR_SERVER_DIR)s/bin/ash -c \"echo start $X_IDE_SPACE_KEY sandbox-log-collector; %(ENV_IDE_EDITOR_SERVER_DIR)s/workspace-init/start-sandbox-log-collector\"", "autostart": "true", "autorestart": "true", "startsecs": "5", "startretries": "3", "priority": "210", "stdout_logfile": "/dev/stdout", "redirect_stderr": "true"}
+{"file": "/.PlnPyKFp4CRfFtgC1/supervisord-conf/vs-code.conf", "section": "program:vs-code", "command": "%(ENV_IDE_EDITOR_SERVER_DIR)s/bin/ash -c \"%(ENV_IDE_EDITOR_SERVER_DIR)s/workspace-init/start-vscode\"", "autostart": "false", "autorestart": "true", "stdout_logfile": "/dev/stdout", "redirect_stderr": "true"}
+PORTS
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                                 
+udp   UNCONN 0      0         127.0.0.11:48989      0.0.0.0:*                                           
+udp   UNCONN 0      0            0.0.0.0:57384      0.0.0.0:*    users:(("tailscaled",pid=65518,fd=13)) 
+udp   UNCONN 0      0               [::]:58020         [::]:*    users:(("tailscaled",pid=65518,fd=10)) 
+tcp   LISTEN 0      128        127.0.0.1:39099      0.0.0.0:*    users:(("editor_sdk",pid=64144,fd=7))  
+tcp   LISTEN 0      4096      0.0.0.0%lo:34700      0.0.0.0:*    users:(("tailscaled",pid=65518,fd=15)) 
+tcp   LISTEN 0      511        127.0.0.1:62667      0.0.0.0:*    users:(("node",pid=1347,fd=18))        
+tcp   LISTEN 0      511          0.0.0.0:65310      0.0.0.0:*    users:(("node",pid=105,fd=18))         
+tcp   LISTEN 0      4096       127.0.0.1:8089       0.0.0.0:*    users:(("sync_server",pid=64125,fd=12))
+tcp   LISTEN 0      4096       127.0.0.1:1055       0.0.0.0:*    users:(("tailscaled",pid=65518,fd=12)) 
+tcp   LISTEN 0      128          0.0.0.0:22         0.0.0.0:*    users:(("sshd",pid=67281,fd=3))        
+tcp   LISTEN 0      4096      127.0.0.11:42913      0.0.0.0:*                                           
+tcp   LISTEN 0      511                *:65213            *:*    users:(("node",pid=95,fd=17))          
+tcp   LISTEN 0      511                *:65216            *:*    users:(("node",pid=110,fd=18))         
+tcp   LISTEN 0      4096               *:65225            *:*    users:(("sandbox-proxy",pid=116,fd=16))
+tcp   LISTEN 0      4096               *:49983            *:*    users:(("envd",pid=1265,fd=6))         
+tcp   LISTEN 0      4096               *:9090             *:*    users:(("sandbox-proxy",pid=116,fd=10))
+tcp   LISTEN 0      128             [::]:22            [::]:*    users:(("sshd",pid=67281,fd=4))        
+tcp   LISTEN 0      4096               *:18601            *:*    users:(("sync_server",pid=64125,fd=14))
+
+PROCESS_STARTS
+    PID    PPID                  STARTED COMMAND
+      1       0 Tue Nov 10 14:37:28 2026 docker-init
+     61       1 Tue Nov 10 14:37:28 2026 supervisord
+     90      61 Tue Nov 10 14:37:29 2026 ash
+     92      90 Tue Nov 10 14:37:29 2026 ash
+     93      90 Tue Nov 10 14:37:29 2026 log-forward-tee
+     95      92 Tue Nov 10 14:37:29 2026 node
+     97      61 Tue Nov 10 14:37:29 2026 ash
+    100      61 Tue Nov 10 14:37:29 2026 ash
+    105      61 Tue Nov 10 14:37:29 2026 node
+    106      97 Tue Nov 10 14:37:29 2026 ash
+    107      97 Tue Nov 10 14:37:29 2026 log-forward-tee
+    110      61 Tue Nov 10 14:37:29 2026 node
+    111     100 Tue Nov 10 14:37:29 2026 ash
+    112     106 Tue Nov 10 14:37:29 2026 bash
+    113     100 Tue Nov 10 14:37:29 2026 log-forward-tee
+    116     111 Tue Nov 10 14:37:29 2026 sandbox-proxy
+    118      61 Tue Nov 10 14:37:29 2026 docker-init
+    130      61 Tue Nov 10 14:37:29 2026 sandbox-log-col
+    174      93 Tue Nov 10 14:37:29 2026 log-forward-tee
+    177     107 Tue Nov 10 14:37:29 2026 log-forward-tee
+    181     113 Tue Nov 10 14:37:29 2026 log-forward-tee
+   1265     112 Tue Nov 10 14:37:29 2026 envd
+   1301       1 Tue Nov 10 14:37:29 2026 PM2 v6.0.14: Go
+   1313    1301 Tue Nov 10 14:37:29 2026 sandbox-proxy-m
+   1347     116 Tue Nov 10 14:37:31 2026 node
+   1348     116 Tue Nov 10 14:37:31 2026 node
+  51585       1 Tue Nov 10 15:22:33 2026 nc
+  51868     118 Tue Nov 10 15:22:33 2026 dockerd
+  52016   51868 Tue Nov 10 15:22:33 2026 containerd
+  52463     177 Tue Nov 10 15:22:34 2026 nc
+  52466     174 Tue Nov 10 15:22:34 2026 nc
+  64062     116 Tue Nov 10 15:36:20 2026 node
+  64088    1347 Tue Nov 10 15:36:20 2026 sandbox-proxy
+  64107     181 Tue Nov 10 15:36:21 2026 nc
+  64108      61 Tue Nov 10 15:36:21 2026 bash
+  64125       1 Tue Nov 10 15:36:21 2026 sync_server
+  64144      61 Tue Nov 10 15:36:21 2026 editor_sdk
+  64167    1347 Tue Nov 10 15:36:22 2026 node
+  64553   64108 Tue Nov 10 15:36:25 2026 tail
+  65518       1 Tue Nov 10 15:40:51 2026 tailscaled
+  67281       1 Tue Nov 10 15:45:19 2026 sshd
+  68343   65518 Tue Nov 10 15:53:42 2026 tailscaled
+  68352   68343 Tue Nov 10 15:53:42 2026 login
+  68366   68352 Tue Nov 10 15:53:42 2026 bash
+  69325   65518 Tue Nov 10 16:35:43 2026 tailscaled
+  69333   69325 Tue Nov 10 16:35:43 2026 tailscaled
+  69340   69333 Tue Nov 10 16:35:43 2026 python3
+  69343   69340 Tue Nov 10 16:35:43 2026 ps
+
+PM2_READONLY_SOCKET_STATUS
+pm2_pid_file 1301
+SYSTEMD_NOT_INIT
+docker-init
+

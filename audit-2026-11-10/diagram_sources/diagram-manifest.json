@@ -1,0 +1,154 @@
+[
+  {
+    "figure": "图 2-1  资源视图与配额继承",
+    "size": [
+      1400,
+      1100
+    ],
+    "png_size": [
+      2800,
+      2200
+    ],
+    "nodes": 6,
+    "groups": 1,
+    "edges": 5,
+    "files": [
+      "04-resource-inheritance.svg",
+      "04-resource-inheritance.png",
+      "04-resource-inheritance.drawio"
+    ]
+  },
+  {
+    "figure": "图 3-1  存储层次与持久化边界",
+    "size": [
+      1400,
+      1160
+    ],
+    "png_size": [
+      2800,
+      2320
+    ],
+    "nodes": 6,
+    "groups": 1,
+    "edges": 5,
+    "files": [
+      "05-storage-persistence.svg",
+      "05-storage-persistence.png",
+      "05-storage-persistence.drawio"
+    ]
+  },
+  {
+    "figure": "图 5-1  服务管理结构",
+    "size": [
+      1400,
+      850
+    ],
+    "png_size": [
+      2800,
+      1700
+    ],
+    "nodes": 8,
+    "groups": 1,
+    "edges": 7,
+    "files": [
+      "01-service-structure.svg",
+      "01-service-structure.png",
+      "01-service-structure.drawio"
+    ]
+  },
+  {
+    "figure": "图 6-1  账号与权限关系",
+    "size": [
+      1400,
+      1100
+    ],
+    "png_size": [
+      2800,
+      2200
+    ],
+    "nodes": 5,
+    "groups": 1,
+    "edges": 3,
+    "files": [
+      "06-account-privileges.svg",
+      "06-account-privileges.png",
+      "06-account-privileges.drawio"
+    ]
+  },
+  {
+    "figure": "图 7-1  容器网络逻辑图",
+    "size": [
+      1600,
+      1510
+    ],
+    "png_size": [
+      3200,
+      3020
+    ],
+    "nodes": 14,
+    "groups": 2,
+    "edges": 11,
+    "files": [
+      "02-network-topology.svg",
+      "02-network-topology.png",
+      "02-network-topology.drawio"
+    ]
+  },
+  {
+    "figure": "图 7-2  OpenSSH 访问条件",
+    "size": [
+      1400,
+      1300
+    ],
+    "png_size": [
+      2800,
+      2600
+    ],
+    "nodes": 5,
+    "groups": 2,
+    "edges": 4,
+    "files": [
+      "07-ssh-access-conditions.svg",
+      "07-ssh-access-conditions.png",
+      "07-ssh-access-conditions.drawio"
+    ]
+  },
+  {
+    "figure": "图 8-1  Namespace 隔离与运行层级",
+    "size": [
+      1500,
+      1190
+    ],
+    "png_size": [
+      3000,
+      2380
+    ],
+    "nodes": 8,
+    "groups": 2,
+    "edges": 7,
+    "files": [
+      "03-namespace-layers.svg",
+      "03-namespace-layers.png",
+      "03-namespace-layers.drawio"
+    ]
+  },
+  {
+    "figure": "图 11-1  日志链路与审计缺口",
+    "size": [
+      1500,
+      1170
+    ],
+    "png_size": [
+      3000,
+      2340
+    ],
+    "nodes": 9,
+    "groups": 2,
+    "edges": 7,
+    "files": [
+      "08-log-audit-chain.svg",
+      "08-log-audit-chain.png",
+      "08-log-audit-chain.drawio"
+    ]
+  }
+]

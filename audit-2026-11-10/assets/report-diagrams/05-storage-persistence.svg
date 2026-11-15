@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1160" viewBox="0 0 1400 1160">
+<title>图 3-1  存储层次与持久化边界</title>
+<desc>实线表示已观察的路径 / 存储关联；虚线表示待平台确认的恢复能力</desc>
+<defs>
+<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#176B99"/></marker>
+<marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#A86C16"/></marker>
+<marker id="arrow-slate" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#64788C"/></marker>
+</defs>
+<rect width="1400" height="1160" fill="white"/>
+<g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="40" y="42" width="7" height="38" rx="3" fill="#137B77"/>
+<text x="64" y="75.0" text-anchor="start" font-size="34" fill="#16324F" font-weight="700">图 3-1  存储层次与持久化边界</text>
+<text x="64" y="109.0" text-anchor="start" font-size="18" fill="#52647A" font-weight="400">实线表示已观察的路径 / 存储关联；虚线表示待平台确认的恢复能力</text>
+<rect x="40" y="170" width="1320" height="670" rx="18" fill="#F6F9FC" stroke="#A9BED0" stroke-width="1.5"/>
+<text x="64" y="207.0" text-anchor="start" font-size="22" fill="#16324F" font-weight="700">已观察的容器路径与存储结构</text>
+<polyline points="370,365 370,470" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="1030,365 1030,470" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="370,590 370,705" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="370,795 370,880 700,880 700,940" fill="none" stroke="#A86C16" stroke-width="2.3" stroke-linejoin="round" stroke-dasharray="8 6" marker-end="url(#arrow-amber)"/>
+<polyline points="1030,590 1320,590 1320,880 700,880 700,940" fill="none" stroke="#A86C16" stroke-width="2.3" stroke-linejoin="round" stroke-dasharray="8 6" marker-end="url(#arrow-amber)"/>
+<rect x="120" y="255" width="500" height="110" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="370.0" y="285.71999999999997" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">工作区与用户文件</text>
+<text x="370.0" y="325.27" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">/root / /workspace / /tmp</text>
+<text x="370.0" y="352.82" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">检查时位于根文件系统视图内</text>
+<rect x="780" y="255" width="500" height="110" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="1030.0" y="285.71999999999997" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">内部运行时数据目录</text>
+<text x="1030.0" y="325.27" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">/var/lib/docker / /var/lib/buildkit</text>
+<text x="1030.0" y="352.82" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">以及 containerd、kubelet 等目录</text>
+<rect x="120" y="470" width="500" height="120" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="370.0" y="505.71999999999997" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">根文件系统：overlay</text>
+<text x="370.0" y="545.27" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">可见总容量 256 GiB</text>
+<text x="370.0" y="572.82" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">采样可用约 253.79 GiB</text>
+<rect x="780" y="470" width="500" height="120" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="1030.0" y="505.71999999999997" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">运行时目录的后端挂载</text>
+<text x="1030.0" y="545.27" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">可见平台分配目录及 idmapped 挂载</text>
+<text x="1030.0" y="572.82" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">另见 /dev/nbd962 的 btrfs 后端</text>
+<rect x="120" y="705" width="500" height="90" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="370.0" y="739.495" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">可写层来源线索</text>
+<text x="370.0" y="779.045" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">平台 user-data 路径</text>
+<rect x="400" y="940" width="600" height="110" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="700.0" y="970.72" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">休眠、重建、回收后的数据保留？</text>
+<text x="700.0" y="1010.27" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">哪些路径受保护、快照周期及恢复时长</text>
+<text x="700.0" y="1037.82" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">均需平台确认，并以恢复演练验收</text>
+<text x="790" y="703.0" text-anchor="start" font-size="18" fill="#52647A" font-weight="400">挂载来源是存储结构线索。</text>
+<text x="790" y="730.0" text-anchor="start" font-size="18" fill="#52647A" font-weight="400">不能据此确定独占容量、数据保留周期，</text>
+<text x="790" y="757.0" text-anchor="start" font-size="18" fill="#52647A" font-weight="400">也不代表相关运行时全部正在运行。</text>
+<text x="50" y="1109.0" text-anchor="start" font-size="19" fill="#52647A" font-weight="400">文件同步不等于可恢复备份；磁盘设备显示值也不能直接相加为容器可用容量。</text>
+</g></svg>

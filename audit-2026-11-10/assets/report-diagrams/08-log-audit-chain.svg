@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1170" viewBox="0 0 1500 1170">
+<title>图 11-1  日志链路与审计缺口</title>
+<desc>蓝色实线表示已观察的采集 / 发送链路线索；橙色虚线表示尚待确认的环节</desc>
+<defs>
+<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#176B99"/></marker>
+<marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#A86C16"/></marker>
+<marker id="arrow-slate" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#64788C"/></marker>
+</defs>
+<rect width="1500" height="1170" fill="white"/>
+<g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="40" y="42" width="7" height="38" rx="3" fill="#137B77"/>
+<text x="64" y="75.0" text-anchor="start" font-size="34" fill="#16324F" font-weight="700">图 11-1  日志链路与审计缺口</text>
+<text x="64" y="109.0" text-anchor="start" font-size="18" fill="#52647A" font-weight="400">蓝色实线表示已观察的采集 / 发送链路线索；橙色虚线表示尚待确认的环节</text>
+<rect x="50" y="180" width="900" height="650" rx="18" fill="#F6F9FC" stroke="#A9BED0" stroke-width="1.5"/>
+<text x="74" y="217.0" text-anchor="start" font-size="22" fill="#16324F" font-weight="700">WorkBuddy 容器内部</text>
+<rect x="1010" y="180" width="440" height="650" rx="18" fill="#F6F9FC" stroke="#A9BED0" stroke-width="1.5"/>
+<text x="1034" y="217.0" text-anchor="start" font-size="22" fill="#16324F" font-weight="700">平台侧</text>
+<polyline points="460,315 550,315" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="460,505 550,505" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="890,315 980,315 980,415 1060,415" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="890,505 980,505 980,460 1060,460" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="1230,510 1230,620" fill="none" stroke="#A86C16" stroke-width="2.3" stroke-linejoin="round" stroke-dasharray="8 6" marker-end="url(#arrow-amber)"/>
+<polyline points="460,705 550,705" fill="none" stroke="#A86C16" stroke-width="2.3" stroke-linejoin="round" stroke-dasharray="8 6" marker-end="url(#arrow-amber)"/>
+<polyline points="720,760 720,940" fill="none" stroke="#A86C16" stroke-width="2.3" stroke-linejoin="round" stroke-dasharray="8 6" marker-end="url(#arrow-amber)"/>
+<rect x="100" y="265" width="360" height="100" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="280.0" y="304.495" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">部分服务标准输出</text>
+<text x="280.0" y="344.045" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">并非所有服务均已确认覆盖</text>
+<rect x="550" y="265" width="340" height="100" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="720.0" y="304.495" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">log-forward-tee</text>
+<text x="720.0" y="344.045" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">复制及转发输出</text>
+<rect x="100" y="455" width="360" height="100" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="280.0" y="494.495" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">平台日志文件</text>
+<text x="280.0" y="534.045" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">采集目录与覆盖范围需复核</text>
+<rect x="550" y="455" width="340" height="100" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="720.0" y="494.495" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">sandbox-log-collector</text>
+<text x="720.0" y="534.045" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">已观察到采集进程运行</text>
+<rect x="100" y="650" width="360" height="110" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="280.0" y="694.495" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">OpenSSH 认证事件</text>
+<text x="280.0" y="734.045" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">登录成功 / 失败及相关行为</text>
+<rect x="550" y="650" width="340" height="110" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="720.0" y="683.62" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">留存链路未确认</text>
+<text x="720.0" y="720.27" text-anchor="middle" font-size="17" fill="#52647A" font-weight="400">常规 auth.log / journal 缺失</text>
+<text x="720.0" y="744.92" text-anchor="middle" font-size="17" fill="#52647A" font-weight="400">sshd 标准输出指向空设备</text>
+<rect x="1060" y="350" width="340" height="160" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="1230.0" y="405.71999999999997" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">平台日志接收端</text>
+<text x="1230.0" y="445.27" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">172.24.0.1:18100</text>
+<text x="1230.0" y="472.82" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">已观察到多个连接</text>
+<rect x="1060" y="620" width="340" height="135" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="1230.0" y="664.67" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">平台日志后台</text>
+<text x="1230.0" y="702.77" text-anchor="middle" font-size="18" fill="#52647A" font-weight="400">是否完整入库、可检索</text>
+<text x="1230.0" y="728.87" text-anchor="middle" font-size="18" fill="#52647A" font-weight="400">以及保留期限均未验证</text>
+<rect x="300" y="940" width="900" height="115" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="750.0" y="973.22" text-anchor="middle" font-size="21" fill="#16324F" font-weight="700">建议补齐并验收的审计事件</text>
+<text x="750.0" y="1012.77" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">登录成功 / 失败、权限变更、服务异常退出、OOM 与关键操作</text>
+<text x="750.0" y="1040.32" text-anchor="middle" font-size="19" fill="#52647A" font-weight="400">确认覆盖范围、检索方式、保留期限和导出能力</text>
+<rect x="642.0" y="860" width="156.0" height="28" rx="5" fill="white"/>
+<text x="720" y="880.0" text-anchor="middle" font-size="17" fill="#176B99" font-weight="400">待平台核验与补齐</text>
+<text x="60" y="1114.0" text-anchor="start" font-size="19" fill="#52647A" font-weight="400">存在日志发送连接不等于日志已完整入库；本地日志缺失也不能单独证明平台没有另行采集。</text>
+</g></svg>

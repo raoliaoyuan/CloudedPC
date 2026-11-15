@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1240" viewBox="0 0 1400 1240">
+<title>图 4-1  三种联网上下文与代理路径</title>
+<desc>蓝色实线：记录中的配置或操作；橙色虚线：链路细节未确认；非抓包拓扑</desc>
+<defs>
+<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#176B99"/></marker>
+<marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#137B77"/></marker>
+<marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#A86C16"/></marker>
+<marker id="arrow-slate" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#64788C"/></marker>
+</defs>
+<rect width="1400" height="1240" fill="white"/>
+<g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="40" y="42" width="7" height="38" rx="3" fill="#137B77"/>
+<text x="64" y="75.0" text-anchor="start" font-size="34" fill="#16324F" font-weight="700">图 4-1  三种联网上下文与代理路径</text>
+<text x="64" y="112.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">蓝色实线：记录中的配置或操作；橙色虚线：链路细节未确认；非抓包拓扑</text>
+<polyline points="255,320 255,455" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="700,320 700,455" fill="none" stroke="#A86C16" stroke-width="2.3" stroke-linejoin="round" stroke-dasharray="8 6" marker-end="url(#arrow-amber)"/>
+<polyline points="1145,320 1145,455" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="255,605 255,760" fill="none" stroke="#A86C16" stroke-width="2.3" stroke-linejoin="round" stroke-dasharray="8 6" marker-end="url(#arrow-amber)"/>
+<polyline points="700,605 700,760" fill="none" stroke="#A86C16" stroke-width="2.3" stroke-linejoin="round" stroke-dasharray="8 6" marker-end="url(#arrow-amber)"/>
+<polyline points="1145,605 1145,760" fill="none" stroke="#A86C16" stroke-width="2.3" stroke-linejoin="round" stroke-dasharray="8 6" marker-end="url(#arrow-amber)"/>
+<rect x="55" y="190" width="400" height="130" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="255.0" y="243.45999999999998" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">云端 Chromium〔记录〕</text>
+<text x="255.0" y="290.26" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">启动参数由历史助手转述</text>
+<rect x="500" y="190" width="400" height="130" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="700.0" y="243.45999999999998" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">桌面终端〔用户记录〕</text>
+<text x="700.0" y="290.26" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">用户称请求失败</text>
+<rect x="945" y="190" width="400" height="130" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="1145.0" y="243.45999999999998" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">助手命令工具〔记录〕</text>
+<text x="1145.0" y="290.26" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">助手称单个请求成功</text>
+<rect x="55" y="455" width="400" height="150" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="255.0" y="499.61" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">显式 HTTP 代理〔记录〕</text>
+<text x="255.0" y="547.86" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">browser-proxy:8889</text>
+<text x="255.0" y="584.11" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">具体逐请求路径未取证</text>
+<rect x="500" y="455" width="400" height="150" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="700.0" y="499.61" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">程序网络配置〔未确认〕</text>
+<text x="700.0" y="547.86" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">实际代理、DNS、证书</text>
+<text x="700.0" y="584.11" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">执行上下文与错误码</text>
+<rect x="945" y="455" width="400" height="150" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="1145.0" y="499.61" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">本地临时代理〔记录〕</text>
+<text x="1145.0" y="547.86" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">127.0.0.1:临时端口</text>
+<text x="1145.0" y="584.11" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">不能把早期端口直接套入</text>
+<rect x="55" y="760" width="400" height="140" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="255.0" y="817.735" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">目标网站〔逻辑终点〕</text>
+<text x="255.0" y="865.985" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">出口及后续代理链未知</text>
+<rect x="500" y="760" width="400" height="140" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="700.0" y="817.735" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">请求结果待复现</text>
+<text x="700.0" y="865.985" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">不能据此认定全部断网</text>
+<rect x="945" y="760" width="400" height="140" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="1145.0" y="799.61" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">chatgpt.com〔记录〕</text>
+<text x="1145.0" y="847.86" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">助手称返回 HTTP 200</text>
+<text x="1145.0" y="884.11" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">只支持当时该目标的陈述</text>
+<rect x="201.0" y="373" width="108.0" height="28" rx="5" fill="white"/>
+<text x="255" y="393.0" text-anchor="middle" font-size="22" fill="#176B99" font-weight="400">配置线索</text>
+<rect x="1058.0" y="373" width="174.0" height="28" rx="5" fill="white"/>
+<text x="1145" y="393.0" text-anchor="middle" font-size="22" fill="#176B99" font-weight="400">助手报告的操作</text>
+<rect x="168.0" y="665" width="174.0" height="28" rx="5" fill="white"/>
+<text x="255" y="685.0" text-anchor="middle" font-size="22" fill="#176B99" font-weight="400">后续链路未确认</text>
+<rect x="1058.0" y="665" width="174.0" height="28" rx="5" fill="white"/>
+<text x="1145" y="685.0" text-anchor="middle" font-size="22" fill="#176B99" font-weight="400">后续链路未确认</text>
+<text x="70" y="996.0" text-anchor="start" font-size="26" fill="#52647A" font-weight="400">主机名映射不等于网卡绑定；三个上下文不等于三个已确认容器。</text>
+<text x="70" y="1035.0" text-anchor="start" font-size="26" fill="#52647A" font-weight="400">浏览器出站代理不是已确认的 GUI 画面传输通道。</text>
+<text x="70" y="1074.0" text-anchor="start" font-size="26" fill="#52647A" font-weight="400">GUI 协议、出口 IP、TLS 检查范围与完整网络空间关系均未确认。</text>
+<text x="60" y="1182.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">来源：[A #021、#025、#027、#036]；[O2] 分项控制；[T4][T5][T6] 技术解释。</text>
+</g></svg>

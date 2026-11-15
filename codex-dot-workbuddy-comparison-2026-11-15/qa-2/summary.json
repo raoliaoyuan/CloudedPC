@@ -1,0 +1,28 @@
+{
+  "a_docx": "/home/gamer/Work/CloudPC/\u4e91PC\u8f6f\u786c\u4ef6\u68c0\u67e5\u62a5\u544a.docx",
+  "b_docx": "/home/gamer/Work/CloudPC/codex-dot-workbuddy-comparison-2026-11-15/Codex Dot\u5bf9\u6bd4 Workbuddy\u4e91PC\u5bf9\u6bd4\u5206\u6790\u62a5\u544a\u53caGUI\u4f53\u9a8c\u5206\u6790.docx",
+  "pages_a": 10,
+  "pages_b": 19,
+  "changed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "num_changed_pages": 19
+}

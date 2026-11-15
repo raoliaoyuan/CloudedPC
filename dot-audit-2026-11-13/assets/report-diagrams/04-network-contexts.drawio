@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device" version="24.7.17">
+  <diagram id="04-network-contexts" name="图 4-1  三种联网上下文与代理路径">
+    <mxGraphModel dx="1400" dy="1240" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1240" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;div style=&quot;line-height:1.5&quot;&gt;图 4-1  三种联网上下文与代理路径&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=34;fontColor=#16324F;fontStyle=1;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64" y="41" width="1300" height="45" />
+        </mxCell>
+        <mxCell id="subtitle" value="&lt;div style=&quot;line-height:1.5&quot;&gt;蓝色实线：记录中的配置或操作；橙色虚线：链路细节未确认；非抓包拓扑&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="64" y="85" width="1300" height="30" />
+        </mxCell>
+        <mxCell id="accent" value="" style="rounded=1;fillColor=#137B77;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="42" width="7" height="38" />
+        </mxCell>
+        <mxCell id="browser" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;云端 Chromium〔记录〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:24px;line-height:1.45;color:#52647A&quot;&gt;启动参数由历史助手转述&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="55" y="190" width="400" height="130" />
+        </mxCell>
+        <mxCell id="terminal" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;桌面终端〔用户记录〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:24px;line-height:1.45;color:#52647A&quot;&gt;用户称请求失败&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="500" y="190" width="400" height="130" />
+        </mxCell>
+        <mxCell id="tool" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;助手命令工具〔记录〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:24px;line-height:1.45;color:#52647A&quot;&gt;助手称单个请求成功&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="945" y="190" width="400" height="130" />
+        </mxCell>
+        <mxCell id="browser-proxy" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;显式 HTTP 代理〔记录〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:25px;line-height:1.45;color:#52647A&quot;&gt;browser-proxy:8889&lt;br&gt;具体逐请求路径未取证&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="55" y="455" width="400" height="150" />
+        </mxCell>
+        <mxCell id="terminal-config" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;程序网络配置〔未确认〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:25px;line-height:1.45;color:#52647A&quot;&gt;实际代理、DNS、证书&lt;br&gt;执行上下文与错误码&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF8E9;strokeColor=#A86C16;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;dashed=1;dashPattern=8 6;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="500" y="455" width="400" height="150" />
+        </mxCell>
+        <mxCell id="loopback-proxy" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;本地临时代理〔记录〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:25px;line-height:1.45;color:#52647A&quot;&gt;127.0.0.1:临时端口&lt;br&gt;不能把早期端口直接套入&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="945" y="455" width="400" height="150" />
+        </mxCell>
+        <mxCell id="website" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;目标网站〔逻辑终点〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:25px;line-height:1.45;color:#52647A&quot;&gt;出口及后续代理链未知&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF8E9;strokeColor=#A86C16;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;dashed=1;dashPattern=8 6;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="55" y="760" width="400" height="140" />
+        </mxCell>
+        <mxCell id="terminal-result" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;请求结果待复现&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:25px;line-height:1.45;color:#52647A&quot;&gt;不能据此认定全部断网&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF8E9;strokeColor=#A86C16;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;dashed=1;dashPattern=8 6;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="500" y="760" width="400" height="140" />
+        </mxCell>
+        <mxCell id="chatgpt" value="&lt;div style=&quot;font-size:28px;font-weight:bold;line-height:1.3&quot;&gt;chatgpt.com〔记录〕&lt;/div&gt;&lt;div style=&quot;margin-top:9px;font-size:25px;line-height:1.45;color:#52647A&quot;&gt;助手称返回 HTTP 200&lt;br&gt;只支持当时该目标的陈述&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FB;strokeColor=#176B99;strokeWidth=1.6;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontColor=#16324F;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="945" y="760" width="400" height="140" />
+        </mxCell>
+        <mxCell id="browser-config" style="edgeStyle=none;rounded=0;html=1;strokeColor=#176B99;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="browser" target="browser-proxy">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="browser-config-label" value="配置线索" style="text;html=1;fillColor=#FFFFFF;strokeColor=none;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#176B99;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="201.0" y="373" width="108.0" height="28" />
+        </mxCell>
+        <mxCell id="terminal-config-link" style="edgeStyle=none;rounded=0;html=1;strokeColor=#A86C16;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;dashed=1;dashPattern=8 6;" edge="1" parent="1" source="terminal" target="terminal-config">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="tool-config" style="edgeStyle=none;rounded=0;html=1;strokeColor=#176B99;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="tool" target="loopback-proxy">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="tool-config-label" value="助手报告的操作" style="text;html=1;fillColor=#FFFFFF;strokeColor=none;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#176B99;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1058.0" y="373" width="174.0" height="28" />
+        </mxCell>
+        <mxCell id="browser-remote" style="edgeStyle=none;rounded=0;html=1;strokeColor=#A86C16;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;dashed=1;dashPattern=8 6;" edge="1" parent="1" source="browser-proxy" target="website">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="browser-remote-label" value="后续链路未确认" style="text;html=1;fillColor=#FFFFFF;strokeColor=none;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#176B99;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="168.0" y="665" width="174.0" height="28" />
+        </mxCell>
+        <mxCell id="terminal-remote" style="edgeStyle=none;rounded=0;html=1;strokeColor=#A86C16;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;dashed=1;dashPattern=8 6;" edge="1" parent="1" source="terminal-config" target="terminal-result">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="tool-remote" style="edgeStyle=none;rounded=0;html=1;strokeColor=#A86C16;strokeWidth=2.3;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;dashed=1;dashPattern=8 6;" edge="1" parent="1" source="loopback-proxy" target="chatgpt">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="tool-remote-label" value="后续链路未确认" style="text;html=1;fillColor=#FFFFFF;strokeColor=none;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#176B99;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1058.0" y="665" width="174.0" height="28" />
+        </mxCell>
+        <mxCell id="meaning" value="&lt;div style=&quot;line-height:1.5&quot;&gt;主机名映射不等于网卡绑定；三个上下文不等于三个已确认容器。&lt;br&gt;浏览器出站代理不是已确认的 GUI 画面传输通道。&lt;br&gt;GUI 协议、出口 IP、TLS 检查范围与完整网络空间关系均未确认。&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=26;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="70" y="970" width="1260" height="115" />
+        </mxCell>
+        <mxCell id="source" value="&lt;div style=&quot;line-height:1.5&quot;&gt;来源：[A #021、#025、#027、#036]；[O2] 分项控制；[T4][T5][T6] 技术解释。&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#52647A;fontStyle=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="1160" width="1280" height="45" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

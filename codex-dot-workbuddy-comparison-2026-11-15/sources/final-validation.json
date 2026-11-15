@@ -1,0 +1,89 @@
+{
+  "status": "pass",
+  "word_pages": 19,
+  "visually_reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "native_drawio_exports_visually_reviewed": 6,
+  "figures": 6,
+  "tables": 11,
+  "chapters": 12,
+  "source_ids": [
+    "W1",
+    "W2",
+    "W3",
+    "A",
+    "D1",
+    "U1",
+    "R0",
+    "O1",
+    "O2",
+    "O3",
+    "T1",
+    "T2",
+    "T3",
+    "H1",
+    "C1",
+    "C2",
+    "C3"
+  ],
+  "preserved_template_parts": 12,
+  "source_hashes_unchanged": true,
+  "relative_links_valid": true,
+  "native_graphs": [
+    {
+      "key": "01-comparison-scope",
+      "vertices": 13,
+      "edges": 0
+    },
+    {
+      "key": "02-resource-comparison",
+      "vertices": 11,
+      "edges": 2
+    },
+    {
+      "key": "03-network-comparison",
+      "vertices": 15,
+      "edges": 4
+    },
+    {
+      "key": "04-persistence-comparison",
+      "vertices": 11,
+      "edges": 2
+    },
+    {
+      "key": "05-gui-workflow",
+      "vertices": 14,
+      "edges": 3
+    },
+    {
+      "key": "06-gui-diagnosis",
+      "vertices": 13,
+      "edges": 5
+    }
+  ],
+  "zip_entries": 22,
+  "zip_crc": "pass",
+  "output_sha256": "015ca9e0d928adf6e1222a621c3045af27e8d7d9fee88e1aad0a47bf084b3f36",
+  "zip_sha256": "b7a6b5b77e325443e1a46aca8d6ef2a45e5462e69c64d22f183d9c0a5439c79d",
+  "accessibility_audit": "0 findings (prior audit)",
+  "final_render": "qa-2/b_render"
+}

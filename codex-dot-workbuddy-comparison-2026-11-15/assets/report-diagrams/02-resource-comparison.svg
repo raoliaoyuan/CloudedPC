@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1080" viewBox="0 0 1400 1080">
+<title>图 2  可见资源与实际限制</title>
+<desc>蓝色：历史实测或记录；橙色虚线：需补证据；同口径后才能比较</desc>
+<defs>
+<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#176B99"/></marker>
+<marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#137B77"/></marker>
+<marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#A86C16"/></marker>
+<marker id="arrow-slate" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#64788C"/></marker>
+</defs>
+<rect width="1400" height="1080" fill="white"/>
+<g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="40" y="42" width="7" height="38" rx="3" fill="#137B77"/>
+<text x="64" y="75.0" text-anchor="start" font-size="34" fill="#16324F" font-weight="700">图 2  可见资源与实际限制</text>
+<text x="64" y="112.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">蓝色：历史实测或记录；橙色虚线：需补证据；同口径后才能比较</text>
+<polyline points="370,350 370,500" fill="none" stroke="#A86C16" stroke-width="2.3" stroke-linejoin="round" stroke-dasharray="8 6" marker-end="url(#arrow-amber)"/>
+<polyline points="1030,350 1030,500" fill="none" stroke="#176B99" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<rect x="70" y="190" width="600" height="160" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="370.0" y="235.26" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">Dot 可见视图〔记录〕</text>
+<text x="370.0" y="287.86" text-anchor="middle" font-size="28" fill="#52647A" font-weight="400">9 个逻辑 CPU</text>
+<text x="370.0" y="328.46" text-anchor="middle" font-size="28" fill="#52647A" font-weight="400">内存总量约 9.73 GiB</text>
+<rect x="730" y="190" width="600" height="160" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="1030.0" y="235.26" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">WorkBuddy 可见视图〔实测〕</text>
+<text x="1030.0" y="287.86" text-anchor="middle" font-size="28" fill="#52647A" font-weight="400">32 个逻辑 CPU</text>
+<text x="1030.0" y="328.46" text-anchor="middle" font-size="28" fill="#52647A" font-weight="400">内存总量约 123.32 GiB</text>
+<rect x="70" y="500" width="600" height="165" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="370.0" y="550.66" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">实际限制〔未确认〕</text>
+<text x="370.0" y="600.36" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">缺少 cpu.max、memory.max</text>
+<text x="370.0" y="638.06" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">或其他资源控制机制的原始证据</text>
+<rect x="730" y="500" width="600" height="165" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="1030.0" y="550.66" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">父级限制〔历史实测〕</text>
+<text x="1030.0" y="600.36" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">400000 / 100000 → 4 核时间上限</text>
+<text x="1030.0" y="638.06" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">memory.max → 8 GiB 硬限制</text>
+<rect x="140" y="800" width="1120" height="145" rx="12" fill="#EFF6FB" stroke="#176B99" stroke-width="1.6"/>
+<text x="700.0" y="839.21" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">比较结论〔技术分析〕</text>
+<text x="700.0" y="890.36" text-anchor="middle" font-size="27" fill="#52647A" font-weight="400">9 个可见 CPU 与 4 核时间上限不是同一种指标</text>
+<text x="700.0" y="929.51" text-anchor="middle" font-size="27" fill="#52647A" font-weight="400">没有同负载基准，不能据此排名性能、独占性或响应速度</text>
+<rect x="272.0" y="410" width="196.0" height="28" rx="5" fill="white"/>
+<text x="370" y="430.0" text-anchor="middle" font-size="22" fill="#176B99" font-weight="400">不能直接当成配额</text>
+<rect x="932.0" y="410" width="196.0" height="28" rx="5" fill="white"/>
+<text x="1030" y="430.0" text-anchor="middle" font-size="22" fill="#176B99" font-weight="400">实际核对父级约束</text>
+<text x="60" y="1022.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">来源：[A #024][W1 第 2 章][T1]。4 核上限不是 4 个独占物理核，也不是保底性能。</text>
+</g></svg>

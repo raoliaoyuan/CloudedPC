@@ -1,0 +1,615 @@
+{
+  "scope": "Read-only inspection of user-controlled WorkBuddy container only; no host or peer probing, exploit execution, or configuration changes.",
+  "container": "064f56bb22e3",
+  "container_audit": {
+    "time_utc": "2026-11-10T09:39:42.495815+00:00",
+    "process_security": [
+      {
+        "Name": "docker-init",
+        "Pid": "1",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "supervisord",
+        "Pid": "61",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "ash",
+        "Pid": "90",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "ash",
+        "Pid": "92",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "log-forward-tee",
+        "Pid": "93",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "node",
+        "Pid": "95",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "ash",
+        "Pid": "97",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "ash",
+        "Pid": "100",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "node",
+        "Pid": "105",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "ash",
+        "Pid": "106",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "log-forward-tee",
+        "Pid": "107",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "node",
+        "Pid": "110",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "ash",
+        "Pid": "111",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "bash",
+        "Pid": "112",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "log-forward-tee",
+        "Pid": "113",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "sandbox-proxy",
+        "Pid": "116",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "docker-init",
+        "Pid": "118",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "sandbox-log-col",
+        "Pid": "130",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "log-forward-tee",
+        "Pid": "174",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "log-forward-tee",
+        "Pid": "177",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "log-forward-tee",
+        "Pid": "181",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "envd",
+        "Pid": "1265",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "PM2 v6.0.14: Go",
+        "Pid": "1301",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "sandbox-proxy-m",
+        "Pid": "1313",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "node",
+        "Pid": "1347",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "node",
+        "Pid": "1348",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "nc",
+        "Pid": "51585",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "dockerd",
+        "Pid": "51868",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "containerd",
+        "Pid": "52016",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "nc",
+        "Pid": "52463",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "nc",
+        "Pid": "52466",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "node",
+        "Pid": "64062",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "sandbox-proxy",
+        "Pid": "64088",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "nc",
+        "Pid": "64107",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "bash",
+        "Pid": "64108",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "sync_server",
+        "Pid": "64125",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "editor_sdk",
+        "Pid": "64144",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "node",
+        "Pid": "64167",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "tail",
+        "Pid": "64553",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "tailscaled",
+        "Pid": "65518",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "sshd",
+        "Pid": "67281",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "tailscaled",
+        "Pid": "68343",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "login",
+        "Pid": "68352",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "bash",
+        "Pid": "68366",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "tailscaled",
+        "Pid": "70372",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "tailscaled",
+        "Pid": "70381",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      },
+      {
+        "Name": "python3",
+        "Pid": "70388",
+        "Uid": "0\t0\t0\t0",
+        "CapEff": "000001ffffffffff",
+        "CapAmb": "000001ffffffffff",
+        "NoNewPrivs": "0",
+        "Seccomp": "2",
+        "Seccomp_filters": "2"
+      }
+    ],
+    "kernel_controls": {
+      "kernel/unprivileged_bpf_disabled": "0",
+      "kernel/perf_event_paranoid": "2",
+      "kernel/kptr_restrict": "1",
+      "kernel/dmesg_restrict": "0",
+      "kernel/yama/ptrace_scope": "0",
+      "user/max_user_namespaces": "2147483647"
+    },
+    "security_label": "kernel\u0000",
+    "lsm_list": {
+      "error": "No such file or directory"
+    },
+    "cgroup": {
+      "cgroup.controllers": "cpuset cpu io memory net_cls hugetlb pids rdma misc",
+      "cgroup.subtree_control": "cpuset cpu io memory net_cls hugetlb pids rdma misc",
+      "cgroup.type": "domain",
+      "cpu.max": "400000 100000",
+      "memory.max": "8589934592",
+      "pids.max": "151533",
+      "init.scope/cpu.max": "max 100000",
+      "init.scope/memory.max": "max",
+      "init.scope/pids.max": "max"
+    },
+    "tcp_listeners": {
+      "rc": 0,
+      "stdout": "State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                                 \nLISTEN 0      128        127.0.0.1:39099      0.0.0.0:*    users:((\"editor_sdk\",pid=64144,fd=7))  \nLISTEN 0      4096      0.0.0.0%lo:34700      0.0.0.0:*    users:((\"tailscaled\",pid=65518,fd=15)) \nLISTEN 0      511        127.0.0.1:62667      0.0.0.0:*    users:((\"node\",pid=1347,fd=18))        \nLISTEN 0      511          0.0.0.0:65310      0.0.0.0:*    users:((\"node\",pid=105,fd=18))         \nLISTEN 0      4096       127.0.0.1:8089       0.0.0.0:*    users:((\"sync_server\",pid=64125,fd=12))\nLISTEN 0      4096       127.0.0.1:1055       0.0.0.0:*    users:((\"tailscaled\",pid=65518,fd=12)) \nLISTEN 0      128          0.0.0.0:22         0.0.0.0:*    users:((\"sshd\",pid=67281,fd=3))        \nLISTEN 0      4096      127.0.0.11:42913      0.0.0.0:*                                           \nLISTEN 0      511                *:65213            *:*    users:((\"node\",pid=95,fd=17))          \nLISTEN 0      511                *:65216            *:*    users:((\"node\",pid=110,fd=18))         \nLISTEN 0      4096               *:65225            *:*    users:((\"sandbox-proxy\",pid=116,fd=16))\nLISTEN 0      4096               *:49983            *:*    users:((\"envd\",pid=1265,fd=6))         \nLISTEN 0      4096               *:9090             *:*    users:((\"sandbox-proxy\",pid=116,fd=10))\nLISTEN 0      128             [::]:22            [::]:*    users:((\"sshd\",pid=67281,fd=4))        \nLISTEN 0      4096               *:18601            *:*    users:((\"sync_server\",pid=64125,fd=14))\n",
+      "stderr": ""
+    },
+    "unix_listeners": {
+      "rc": 0,
+      "stdout": "Netid State  Recv-Q Send-Q                                    Local Address:Port      Peer Address:PortProcess                                    \nu_str LISTEN 0      511           /dev/shm/codebuddy-prewarm-sbx-116-2.sock 572490950            * 0    users:((\"node\",pid=1348,fd=18))           \nu_str LISTEN 0      511           /dev/shm/codebuddy-prewarm-sbx-116-3.sock 624611059            * 0    users:((\"node\",pid=64062,fd=18))          \nu_str LISTEN 0      4096         /.PlnPyKFp4CRfFtgC1_run/cs-supervisor.sock 601866554            * 0    users:((\"supervisord\",pid=61,fd=3))       \nu_str LISTEN 0      4096                               /var/run/docker.sock 601756285            * 0    users:((\"dockerd\",pid=51868,fd=3))        \nu_str LISTEN 0      4096   /var/run/docker/containerd/containerd-debug.sock 601758417            * 0    users:((\"containerd\",pid=52016,fd=7))     \nu_str LISTEN 0      4096   /var/run/docker/containerd/containerd.sock.ttrpc 601876821            * 0    users:((\"containerd\",pid=52016,fd=8))     \nu_str LISTEN 0      4096         /var/run/docker/containerd/containerd.sock 601876822            * 0    users:((\"containerd\",pid=52016,fd=9))     \nu_str LISTEN 0      4096                       /var/run/docker/metrics.sock 601756335            * 0    users:((\"dockerd\",pid=51868,fd=8))        \nu_str LISTEN 0      4096       /var/run/docker/libnetwork/8395f83dd544.sock 601884595            * 0    users:((\"dockerd\",pid=51868,fd=13))       \nu_str LISTEN 0      511                                 /root/.pm2/pub.sock 572472839            * 0    users:((\"PM2 v6.0.14: Go\",pid=1301,fd=19))\nu_str LISTEN 0      511                                 /root/.pm2/rpc.sock 572472840            * 0    users:((\"PM2 v6.0.14: Go\",pid=1301,fd=20))\nu_str LISTEN 0      4096                 /var/run/tailscale/tailscaled.sock 626753440            * 0    users:((\"tailscaled\",pid=65518,fd=9))     \n",
+      "stderr": ""
+    },
+    "iptables_input": {
+      "rc": 0,
+      "stdout": "-P INPUT ACCEPT\n",
+      "stderr": "# Warning: iptables-legacy tables present, use iptables-legacy to see them\n"
+    },
+    "ip6tables_input": {
+      "rc": 0,
+      "stdout": "-P INPUT ACCEPT\n",
+      "stderr": "# Warning: ip6tables-legacy tables present, use ip6tables-legacy to see them\n"
+    },
+    "mount_overview": {
+      "rc": 0,
+      "stdout": "/.oldroot overlay overlay rw,relatime\n/.oldroot/sys sysfs sysfs rw,nosuid,nodev,noexec,relatime\n/.oldroot/sys/fs/cgroup cgroup cgroup2 rw,nosuid,nodev,noexec,relatime\n/.oldroot/proc proc proc rw,nosuid,nodev,noexec,relatime\n/.oldroot/dev tmpfs tmpfs rw,nosuid\n/.oldroot/dev/mqueue mqueue mqueue rw,nosuid,nodev,noexec,relatime\n/.oldroot/dev/pts devpts devpts rw,nosuid,noexec,relatime\n/.oldroot/dev/shm shm tmpfs rw,nosuid,nodev,noexec,relatime\n/.oldroot/.PlnPyKFp4CRfFtgC1_run tmpfs tmpfs rw,nosuid,nodev,noexec,relatime\n/.oldroot/sys/devices/virtual sysboxfs[/sys/devices/virtual] fuse rw,nosuid,nodev,relatime\n/.oldroot/sys/kernel sysboxfs[/sys/kernel] fuse rw,nosuid,nodev,relatime\n/.oldroot/sys/module/nf_conntrack/parameters sysboxfs[/sys/module/nf_conntrack/parameters] fuse rw,nosuid,nodev,relatime\n/.oldroot/proc/swaps sysboxfs[/proc/swaps] fuse rw,nosuid,nodev,relatime\n/.oldroot/proc/sys sysboxfs[/proc/sys] fuse rw,nosuid,nodev,relatime\n/.oldroot/proc/uptime sysboxfs[/proc/uptime] fuse rw,nosuid,nodev,relatime\n/.oldroot/dev/kmsg devtmpfs[/null] devtmpfs rw,nosuid\n/.oldroot/usr/sbin/docker-init /dev/vda1[/usr/libexec/docker/docker-init] xfs ro,relatime,idmapped\n/.oldroot/.PlnPyKFp4CRfFtgC1 /dev/vdb[/docker-root/overlay2/dcf5fdae610891096e531192747cfc398d6ca3986f60afdfe0eb11ae00a34d31/diff/.PlnPyKFp4CRfFtgC1] ext4 ro,relatime,idmapped\n/.oldroot/etc/resolv.conf /dev/vdb[/docker-root/containers/064f56bb22e3d62c930698fcfa2f521ae37dc9381f776d8cc9833e369993ae68/resolv.conf] ext4 rw,relatime,idmapped\n/.oldroot/etc/hostname /dev/vdb[/docker-root/containers/064f56bb22e3d62c930698fcfa2f521ae37dc9381f776d8cc9833e369993ae68/hostname] ext4 rw,relatime,idmapped\n/.oldroot/etc/hosts /dev/vdb[/docker-root/containers/064f56bb22e3d62c930698fcfa2f521ae37dc9381f776d8cc9833e369993ae68/hosts] ext4 rw,relatime,idmapped\n/.oldroot/etc/docker/daemon.json tmpfs[/cloudstudio/warm-6092b80c-9f1f-4559-a6f2-e40f6b2a9596_6092b80c-9f1f-4559-a6f2-e40f6b2a9596/dind/dind-daemon.json] tmpfs ro,nosuid,nodev,idmapped\n/.oldroot/usr/local/bin/dockerd-entrypoint.sh tmpfs[/cloudstudio/warm-6092b80c-9f1f-4559-a6f2-e40f6b2a9596_6092b80c-9f1f-4559-a6f2-e40f6b2a9596/dind/dind-dockerd-entrypoint.sh] tmpfs ro,nosuid,nodev,idmapped\n/.oldroot/var/lib/k0s /dev/vdb[/sysbox/k0s/064f56bb22e3d62c930698fcfa2f521ae37dc9381f776d8cc9833e369993ae68] ext4 rw,relatime,idmapped\n/.oldroot/var/lib/buildkit /dev/vdb[/sysbox/buildkit/064f56bb22e3d62c930698fcfa2f521ae37dc9381f776d8cc9833e369993ae68] ext4 rw,relatime,idmapped\n/.oldroot/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs /dev/vdb[/sysbox/containerd/064f56bb22e3d62c930698fcfa2f521ae37dc9381f776d8cc9833e369993ae68] ext4 rw,relatime,idmapped\n/.oldroot/var/lib/docker /dev/vdb[/sysbox/docker/064f56bb22e3d62c930698fcfa2f521ae37dc9381f776d8cc9833e369993ae68] ext4 rw,relatime,idmapped\n/.oldroot/var/lib/rancher/k3s /dev/vdb[/sysbox/rancher-k3s/064f56bb22e3d62c930698fcfa2f521ae37dc9381f776d8cc9833e369993ae68] ext4 rw,relatime,idmapped\n/.oldroot/var/lib/rancher/rke2 /dev/vdb[/sysbox/rancher-rke2/064f56bb22e3d62c930698fcfa2f521ae37dc9381f776d8cc9833e369993ae68] ext4 rw,relatime,idmapped\n/.oldroot/var/lib/kubelet /dev/vdb[/sysbox/kubelet/064f56bb22e3d62c930698fcfa2f521ae37dc9381f776d8cc9833e369993ae68] ext4 rw,relatime,idmapped\n/.oldroot/usr/lib/modules/6.6.117-45.14.1.tl4.x86_64 /dev/vda1[/usr/lib/modules/6.6.117-45.14.1.tl4.x86_64] xfs ro,relatime,idmapped\n/.oldroot/dev/null devtmpfs[/null] devtmpfs rw,nosuid\n/.oldroot/dev/random devtmpfs[/random] devtmpfs rw,nosuid\n/.oldroot/dev/full devtmpfs[/full] devtmpfs rw,nosuid\n/.oldroot/dev/tty devtmpfs[/tty] devtmpfs rw,nosuid\n/.oldroot/dev/zero devtmpfs[/zero] devtmpfs rw,nosuid\n/.oldroot/dev/urandom devtmpfs[/urandom] devtmpfs rw,nosuid\n/.oldroot/proc/bus proc[/bus] proc ro,nosuid,nodev,noexec,relatime\n/.oldroot/proc/fs proc[/fs] proc ro,nosuid,nodev,noexec,relatime\n/.oldroot/proc/irq proc[/irq] proc ro,nosuid,nodev,noexec,relatime\n/.oldroot/proc/sysrq-trigger proc[/sysrq-trigger] proc ro,nosuid,nodev,noexec,relatime\n/.oldroot/proc/acpi tmpfs tmpfs ro,relatime\n/.oldroot/proc/interrupts devtmpfs[/null] devtmpfs rw,nosuid\n/.oldroot/proc/keys devtmpfs[/null] devtmpfs rw,nosuid\n/.oldroot/proc/latency_stats devtmpfs[/null] devtmpfs rw,nosuid\n/.oldroot/proc/scsi tmpfs tmpfs ro,relatime\n/.oldroot/proc/timer_list devtmpfs[/null] devtmpfs rw,nosuid\n/.oldroot/sys/firmware tmpfs tmpfs ro,relatime\n/ overlay overlay rw,relatime\n/proc proc proc rw,nosuid,nodev,noexec,relatime\n/proc/swaps sysboxfs[/proc/swaps] fuse rw,nosuid,nodev,relatime\n/proc/sys sysboxfs[/proc/sys] fuse rw,nosuid,nodev,relatime\n/proc/uptime sysboxfs[/proc/uptime] fuse rw,nosuid,nodev,relatime\n/proc/bus proc[/bus] proc ro,nosuid,nodev,noexec,relatime\n/proc/fs proc[/fs] proc ro,nosuid,nodev,noexec,relatime\n/proc/irq proc[/irq] proc ro,nosuid,nodev,noexec,relatime\n/proc/sysrq-trigger proc[/sysrq-trigger] proc ro,nosuid,nodev,noexec,relatime\n/proc/acpi tmpfs tmpfs ro,relatime\n/proc/interrupts devtmpfs[/null] devtmpfs rw,nosuid\n/proc/keys devtmpfs[/null] devtmpfs rw,nosuid\n/proc/latency_stats devtmpfs[/null] devtmpfs rw,nosuid\n/proc/scsi tmpfs tmpfs ro,relatime\n/proc/timer_list devtmpfs[/null] devtmpfs rw,nosuid\n/sys sysfs sysfs rw,nosuid,nodev,noexec,relatime\n/sys/fs/cgroup cgroup cgroup2 rw,nosuid,nodev,noexec,relatime\n/sys/devices/virtual sysboxfs[/sys/devices/virtual] fuse rw,nosuid,nodev,relatime\n/sys/kernel sysboxfs[/sys/kernel] fuse rw,nosuid,nodev,relatime\n/sys/module/nf_conntrack/parameters sysboxfs[/sys/module/nf_conntrack/parameters] fuse rw,nosuid,nodev,relatime\n/sys/firmware tmpfs tmpfs ro,relatime\n/dev tmpfs tmpfs rw,nosuid\n/dev/mqueue mqueue mqueue rw,nosuid,nodev,noexec,relatime\n/dev/pts devpts devpts rw,nosuid,noexec,relatime\n/dev/shm shm tmpfs rw,nosuid,nodev,noexec,relatime\n/dev/kmsg devtmpfs[/null] devtmpfs rw,nosuid\n/dev/null devtmpfs[/null] devtmpfs rw,nosuid\n/dev/random devtmpfs[/random] devtmpfs rw,nosuid\n/dev/full devtmpfs[/full] devtmpfs rw,nosuid\n/dev/tty devtmpfs[/tty] devtmpfs rw,nosuid\n/dev/zero devtmpfs[/zero] devtmpfs rw,nosuid\n/dev/urandom devtmpfs[/urandom] devtmpfs rw,nosuid\n/.PlnPyKFp4CRfFtgC1 /dev/vdb[/docker-root/overlay2/dcf5fdae610891096e531192747cfc398d6ca3986f60afdfe0eb11ae00a34d31/diff/.PlnPyKFp4CRfFtgC1] ext4 ro,relatime,idmapped\n/.PlnPyKFp4CRfFtgC1_run tmpfs tmpfs rw,nosuid,nodev,noexec,relatime\n/etc/docker/daemon.json tmpfs[/cloudstudio/warm-6092b80c-9f1f-4559-a6f2-e40f6b2a9596_6092b80c-9f1f-4559-a6f2-e40f6b2a9596/dind/dind-daemon.json] tmpfs ro,nosuid,nodev,idmapped\n/etc/hostname /dev/vdb[/docker-root/containers/064f56bb22e3d62c930698fcfa2f521ae37dc9381f776d8cc9833e369993ae68/hostname] ext4 rw,relatime,idmapped\n/etc/hosts /dev/vdb[/docker-root/containers/064f56bb22e3d62c930698fcfa2f521ae37dc9381f776d8cc9833e369993ae68/hosts] ext4 rw,relatime,idmapped\n/etc/resolv.conf /dev/vdb[/docker-root/containers/064f56bb22e3d62c930698fcfa2f521ae37dc9381f776d8cc9833e369993ae68/resolv.conf] ext4 rw,relatime,idmapped\n/usr/lib/modules/6.6.117-45.14.1.tl4.x86_64 /dev/vda1[/usr/lib/modules/6.6.117-45.14.1.tl4.x86_64] xfs ro,relatime,idmapped\n/usr/local/bin/dockerd-entrypoint.sh tmpfs[/cloudstudio/warm-6092b80c-9f1f-4559-a6f2-e40f6b2a9596_6092b80c-9f1f-4559-a6f2-e40f6b2a9596/dind/dind-dockerd-entrypoint.sh] tmpfs ro,nosuid,nodev,idmapped\n/usr/sbin/docker-init /dev/vda1[/usr/libexec/docker/docker-init] xfs ro,relatime,idmapped\n/var/lib/buildkit /dev/vdb[/sysbox/buildkit/064f56bb22e3d62c930698fcfa2f521ae37dc9381f776d8cc9833e369993ae68] ext4 rw,relatime,idmapped\n/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs /dev/vdb[/sysbox/containerd/064f56bb22e3d62c930698fcfa2f521ae37dc9381f776d8cc9833e369993ae68] ext4 rw,relatime,idmapped\n/var/lib/docker /dev/vdb[/sysbox/docker/064f56bb22e3d62c930698fcfa2f521ae37dc9381f776d8cc9833e369993ae68] ext4 rw,relatime,idmapped\n/var/lib/k0s /dev/vdb[/sysbox/k0s/064f56bb22e3d62c930698fcfa2f521ae37dc9381f776d8cc9833e369993ae68] ext4 rw,relatime,idmapped\n/var/lib/kubelet /dev/vdb[/sysbox/kubelet/064f56bb22e3d62c930698fcfa2f521ae37dc9381f776d8cc9833e369993ae68] ext4 rw,relatime,idmapped\n/var/lib/rancher/k3s /dev/vdb[/sysbox/rancher-k3s/064f56bb22e3d62c930698fcfa2f521ae37dc9381f776d8cc9833e369993ae68] ext4 rw,relatime,idmapped\n/var/lib/rancher/rke2 /dev/vdb[/sysbox/rancher-rke2/064f56bb22e3d62c930698fcfa2f521ae37dc9381f776d8cc9833e369993ae68] ext4 rw,relatime,idmapped\n/root/proxy/box overlay[/root/proxy/box] overlay rw,relatime\n/root/.nvm/versions/node/v22.13.1/lib/node_modules/@tencent-ai/codebuddy-code overlay[/root/.nvm/versions/node/v22.13.1/lib/node_modules/@tencent-ai/codebuddy-code] overlay rw,relatime\n/run/cloudstudio/prewarm-info.json overlay[/run/cloudstudio/prewarm-info.json] overlay rw,relatime\n/usr/local/tna/sync_server overlay[/usr/local/tna/sync_server] overlay rw,relatime\n/usr/local/system/bin overlay[/usr/local/system/bin] overlay rw,relatime\n/var/lib/docker /dev/nbd962[/workspace/docker] btrfs rw,relatime\n/var/lib/buildkit /dev/nbd962[/workspace/buildkit] btrfs rw,relatime\n/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs /dev/nbd962[/workspace/containerd-ovfs] btrfs rw,relatime\n/var/lib/kubelet /dev/nbd962[/workspace/kubelet] btrfs rw,relatime\n/var/lib/k0s /dev/nbd962[/workspace/k0s] btrfs rw,relatime\n/var/lib/rancher/k3s /dev/nbd962[/workspace/rancher-k3s] btrfs rw,relatime\n/var/lib/rancher/rke2 /dev/nbd962[/workspace/rancher-rke2] btrfs rw,relatime\n",
+      "stderr": ""
+    },
+    "special_devices": [
+      {
+        "path": "/dev/urandom",
+        "block": false,
+        "major": 1,
+        "minor": 9
+      },
+      {
+        "path": "/dev/zero",
+        "block": false,
+        "major": 1,
+        "minor": 5
+      },
+      {
+        "path": "/dev/tty",
+        "block": false,
+        "major": 5,
+        "minor": 0
+      },
+      {
+        "path": "/dev/full",
+        "block": false,
+        "major": 1,
+        "minor": 7
+      },
+      {
+        "path": "/dev/random",
+        "block": false,
+        "major": 1,
+        "minor": 8
+      },
+      {
+        "path": "/dev/null",
+        "block": false,
+        "major": 1,
+        "minor": 3
+      },
+      {
+        "path": "/dev/kmsg",
+        "block": false,
+        "major": 1,
+        "minor": 3
+      },
+      {
+        "path": "/dev/pts/0",
+        "block": false,
+        "major": 136,
+        "minor": 0
+      },
+      {
+        "path": "/dev/pts/ptmx",
+        "block": false,
+        "major": 5,
+        "minor": 2
+      }
+    ]
+  },
+  "network_followup": {
+    "iptables-legacy -S INPUT": {
+      "rc": 0,
+      "result": "-P INPUT ACCEPT\n",
+      "stderr": ""
+    },
+    "ip6tables-legacy -S INPUT": {
+      "rc": 0,
+      "result": "-P INPUT ACCEPT\n",
+      "stderr": ""
+    },
+    "nft -j list ruleset": {
+      "error": "[Errno 2] No such file or directory: 'nft'"
+    },
+    "sshd -T": {
+      "rc": 0,
+      "result": [
+        "listenaddress [::]:22",
+        "listenaddress 0.0.0.0:22",
+        "permitrootlogin yes",
+        "pubkeyauthentication yes",
+        "passwordauthentication yes"
+      ],
+      "stderr": ""
+    }
+  },
+  "limitations": [
+    "No host management access; user confirmed platform-managed WorkBuddy container.",
+    "Seccomp filter contents and outer runtime/kernel patch status not verified.",
+    "Sysbox virtualizes proc/sys; displayed sysctls do not establish host kernel policy.",
+    "No claim that all escape paths are prevented; no exploitation performed."
+  ]
+}

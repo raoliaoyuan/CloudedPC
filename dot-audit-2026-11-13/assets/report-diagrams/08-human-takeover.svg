@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1200" viewBox="0 0 1400 1200">
+<title>图 8-2  云电脑查看与人工接管流程</title>
+<desc>青色：官方操作流程；橙色虚线：实现与体验原因未确认；非内部设计披露</desc>
+<defs>
+<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#176B99"/></marker>
+<marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#137B77"/></marker>
+<marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#A86C16"/></marker>
+<marker id="arrow-slate" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#64788C"/></marker>
+</defs>
+<rect width="1400" height="1200" fill="white"/>
+<g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="40" y="42" width="7" height="38" rx="3" fill="#137B77"/>
+<text x="64" y="75.0" text-anchor="start" font-size="34" fill="#16324F" font-weight="700">图 8-2  云电脑查看与人工接管流程</text>
+<text x="64" y="112.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">青色：官方操作流程；橙色虚线：实现与体验原因未确认；非内部设计披露</text>
+<polyline points="420,285 420,380" fill="none" stroke="#137B77" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-teal)"/>
+<polyline points="420,495 420,590" fill="none" stroke="#137B77" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-teal)"/>
+<polyline points="420,705 420,800" fill="none" stroke="#137B77" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-teal)"/>
+<polyline points="750,857 865,857" fill="none" stroke="#137B77" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-teal)"/>
+<rect x="90" y="170" width="660" height="115" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="420.0" y="213.06" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">打开云电脑</text>
+<text x="420.0" y="265.66" text-anchor="middle" font-size="28" fill="#52647A" font-weight="400">进入查看界面</text>
+<rect x="90" y="380" width="660" height="115" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="420.0" y="423.06" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">Take over</text>
+<text x="420.0" y="475.66" text-anchor="middle" font-size="28" fill="#52647A" font-weight="400">取得鼠标与键盘控制</text>
+<rect x="90" y="590" width="660" height="115" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="420.0" y="633.0600000000001" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">人工完成操作</text>
+<text x="420.0" y="685.6600000000001" text-anchor="middle" font-size="28" fill="#52647A" font-weight="400">例如网站登录或额外验证</text>
+<rect x="90" y="800" width="660" height="115" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="420.0" y="843.0600000000001" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">Return control</text>
+<text x="420.0" y="895.6600000000001" text-anchor="middle" font-size="28" fill="#52647A" font-weight="400">将控制交还 Dot</text>
+<rect x="865" y="170" width="445" height="135" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="1087.5" y="226.685" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">查看不等于已接管</text>
+<text x="1087.5" y="272.035" text-anchor="middle" font-size="23" fill="#52647A" font-weight="400">打开画面后仍需选择 Take over</text>
+<rect x="865" y="800" width="445" height="115" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="1087.5" y="845.235" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">Dot 继续任务</text>
+<text x="1087.5" y="893.485" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">控制权交接后的工作延续</text>
+<rect x="865" y="420" width="445" height="220" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="1087.5" y="483.66" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">尚未确认的实现</text>
+<text x="1087.5" y="530.46" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">GUI 传输协议与桌面组件</text>
+<text x="1087.5" y="565.26" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">编码、帧率、输入转发机制</text>
+<text x="1087.5" y="600.0600000000001" text-anchor="middle" font-size="24" fill="#52647A" font-weight="400">界面简化的内部设计动机</text>
+<text x="70" y="1021.0" text-anchor="start" font-size="26" fill="#52647A" font-weight="400">流程能够解释“查看、接管、交还”的关系，不能解释或证明界面难用的根因。</text>
+<text x="70" y="1060.0" text-anchor="start" font-size="26" fill="#52647A" font-weight="400">没有证据说明简陋 GUI 是安全、成本或代理工作的必要代价。</text>
+<text x="60" y="1152.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">来源：[O1] Use the cloud computer / Sign in to a website；未确认项沿用正文证据边界。</text>
+</g></svg>

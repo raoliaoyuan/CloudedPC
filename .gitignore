@@ -1,0 +1,17 @@
+# Local credentials and agent settings
+/.aws/
+/.codex/
+/.agents/
+.env
+.env.*
+!.env.example
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Editor and operating system temporary files
+.DS_Store
+*~
+*.swp
+~$*

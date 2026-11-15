@@ -1,0 +1,72 @@
+{
+  "W1": {
+    "path": "/home/gamer/Work/CloudPC/audit-2026-11-10/腾讯云CVM-Linux容器开发环境综合检查报告.md",
+    "sha256": "500e7f44737855cbfd79cb14c276a7433cb53dcfd4f59e63a588538636392657"
+  },
+  "W2": {
+    "path": "/home/gamer/Work/CloudPC/云PC软硬件检查报告.docx",
+    "sha256": "fc206e63af54b37f193e7a92d31869354598059053167358798009ea561e1428"
+  },
+  "W3": {
+    "path": "/home/gamer/Work/CloudPC/audit-2026-11-10/tailscale-ping.txt",
+    "sha256": "38f782e516c9867e10c9a35eec792dd869b97237e29798f216bb6c7f8e5066bc"
+  },
+  "A": {
+    "path": "/home/gamer/Downloads/二狗子-完整可见对话与云电脑技术解读-2026-11-13.md",
+    "sha256": "9987916a603385775e50e37d35516810d7670805fad3649554e00db01230c618"
+  },
+  "D1": {
+    "path": "/home/gamer/Work/CloudPC/dot-audit-2026-11-13/Dot云电脑软硬件配置与运行检查报告.md",
+    "sha256": "414f60aa12ae1b27e814f85fa7fe0cfd9300112dd144c1160f6d08e0cd2a1ae2"
+  },
+  "U1": {
+    "path": "/home/gamer/Work/CloudPC/dot-comparison-2026-11-13/evidence/user-gui-observation.md",
+    "sha256": "b07bc7ba2765caf4f3beeaf12c50ae22857f770c52f7aeb4c1b959350c0aa406"
+  },
+  "R0": {
+    "path": "/home/gamer/Work/CloudPC/dot-comparison-2026-11-13/Dot与云PC对比及GUI设计分析报告.md",
+    "sha256": "9f3b7a34bc5fa89551731b37fa5bc7aee5ae7aafade6c6c1937b95fd22e5328c"
+  },
+  "public_references": {
+    "O1": {
+      "url": "https://learn.chatgpt.com/docs/dots/computers-and-apps",
+      "review_date": "2026-11-15"
+    },
+    "O2": {
+      "url": "https://learn.chatgpt.com/docs/enterprise/dots-security",
+      "review_date": "2026-11-15"
+    },
+    "O3": {
+      "url": "https://learn.chatgpt.com/docs/dots",
+      "review_date": "2026-11-15"
+    },
+    "T1": {
+      "url": "https://docs.kernel.org/admin-guide/cgroup-v2.html",
+      "review_date": "2026-11-15"
+    },
+    "T2": {
+      "url": "https://tailscale.com/docs/concepts/userspace-networking",
+      "review_date": "2026-11-15"
+    },
+    "T3": {
+      "url": "https://learn.microsoft.com/en-us/azure/virtual-desktop/connection-latency",
+      "review_date": "2026-11-15"
+    },
+    "H1": {
+      "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+      "review_date": "2026-11-15"
+    },
+    "C1": {
+      "url": "https://news.ycombinator.com/item?id=50229493",
+      "review_date": "2026-11-15"
+    },
+    "C2": {
+      "url": "https://simonwillison.net/2025/Jun/3/codex-agent-internet-access/",
+      "review_date": "2026-11-15"
+    },
+    "C3": {
+      "url": "https://simonwillison.net/2026/Feb/10/showboat-and-rodney/",
+      "review_date": "2026-11-15"
+    }
+  }
+}

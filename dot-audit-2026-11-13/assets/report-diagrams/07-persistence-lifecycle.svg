@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1190" viewBox="0 0 1400 1190">
+<title>图 8-1  状态保留与持续运行的区别</title>
+<desc>青色：官方能力；橙色虚线：本实例仍需核验；箭头为状态逻辑，不是时间 SLA</desc>
+<defs>
+<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#176B99"/></marker>
+<marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#137B77"/></marker>
+<marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#A86C16"/></marker>
+<marker id="arrow-slate" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 1 L 8 5 L 0 9 Z" fill="#64788C"/></marker>
+</defs>
+<rect width="1400" height="1190" fill="white"/>
+<g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="40" y="42" width="7" height="38" rx="3" fill="#137B77"/>
+<text x="64" y="75.0" text-anchor="start" font-size="34" fill="#16324F" font-weight="700">图 8-1  状态保留与持续运行的区别</text>
+<text x="64" y="112.0" text-anchor="start" font-size="22" fill="#52647A" font-weight="400">青色：官方能力；橙色虚线：本实例仍需核验；箭头为状态逻辑，不是时间 SLA</text>
+<rect x="70" y="440" width="1260" height="360" rx="18" fill="#F6F9FC" stroke="#A9BED0" stroke-width="1.5"/>
+<text x="94" y="480.0" text-anchor="start" font-size="26" fill="#16324F" font-weight="700">必须分别核验的对象〔支持保留状态，不代表以下项目全有相同保证〕</text>
+<polyline points="650,260 750,260" fill="none" stroke="#137B77" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow-teal)"/>
+<rect x="70" y="185" width="580" height="150" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="360.0" y="226.70999999999998" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">使用时段 A〔官方能力〕</text>
+<text x="360.0" y="277.85999999999996" text-anchor="middle" font-size="27" fill="#52647A" font-weight="400">云电脑具有自己的文件</text>
+<text x="360.0" y="317.01" text-anchor="middle" font-size="27" fill="#52647A" font-weight="400">软件与浏览器会话</text>
+<rect x="750" y="185" width="580" height="150" rx="12" fill="#EDF8F5" stroke="#137B77" stroke-width="1.6"/>
+<text x="1040.0" y="226.70999999999998" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">后续使用时段 B〔官方能力〕</text>
+<text x="1040.0" y="277.85999999999996" text-anchor="middle" font-size="27" fill="#52647A" font-weight="400">可跨使用时段保留状态</text>
+<text x="1040.0" y="317.01" text-anchor="middle" font-size="27" fill="#52647A" font-weight="400">安全文档说明跨会话快照</text>
+<rect x="100" y="535" width="350" height="200" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="275.0" y="607.51" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">文件与目录</text>
+<text x="275.0" y="652.86" text-anchor="middle" font-size="23" fill="#52647A" font-weight="400">具体路径、保留期限</text>
+<text x="275.0" y="686.21" text-anchor="middle" font-size="23" fill="#52647A" font-weight="400">恢复后哈希是否一致</text>
+<rect x="525" y="535" width="350" height="200" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="700.0" y="607.51" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">浏览器登录态</text>
+<text x="700.0" y="652.86" text-anchor="middle" font-size="23" fill="#52647A" font-weight="400">可能受网站会话失效影响</text>
+<text x="700.0" y="686.21" text-anchor="middle" font-size="23" fill="#52647A" font-weight="400">与文件快照不是同一对象</text>
+<rect x="950" y="535" width="350" height="200" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="1125.0" y="607.51" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">进程与网络连接</text>
+<text x="1125.0" y="652.86" text-anchor="middle" font-size="23" fill="#52647A" font-weight="400">进程、监听端口、TCP 会话</text>
+<text x="1125.0" y="686.21" text-anchor="middle" font-size="23" fill="#52647A" font-weight="400">是否继续或恢复仍未知</text>
+<rect x="70" y="915" width="600" height="145" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="370.0" y="957.11" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">适用账号策略〔未确认〕</text>
+<text x="370.0" y="1005.36" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">企业条件化保留规则不能直接套用</text>
+<text x="370.0" y="1041.6100000000001" text-anchor="middle" font-size="25" fill="#52647A" font-weight="400">不能承诺统一文件寿命或永久保存</text>
+<rect x="730" y="915" width="600" height="145" rx="12" fill="#FFF8E9" stroke="#A86C16" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="1030.0" y="955.66" text-anchor="middle" font-size="28" fill="#16324F" font-weight="700">独立副本与恢复演练〔建议〕</text>
+<text x="1030.0" y="1005.36" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">源码和交付物保留独立副本</text>
+<text x="1030.0" y="1043.06" text-anchor="middle" font-size="26" fill="#52647A" font-weight="400">恢复成功仅证明该次情景</text>
+<text x="60" y="1148.0" text-anchor="start" font-size="23" fill="#52647A" font-weight="400">来源：[O1][O2]；[A #039、#042]。状态延续不等于任意后台服务不间断运行。</text>
+</g></svg>
