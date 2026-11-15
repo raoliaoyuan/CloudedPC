@@ -1,0 +1,21 @@
+请对以下最终版本做独立只读复核，用中文输出 Markdown 报告，不修改任何文件。这是用户明确要求的 Claude CLI 最终复核。
+
+文件：
+1. /home/gamer/Work/CloudPC/ai-computer-selection/document/AI执行环境选择流程说明与厂商系统对比.md
+2. /home/gamer/Work/CloudPC/ai-computer-selection/ai-computer-selection.drawio
+3. /home/gamer/Work/CloudPC/ai-computer-selection/ai-computer-selection.png
+4. /home/gamer/Work/CloudPC/ai-computer-selection/preview.png
+5. /home/gamer/Work/CloudPC/ai-computer-selection/build_diagram.py （必要时检查同源生成和文本尺寸断言）
+
+最新修订：图顶 existing_cloud 以及 Markdown 导语和第3节例外说明都补充了“软件兼容性与上云条件仍须核对”。画布、节点、连线和字体大小保持不变。请实际读取最终文件，勿沿用旧报告。
+
+范围与重点：
+- 第一判断为操作系统依赖；五种最终结果、本地 Windows 包括本地虚拟机；判断节点的“且”逻辑、是/否路径和不能上云时补足本地条件的处理一致。
+- 新增环境适用范围、已有云桌面/组织统一托管例外在图文中一致；新补的限制能否避免被理解成无视必需操作系统、软件兼容性或上云可行性。
+- 新增加长的标题下第二行是否溢出、裁切、遮挡或挤压开始节点；PNG 与 Draw.io 文本、画布和所有连线一致；原有紧凑布局可读。
+- Markdown 新增的两处句子、图件链接、表格结构和整体表述有无引入新问题。
+- 无需重新核对厂商现状、访问网络、读取其他项目材料。
+
+请区分：阻碍定稿的实质问题、新引入的问题、原有可选优化。不要为了凑意见重复不影响结论的建议。若发现实质问题，给准确文件位置或节点ID和最小修正方案；没有则明确说明。
+
+报告结构：总体结论（可定稿/需修正/受限无法判断）；重点对照表；问题与处理建议（如无就写无）；核验方式及限制。不要声称做过未执行的工具实测或在 Draw.io GUI 中重新导出。你可查看 PNG，并以 Draw.io 坐标和生成代码辅助判断排版，明确这种方法的局限。

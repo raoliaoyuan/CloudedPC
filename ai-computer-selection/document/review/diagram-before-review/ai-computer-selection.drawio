@@ -1,0 +1,373 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device" version="24.7.17">
+  <diagram id="ai-environment-selection" name="AI 执行环境选择流程">
+    <mxGraphModel dx="1660" dy="2170" grid="1" gridSize="10" guides="1" connect="1" arrows="1" page="1" pageScale="1" pageWidth="1660" pageHeight="2170" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" value="开始：AI 需要电脑执行任务" style="rounded=1;arcSize=50;absoluteArcSize=1;whiteSpace=wrap;html=0;fillColor=#F4F7FA;strokeColor=#516778;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=24;fontColor=#183348;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="650.0" y="100" width="360" height="65" />
+        </mxCell>
+        <mxCell id="os" value="必须依赖&#10;哪种操作系统？" style="rhombus;whiteSpace=wrap;html=0;fillColor=#F4F7FA;strokeColor=#516778;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=27;fontColor=#183348;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="630.0" y="200" width="400" height="220" />
+        </mxCell>
+        <mxCell id="win_gate" value="本地方案不合适&#10;且任务适合上云？" style="rhombus;whiteSpace=wrap;html=0;fillColor=#FFF5E9;strokeColor=#B86A13;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=26;fontColor=#183348;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="80.0" y="580" width="400" height="220" />
+        </mxCell>
+        <mxCell id="general_gate" value="是否需要且适合&#10;云端执行？" style="rhombus;whiteSpace=wrap;html=0;fillColor=#F4F7FA;strokeColor=#516778;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=26;fontColor=#183348;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="630.0" y="580" width="400" height="220" />
+        </mxCell>
+        <mxCell id="mac_gate" value="本地方案不合适&#10;且任务适合上云？" style="rhombus;whiteSpace=wrap;html=0;fillColor=#F4F7FA;strokeColor=#516778;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=26;fontColor=#183348;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1180.0" y="580" width="400" height="220" />
+        </mxCell>
+        <mxCell id="win_cloud" value="Windows 云电脑" style="rounded=1;arcSize=50;absoluteArcSize=1;whiteSpace=wrap;html=0;fillColor=#FFF0DD;strokeColor=#B86A13;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=31;fontColor=#183348;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="80.0" y="1350" width="400" height="90" />
+        </mxCell>
+        <mxCell id="linux_cloud" value="Linux 云电脑" style="rounded=1;arcSize=50;absoluteArcSize=1;whiteSpace=wrap;html=0;fillColor=#EAF5F3;strokeColor=#257D70;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=31;fontColor=#183348;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="630.0" y="1350" width="400" height="90" />
+        </mxCell>
+        <mxCell id="mac_cloud" value="Mac 云电脑" style="rounded=1;arcSize=50;absoluteArcSize=1;whiteSpace=wrap;html=0;fillColor=#EDF3FB;strokeColor=#45688E;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=31;fontColor=#183348;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1180.0" y="1350" width="400" height="90" />
+        </mxCell>
+        <mxCell id="local_choice" value="哪种本地设备&#10;更方便？" style="rhombus;whiteSpace=wrap;html=0;fillColor=#F4F7FA;strokeColor=#516778;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=27;fontColor=#183348;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="630.0" y="1560" width="400" height="180" />
+        </mxCell>
+        <mxCell id="win_local" value="本地 Windows 电脑" style="rounded=1;arcSize=50;absoluteArcSize=1;whiteSpace=wrap;html=0;fillColor=#EDF3FB;strokeColor=#45688E;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=29;fontColor=#183348;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="80.0" y="1930" width="400" height="90" />
+        </mxCell>
+        <mxCell id="mac_local" value="本地 Mac 电脑" style="rounded=1;arcSize=50;absoluteArcSize=1;whiteSpace=wrap;html=0;fillColor=#EDF3FB;strokeColor=#45688E;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=29;fontColor=#183348;align=center;verticalAlign=middle;spacing=4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1180.0" y="1930" width="400" height="90" />
+        </mxCell>
+        <mxCell id="e1" source="start" target="os" edge="1" parent="1" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;endSize=10;strokeColor=#516778;strokeWidth=2;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2" source="os" target="win_gate" edge="1" parent="1" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;endSize=10;strokeColor=#B86A13;strokeWidth=2;exitX=0.0;exitY=0.5;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="600" y="310" />
+              <mxPoint x="600" y="480" />
+              <mxPoint x="280" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2-label" value="必须 Windows" style="text;html=0;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=none;fontFamily=Noto Sans CJK SC;fontSize=25;fontColor=#B86A13;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="330.0078125" y="462" width="179.984375" height="36" />
+        </mxCell>
+        <mxCell id="e3" source="os" target="general_gate" edge="1" parent="1" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;endSize=10;strokeColor=#516778;strokeWidth=2;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3-label" value="无专属系统依赖" style="text;html=0;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=none;fontFamily=Noto Sans CJK SC;fontSize=25;fontColor=#516778;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="733.5" y="482" width="193.0" height="36" />
+        </mxCell>
+        <mxCell id="e4" source="os" target="mac_gate" edge="1" parent="1" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;endSize=10;strokeColor=#516778;strokeWidth=2;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1060" y="310" />
+              <mxPoint x="1060" y="480" />
+              <mxPoint x="1380" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4-label" value="必须 macOS" style="text;html=0;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=none;fontFamily=Noto Sans CJK SC;fontSize=25;fontColor=#516778;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1151.484375" y="462" width="157.03125" height="36" />
+        </mxCell>
+        <mxCell id="e5" source="win_gate" target="win_cloud" edge="1" parent="1" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;endSize=10;strokeColor=#B86A13;strokeWidth=2;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=1.0;entryY=0.5;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="530" y="690" />
+              <mxPoint x="530" y="1395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5-label" value="是" style="text;html=0;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=none;fontFamily=Noto Sans CJK SC;fontSize=25;fontColor=#B86A13;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="488.5" y="632" width="43.0" height="36" />
+        </mxCell>
+        <mxCell id="e6" source="win_gate" target="win_local" edge="1" parent="1" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;endSize=10;strokeColor=#516778;strokeWidth=2;exitX=0.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="40" y="690" />
+              <mxPoint x="40" y="1975" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6-label" value="否" style="text;html=0;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=none;fontFamily=Noto Sans CJK SC;fontSize=25;fontColor=#516778;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="38.5" y="632" width="43.0" height="36" />
+        </mxCell>
+        <mxCell id="e7" source="general_gate" target="linux_cloud" edge="1" parent="1" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;endSize=10;strokeColor=#516778;strokeWidth=2;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=1.0;entryY=0.5;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1080" y="690" />
+              <mxPoint x="1080" y="1395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7-label" value="是" style="text;html=0;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=none;fontFamily=Noto Sans CJK SC;fontSize=25;fontColor=#516778;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1038.5" y="632" width="43.0" height="36" />
+        </mxCell>
+        <mxCell id="e8" source="general_gate" target="local_choice" edge="1" parent="1" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;endSize=10;strokeColor=#516778;strokeWidth=2;exitX=0.0;exitY=0.5;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="590" y="690" />
+              <mxPoint x="590" y="1490" />
+              <mxPoint x="830" y="1490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8-label" value="否" style="text;html=0;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=none;fontFamily=Noto Sans CJK SC;fontSize=25;fontColor=#516778;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="588.5" y="632" width="43.0" height="36" />
+        </mxCell>
+        <mxCell id="e9" source="mac_gate" target="mac_cloud" edge="1" parent="1" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;endSize=10;strokeColor=#516778;strokeWidth=2;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=1.0;entryY=0.5;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1630" y="690" />
+              <mxPoint x="1630" y="1395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9-label" value="是" style="text;html=0;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=none;fontFamily=Noto Sans CJK SC;fontSize=25;fontColor=#516778;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1588.5" y="632" width="43.0" height="36" />
+        </mxCell>
+        <mxCell id="e10" source="mac_gate" target="mac_local" edge="1" parent="1" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;endSize=10;strokeColor=#516778;strokeWidth=2;exitX=0.0;exitY=0.5;exitPerimeter=0;entryX=1.0;entryY=0.5;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1140" y="690" />
+              <mxPoint x="1140" y="1490" />
+              <mxPoint x="1630" y="1490" />
+              <mxPoint x="1630" y="1975" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10-label" value="否" style="text;html=0;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=none;fontFamily=Noto Sans CJK SC;fontSize=25;fontColor=#516778;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1138.5" y="632" width="43.0" height="36" />
+        </mxCell>
+        <mxCell id="e11" source="local_choice" target="win_local" edge="1" parent="1" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;endSize=10;strokeColor=#516778;strokeWidth=2;exitX=0.0;exitY=0.5;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="280" y="1650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11-label" value="Windows" style="text;html=0;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=none;fontFamily=Noto Sans CJK SC;fontSize=25;fontColor=#516778;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="397.8046875" y="1632" width="124.390625" height="36" />
+        </mxCell>
+        <mxCell id="e12" source="local_choice" target="mac_local" edge="1" parent="1" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;endSize=10;strokeColor=#516778;strokeWidth=2;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1380" y="1650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12-label" value="Mac" style="text;html=0;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=none;fontFamily=Noto Sans CJK SC;fontSize=25;fontColor=#516778;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1167.4375" y="1632" width="65.125" height="36" />
+        </mxCell>
+        <mxCell id="title" value="AI 执行环境选择流程 · 先判断操作系统依赖" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;fontFamily=Noto Sans CJK SC;fontSize=38;fontColor=#183348;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="20" width="1580" height="55" />
+        </mxCell>
+        <mxCell id="win_note" value="Windows 刚需 + 本地不合适 + 云端可行" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;fontFamily=Noto Sans CJK SC;fontSize=21;fontColor=#99580E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="80" y="1450" width="460" height="40" />
+        </mxCell>
+        <mxCell id="linux_note" value="无专属依赖 + 云端有需求且可行" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;fontFamily=Noto Sans CJK SC;fontSize=21;fontColor=#257D70;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="630" y="1450" width="460" height="40" />
+        </mxCell>
+        <mxCell id="mac_note" value="macOS 刚需 + 本地不合适 + 云端可行" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;fontFamily=Noto Sans CJK SC;fontSize=21;fontColor=#45688E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1180" y="1450" width="460" height="40" />
+        </mxCell>
+        <mxCell id="win_local_note" value="Windows 适用 + 本地够用或需留本地" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;fontFamily=Noto Sans CJK SC;fontSize=21;fontColor=#45688E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="80" y="2030" width="460" height="40" />
+        </mxCell>
+        <mxCell id="mac_local_note" value="macOS 适用 + 本地够用或需留本地" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;fontFamily=Noto Sans CJK SC;fontSize=21;fontColor=#45688E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1180" y="2030" width="460" height="40" />
+        </mxCell>
+        <mxCell id="foot1" value="本地 Windows 包含物理机、备用机、专用主机及本地 Windows 虚拟机。" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;fontFamily=Noto Sans CJK SC;fontSize=24;fontColor=#516778;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="2070" width="1580" height="40" />
+        </mxCell>
+        <mxCell id="foot2" value="“否”可能表示本地已够用，也可能表示不能上云；后者需补足本地条件或调整任务。" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;fontFamily=Noto Sans CJK SC;fontSize=24;fontColor=#516778;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="2115" width="1580" height="40" />
+        </mxCell>
+        <mxCell id="windows_examples" value="" style="rounded=1;arcSize=18;absoluteArcSize=1;fillColor=#F7F9FC;strokeColor=#D5DEE8;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="150" width="500" height="280" />
+        </mxCell>
+        <mxCell id="windows_examples-title" value="必须 Windows 的典型任务" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=26;fontStyle=1;fontColor=#B86A13;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="74" y="166" width="452" height="40" />
+        </mxCell>
+        <mxCell id="windows_examples-line0" value="• Windows 专属财务、ERP 软件" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="74" y="218" width="452" height="36" />
+        </mxCell>
+        <mxCell id="windows_examples-line1" value="• 依赖 COM / ActiveX 的 Excel 流程" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="74" y="254" width="452" height="36" />
+        </mxCell>
+        <mxCell id="windows_examples-line2" value="• Windows 原生界面操作或测试" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="74" y="290" width="452" height="36" />
+        </mxCell>
+        <mxCell id="windows_examples-line3" value="网页或 API 能替代时，可重判依赖。" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=1;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="74" y="326" width="452" height="36" />
+        </mxCell>
+        <mxCell id="mac_examples" value="" style="rounded=1;arcSize=18;absoluteArcSize=1;fillColor=#F7F9FC;strokeColor=#D5DEE8;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1110" y="150" width="500" height="280" />
+        </mxCell>
+        <mxCell id="mac_examples-title" value="必须 macOS 的典型任务" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=26;fontStyle=1;fontColor=#516778;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1134" y="166" width="452" height="40" />
+        </mxCell>
+        <mxCell id="mac_examples-line0" value="• Xcode 构建、签名及测试" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1134" y="218" width="452" height="36" />
+        </mxCell>
+        <mxCell id="mac_examples-line1" value="• macOS 独有软件或桌面功能" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1134" y="254" width="452" height="36" />
+        </mxCell>
+        <mxCell id="mac_examples-line2" value="生成 Word / Excel 文件本身，" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1134" y="290" width="452" height="36" />
+        </mxCell>
+        <mxCell id="mac_examples-line3" value="不代表必须用 Windows 或 macOS。" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=1;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1134" y="326" width="452" height="36" />
+        </mxCell>
+        <mxCell id="windows_conditions" value="" style="rounded=1;arcSize=18;absoluteArcSize=1;fillColor=#F7F9FC;strokeColor=#D5DEE8;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="835" width="460" height="470" />
+        </mxCell>
+        <mxCell id="windows_conditions-title" value="本地不合适的典型情况" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=26;fontStyle=1;fontColor=#B86A13;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="74" y="851" width="412" height="40" />
+        </mxCell>
+        <mxCell id="windows_conditions-line0" value="• 关机休眠，不能持续或定时运行" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="74" y="903" width="412" height="36" />
+        </mxCell>
+        <mxCell id="windows_conditions-line1" value="• AI 占用桌面，影响本人工作" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="74" y="939" width="412" height="36" />
+        </mxCell>
+        <mxCell id="windows_conditions-line2" value="• 资源不足，不愿升级或维护专用机" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="74" y="975" width="412" height="36" />
+        </mxCell>
+        <mxCell id="windows_conditions-line3" value="• 备用机或虚拟机也无法满足需求" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="74" y="1011" width="412" height="36" />
+        </mxCell>
+        <mxCell id="windows_conditions-line4" value="上云还须同时满足" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=1;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="74" y="1047" width="412" height="36" />
+        </mxCell>
+        <mxCell id="windows_conditions-line5" value="• 数据与软件授权允许" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="74" y="1083" width="412" height="36" />
+        </mxCell>
+        <mxCell id="windows_conditions-line6" value="• 内网、账号、文件和外设可访问" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="74" y="1119" width="412" height="36" />
+        </mxCell>
+        <mxCell id="windows_conditions-line7" value="• AI 可操作；预算、算力符合要求" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="74" y="1155" width="412" height="36" />
+        </mxCell>
+        <mxCell id="windows_conditions-line8" value="• 会话时长、持久化满足任务" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="74" y="1191" width="412" height="36" />
+        </mxCell>
+        <mxCell id="windows_conditions-line9" value="本地已够用，就不必上云。" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=1;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="74" y="1227" width="412" height="36" />
+        </mxCell>
+        <mxCell id="mac_conditions" value="" style="rounded=1;arcSize=18;absoluteArcSize=1;fillColor=#F7F9FC;strokeColor=#D5DEE8;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1150" y="835" width="460" height="470" />
+        </mxCell>
+        <mxCell id="mac_conditions-title" value="本地不合适的典型情况" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=26;fontStyle=1;fontColor=#516778;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1174" y="851" width="412" height="40" />
+        </mxCell>
+        <mxCell id="mac_conditions-line0" value="• 关机休眠，不能持续或定时运行" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1174" y="903" width="412" height="36" />
+        </mxCell>
+        <mxCell id="mac_conditions-line1" value="• AI 占用桌面，影响本人工作" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1174" y="939" width="412" height="36" />
+        </mxCell>
+        <mxCell id="mac_conditions-line2" value="• 资源不足，不愿升级或维护专用机" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1174" y="975" width="412" height="36" />
+        </mxCell>
+        <mxCell id="mac_conditions-line3" value="• 备用机或虚拟机也无法满足需求" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1174" y="1011" width="412" height="36" />
+        </mxCell>
+        <mxCell id="mac_conditions-line4" value="上云还须同时满足" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=1;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1174" y="1047" width="412" height="36" />
+        </mxCell>
+        <mxCell id="mac_conditions-line5" value="• 数据与软件授权允许" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1174" y="1083" width="412" height="36" />
+        </mxCell>
+        <mxCell id="mac_conditions-line6" value="• 内网、账号、文件和外设可访问" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1174" y="1119" width="412" height="36" />
+        </mxCell>
+        <mxCell id="mac_conditions-line7" value="• AI 可操作；预算、算力符合要求" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1174" y="1155" width="412" height="36" />
+        </mxCell>
+        <mxCell id="mac_conditions-line8" value="• 会话时长、持久化满足任务" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1174" y="1191" width="412" height="36" />
+        </mxCell>
+        <mxCell id="mac_conditions-line9" value="本地已够用，就不必上云。" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=1;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1174" y="1227" width="412" height="36" />
+        </mxCell>
+        <mxCell id="general_conditions" value="" style="rounded=1;arcSize=18;absoluteArcSize=1;fillColor=#F7F9FC;strokeColor=#D5DEE8;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="600" y="835" width="460" height="490" />
+        </mxCell>
+        <mxCell id="general_conditions-title" value="通用任务的判断依据" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=26;fontStyle=1;fontColor=#516778;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="624" y="851" width="412" height="40" />
+        </mxCell>
+        <mxCell id="general_conditions-line0" value="• 网页、API、Python、数据处理" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="624" y="903" width="412" height="36" />
+        </mxCell>
+        <mxCell id="general_conditions-line1" value="• 所需功能和依赖可在 Linux 运行" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="624" y="933" width="412" height="36" />
+        </mxCell>
+        <mxCell id="general_conditions-line2" value="云端需求" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=1;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="624" y="963" width="412" height="36" />
+        </mxCell>
+        <mxCell id="general_conditions-line3" value="• 定时、并发、隔离或远程协作" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="624" y="993" width="412" height="36" />
+        </mxCell>
+        <mxCell id="general_conditions-line4" value="上云还须同时满足" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=1;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="624" y="1023" width="412" height="36" />
+        </mxCell>
+        <mxCell id="general_conditions-line5" value="• 数据、授权、网络和外设允许" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="624" y="1053" width="412" height="36" />
+        </mxCell>
+        <mxCell id="general_conditions-line6" value="• AI 可操作；预算、算力适合" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="624" y="1083" width="412" height="36" />
+        </mxCell>
+        <mxCell id="general_conditions-line7" value="• 会话时长和持久化满足任务" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="624" y="1113" width="412" height="36" />
+        </mxCell>
+        <mxCell id="general_conditions-line8" value="临时任务或本地已够用，选“否”。" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=1;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="624" y="1143" width="412" height="36" />
+        </mxCell>
+        <mxCell id="general_conditions-line9" value="云环境不等于可以长期在线。" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="624" y="1173" width="412" height="36" />
+        </mxCell>
+        <mxCell id="general_conditions-line10" value="厂商为何常选 Linux？" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=1;fontColor=#257D70;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="624" y="1203" width="412" height="36" />
+        </mxCell>
+        <mxCell id="general_conditions-line11" value="通用任务够用；易批量部署与隔离；" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#257D70;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="624" y="1233" width="412" height="36" />
+        </mxCell>
+        <mxCell id="general_conditions-line12" value="授权与运维负担通常较低。" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#257D70;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="624" y="1263" width="412" height="36" />
+        </mxCell>
+        <mxCell id="local_examples" value="" style="rounded=1;arcSize=18;absoluteArcSize=1;fillColor=#F7F9FC;strokeColor=#D5DEE8;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="580" y="1780" width="500" height="230" />
+        </mxCell>
+        <mxCell id="local_examples-title" value="本地选哪台？看现有条件" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=26;fontStyle=1;fontColor=#516778;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="604" y="1796" width="452" height="40" />
+        </mxCell>
+        <mxCell id="local_examples-line0" value="临时交互、依赖本地文件或外设、" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="604" y="1848" width="452" height="36" />
+        </mxCell>
+        <mxCell id="local_examples-line1" value="数据不能上云，或本地设备已够用时，" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="604" y="1884" width="452" height="36" />
+        </mxCell>
+        <mxCell id="local_examples-line2" value="选软件齐全、授权可用，且 AI 能操作" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="604" y="1920" width="452" height="36" />
+        </mxCell>
+        <mxCell id="local_examples-line3" value="的 Windows 电脑或 Mac。" style="text;html=0;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=24;fontStyle=0;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="604" y="1956" width="452" height="36" />
+        </mxCell>
+        <mxCell id="note-win_gate" source="win_gate" target="windows_conditions" edge="1" parent="1" style="edgeStyle=none;dashed=1;endArrow=none;strokeColor=#98A9B9;strokeWidth=1;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="note-general_gate" source="general_gate" target="general_conditions" edge="1" parent="1" style="edgeStyle=none;dashed=1;endArrow=none;strokeColor=#98A9B9;strokeWidth=1;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="note-mac_gate" source="mac_gate" target="mac_conditions" edge="1" parent="1" style="edgeStyle=none;dashed=1;endArrow=none;strokeColor=#98A9B9;strokeWidth=1;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="note-local_choice" source="local_choice" target="local_examples" edge="1" parent="1" style="edgeStyle=none;dashed=1;endArrow=none;strokeColor=#98A9B9;strokeWidth=1;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
