@@ -1,8 +1,8 @@
 # Template contract
 
-Reference: /home/gamer/Work/CloudPC/云PC软硬件检查报告.docx
+Reference: [云PC软硬件检查报告.docx](../%E4%BA%91PC%E8%BD%AF%E7%A1%AC%E4%BB%B6%E6%A3%80%E6%9F%A5%E6%8A%A5%E5%91%8A.docx)
 SHA256: fc206e63af54b37f193e7a92d31869354598059053167358798009ea561e1428
-Retained reference is unchanged. The previously inspected reference render is /tmp/dot-report-reference, 10 pages. The existing distilled evidence is /home/gamer/Work/CloudPC/dot-audit-2026-11-13/artifact.md and package-inventory.json.
+Retained reference is unchanged. The previously inspected reference render is `/tmp/dot-report-reference` (temporary local render, not included in this repository), 10 pages. The existing distilled evidence is [dot-audit-2026-11-13/artifact.md](../dot-audit-2026-11-13/artifact.md) and package-inventory.json.
 
 One portrait A4 section, 21 × 29.7 cm; top/bottom margins 1.8 cm; left/right 2 cm; footer 0.8 cm. Preserve sectPr, styles, theme, numbering, and all untouched package parts byte-for-byte. No images or content controls are present. Use the source paragraph and table prototypes, never a blank document.
 

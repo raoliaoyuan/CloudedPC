@@ -1,8 +1,8 @@
 # Reference contract
 
-Reference: /home/gamer/Work/CloudPC/云PC软硬件检查报告.docx
+Reference: [云PC软硬件检查报告.docx](../%E4%BA%91PC%E8%BD%AF%E7%A1%AC%E4%BB%B6%E6%A3%80%E6%9F%A5%E6%8A%A5%E5%91%8A.docx)
 SHA256: fc206e63af54b37f193e7a92d31869354598059053167358798009ea561e1428
-Reference render: /tmp/dot-report-reference; 10 pages, all inspected. One portrait A4 section; all pages use the same body, table, and footer system. No figures or rich content controls need preservation.
+Reference render: `/tmp/dot-report-reference` (temporary local render, not included in this repository); 10 pages, all inspected. One portrait A4 section; all pages use the same body, table, and footer system. No figures or rich content controls need preservation.
 
 Page: 21 × 29.7 cm; margins top/bottom 1.8 cm, left/right 2 cm; footer distance 0.8 cm. Preserve sectPr and style/numbering/theme parts byte-for-byte. Title 24 pt black, line 32 pt; body Noto Sans CJK SC 10 pt, exact line 15 pt, after 6 pt; Heading 1 17 pt/24 pt with page break before; Heading 2 12 pt/18 pt, before 9 pt. Footer right aligned date and PAGE field, 8 pt. Update date only. No title rules.
 
