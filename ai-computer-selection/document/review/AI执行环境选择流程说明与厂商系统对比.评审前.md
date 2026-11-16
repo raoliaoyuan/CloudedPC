@@ -28,9 +28,9 @@
 
 从最上方的操作系统判断开始，沿实线箭头选择；虚线只连接场景说明，不代表执行步骤。
 
-![AI 执行环境选择流程图](/home/gamer/Work/CloudPC/ai-computer-selection/ai-computer-selection.png)
+![AI 执行环境选择流程图](../../ai-computer-selection.png)
 
-[高清 PNG](/home/gamer/Work/CloudPC/ai-computer-selection/ai-computer-selection.png) · [可编辑 Draw.io 源图](/home/gamer/Work/CloudPC/ai-computer-selection/ai-computer-selection.drawio)
+[高清 PNG](../../ai-computer-selection.png) · [可编辑 Draw.io 源图](../../ai-computer-selection.drawio)
 
 图 1  当前确认版流程图。保留节点旁的典型场景、Linux 选型原因，以及五个结果节点下方的选择条件。
 
@@ -138,12 +138,12 @@ FAQ：Linux microVM、默认 Ubuntu 以及可替换的 Linux 镜像。
 ### 项目内既有研究材料
 
 [L1] Dot云电脑软硬件配置与运行检查报告  
-2026年11月13日整理，主要依据11月11日聊天记录；Debian 13.6 为历史记录，本次未复测。[  查看项目原始材料](</home/gamer/Work/CloudPC/dot-audit-2026-11-13/Dot云电脑软硬件配置与运行检查报告.md>)
+2026年11月13日整理，主要依据11月11日聊天记录；Debian 13.6 为历史记录，本次未复测。[  查看项目原始材料](../../../dot-audit-2026-11-13/Dot%E4%BA%91%E7%94%B5%E8%84%91%E8%BD%AF%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE%E4%B8%8E%E8%BF%90%E8%A1%8C%E6%A3%80%E6%9F%A5%E6%8A%A5%E5%91%8A.md)
 
 [L2] 腾讯云CVM Linux容器开发环境综合检查报告  
-2026年11月10日实测；第2章给出 Ubuntu 24.04.3 LTS，检查对象为本项目 WorkBuddy 容器。[  查看项目原始材料](</home/gamer/Work/CloudPC/audit-2026-11-10/腾讯云CVM-Linux容器开发环境综合检查报告.md>)
+2026年11月10日实测；第2章给出 Ubuntu 24.04.3 LTS，检查对象为本项目 WorkBuddy 容器。[  查看项目原始材料](../../../audit-2026-11-10/%E8%85%BE%E8%AE%AF%E4%BA%91CVM-Linux%E5%AE%B9%E5%99%A8%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%BB%BC%E5%90%88%E6%A3%80%E6%9F%A5%E6%8A%A5%E5%91%8A.md)
 
 [L3] WorkBuddy 原始采样 evidence.txt  
-文件开头的 /etc/os-release 采样支持 Ubuntu 24.04.3 LTS。[  查看项目原始材料](</home/gamer/Work/CloudPC/audit-2026-11-10/evidence.txt>)
+文件开头的 /etc/os-release 采样支持 Ubuntu 24.04.3 LTS。[  查看项目原始材料](../../../audit-2026-11-10/evidence.txt)
 
 流程图配套文件位于 ai-computer-selection 目录，文件名为 ai-computer-selection.png 与 ai-computer-selection.drawio。本文嵌入的图为本次说明文档所对应的确认版本。

@@ -63,3 +63,7 @@
 - **历史过程文件**：选型目录中的 Word、PDF、`qa`、`qa-final`、评审前副本和早期转换脚本保留用于追溯，并非 11-16 定稿；不要用早期 Word 转换脚本覆盖正式 Markdown。
 - **修改与再生成**：[流程图生成脚本](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/build_diagram.py) 同时生成 PNG、Draw.io 和预览图；[GitHub 阅读版生成脚本](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/build_github_readme.py) 从正式 Markdown 更新在线阅读版。修改正式内容后，应重新核对图文一致性。
 - **证据范围**：WorkBuddy 结果只代表已检查的项目实例；Dot 的历史助手陈述、用户观察和官方说明分别标注。历史版本与本次复核均不构成对全部产品实例或当前服务状态的保证。
+
+## 在线链接维护
+
+2026-11-16 已将其他报告及图件说明中的仓库内材料链接改为相对路径。原始 Dot 聊天导出未收录，相关 [A] 链接指向[资料来源说明](SOURCE_NOTES.md)，不代表可在线读取原文件。已发布的 Word、PDF 和 ZIP 保留原交付版本；在线阅读优先使用当前 Markdown。

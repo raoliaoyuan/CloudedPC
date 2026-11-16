@@ -1,12 +1,14 @@
 # 腾讯云 CVM 虚拟机上的 Linux 容器开发环境综合检查报告
 
+> 历史阶段稿：原文的“3 页”描述保留当时状态。为修复在线访问，本页图件链接指向当前图件目录，其中完整图集已扩充为 8 页；请以[当前综合报告](../腾讯云CVM-Linux容器开发环境综合检查报告.md)为准。
+
 **检查对象：** WorkBuddy 托管 Linux 执行容器  
 **容器主机名：** `064f56bb22e3`  
 **检查日期：** 2026 年 11 月 10 日  
 **资料范围：** 当日多轮软硬件、服务、网络、账号及安全检查；namespace 信息补充核验至 17:52，新加坡时间（UTC+8）  
 **管理权限范围：** 容器内部管理员权限；不包含平台宿主机管理权限
 
-**图件附件：** [完整可编辑图集（draw.io，3 页）](assets/report-diagrams/完整报告图集.drawio)。正文使用 PNG 直接展示，每图另附 SVG 与独立 draw.io 源文件。图件于 2026 年 11 月 15 日重新绘制，检查数据日期保持不变。
+**图件附件：** [完整可编辑图集（draw.io，3 页）](../assets/report-diagrams/完整报告图集.drawio)。正文使用 PNG 直接展示，每图另附 SVG 与独立 draw.io 源文件。图件于 2026 年 11 月 15 日重新绘制，检查数据日期保持不变。
 
 ---
 
@@ -218,9 +220,9 @@ Ubuntu 用户态版本不意味着使用 Ubuntu 标准发行版内核。共享�
 
 可观察到的主要管理关系为：
 
-![01  服务管理结构](assets/report-diagrams/01-service-structure.png)
+![01  服务管理结构](../assets/report-diagrams/01-service-structure.png)
 
-[SVG 矢量图](assets/report-diagrams/01-service-structure.svg) · [可编辑 draw.io 源文件](assets/report-diagrams/01-service-structure.drawio)
+[SVG 矢量图](../assets/report-diagrams/01-service-structure.svg) · [可编辑 draw.io 源文件](../assets/report-diagrams/01-service-structure.drawio)
 
 服务判断综合使用了 Supervisor 配置、进程和监听端口。未获得完整可靠的 Supervisor 实时状态输出，因此“配置自动启动”和“本次实际运行”分别核对。
 
@@ -393,9 +395,9 @@ eth0 的 MTU 为 1500，观察到的 veth 对端接口索引为 12758。该索�
 
 实线表示已观察到的接口、路由或连接关系；虚线表示推断或尚未验证的通信路径。图中的平台设施部署位置为逻辑表达，不代表已确认物理部署。
 
-![02  容器网络逻辑图](assets/report-diagrams/02-network-topology.png)
+![02  容器网络逻辑图](../assets/report-diagrams/02-network-topology.png)
 
-[SVG 矢量图](assets/report-diagrams/02-network-topology.svg) · [可编辑 draw.io 源文件](assets/report-diagrams/02-network-topology.drawio)
+[SVG 矢量图](../assets/report-diagrams/02-network-topology.svg) · [可编辑 draw.io 源文件](../assets/report-diagrams/02-network-topology.drawio)
 
 ### 7.4 与其他容器的关系
 
@@ -436,9 +438,9 @@ Docker 网桥的通用行为可用于解释潜在路径，但不能替代对本�
 
 ### 8.1 推测的整体层级
 
-![03  Namespace 隔离与运行层级](assets/report-diagrams/03-namespace-layers.png)
+![03  Namespace 隔离与运行层级](../assets/report-diagrams/03-namespace-layers.png)
 
-[SVG 矢量图](assets/report-diagrams/03-namespace-layers.svg) · [可编辑 draw.io 源文件](assets/report-diagrams/03-namespace-layers.drawio)
+[SVG 矢量图](../assets/report-diagrams/03-namespace-layers.svg) · [可编辑 draw.io 源文件](../assets/report-diagrams/03-namespace-layers.drawio)
 
 Sysbox 判断主要来自：
 

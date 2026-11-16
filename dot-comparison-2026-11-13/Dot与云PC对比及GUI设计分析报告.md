@@ -1,5 +1,7 @@
 # Dot 与云 PC 对比及 GUI 设计分析报告
 
+> 链接维护（2026-11-16）：仓库内材料使用相对路径；原始 Dot 对话 [A] 未收录，其链接指向[来源说明](../SOURCE_NOTES.md)。历史数据及结论未更新。
+
 **检查对象　Dot 云电脑与 workbuddy-sandbox 云 PC**
 
 编制与公开资料复核日期：2026 年 11 月 13 日，新加坡时间 UTC+8。
@@ -264,10 +266,10 @@
 
 单位：GiB = 2³⁰ 字节，MiB = 2²⁰ 字节。CPU 配额以 quota / period 表示 CPU 时间上限；可见 CPU 数、频率和型号字符串均不是性能分数。GUI 体验建议尚未转化为新的测量结果。
 
-[A]: /home/gamer/Downloads/二狗子-完整可见对话与云电脑技术解读-2026-11-13.md
-[B]: /home/gamer/Work/CloudPC/云PC软硬件检查报告.docx
-[C]: /home/gamer/Work/CloudPC/dot-audit-2026-11-13/Dot云电脑软硬件配置与运行检查报告.docx
-[U1]: /home/gamer/Work/CloudPC/dot-comparison-2026-11-13/evidence/user-gui-observation.md
+[A]: ../SOURCE_NOTES.md
+[B]: ../%E4%BA%91PC%E8%BD%AF%E7%A1%AC%E4%BB%B6%E6%A3%80%E6%9F%A5%E6%8A%A5%E5%91%8A.docx
+[C]: ../dot-audit-2026-11-13/Dot%E4%BA%91%E7%94%B5%E8%84%91%E8%BD%AF%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE%E4%B8%8E%E8%BF%90%E8%A1%8C%E6%A3%80%E6%9F%A5%E6%8A%A5%E5%91%8A.docx
+[U1]: evidence/user-gui-observation.md
 [O1]: https://learn.chatgpt.com/docs/dots/computers-and-apps
 [O2]: https://learn.chatgpt.com/docs/enterprise/dots-security
 [O3]: https://learn.chatgpt.com/docs/dots

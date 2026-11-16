@@ -1,5 +1,7 @@
 # Dot 云电脑软硬件配置与运行检查报告
 
+> 链接维护（2026-11-16）：仓库内材料使用相对路径；原始 Dot 对话 [A] 未收录，其链接指向[来源说明](../SOURCE_NOTES.md)。历史数据及结论未更新。
+
 **检查对象　二狗子 Dot 的云电脑**
 
 编制与公开资料核查日期：2026 年 11 月 13 日，新加坡时间 UTC+8。
@@ -412,8 +414,8 @@ Willison 于 2026 年 2 月 10 日介绍 Showboat／Rodney 时，强调用命令
 
 单位：GiB = 2³⁰ 字节，MiB = 2²⁰ 字节，KiB = 2¹⁰ 字节。带“约”的容量不具有原始字节级精度。本报告不以社区猜测填补官方未公开的实现细节。
 
-[A]: /home/gamer/Downloads/二狗子-完整可见对话与云电脑技术解读-2026-11-13.md
-[B]: /home/gamer/Work/CloudPC/云PC软硬件检查报告.docx
+[A]: ../SOURCE_NOTES.md
+[B]: ../%E4%BA%91PC%E8%BD%AF%E7%A1%AC%E4%BB%B6%E6%A3%80%E6%9F%A5%E6%8A%A5%E5%91%8A.docx
 [O1]: https://learn.chatgpt.com/docs/dots/computers-and-apps
 [O2]: https://learn.chatgpt.com/docs/enterprise/dots-security
 [O3]: https://learn.chatgpt.com/docs/enterprise/chatgpt-work-cloud-security
