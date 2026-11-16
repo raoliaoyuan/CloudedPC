@@ -13,7 +13,7 @@
 | 入口 | 用途 |
 | --- | --- |
 | [在线阅读：选型说明与厂商系统对比](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/README.md) | 推荐在 GitHub 阅读，图件和材料链接已适配仓库 |
-| [正式 Markdown](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/document/AI%E6%89%A7%E8%A1%8C%E7%8E%AF%E5%A2%83%E9%80%89%E6%8B%A9%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E%E4%B8%8E%E5%8E%82%E5%95%86%E7%B3%BB%E7%BB%9F%E5%AF%B9%E6%AF%94.md) | 最终复核的正式文件；本地图片和材料使用工作区绝对路径 |
+| [正式 Markdown](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/document/AI%E6%89%A7%E8%A1%8C%E7%8E%AF%E5%A2%83%E9%80%89%E6%8B%A9%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E%E4%B8%8E%E5%8E%82%E5%95%86%E7%B3%BB%E7%BB%9F%E5%AF%B9%E6%AF%94.md) | 正式说明文档；图件及项目材料使用仓库相对路径，支持 GitHub 阅读 |
 | [高清流程图 PNG](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/ai-computer-selection.png) | 3320 × 4460，可查看或下载 |
 | [可编辑 Draw.io 源图](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/ai-computer-selection.drawio) | 编辑判断节点、场景说明和连线 |
 | [Claude CLI 最终复核报告](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/document/review/Claude-CLI-%E6%9C%80%E7%BB%88%E5%A4%8D%E6%A0%B8%E6%8A%A5%E5%91%8A.md) | 最终结论为“可定稿”；包含核验范围、限制与计数更正 |
@@ -21,7 +21,7 @@
 <details>
 <summary>展开最新流程图预览</summary>
 
-![AI 执行环境选择流程](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/preview.png?raw=true)
+![AI 执行环境选择流程](ai-computer-selection/preview.png)
 
 </details>
 
@@ -59,7 +59,7 @@
 
 选型文档的评审过程可从 [评审意见处理记录](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/document/review/%E8%AF%84%E5%AE%A1%E6%84%8F%E8%A7%81%E5%A4%84%E7%90%86%E8%AE%B0%E5%BD%95.md)、[图文一致性复核报告](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/document/review/Claude-CLI-%E5%9B%BE%E6%96%87%E4%B8%80%E8%87%B4%E6%80%A7%E5%A4%8D%E6%A0%B8%E6%8A%A5%E5%91%8A.md) 和 [最终复核报告](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/document/review/Claude-CLI-%E6%9C%80%E7%BB%88%E5%A4%8D%E6%A0%B8%E6%8A%A5%E5%91%8A.md) 追溯；原始 CLI 结果、送审文件摘要和修订记录保存在 [review 目录](https://github.com/raoliaoyuan/CloudedPC/tree/main/ai-computer-selection/document/review)。
 
-- **选型定稿文件**：以正式 Markdown、顶层 PNG 和 Draw.io 为准。GitHub 阅读版只转换文件链接并补充导航。
+- **选型定稿文件**：以正式 Markdown、顶层 PNG 和 Draw.io 为准。GitHub 阅读版适配当前目录下的文件链接并补充导航。正式 Markdown 的文件引用已修正为仓库相对路径，判断逻辑与报告结论沿用最终复核版本。
 - **历史过程文件**：选型目录中的 Word、PDF、`qa`、`qa-final`、评审前副本和早期转换脚本保留用于追溯，并非 11-16 定稿；不要用早期 Word 转换脚本覆盖正式 Markdown。
 - **修改与再生成**：[流程图生成脚本](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/build_diagram.py) 同时生成 PNG、Draw.io 和预览图；[GitHub 阅读版生成脚本](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/build_github_readme.py) 从正式 Markdown 更新在线阅读版。修改正式内容后，应重新核对图文一致性。
 - **证据范围**：WorkBuddy 结果只代表已检查的项目实例；Dot 的历史助手陈述、用户观察和官方说明分别标注。历史版本与本次复核均不构成对全部产品实例或当前服务状态的保证。

@@ -31,11 +31,11 @@ Claude CLI 评审及修订日期：2026年11月16日（新加坡时间）
 
 从最上方的操作系统判断开始，沿实线箭头选择；虚线只连接场景说明，不代表执行步骤。
 
-![AI 执行环境选择流程图](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/ai-computer-selection.png?raw=true)
+![AI 执行环境选择流程图](ai-computer-selection.png)
 
 图 1：AI 执行环境选择流程（2026年11月16日评审同步版）。标题下说明新增环境的适用范围与已有云桌面的例外；节点旁列出典型场景和 Linux 选型原因，五个结果节点下方标注选择条件。
 
-[高清 PNG](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/ai-computer-selection.png?raw=true) · [可编辑 Draw.io 源图](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/ai-computer-selection.drawio)
+[高清 PNG](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/ai-computer-selection.png) · [可编辑 Draw.io 源图](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/ai-computer-selection.drawio)
 
 ## 3 如何逐步作出判断
 
@@ -153,11 +153,11 @@ FAQ：Linux microVM、默认 Ubuntu 以及可替换的 Linux 镜像。
 
 流程图配套文件位于 ai-computer-selection 目录，文件名为 ai-computer-selection.png 与 ai-computer-selection.drawio。本文嵌入的图为本次说明文档所对应的确认版本。
 
-本页由正式 Markdown 自动生成，仅将本机文件链接转换为 GitHub 链接；正文内容与最终复核版本相同。
+本页由正式 Markdown 自动生成，适配文件与图片链接并补充导航；判断逻辑与报告结论沿用最终复核版本。
 
 ## 文件与复核记录
 
-- [正式 Markdown（供本地阅读）](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/document/AI%E6%89%A7%E8%A1%8C%E7%8E%AF%E5%A2%83%E9%80%89%E6%8B%A9%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E%E4%B8%8E%E5%8E%82%E5%95%86%E7%B3%BB%E7%BB%9F%E5%AF%B9%E6%AF%94.md)
+- [正式 Markdown（支持 GitHub 与本地阅读）](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/document/AI%E6%89%A7%E8%A1%8C%E7%8E%AF%E5%A2%83%E9%80%89%E6%8B%A9%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E%E4%B8%8E%E5%8E%82%E5%95%86%E7%B3%BB%E7%BB%9F%E5%AF%B9%E6%AF%94.md)
 - [Claude CLI 最终复核报告](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/document/review/Claude-CLI-%E6%9C%80%E7%BB%88%E5%A4%8D%E6%A0%B8%E6%8A%A5%E5%91%8A.md)
 - [流程图生成脚本](https://github.com/raoliaoyuan/CloudedPC/blob/main/ai-computer-selection/build_diagram.py)
 

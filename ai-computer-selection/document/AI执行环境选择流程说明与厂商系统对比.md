@@ -31,11 +31,11 @@ Claude CLI 评审及修订日期：2026年11月16日（新加坡时间）
 
 从最上方的操作系统判断开始，沿实线箭头选择；虚线只连接场景说明，不代表执行步骤。
 
-![AI 执行环境选择流程图](/home/gamer/Work/CloudPC/ai-computer-selection/ai-computer-selection.png)
+![AI 执行环境选择流程图](../ai-computer-selection.png)
 
 图 1：AI 执行环境选择流程（2026年11月16日评审同步版）。标题下说明新增环境的适用范围与已有云桌面的例外；节点旁列出典型场景和 Linux 选型原因，五个结果节点下方标注选择条件。
 
-[高清 PNG](/home/gamer/Work/CloudPC/ai-computer-selection/ai-computer-selection.png) · [可编辑 Draw.io 源图](/home/gamer/Work/CloudPC/ai-computer-selection/ai-computer-selection.drawio)
+[高清 PNG](../ai-computer-selection.png) · [可编辑 Draw.io 源图](../ai-computer-selection.drawio)
 
 ## 3 如何逐步作出判断
 
@@ -143,14 +143,14 @@ FAQ：Linux microVM、默认 Ubuntu 以及可替换的 Linux 镜像。
 ### 项目内既有研究材料
 
 [L1] Dot云电脑软硬件配置与运行检查报告  
-2026年11月13日整理，主要依据11月11日聊天记录；Debian 13.6 为历史助手陈述，所引材料未提供原始系统采样，本次未复测。[查看项目原始材料](</home/gamer/Work/CloudPC/dot-audit-2026-11-13/Dot云电脑软硬件配置与运行检查报告.md>)
+2026年11月13日整理，主要依据11月11日聊天记录；Debian 13.6 为历史助手陈述，所引材料未提供原始系统采样，本次未复测。[查看项目原始材料](../../dot-audit-2026-11-13/Dot云电脑软硬件配置与运行检查报告.md)
 
 [L2] 腾讯云CVM Linux容器开发环境综合检查报告  
-2026年11月10日实测；第 4.1 节给出 Ubuntu 24.04.3 LTS，检查对象为本项目 WorkBuddy 容器。[查看项目原始材料](</home/gamer/Work/CloudPC/audit-2026-11-10/腾讯云CVM-Linux容器开发环境综合检查报告.md>)
+2026年11月10日实测；第 4.1 节给出 Ubuntu 24.04.3 LTS，检查对象为本项目 WorkBuddy 容器。[查看项目原始材料](../../audit-2026-11-10/腾讯云CVM-Linux容器开发环境综合检查报告.md)
 
 [L3] WorkBuddy 原始采样 evidence.txt  
-文件开头的 /etc/os-release 采样支持 Ubuntu 24.04.3 LTS。[查看项目原始材料](</home/gamer/Work/CloudPC/audit-2026-11-10/evidence.txt>)
+文件开头的 /etc/os-release 采样支持 Ubuntu 24.04.3 LTS。[查看项目原始材料](../../audit-2026-11-10/evidence.txt)
 
 流程图配套文件位于 ai-computer-selection 目录，文件名为 ai-computer-selection.png 与 ai-computer-selection.drawio。本文嵌入的图为本次说明文档所对应的确认版本。
 
-本地阅读说明：图件和项目内材料采用当前工作区的绝对路径，以便在 Codex 页面直接显示和打开。跨机器分享时，应一并提供这些文件并调整链接；单独发送本 Markdown 文件不会携带图片和引用材料。
+文件路径说明：图件和项目内材料使用仓库相对路径，支持在 GitHub 直接阅读。离线使用时请保留仓库目录结构；单独发送本 Markdown 文件不会携带图片和引用材料。2026年11月16日修正文件链接，判断逻辑、报告结论及图件内容保持不变。
